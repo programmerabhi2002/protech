@@ -1,0 +1,595 @@
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+
+        <title>
+            Java
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    </head>
+
+    <style>
+        .vertical-nav {
+            min-width: 17rem;
+            width: 17rem;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s;
+        }
+
+        .page-content {
+            width: calc(100% - 17rem);
+            margin-left: 17rem;
+            transition: all 0.4s;
+        }
+
+        /* for toggle behavior */
+
+        #sidebar.active {
+            margin-left: -17rem;
+        }
+
+        #content.active {
+            width: 100%;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            #sidebar {
+                margin-left: -17rem;
+            }
+
+            #sidebar.active {
+                margin-left: 0;
+            }
+
+            #content {
+                width: 100%;
+                margin: 0;
+            }
+
+            #content.active {
+                margin-left: 17rem;
+                width: calc(100% - 17rem);
+            }
+        }
+
+        body {
+            background: #599fd9;
+            background: -webkit-linear-gradient(to right, #599fd9, #c2e59c);
+            background: linear-gradient(to right, #599fd9, #c2e59c);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .separator {
+            margin: 3rem 0;
+            border-bottom: 1px dashed #fff;
+        }
+
+        .text-uppercase {
+            letter-spacing: 0.1em;
+        }
+
+        .text-gray {
+            color: #525252;
+        }
+    </style>
+
+    <body>
+
+        <!-- Vertical navbar -->
+        <div class="vertical-nav " id="sidebar">
+            <!-- bg-white -->
+            <div class="py-4 px-3 mb-4 ">
+                <!-- bg-white -->
+ 
+            <div class="media d-flex align-items-center"><img src="Img/Java.png" alt="..." width="70" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+                <div class="media-body">
+                    <h4 class="m-0" style="font-size:20px"><i></i></h4>
+                    <p class="font-weight text-dark mb-0"><i>
+                            
+                        </i></p>
+                </div>
+              </div> 
+            </div>
+
+            <div class="separator"></div>
+            <!--         <hr class="solid" style="border-top: 3px solid #bbb"> -->
+            <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0" style="font-weight:bold">Index</p>
+
+            <ul class="nav flex-column  mb-0" style="font-weight:bold">
+                <!-- bg-white -->
+                <li class="nav-item">
+                    <a href="#ja" class="nav-link text-dark font-italic ">
+                        <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                        Introduction
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#hi" class="nav-link text-dark font-italic">
+                        <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                        History
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#aj" class="nav-link text-dark font-italic">
+                        <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                        Applications of Java
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#jl" class="nav-link text-dark font-italic">
+                        <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                        Java Libraries
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#jf" class="nav-link text-dark font-italic">
+                        <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                        Java Frameworks
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link text-dark font-italic">
+                        <i class="fa fa-line-chart mr-3 text-primary fa-fw"></i>
+                        <-BACK TO HOME</a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- End vertical navbar -->
+
+
+        <!-- Page content holder -->
+        <div class="page-content p-5" id="content">
+            <!-- Toggle button -->
+            <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">MENU</small></button>
+
+
+            <!-- Demo content -->
+            <h2 class="display-4 text-white">Java</h2>
+            <p class="lead text-white mb-0"> <i>Designed by James Gosling</i></p>
+            <p class="lead text-white mb-0"> <i>Developed by <a href="https://en.wikipedia.org/wiki/Oracle_Corporation" style="color:white">Oracle Corporation</a> </i></p>
+            <br>
+            <p class="lead text-white">For downloading latest version Click <a href="https://www.java.com/en/download/manual.jsp" class="text-white">
+                    <u>Here</u></a>
+            </p>
+            <hr class="separate" style="border-top: 3px solid #fff">
+
+            <!--  <div class="separator" id="ja"></div> -->
+            <!-- ************************************************************************************** -->
+            <p class="lead"><b><a href="JAVA_1.html" style="font-size:35px;color:white;text-decoration:none">
+                        <i>
+                            <--Back </i>
+                    </a>
+                </b>
+            </p>
+            <!-- ************************************************************************************** -->
+            <hr class="separate" style="border-top: 3px solid #fff">
+
+            <div class="row text-white-bold">
+                <div class="col-lg-12">
+
+                    <p>
+                        <img class="alignleft wp-image-4266" style="float: left; border:2px solid white" src="https://hackr.io/blog/uploads/images/1570190916CUnmOdoFi2.jpg" width="160" height="100">
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h4>
+                        Play Framework
+                    </h4>
+
+                    <p class="lead"> <b>
+                            <strong>Developers:</strong> Lightbend, Zengularity and the community<br>
+                            <strong>Initial release:</strong> 2007<br>
+                            <strong>Written in:</strong> Scala<br>
+                            <strong>License:</strong> Apache License 2.0<br>
+                            <strong>Repository:</strong> <a href="	https://github.com/playframework/playframework">
+                                Play Repository</a><br>
+                        </b>
+                    </p>
+
+                    <p class="lead">
+                        <b>
+                            Play is a slightly conventional and unique type of framework that follows the approach of convention over configuration. It is based on the MVC pattern and is an open-source web application framework. Apart from Java, you can write Play web applications in Scala.
+                            <br>
+                            Play is similar to Django or Ruby on Rails or ASP.NET architecture and doesn’t necessarily follow J2EE web standards.
+                            <br>
+                            Some features of Play are –
+                            <br>
+                            <ul class="lead">
+                                <li>High performance because of the asynchronous processing</li>
+                                <li>No container, no states and built on reactive principles</li>
+                                <li>Uses statically-typed language, so most errors are caught during compile time saving a lot of mistakes early in the development life-cycle.</li>
+                                <li>Scala explores true OOP along with some functional programming concepts. Its compatibility with Java makes for an excellent and powerful system.</li>
+                                <li>With Play2, a new powerful build system sbt has been released which makes it easy to integrate with Maven projects as well as create simple JAR files.</li>
+                                <li>Extensive relational database access libraries for common functionalities are in-built.</li>
+                            </ul>
+                        </b>
+                    </p>
+
+                    <p class="lead">
+                        <b>
+                            Play Framework is an open-source web application framework which follows the model–view–controller (MVC) architectural pattern. It is written in Scala and usable from other programming languages that are compiled to JVM Bytecode, e.g. Java. It aims to optimize developer productivity by using convention over configuration, hot code reloading and display of errors in the browser.
+                            <br>
+                            Support for the Scala programming language has been available since version 1.1 of the framework.
+                            In version 2.0, the framework core was rewritten in Scala. Build and deployment was migrated to SBT, and templates use Scala
+                            instead of Apache Groovy.
+                            <br>
+                            <ul class="lead">
+                                <li><a href="/wiki/Stateless_protocol" title="Stateless protocol">Stateless</a>: Play 2 is fully <a href="/wiki/Representational_state_transfer" title="Representational state transfer">RESTful</a> – there is no Java EE session per connection.</li>
+                                <li>Integrated unit testing: <a href="/wiki/JUnit" title="JUnit">JUnit</a> and <a href="/wiki/Selenium_(software)" title="Selenium (software)">Selenium</a> support is included in the core.</li>
+                                <li><a href="/wiki/Application_programming_interface" class="mw-redirect" title="Application programming interface">API</a> comes with most required elements built-in.</li>
+                                <li><a href="/wiki/Asynchronous_I/O" title="Asynchronous I/O">Asynchronous I/O</a>: due to using Akka HTTP as its web server, Play can service long requests asynchronously rather than tying up HTTP threads doing business logic like Java EE frameworks that don't use the asynchronous support offered by Servlet 3.0.<sup id="cite_ref-20" class="reference"><a href="#cite_note-20">[20]</a></sup></li>
+                                <li>Modular architecture: like Ruby on Rails and Django, Play comes with the concept of modules.</li>
+                                <li>Native Scala support: Play 2 uses Scala internally but also exposes both a Scala API, and a Java API that is deliberately slightly different to fit in with Java conventions, and Play is completely interoperable with Java.</li>
+                            </ul>
+                        </b>
+                    </p>
+
+
+
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/t620S8-cwWg?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+
+                    <p class="lead">
+                        <b>
+                            For tutorial you can visit <a href="https://www.youtube.com/embed/zQUZOiQPz_I&list=PLYPFxrXyK0Bx9SBkNhJr1e2-NlIq4E7ED"> Here.</a>
+                        </b>
+                    </p>
+
+                    <hr class="separate" style="border-top: 3px solid #fff">
+                    <!-- ************************************************************************************** -->
+
+
+                    <p>
+                        <img class="alignleft wp-image-4266" style="float: left; border:2px solid white" src="https://hackr.io/blog/uploads/images/157019091601UD50Jrbr.jpg" width="160" height="100">
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h4>
+                        Apache Hadoop Framework
+                    </h4>
+
+                    <p class="lead"> <b>
+                            <strong>Developers:</strong> Apache Software Foundation<br>
+                            <strong>Initial release:</strong>April 1, 2006; 14 years ago<br>
+                            <strong>Written in:</strong> Java<br>
+                            <strong>License:</strong> Apache License 2.0<br>
+                            <strong>Repository:</strong> <a href="	https://gitbox.apache.org/repos/asf?p=hadoop.git">
+                                Hadoop Repository</a><br>
+                        </b>
+                    </p>
+
+                    <p class="lead">
+                        <b>
+                            Though Apache Hadoop is not a full-stack framework, it provides a software framework and works on the MapReduce programming model. These utilities can easily handle huge volumes of data (Big Data), store, analyse and process them to provide faster and more efficient results.
+                            <br>
+                            I have included Hadoop in this list because it is the ‘thing’ of today with Big Data gaining prominence.
+
+                            Hadoop helps in distributed data storage and processing using the master slave design pattern. The Hadoop HDFS (Hadoop Distributed File System) layer of the master node (namely NameNode) has the data node. The MapReduce layer has the JobTracker and the tasktracker. The slave nodes have the Data node and the taskTracker respectively.
+                            <br>
+                            Apache Hadoop is a collection of open-source software utilities that facilitates using a network of many computers to solve problems involving massive amounts of data and computation. It provides a software framework for distributed storage and processing of big data using the MapReduce programming model. Hadoop was originally designed for computer clusters built from commodity hardware,
+                            which is still the common use.
+                            <br>
+                            It has since also found use on clusters of higher-end hardware.
+                            All the modules in Hadoop are designed with a fundamental assumption that hardware failures are common occurrences and should be automatically handled by the framework.
+                            <br>
+                            The core of Apache Hadoop consists of a storage part, known as Hadoop Distributed File System (HDFS), and a processing part which is a MapReduce programming model. Hadoop splits files into large blocks and distributes them across nodes in a cluster. It then transfers packaged code into nodes to process the data in parallel. This approach takes advantage of data locality
+                            where nodes manipulate the data they have access to. This allows the dataset to be processed faster and more efficiently than it would be in a more conventional supercomputer architecture that relies on a parallel file system where computation and data are distributed via high-speed networking.
+                            <br>
+                            The base Apache Hadoop framework is composed of the following modules:
+                            <br>
+                            <ul class="lead">
+                                <li><i>Hadoop Common</i> – contains libraries and utilities needed by other Hadoop modules;</li>
+                                <li><i>Hadoop Distributed File System (HDFS)</i> – a distributed file-system that stores data on commodity machines, providing very high aggregate bandwidth across the cluster;</li>
+                                <li><i>Hadoop YARN</i> – (introduced in 2012) a platform responsible for managing computing resources in clusters and using them for scheduling users' applications;<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[10]</a></sup><sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup></li>
+                                <li><i>Hadoop MapReduce</i> – an implementation of the MapReduce programming model for large-scale data processing.</li>
+                                <li><i>Hadoop Ozone</i> – (introduced in 2020) An object store for Hadoop</li>
+                            </ul>
+                        </b>
+                    </p>
+
+
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/6sK3LDY7Pp4?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+
+                    <p class="lead">
+                        <b>
+                            For tutorial you can visit <a href="https://www.youtube.com/watch?v=mafw2-CVYnA"> Here.</a><br>
+                            For more information you can visit <a href="https://en.wikipedia.org/wiki/Apache_Hadoop"> Here.</a>
+
+                        </b>
+                    </p>
+
+                    <hr class="separate" style="border-top: 3px solid #fff">
+
+                    <!-- ************************************************************************************** -->
+
+
+                    <p>
+                        <img class="alignleft wp-image-4266" style="float: left; border:2px solid white" src="https://hackr.io/blog/uploads/images/1570190916qd4C6mwb9n.jpg" width="160" height="100">
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h4>
+                        GWT
+                    </h4>
+
+                    <p class="lead"> <b>
+                            <strong>Developers:</strong> Google<br>
+                            <strong>Initial release:</strong>May 16, 2006; 14 years ago<br>
+                            <strong>Written in:</strong> Java<br>
+                            <strong>License:</strong> Apache License 2.0<br>
+                            <strong>Repository:</strong> <a href="	https://github.com/gwtproject/gwt">
+
+                                github.com/gwtproject/gwt</a><br>
+                        </b>
+                    </p>
+
+
+                    <p class="lead">
+                        <b>
+                            Google Web Toolkit (GWT) is a framework obviously created by Google to create rich internet applications in Java. One of the best features of GWT is that it converts Java code into JavaScript code – that too custom code based on the browser. <br>I personally like this feature because, during development, we used to spend a lot of time and effort on the browser testing earlier. With this open-source set of tools, we can write highly performant web applications in less time. If you already have a codebase, you can easily integrate it with GWT because GWT is compatible with the Eclipse IDE, Maven and Junit too. The framework also provides extensive widget libraries that can perform most of the tasks making it easy for even a beginner in Java to develop business logic without worrying too much about basic stuff. There are 3 major components of the GWT framework – the Java to JS compiler, the JRE emulation library that sits on top of the core JRE library and the GWT UI building library that includes the UI components,
+                            history management, and many more features.
+                            <br>
+                            GWT is an open-source set of tools that allows web developers to create and maintain JavaScript front-end applications in Java. Other than a few native libraries, everything is Java source that can be built on any supported platform with the included GWT Ant build files.
+                            It is licensed under the Apache License 2.0.
+                            <br>
+                            GWT emphasizes reusable approaches to common web development tasks, namely asynchronous remote procedure calls, history management, bookmarking, UI abstraction, internationalization, and cross-browser portability.
+                            <br>
+                            Using GWT, developers can develop and debug Ajax applications in the Java language using the Java development tools of their choice. When the application is deployed, the GWT cross-compiler translates the Java application to standalone JavaScript files that are optionally obfuscated and deeply optimized. When needed, JavaScript can also be embedded directly into Java code, using Java comments.
+                            <br>
+                            GWT does not revolve only around user interface programming; it is a general set of tools for building any sort of high-performance client-side JavaScript functionality. Indeed, many key architectural decisions are left completely to the developer. The GWT mission statement
+                            clarifies the philosophical breakdown of GWT's role versus the developer's role. History is an example of such: although GWT manages history tokens as users click Back or Forward in the browser, it does not prescribe how to map history tokens to an application state.
+                            <br>
+                            GWT applications can be run in two modes:
+                            <br>
+                            <ul class="lead">
+                                <li><i>Development mode</i> (formerly <i>Hosted mode</i>): The application is run as Java bytecode within the <a href="/wiki/Java_Virtual_Machine" class="mw-redirect" title="Java Virtual Machine">Java Virtual Machine</a> (JVM).<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup> This mode is typically used for development, supporting <a href="/wiki/Hot_swapping#Software" title="Hot swapping">hot swapping of code</a> and debugging. In 2014, the classic implementation of Dev Mode was rendered unusable by browser updates<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">[12]</a></sup><sup id="cite_ref-13" class="reference"><a href="#cite_note-13">[13]</a></sup> until its replacement with the more compatible <i>Super Dev Mode</i>, which became the default in GWT 2.7.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">[14]</a></sup></li>
+                                <li><i>Production mode</i> (formerly <i>Web mode</i>): The application is run as pure JavaScript and HTML, compiled from the Java source. This mode is typically used for deployment.</li>
+                            </ul>
+                        </b>
+                    </p>
+
+
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/q7_W6o0Iuzc?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+
+                    <p class="lead">
+                        <b>
+                            For tutorial you can visit <a href="https://www.youtube.com/embed/WTJ4w-J81oE&list=PLGJDCzBP5j3yheWxkEdJCDAhzYxpudejx"> Here.</a><br>
+                            For more information you can visit <a href="http://www.gwtproject.org/gettingstarted.html"> Here.</a>
+
+                        </b>
+                    </p>
+
+                    <hr class="separate" style="border-top: 3px solid #fff">
+                    <!-- ************************************************************************************** -->
+
+
+                    <p>
+                        <img class="alignleft wp-image-4266" style="float: left; border:2px solid white" src="https://hackr.io/blog/uploads/images/1570190916xARJ0kc9QJ.jpg" width="160" height="100">
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h4>
+                        Drools
+                    </h4>
+
+                    <p class="lead"> <b>
+                            <strong>Developers:</strong> Red Hat<br>
+                            <!--<strong>Initial release:</strong>May 16, 2006; 14 years ago<br>-->
+                            <strong>Written in:</strong> Java<br>
+                            <strong>License:</strong> ASL 2<br>
+                            <strong>Repository:</strong> <a href="	https://github.com/kiegroup/drools">
+
+                                https://github.com/kiegroup/drools</a><br>
+                        </b>
+                    </p>
+
+                    <p class="lead">
+                        <b>
+                            Drools is a popular Business Rules Management System. It has a Business Rules Engine (BRE), authoring, a rules management application and runtime support for Decision and Notation models. The rules management app is called as the Drools workbench. The project is backed by RedHat and JBoss. With Drools, developers can easily separate the data from business logic.
+                            <br>
+                            The two main steps in Drools are –
+                            <br>
+                            <ul class="lead">
+                                <li><strong>Authoring:</strong>Creation of rule files.</li>
+                                <li><strong>Runtime:</strong>where you execute the rules.</li>
+                            </ul>
+                        </b>
+                    </p>
+                    <p class="lead">
+                        <b>
+                            The most important feature of Drools is that new rules can be removed and added at any time without restarting the server.
+                            <br>
+                            Drools is apt choice for applications that rely on a lot of conditions for some action to happen. For example, to check if a person is eligible for upgrading his plan or not, there are certain set rules – for example, is the customer existing, the customer’s bill amount is greater than the certain limit and so on. These rules can be defined as a decision table rather than hard coding them in the code. Any changes would then not need another build, complete testing or redeployment.
+                            <br>
+                            Drools is a business rule management system (BRMS) with a forward and backward chaining inference based rules engine, more correctly known as a production rule system, using an enhanced implementation of the Rete algorithm.
+                            <br>
+                            Drools supports the Java Rules Engine API (Java Specification Request 94) standard for its business rule engine and enterprise framework for the construction, maintenance, and enforcement of business policies in an organization, application, or service.
+                            <br>
+                        </b>
+                    </p>
+
+
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/OMOvUjxOQkc?start=50?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+
+                    <p class="lead">
+                        <b>
+                            For tutorial you can visit <a href="https://www.youtube.com/embed/zQhDe_PT60Y"> Here.</a><br>
+                            For more information you can visit <a href="https://en.wikipedia.org/wiki/Drools"> Here.</a>
+
+                        </b>
+                    </p>
+
+                    <hr class="separate" style="border-top: 3px solid #fff">
+                    <!-- ************************************************************************************** -->
+                    <p>
+                        <img class="alignleft wp-image-4266" style="float: left; border:2px solid white" src="https://hackr.io/blog/uploads/images/1570190916u5I8Aj2Sgz.jpg" width="160" height="100">
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h4>
+                        Jersey
+                    </h4>
+
+                    <p class="lead"> <b>
+                            <strong>Developers:</strong> Oracle Corporation and Eclipse Foundation<br>
+                            <!--<strong>Initial release:</strong>May 16, 2006; 14 years ago<br>-->
+                            <strong>Written in:</strong> Java<br>
+                            <strong>License:</strong> Eclipse Public License 2.0<br>
+                            <strong>Repository:</strong> <a href="https://github.com/eclipse-ee4j/jersey/">
+
+                                https://github.com/eclipse-ee4j/jersey/</a><br>
+                        </b>
+                    </p>
+
+                    <p class="lead">
+                        <b>
+                            Jersey is a web services framework to create RESTful services and supports JAX-RS APIs. It greatly simplifies the development of RESTful services through useful features and utility functions. Jersey provides a sort of abstraction layer so that developers need not worry about the low-level implementation of client-server communication and can concentrate on the main web service functionality.
+                            <br>
+                            A striking feature of Jersey, as opposed to any other RESTful frameworks, is that it allows for Chunked output i.e. the server can send back a response to a client in parts or chunks. This is useful when a large data has to be sent and data chunks can be sent while the entire response is prepared.
+                            <br>
+                            Jersey also comes with easy testing infrastructure. You can write lightweight integration tests that are primarily based on Junit. It is also easy to integrate the tests with Maven environment. All you need to do is add the dependency in your pom.xml.
+                            <br>
+                            Java programmers who are interested in developing and deploying Restful Web Services using JAX-RS API and JAXB.
+
+                        </b>
+                    </p>
+
+
+
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/AWrKBJ8mHz0?start=50?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+
+                    <p class="lead">
+                        <b>
+                            For tutorial you can visit <a href="https://www.youtube.com/embed/RuICubxGvj4&list=PLqq-6Pq4lTTZh5U8RbdXq0WaYvZBz2rbn"> Here.</a><br>
+                            For more information you can visit <a href="https://www.journaldev.com/498/jersey-java-tutorial"> Here.</a>
+
+                        </b>
+                    </p>
+                    <hr class="separate" style="border-top: 3px solid #fff">
+                    <!-- ************************************************************************************** -->
+                    <p>
+                        <img class="alignleft wp-image-4266" style="float: left; border:2px solid white" src="https://hackr.io/blog/uploads/images/1570190916ubv4zgz06b.jpg" width="160" height="100">
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h4>
+                        Spark
+                    </h4>
+
+                    <p class="lead"> <b>
+                            <!-- <strong>Developers:</strong> Red Hat<br> -->
+                            <!--<strong>Initial release:</strong>May 16, 2006; 14 years ago<br>-->
+                            <strong>Written in:</strong> Java<br>
+                            <strong>License:</strong> Apache License 2.0<br>
+                            <strong>Repository:</strong> <a href="	https://github.com/perwendel/spark/">
+
+                                Spark Repository</a><br>
+                        </b>
+                    </p>
+
+                    <p class="lead">
+                        <b>
+                            Another masterstroke from Apache, Spark is an open-source web development framework which has similar features as Spring, Play and JAX-RS, but is more powerful and doesn’t follow the traditional MVC design pattern.
+                            <br>
+                            It is a micro-framework and a domain-specific language for Java focussing on the speed of development. It needs very less configuration and coding. It is 10 times faster than Hadoop in terms of data processing because of in-memory computation. A completely dynamic framework, Spark supports lazy initialization and real-time data processing.
+                            <br>
+                            It is also easy to integrate with Scala and R which are programming languages focused on data science and big data. The primary objective of Spark is processing huge data and also supports advanced analytics with SQL queries, machine learning and graph algorithms.
+                            <br>
+                            Don’t think that Spark can replace Hadoop – it can be an extension to the features that Hadoop offers – learning both these frameworks will give you an edge over others if you are getting into Data Science field.
+                        </b>
+                    </p>
+
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/cu2E0sSlWsY?start=50?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+                    <br>
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/2PVzOHA3ktE?start=50?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+
+                    <p class="lead">
+                        <b>
+                            For tutorial you can visit <a href="https://www.youtube.com/embed/dY5099JlQV8"> Here.</a><br>
+                            For more information you can visit <a href="http://sparkjava.com/"> Here.</a>
+
+                        </b>
+                    </p>
+                    <hr class="separate" style="border-top: 3px solid #fff">
+                    <!-- ************************************************************************************** -->
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- End demo content -->
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+
+        <script>
+            $(function() {
+                // Sidebar toggle behavior
+                $('#sidebarCollapse').on('click', function() {
+                    $('#sidebar, #content').toggleClass('active');
+                });
+            });
+        </script>
+
+    </body>
+
+
+
+
+    </html>

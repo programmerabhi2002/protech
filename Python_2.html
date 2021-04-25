@@ -1,0 +1,624 @@
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+
+        <title>
+
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+
+    </head>
+    <style>
+
+
+        .vertical-nav {
+            min-width: 17rem;
+            width: 17rem;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s;
+        }
+
+        .page-content {
+            width: calc(100% - 17rem);
+            margin-left: 17rem;
+            transition: all 0.4s;
+        }
+
+        /* for toggle behavior */
+
+        #sidebar.active {
+            margin-left: -17rem;
+        }
+
+        #content.active {
+            width: 100%;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            #sidebar {
+                margin-left: -17rem;
+            }
+
+            #sidebar.active {
+                margin-left: 0;
+            }
+
+            #content {
+                width: 100%;
+                margin: 0;
+            }
+
+            #content.active {
+                margin-left: 17rem;
+                width: calc(100% - 17rem);
+            }
+        }
+
+
+        /*
+*
+* ==========================================
+* FOR DEMO PURPOSE
+* ==========================================
+*
+*/
+
+        body {
+            background: #599fd9;
+            background: -webkit-linear-gradient(to right, #599fd9, #c2e59c);
+            background: linear-gradient(to right, #599fd9, #c2e59c);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .separator {
+            margin: 3rem 0;
+            border-bottom: 1px dashed #fff;
+        }
+
+        .text-uppercase {
+            letter-spacing: 0.1em;
+        }
+
+        .text-gray {
+            color: #525252;
+        }
+
+
+
+        /* .vl{
+    border-left: 6px solid green;
+  height: 500px;
+  position: absolute;
+  left: 80%;
+  margin-left: -20px;
+  top: 30; */
+    </style>
+
+    <body>
+
+
+        <!-- Vertical navbar Starts Here -->
+
+        <div class="vertical-nav " id="sidebar">
+            <!-- style="position:fixed" -->
+            <!-- bg-white -->
+            <div class="py-4 px-3 mb-4 ">
+                <!-- bg-white -->
+                <!-- <div class="media d-flex align-items-center"><img src="Abhishek_1(30.2kb).jpg" alt="..." width="70" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+ -->
+                     
+              <div class="media d-flex align-items-center"><img src="Img/download.jfif" alt="..." width="70" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+                <div class="media-body">
+                    <h4 class="m-0" style="font-size:20px"><i></i></h4>
+                    <p class="font-weight text-dark mb-0"><i>
+                           
+                        </i></p>
+                </div>
+                  </div> 
+            </div>
+
+            <div class="separator"></div>
+            <!--         <hr class="solid" style="border-top: 3px solid #bbb"> -->
+            <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Index</p>
+
+            <ul class="nav flex-column  mb-0" style="font-weight:bold">
+                <!-- bg-white -->
+                <li class="nav-item">
+                    <a href="#py" class="nav-link text-dark font-italic ">
+                        <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                        Start
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#in" class="nav-link text-dark font-italic ">
+                        <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                        Introduction
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#hi" class="nav-link text-dark font-italic">
+                        <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                        History
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#ap" class="nav-link text-dark font-italic">
+                        <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                        Applications of Python
+                    </a>
+                </li>
+               
+            </ul>
+
+            <ul class="nav flex-column  mb-0" style="font-weight:bold">
+                <!-- bg-white -->
+                <li class="nav-item">
+                    <a href="#bif" class="nav-link text-dark font-italic">
+                        <i class="fa fa-area-chart mr-3 text-primary fa-fw"></i>
+                        Python Built-in functions
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="Python.html" class="nav-link text-dark font-italic">
+                        <i class="fa fa-bar-chart mr-3 text-primary fa-fw"></i>
+                        Python Frameworks
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="Python_2.html" class="nav-link text-dark font-italic">
+                        <i class="fa fa-pie-chart mr-3 text-primary fa-fw"></i>
+                        Python Libraries
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link text-dark font-italic">
+                        <i class="fa fa-line-chart mr-3 text-primary fa-fw"></i>
+                        <-BACK TO HOME</a>
+                </li>
+            </ul>
+        </div>
+
+        
+
+        <div class="page-content p-5" id="content">
+
+            <!-- Toggle button -->
+
+            <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">MENU</small></button>
+
+            <!-- Toggle button ends here -->
+
+            <!-- *************************************************************************************** -->
+            <h2 class="display-4 text-white" id="py">Python</h2>
+            <p class="lead text-white mb-0"> <i>By Guido van Rossum</i></p>
+            <p class="lead text-white">Snippet by <a href="https://www.python.org/doc/" class="text-white">
+                    <u>python.org</u></a>
+            </p>
+
+            <p class="lead text-white">For downloading latest version Click <a href="https://www.python.org/ftp/python/3.9.1/python-3.9.1-amd64.exe" class="text-white">
+                    <u>Here</u></a>
+            </p>
+
+            <hr class="separate" style="border-top: 3px solid #fff">
+
+            <p class="lead"><b><a href="Python.html" style="font-size:35px;color:white;text-decoration:none"><i>
+                            <--Back </i></a></b></p>
+            <hr class="separate" style="border-top: 3px solid #fff">
+
+            <!-- *********************************************************************8 -->
+            <div class="col-lg-12">
+
+                <p class="lead" style="font-size:20px"><b>
+                        Python Libraries are a set of useful functions that eliminate
+                        the need for writing codes from scratch.<br>
+                        <strong><i>There are over 137,000 python libraries present today.</i></strong><br>
+                        Python libraries play a vital role in developing machine learning, data science, data visualization, image and data manipulation applications and
+                        more.<br>
+                        The probability that you must have heard of ‘Python’ is outright. Guido Van Rossum’s brainchild – Python, which dates back to the ’80s has become an avid game changer. It is one of the most popular coding languages today and is widely used for a gamut of
+                        applications.
+                    </b></p>
+
+                <p class=" lead" style="font-size:25px"><b><strong>What is a Library?</strong></b></p>
+                <p class="lead"><b>
+                        A library is a collection of pre-combined codes that can be used iteratively to reduce the time required to code.
+                        They are particularly useful for accessing the pre-written frequently used codes, instead of writing them from scratch every single time. Similar to the physical libraries, these are a collection of reusable resources, which means every library has a root source. This is the foundation behind the numerous open-source
+                        libraries available in Python. <br>
+                    </b></p>
+                <h3> Python libraries Everyone should know</h3><br>
+
+                <img src="https://d1m75rqqgidzqn.cloudfront.net/2019/08/scikit.png" alt="python libraries" class="wp-image-5968 lazyloaded" data-ll-status="loaded" width="120" height="100">
+                <br><br>
+                <p class="lead" style="font-size:22px">
+                    <b><strong>
+                            <u> Scikit-learn </u>
+                        </strong>
+                    </b>
+                </p>
+
+
+                <p class="lead">
+                    <b>
+                        <strong>Original author:</strong><a href="https://en.wikipedia.org/wiki/David_Cournapeau"> David Cournapeau</a><br>
+                        <strong>License:</strong> New BSD License<br>
+                        <strong>Initial release:</strong>June 2007(13 years ago)<br>
+                        <strong>Operating system:</strong> Linux, macOS, Windows<br>
+                        <strong>Programming languages: </strong>Python, C, C++, Cython<br>
+                        <strong>Repository:</strong>Click <a href="github.com/scikit-learn/scikit-learn">Here.</a>
+                    </b>
+                </p>
+                <p class="lead"><b>Scikit-learn (formerly scikits.learn and also known as sklearn) is a free software machine learning library for the Python programming language. It features various classification, regression and clustering algorithms including support vector machines, random forests, gradient boosting, k-means and DBSCAN, and is designed to interoperate with the Python numerical and
+                        scientific libraries NumPy and SciPy.<br><br>
+                        Scikit-learn is largely written in Python, and uses numpy extensively for high-performance linear algebra and array operations. Furthermore, some core algorithms are written in Cython to improve performance. Support vector machines are implemented by a Cython wrapper around LIBSVM; logistic regression and linear support vector machines by a similar wrapper around LIBLINEAR. In such cases, extending these methods with Python may
+                        not be possible.<br><br>
+                        Scikit-learn integrates well with many other Python libraries, such as matplotlib and plotly for plotting, numpy for array vectorization, pandas dataframes, scipy,
+                        and many more.<br><br>
+                    </b></p>
+                <p class="lead"><b><strong>Version Timeline:-</strong></b></p>
+                <center>
+                    <img usemap="#timeline_649b5b6b6bff64b79fb1f8bc812011fb" src="//upload.wikimedia.org/wikipedia/en/timeline/649b5b6b6bff64b79fb1f8bc812011fb.png">
+                </center><br>
+                <p class="lead"><b> For Tutorial Click<a href="https://scikit-learn.org/stable/tutorial/index.html"> Here.</a></b></p>
+                <p class="lead"><b>For Examples,Visit<a href="https://scikit-learn.org/stable/auto_examples/classification/plot_digits_classification.html#sphx-glr-auto-examples-classification-plot-digits-classification-py"> Here.</a></b></p>
+                <hr class="separate" style="border-top: 3px solid #fff">
+
+                <!-- ************************************************************************************** -->
+
+                <img src="https://d1m75rqqgidzqn.cloudfront.net/2019/08/numpy-300x105.jpg" alt="python libraries" class="wp-image-5968 lazyloaded" data-ll-status="loaded" width="120" height="100">
+                <br><br>
+                <p class="lead" style="font-size:22px">
+                    <b><strong>
+                            <u> NumPy</u>
+                        </strong>
+                    </b>
+                </p>
+                <p class="lead">
+                    <b>
+                        <strong>Original author:</strong><a href="https://en.wikipedia.org/wiki/Travis_Oliphant"> Travis Oliphant</a><br>
+                        <strong>License:</strong> BSD <br>
+                        <strong>Initial release:</strong>1995<br>
+                        <strong>Operating system:</strong>Cross-platform<br>
+                        <strong>Programming languages: </strong> Python, C<br>
+                        <strong>Repository:</strong>Click <a href="github.com/numpy/numpy">Here.</a>
+                    </b>
+                </p>
+                <p class="lead">
+                    <b>
+                        NumPy is a library for the Python programming language, adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.[5] The ancestor of NumPy, Numeric, was originally created by Jim Hugunin with contributions from several other developers. In 2005, Travis Oliphant created NumPy by incorporating features of the competing Numarray into Numeric, with extensive modifications.
+                        NumPy is open-source software and has many contributors.<br>
+                        NumPy targets the CPython reference implementation of Python, which is a non-optimizing bytecode interpreter. Mathematical algorithms written for this version of Python often run much slower than compiled equivalents. NumPy addresses the slowness problem partly by providing multidimensional arrays and functions and operators that operate efficiently on arrays, requiring rewriting some code, mostly inner loops, using
+                        NumPy.<br>
+                        Using NumPy in Python gives functionality comparable to MATLAB since they are both interpreted,
+                        and they both allow the user to write fast programs as long as most operations work on arrays or matrices instead of scalars. In comparison, MATLAB boasts a large number of additional toolboxes, notably Simulink, whereas NumPy is intrinsically integrated with Python, a more modern and complete programming language. Moreover, complementary Python packages are available; SciPy is a library that adds more MATLAB-like functionality and Matplotlib is a plotting package that provides MATLAB-like plotting functionality. Internally, both MATLAB and NumPy rely on BLAS and LAPACK for efficient linear algebra computations.<br>
+                    </b>
+                </p>
+
+                <p class="lead">
+                    <b>
+                        The ndarray data structure:-<br>
+                        The core functionality of NumPy is its "ndarray", for n-dimensional array, data structure. These arrays are strided views on memory.[9] In contrast to Python's built-in list data structure, these arrays are homogeneously typed: all elements of a single array must
+                        be of the same type.<br>
+                        Such arrays can also be views into memory buffers allocated by C/C++, Cython, and Fortran extensions to the CPython interpreter without the need to copy data around, giving a degree of compatibility with existing numerical libraries. This functionality is exploited by the SciPy package, which wraps a number of such libraries (notably BLAS and LAPACK). NumPy has built-in support for
+                        memory-mapped ndarrays.<br>
+
+
+                    </b>
+                    <b>For Example:-<br>Array Creation<br></b>
+                </p>
+
+                <div class="shadow p-3 mb-5  bg-white rounded"><b>
+                        >>> import numpy as np<br>
+                        >>> x = np.array([1, 2, 3])<br>
+                        >>> x<br>
+                        array([1, 2, 3])<br.>>> y = np.arange(10) # like Python's list(range(10)), but returns an array<br>
+                            >>> y<br>
+                            array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])<br>
+                    </b>
+                </div>
+                <p class="lead"><b>For more example:- Click<a href="https://numpy.org/doc/stable/user/quickstart.html#an-example">Here.</a></b></p>
+
+                <p class="lead"><b>For Tutorial:- Click<a href="https://numpy.org/doc/stable/user/quickstart.html#">here</a></b></p>
+                <hr class="separate" style="border-top: 3px solid #fff">
+
+                <!-- ************************************************************************************** -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/TensorFlowLogo.svg/330px-TensorFlowLogo.svg.png" alt="python libraries" class="wp-image-5968 lazyloaded" data-ll-status="loaded" width="120" height="100">
+                <br><br>
+                <p class="lead" style="font-size:22px">
+                    <b><strong>
+                            <u> TensorFlow</u>
+                        </strong>
+                    </b>
+                </p>
+
+                <p class="lead">
+                    <b>
+                        <strong>License:</strong>Apache License 2.0<br>
+                        <strong>Initial release:</strong>9 November 2015<br>
+                        <strong>Developer:</strong> Google<br>
+                        <strong>Programming languages: </strong> Python, C++, CUDA<br>
+                        <strong>Repository:</strong>Click <a href="github.com/tensorflow/tensorflow">Here.</a>
+                    </b>
+                </p>
+
+                <p class="lead">
+                    <b>
+                        TensorFlow is a free and open-source software library for machine learning. It can be used across a range of tasks but has a particular focus on training and inference of deep neural networks.<br>
+                        Tensorflow is a symbolic math library based on dataflow and differentiable programming. It is used for both research and production at Google.<br>
+                        TensorFlow was developed by the Google Brain team for internal Google use. It was released under the Apache License 2.0 in 2015.<br>
+
+                        TensorFlow is Google Brain's second-generation system. Version 1.0.0 was released on February 11, 2017.While the reference implementation runs on single devices, TensorFlow can run on multiple CPUs and GPUs (with optional CUDA and SYCL extensions for general-purpose computing on graphics processing units).
+                        TensorFlow is available on 64-bit Linux, macOS, Windows, and mobile computing platforms including Android and iOS.<br>
+
+                        Its flexible architecture allows for the easy deployment of computation across a variety of platforms (CPUs, GPUs, TPUs), and from desktops to clusters of servers to mobile and edge devices.<br>
+                        In December 2017, developers from Google, Cisco, RedHat, CoreOS, and CaiCloud introduced Kubeflow at a conference. Kubeflow allows operation and deployment of TensorFlow on Kubernetes.<br>
+                        In March 2018, Google announced TensorFlow.js version 1.0 for machine learning in JavaScript.<br>
+                        In Jan 2019, Google announced TensorFlow 2.0.It became officially available in Sep 2019.<br>
+                        In May 2019, Google announced TensorFlow Graphics for deep learning in computer graphics.<br>
+
+                    </b>
+                </p>
+                <div class="shadow p-3 mb-5  bg-white rounded">
+                    import tensorflow as tf<br>
+                    mnist = tf.keras.datasets.mnist<br>
+                    <br>
+                    (x_train, y_train),(x_test, y_test) = mnist.load_data()<br>
+                    x_train, x_test = x_train / 255.0, x_test / 255.0<br>
+                    <br>
+                    model = tf.keras.models.Sequential([<br>
+                    tf.keras.layers.Flatten(input_shape=(28, 28)),<br>
+                    tf.keras.layers.Dense(128, activation='relu'),<br>
+                    tf.keras.layers.Dropout(0.2),<br>
+                    tf.keras.layers.Dense(10, activation='softmax')<br>
+                    ])<br>
+                    <br>
+                    model.compile(optimizer='adam',<br>
+                    loss='sparse_categorical_crossentropy',<br>
+                    metrics=['accuracy'])<br>
+                    <br>
+                    model.fit(x_train, y_train, epochs=5)<br>
+                    model.evaluate(x_test, y_test)<br>
+                    </>
+                </div>
+                <p class="lead"><b> For output, Click <a href="https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/tutorials/quickstart/beginner.ipynb">Here</a></b></p>
+
+                <p class="lead"><b>
+                        For Tutorial and Example click <a href="https://www.tensorflow.org/tutorials">Here.</a>
+                    </b>
+                </p>
+
+
+                <hr class="separate" style="border-top: 3px solid #fff">
+
+                <!-- ************************************************************************************** -->
+                <img src="https://d1m75rqqgidzqn.cloudfront.net/2019/08/numpy-300x105.jpg" alt="python libraries" class="wp-image-5968 lazyloaded" data-ll-status="loaded" width="120" height="100">
+                <br><br>
+                <p class="lead" style="font-size:22px">
+                    <b><strong>
+                            <u>PyTorch</u>
+                        </strong>
+                    </b>
+                </p>
+                <p class="lead">
+                    <b>
+                        <strong>Original author:</strong> Adam Paszke; Sam Gross; Soumith Chintala; Gregory Chanan<br>
+                        <strong>License:</strong> BSD <br>
+                        <strong>Initial release:</strong>September 2016(4 years ago)<br>
+                        <strong>Developers:</strong>Facebook's AI Research lab (FAIR)<br>
+                        <strong>Programming languages: </strong> Python, C<br>
+                        <strong>Repository:</strong>Click <a href="github.com/numpy/numpy">Here.</a>
+                    </b>
+                </p>
+
+                <p class="lead">
+                    <b>
+                        Facebook operates both PyTorch and Convolutional Architecture for Fast Feature Embedding (Caffe2), but models defined by the two frameworks were mutually incompatible. The Open Neural Network Exchange (ONNX) project was created by Facebook and Microsoft in September 2017 for converting models between frameworks. Caffe2
+                        was merged into PyTorch at the end of March 2018.<br>
+                        PyTorch is an open source machine learning library based on the Torch library,used for applications such as computer vision and natural language processing,
+                        primarily developed by Facebook's AI Research lab (FAIR).It is free and open-source software released under the Modified BSD license. Although the Python interface is more polished and the primary focus of development,
+
+                        PyTorch also has a C++ interface.<br>
+                        A number of pieces of Deep Learning software are built on top of PyTorch, including Tesla Autopilot,
+                        Uber's Pyro, HuggingFace's Transformers, PyTorch Lightning, and Catalyst.<br><br>
+                        <strong> PyTorch provides two high-level features:</strong><br>
+                        <strong> 1)&nbsp;</strong>Tensor computing (like NumPy) with strong acceleration via graphics processing units (GPU).<br>
+                        <strong>2)&nbsp;</strong>Deep neural networks built on a tape-based automatic differentiation system.
+                    </b>
+                </p>
+                <p class="lead">
+                    <b>
+                        <strong>PyTorch tensors:-</strong>PyTorch defines a class called Tensor (torch.Tensor) to store and operate on homogeneous multidimensional rectangular arrays of numbers. PyTorch Tensors are similar to NumPy Arrays, but can also be operated on a CUDA-capable Nvidia GPU. PyTorch supports various sub-types of Tensors.<br>
+                        <strong>Autograd Module:-</strong>PyTorch uses a method called automatic differentiation. A recorder records what operations have performed, and then it replays it backward to compute the gradients. This method is especially powerful when building neural networks to save time on one epoch by calculating differentiation of the parameters at the forward pass.<br>
+                        <strong><i>Optim</i> module:-</strong><i>torch.optim</i> is a module that implements various optimization algorithms used for building neural networks. Most of the commonly used methods are already supported, so there is no need to build them from scratch.<br>
+                        <strong> <i>nn</i> module:-</strong>PyTorch autograd makes it easy to define computational graphs and take gradients, but raw autograd can be a bit too low-level for defining complex neural networks. This is where the nn module can help.<br>
+                    </b>
+                </p>
+                <p class="lead">
+                    <b>
+                        PyTorch code is simple. It is easy to understand, and you use the library instantly. For example, take a look at the code snippet below:<br>
+
+                    </b>
+                </p>
+                <div class="shadow p-3 mb-5  bg-white rounded">
+                    class Net(torch.nn.Module):<br>
+                    &nbsp;&nbsp; def __init__(self):<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;super(Net, self).__init__()<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; self.layer = torch.nn.Linear(1, 1)<br>
+                    <br>
+                    &nbsp;&nbsp; def forward(self, x):<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; x = self.layer(x)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; return x<br>
+                </div>
+                <p class="lead"><b>As above, you can define the network model easily, and you can understand the code quickly without much training.</b></p>
+                <p class="lead">
+                    <b>
+                        For Tutorial Click <a href="https://pytorch.org/tutorials/">Here.</a><br>
+                        For Examples Click <a href="https://pytorch.org/tutorials/beginner/pytorch_with_examples.html">Here.</a>
+                    </b>
+                </p>
+
+                <hr class="separate" style="border-top: 3px solid #fff">
+
+                <!-- ************************************************************************************** -->
+
+                <h3> PyTorch Vs. TensorFlow</h3>
+
+
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <td>Parameters </td>
+                            <td>PyTorch </td>
+                            <td>Tensorflow </td>
+                        </tr>
+                        <tr>
+                            <td>Model Definition </td>
+                            <td>The model is defined in a subclass and offers easy to use package </td>
+                            <td>The model is defined with many, and you need to understand the syntax </td>
+                        </tr>
+                        <tr>
+                            <td>GPU Support </td>
+                            <td>Yes </td>
+                            <td>Yes </td>
+                        </tr>
+                        <tr>
+                            <td>Graph Type </td>
+                            <td>Dynamic </td>
+                            <td>Static </td>
+                        </tr>
+                        <tr>
+                            <td>Tools </td>
+                            <td>No visualization tool </td>
+                            <td>You can use Tensorboard visualization tool </td>
+                        </tr>
+                        <tr>
+                            <td>Community </td>
+                            <td>The community still growing </td>
+                            <td>Large active communities </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <hr class="separate" style="border-top: 3px solid #fff">
+
+                <!-- ************************************************************************************** -->
+                <img src="https://d1m75rqqgidzqn.cloudfront.net/2019/08/Pandas-300x156.png" alt="python libraries" class="wp-image-5968 lazyloaded" data-ll-status="loaded" width="120" height="100">
+                <br><br>
+                <p class="lead" style="font-size:22px">
+                    <b><strong>
+                            <u>Pandas</u>
+                        </strong>
+                    </b>
+                </p>
+                <p class="lead">
+                    <b>
+                        <strong>License:</strong> New BSD License <br>
+                        <strong>Initial release:</strong>11 January 2008(12 years ago)<br>
+                        <strong>Developers:</strong>Wes McKinney<br>
+                        <strong>Programming languages: </strong> Python, C, Cython<br>
+                        <strong>Repository:</strong>Click <a href="github.com/pandas-dev/pandas">Here.</a>
+                    </b>
+                </p>
+                <p class="lead">
+                    <b>
+                        In computer programming, pandas is a software library written for the Python programming language for data manipulation and analysis. In particular, it offers data structures and operations for manipulating numerical tables and time series.
+                        It is free software released under the three-clause BSD license.
+                        The name is derived from the term "panel data", an econometrics term for data sets that include observations over
+                        multiple time periods for the same individuals.
+                        Its name is a play on the phrase "Python data analysis" itself.
+                        Wes McKinney started building what would become pandas at AQR Capital while he was a researcher there from 2007 to 2010.<br>
+
+                        The pandas package is the most important tool at the disposal of Data Scientists and Analysts working in Python today. The powerful machine learning and glamorous visualization tools may get all the attention, but pandas is
+                        the backbone of most data projects.<br>
+
+                        Pandas has so many uses that it might make sense to list the things it can't do instead of what it can do.
+
+                        This tool is essentially your data’s home. Through pandas, you get acquainted with your data by cleaning, transforming, and analyzing it.<br>
+
+
+                    </b>
+                </p>
+                <h4>Dataframes</h4>
+                <p class="lead">
+                    <b>
+                        Pandas is mainly used for data analysis. Pandas allows importing data from various file formats such as comma-separated values, JSON, SQL, Microsoft Excel.
+                        Pandas allows various data manipulation operations such as merging,reshaping, selecting,
+                        as well as data cleaning, and data wrangling features.
+                    </b>
+                </p>
+                <p class="lead">
+                    <b>
+                        <strong> For Example:-</strong><br>
+                        say you want to explore a dataset stored in a CSV on your computer. Pandas will extract the data from that CSV into a DataFrame — a table, basically — then let you do things like:
+                        <br>
+                        Calculate statistics and answer questions about the data, like<br>
+                        &nbsp;&nbsp;->What's the average, median, max, or min of each column?<br>
+                        &nbsp;&nbsp;->Does column A correlate with column B?<br>
+                        &nbsp;&nbsp;->What does the distribution of data in column C look like?<br>
+                        Clean the data by doing things like removing missing values and filtering rows or columns by some criteria.<br>
+                        Visualize the data with help from Matplotlib. Plot bars, lines, histograms, bubbles, and more.<br>
+                        Store the cleaned, transformed data back into a CSV, other file or database.<br>
+                        <br>
+                        Before you jump into the modeling or the complex visualizations you need to have a good understanding of the nature of your dataset and pandas is the best avenue
+                        through which to do that.
+                    </b>
+                </p><br>
+                <img alt="the-rise-in-popularity-of-pandas.png" class="img-responsive" src="https://storage.googleapis.com/lds-media/images/the-rise-in-popularity-of-pandas.width-1200.png" width="600" height="300"><br>
+                <br>
+                <p class="lead">
+                    <b>
+                        For tutorial Click<a href="https://pandas.pydata.org/docs/getting_started/intro_tutorials/">Here.</a><br>
+                        For Examples Click<a href="https://towardsdatascience.com/30-examples-to-master-pandas-f8a2da751fa4">Here</a>
+                    </b>
+                </p>
+
+                <hr class="separate" style="border-top: 3px solid #fff">
+
+
+                <!-- ************************************************************************************** -->
+
+
+
+                <!-- ************************************************************************************** -->
+                <p class="lead"><b><a href="Python_3.html" style="font-size:35px;color:white;text-decoration:none"><i>Next--></i></a></b></p>
+                <!-- ************************************************************************************** -->
+                <hr class="separate" style="border-top: 3px solid #fff">
+
+            </div>
+
+        </div>
+
+        </div>
+        <!-- End demo content -->
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+
+        <script>
+            $(function() {
+                // Sidebar toggle behavior
+                $('#sidebarCollapse').on('click', function() {
+                    $('#sidebar, #content').toggleClass('active');
+                });
+            });
+        </script>
+
+    </body>
+
+
+
+
+    </html>

@@ -1,0 +1,788 @@
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+
+        <title>
+
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+
+    </head>
+    <style>
+        .vertical-nav {
+            min-width: 17rem;
+            width: 17rem;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s;
+        }
+
+        .page-content {
+            width: calc(100% - 17rem);
+            margin-left: 17rem;
+            transition: all 0.4s;
+        }
+
+        /* for toggle behavior */
+
+        #sidebar.active {
+            margin-left: -17rem;
+        }
+
+        #content.active {
+            width: 100%;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            #sidebar {
+                margin-left: -17rem;
+            }
+
+            #sidebar.active {
+                margin-left: 0;
+            }
+
+            #content {
+                width: 100%;
+                margin: 0;
+            }
+
+            #content.active {
+                margin-left: 17rem;
+                width: calc(100% - 17rem);
+            }
+        }
+
+
+
+
+        body {
+            background: #599fd9;
+            background: -webkit-linear-gradient(to right, #599fd9, #c2e59c);
+            background: linear-gradient(to right, #599fd9, #c2e59c);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .separator {
+            margin: 3rem 0;
+            border-bottom: 1px dashed #fff;
+        }
+
+        .text-uppercase {
+            letter-spacing: 0.1em;
+        }
+
+        .text-gray {
+            color: #525252;
+        }
+    </style>
+
+    <body>
+
+
+        <!-- Vertical navbar Starts Here -->
+
+        <div class="vertical-nav " id="sidebar">
+            <!-- style="position:fixed" -->
+            <!-- bg-white -->
+            <div class="py-8 px-3 mb-4 ">
+                <!-- bg-white -->
+               
+                <div class="media d-flex align-items-center" style="padding-top:20px;" ><img src="Img/download.jfif" alt="..." width="70" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+                    <div class="media-body">
+                        <h4 class="m-0" style="font-size:20px;"><i></i></h4>
+                        <p class="font-weight text-dark mb-0"><i>
+                                
+                            </i></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="separator"></div>
+            <!--         <hr class="solid" style="border-top: 3px solid #bbb"> -->
+            <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0 ">Index</p>
+
+            <ul class="nav flex-column  mb-0" style="font-weight:bold">
+                <!-- bg-white -->
+                <li class="nav-item">
+                    <a href="#py" class="nav-link text-dark font-italic ">
+                        <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                        Start
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#in" class="nav-link text-dark font-italic ">
+                        <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                        Introduction
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#hi" class="nav-link text-dark font-italic">
+                        <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                        History
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#ap" class="nav-link text-dark font-italic">
+                        <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                        Applications of Python
+                    </a>
+                </li>
+               
+            </ul>
+
+            <ul class="nav flex-column  mb-0" style="font-weight:bold">
+                <!-- bg-white -->
+                <li class="nav-item">
+                    <a href="#bif" class="nav-link text-dark font-italic">
+                        <i class="fa fa-area-chart mr-3 text-primary fa-fw"></i>
+                        Python Built-in functions
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#fw" class="nav-link text-dark font-italic">
+                        <i class="fa fa-bar-chart mr-3 text-primary fa-fw"></i>
+                        Python Frameworks
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="Python_2.html" class="nav-link text-dark font-italic">
+                        <i class="fa fa-pie-chart mr-3 text-primary fa-fw"></i>
+                        Python Libraries
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link text-dark font-italic">
+                        <i class="fa fa-line-chart mr-3 text-primary fa-fw"></i>
+                        <-BACK TO HOME </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Vertical navbar ends here -->
+        <!-- Page content holder -->
+
+        <div class="page-content p-5" id="content">
+
+            <!-- Toggle button -->
+
+            <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">MENU</small></button>
+
+            <!-- Toggle button ends here -->
+
+            <!-- *************************************************************************************** -->
+            <h2 class="display-4 text-white" id="py">Python</h2>
+            <p class="lead text-white mb-0"> <i>By Guido van Rossum</i></p>
+            <p class="lead text-white">Snippet by <a href="https://www.python.org/doc/" class="text-white">
+                    <u>python.org</u></a>
+            </p>
+
+            <p class="lead text-white">For downloading latest version Click <a href="https://www.python.org/ftp/python/3.9.1/python-3.9.1-amd64.exe" class="text-white">
+                    <u>Here</u></a>
+            </p>
+
+            <hr class="separate" style="border-top: 3px solid #fff">
+
+            <p class="lead"><b><a href="Python.html" style="font-size:35px;color:white;text-decoration:none"><i>
+                            <--Back </i></a></b></p>
+            <hr class="separate" style="border-top: 3px solid #fff">
+
+
+            <!-- *********************************************************************8 -->
+            <div class="col-lg-12">
+
+                <img class="size-medium wp-image-2197 align:left" style="float: left;" src="https://hackr.io/blog/uploads/images/15701909131F385ItQrj.jpg" alt="Cubic Web" width="120" height="50">
+                <br><br><br>
+                <h4><b>Framework-Name:-CubicWeb<br>Type:- Full-Stack Framework</b></h4>
+
+                <p class="lead"><b>
+                        CubicWeb is a semantic web application framework, licensed under the LGPL, that empowers developers to efficiently build web applications by reusing components (called cubes) and following the well known object-oriented design principles.<br>
+                        It is developed and curated by Logilab, CubicWeb is a free-to-use, semantic, open-source, Python-based web framework. Based on the data model, CubicWeb requires
+                        to have the same defined in order to develop a functional application.<br>
+                        Unlike other popular Python frameworks that use separate views and models, CubicWeb makes use of cube. Multiple cubes are then joined together for creating an instance
+                        with the help of a database, a web server, and some configuration files.
+                    </b></p>
+
+                <h5><b>Key Highlights:-</b></h5>
+
+                <p class="lead"><b>
+                        - OWL (Web Ontology Language) and RDF (Resource Description Framework) support.<br>
+                        - Reusable components.<br>
+                        - Security workflows.<br>
+                        - Simplifies data-related queries with RQL (Relational Query Language) embedding.<br>
+                        - Support for multiple databases.<br>
+                    </b></p>
+
+                <p class="lead"><b>To Download it:-</b>
+                    <a href="https://cubicweb.readthedocs.io/en/3.29/book/admin/setup/#id1"> click here.</a>
+                    <br>
+                    For <a href="https://cubicweb.readthedocs.io/en/3.29/tutorials/"> Tutorial</a>
+                </p>
+                <hr class="separate" style="border-top: 3px solid #fff">
+
+                <!-- ************************************************************************************** -->
+
+                <img class="size-medium wp-image-2198 align:left" style="float: left;" src="https://hackr.io/blog/uploads/images/1570190913quzIg2iBPR.jpg" alt="Dash" width="100" height="50">
+                <br><br><br>
+                <h4><b>Framework-Name:-DASH<br>Type:- Micro-Framework</b></h4>
+                <p class="lead"><b>
+                        Dash is an open-source Python-based framework for building analytical web applications. It is an ideal Python framework for data scientists
+                        that aren’t much into the mechanics of web development.<br>
+                        Applications designed with Dash are web servers that run Flask and communicate with JSON packets via HTTP requests. Their frontend renders components using ReactJS.
+                        Flask plugins can be used for extending the capabilities of Dash.<br>
+                        Because Dash apps are rendered in the web browser and can be deployed to servers, they are cross-platform and mobile-ready. Dash developers are provided access to the underlying
+
+                        Flask instance as well as all of its configurable properties.
+                    </b>
+                </p>
+                <h5><b>Key Highlights:-</b></h5>
+
+                <p class="lead"><b>
+                        - Dash apps demand very little boilerplate code for getting started.<br>
+                        - Error handling (Dash Deployment Server).<br>
+                        - High-degree of customization.<br>
+                        - LDAP integration (Dash Deployment Server).<br>
+                        - Plugin support.<br>
+                        - Simple interface for tying UI controls, including dropdowns, graphs, and sliders.<br>
+                        - URL routing (Dash Deployment Server).<br>
+                    </b>
+                </p>
+                <p class="lead"><b>To install it:-</b>
+                </p>
+                <div class="shadow p-3 mb-5  bg-white rounded">
+                    pip install dash==1.19.0
+                </div>
+                <p class="lead"><b>For example and its output, Click
+                        <a href="https://dash.plotly.com/layout"> Here.</a><br>
+                        For<a href="https://dash.plotly.com/">Tutorial</a>
+                    </b>
+                </p>
+                <hr class="separate" style="border-top: 3px solid #fff">
+
+                <!-- ************************************************************************************** -->
+
+                <img class="wp-image-2199 size-medium align:left" style="float: left;" src="https://hackr.io/blog/uploads/images/1570190913zPmaZPCDto.jpg" alt="Django" width="100" height="50">
+                <br><br><br>
+                <h4><b>Framework-Name:-django<br>Type:- Full-Stack Framework</b></h4>
+                <p class="lead"><b>
+                        Django is one of the most beloved web development frameworks for developing Python applications. In fact, it ended up being one of the top 10 web development frameworks of 2021.
+                        Django framework follows the DRY (Don’t Repeat Yourself) principle.<br>
+                        Unlike others, the free-to-use and open-source full-stack Python framework include a grand number of built-in features rather than offering them as individual libraries.
+                        Django makes use of its ORM for mapping objects to database tables.<br>
+                        This results in allowing the code to work across different databases as well as making it easier to migrate from one database to the other. Though Django has inherent support for MySQL, PostgreSQL, SQLite, and Oracle Database, it can support other databases via
+                        third-party drivers.
+                    </b>
+                </p>
+
+                <h5><b>Key Highlights:-</b></h5>
+                <p class="lead"><b>
+                        - A plethora of ready-to-use libraries.<br>
+                        - Authentication support.<br>
+                        - Database schema migrations.<br>
+                        - Object-relational mapper (ORM).<br>
+                        - Support for web servers.<br>
+                        - Template engine.<br>
+                        - URL routing.<br>
+                    </b>
+                </p>
+                <p class="lead"><b>To install it:-</b>
+                </p>
+                <div class="shadow p-3 mb-5  bg-white rounded">
+                    py -m pip install Django
+                </div>
+
+
+
+                <p class="lead"><b>
+                        For <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django"> Tutorial.</a>(Link 1)<br>
+                        For<a href="https://docs.djangoproject.com/en/stable/intro/tutorial01/">Tutorial</a>(Link 2)<br>
+
+                    </b>
+                </p>
+                <hr class="separate" style="border-top: 3px solid #fff">
+
+                <!-- ************************************************************************************** -->
+
+                <img class="size-full wp-image-2192 align:left" style="float: left;" src="https://hackr.io/blog/uploads/images/1570190913mkQ4i8XlXI.jpg" alt="Falcon" width="100" height="80">
+
+                <br><br><br><br>
+                <h4><b>Framework-Name:-Falcon<br>Type:- Micro-Framework</b></h4>
+                <p class="lead"><b>
+                        Falcon aimed at rapidly building web APIs, Falcon is another widely used Python framework. Unlike other Python frameworks that require loading a lot of dependencies for building HTTP APIs, Falcon allows developers to
+                        build a cleaner design that enables HTTP and REST architectures.<br>
+                        As per the benchmark test conducted by Sanic, Falcon is able to handle most requests with the same hardware than all its contemporaries. The Python framework aims to have 100% code coverage. Falcon is used by big players
+                        like LinkedIn, OpenStack, and RackSpace.<br>
+                        Falcon is a reliable, high-performance Python
+                        web framework for building large-scale app backends
+                        and microservices. It encourages the REST architectural
+                        style, and tries to do as little as possible while remaining
+                        highly effective.<br>
+
+                        Falcon apps work with any WSGI server, and run like a champ under CPython 2.7, CPython 3.5+, PyPy2.7, and PyPy3.5.
+                    </b>
+                </p>
+
+                <h5><b>Key Highlights:-</b></h5>
+                <p class="lead"><b>
+                        - An extensible, highly-optimized code base.<br>
+                        - DRY request processing through middleware components and hooks.<br>
+                        - Ease of access for headers and bodies via request and response classes.<br>
+                        - Extra speed boost with Cython support.<br>
+                        - Idiomatic HTTP error responses.<br>
+                        - REST-inspired resource classes and URI templates offer intuitive routing.<br>
+                        - Unit testing via WSGI helpers and mocks.<br>
+                        - Upfront exception handling.<br>
+                    </b>
+                </p>
+                <p class="lead"><b>To install it:-</b>
+                </p>
+                <div class="shadow p-3 mb-5  bg-white rounded">
+                    pip install falcon
+                </div>
+
+                <p class="lead"><b>
+                        Example:"Hello World" in Falcon.Click <a href="https://www.youtube.com/watch?v=WTgd6GbzRqs">Here</a>
+                        <br>
+                        Useful video links for Falcon Frameworks,Click <a href="https://www.youtube.com/watch?v=W6JvboT8Uo8&list=PLLhEJK7fQIxBzJtrjyVDu6RGhSCTmo5rH">Here</a>
+                    </b>
+                </p>
+                <hr class="separate" style="border-top: 3px solid #fff">
+
+                <!-- ************************************************************************************** -->
+
+                <img class=" wp-image-2200 align:left" style="float: left;" src="https://hackr.io/blog/uploads/images/1570190913EgYDyCGZrh.jpg" alt="Flask" width="100" height="120">
+
+                <br><br><br><br><br><br>
+                <h4><b>Framework-Name:-Flask<br>Type:- Micro-Framework</b></h4>
+                <p class="lead"><b>
+                        Available under the BSD license, Flask is another popular Python framework. Inspired by the Sinatra Ruby framework, the microframework requires Jinja2 template and Werkzeug WSGI toolkit.
+                        Thanks to its lightweight and modular design, Flask is readily adaptable.<br>
+
+                        Flask allows the developers to build a solid web application foundation from where it is possible to use any kind of extensions required.
+                        <br> The micro-framework is compatible with Google App Engine.
+                    </b>
+                </p>
+
+                <h5><b>Key Highlights:-</b></h5>
+                <p class="lead"><b>
+                        -Built-in fast debugger.<br>
+                        -HTTP request handling.<br>
+                        -Inbuilt development server.<br>
+                        -Jinja2 templating.<br>
+                        -RESTful request dispatching.<br>
+                        -Support for plugging in any ORM.<br>
+                        -Supports secure cookies to establish client-side sessions.<br>
+                        -Unicode-based.<br>
+                        -Unit testing support.<br>
+                        WSGI 1.0 compliance.<br>
+                    </b>
+                </p>
+
+
+
+                <p class="lead"><b>To install it:-</b>
+                </p>
+                <div class="shadow p-3 mb-5  bg-white rounded">
+                    pip install Flask
+                </div>
+                <h4>Example:</h4>
+
+                <div class="shadow p-3 mb-5  bg-white rounded">
+                    <p class="lead"><b>
+                            from flask import Flask<br>
+                            <br>
+                            app = Flask(__name__)<br>
+                            <br>
+                            @app.route("/")<br>
+                            def hello():<br>
+                            return "Hello, World!"<br>
+                        </b>
+                    </p>
+                </div>
+                <h4>Output:</h4>
+
+                <div class="shadow p-3 mb-5  bg-white rounded">
+                    <p class="lead"><b>
+                            $ env FLASK_APP=hello.py flask run.<br>
+                            * Serving Flask app "hello".<br>
+                            * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit).<br>
+                        </b>
+                    </p>
+                </div>
+
+                <p class="lead">
+                    <b>For tutorial Click
+                        <a href="https://flask.palletsprojects.com/en/1.1.x/tutorial/">
+                            Here.
+
+                        </a>
+                    </b>
+                </p>
+
+                <hr class="separate" style="border-top: 3px solid #fff">
+
+                <!-- ************************************************************************************** -->
+
+                <img class="size-medium wp-image-2201 align:left" style="float: left;" src="https://hackr.io/blog/uploads/images/1570190913HQ4jlaXnHo.jpg" alt="Giotto" width="100" height="50">
+                <br><br><br>
+                <h4><b>Framework-Name:-giotto<br>Type:- Full-Stack Framework</b></h4>
+                <p class="lead"><b>
+                        It is based on the Model View Controller pattern, Giotto is an application framework for Python. In order to allow web designers, web developers, and system admins to work independently,
+                        Giotto separates Model, View, and Controller elements in order.<br>Giotto includes controller modules that enable users to create apps on top of the web, IRC (Internet Relay Chat), and
+                        command line.<br>
+                        Giotto is a python application framework. Not quite a web framework, but it does include plumbing for deploying applications
+                        through a web server.
+                    </b>
+                </p>
+
+                <h5><b>Key Highlights:-</b></h5>
+                <p class="lead"><b>
+                        - Automatic URL routing.<br>
+                        - Database persistence with SQLAlchemy.<br>
+                        - Extremely succinct code.<br>
+                        - Functional CRUD patterns.<br>
+                        - Generic models and views.<br>
+                        - Inbuilt cache with support for Memcache and Redis (Available API for extending support for other engines).<br>
+                        - Jinja2 for HTML templates (API available for supporting other template engines).<br>
+                        - Multiple pluggable controllers.<br>
+                        - RESTful interface with normal “browser POST” CRUD site.<br>
+                        - Extremely terse code. A full featured blog application is under 300 lines of code (including templates).<br>
+                        - Free RESTful interface along with your normal “browser POST” CRUD site.<br>
+                        - SQLAlchemy for database persistence.<br>
+                    </b>
+                </p>
+
+                <p class="lead"><b>To install it:-</b>
+                </p>
+                <div class="shadow p-3 mb-5  bg-white rounded">
+                    pip install giotto
+                </div>
+
+                <p class="lead"><b>For Example:-<br>Install and create base project files:</b>
+                </p>
+                <div class="shadow p-3 mb-5  bg-white rounded">
+                    pip install giotto<br>
+                    mkdir demo<br>
+                    giotto create http
+                </div>
+                <p class="lead"><b>Now your project is initialized. Open the manifest.py and add the following:</b>
+                </p>
+                <div class="shadow p-3 mb-5  bg-white rounded"><b>
+                        from giotto.programs import ProgramManifest, GiottoProgram<br>
+                        from giotto.views import jinja_template, BasicView<br>
+                        <br>
+                        def multiply(x, y):<br>
+                        x = int(x or 0)<br>
+                        y = int(y or y)<br>
+                        return {'x': x, 'y': y, 'result': x * y}<br>
+                        <br>
+                        manifest = ProgramManifest({<br>
+                        'multiply': GiottoProgram(<br>
+                        model=[multiply],<br>
+                        view=BasicView(<br>
+                        html=jinja_template('multiply.html'),<br>
+                        ),<br>
+                        ),<br>
+                        })<br>
+                    </b>
+                </div>
+                <!--  <p class="lead"><b>Now create a file called multiply.html:</b>
+            </p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded"><b>
+                    
+                       <pre> 
+                        !DOCTYPE html
+                        <html>
+                            <body>
+                                {{ data.x }} * {{ data.y }} == <strong>{{ data.result }}</strong>
+                            </body>
+                        </html>
+                        </pre>
+                </b>
+            </div> -->
+                <p class="lead"><b>Run the development server:</b>
+                </p>
+                <div class="shadow p-3 mb-5  bg-white rounded"><b>
+                        $ giotto http --run
+                    </b>
+                </div>
+                <p class="lead"><b>Point your browser to<u> http://localhost:5000/multiply?x=3&y=3</u>. Additionaly, try<u> http://localhost:5000/multiply.json?x=3&y=3</u>.
+                        You can also invoke your multiply program through the command line:</b>
+                </p>
+                <div class="shadow p-3 mb-5  bg-white rounded"><b>
+                        $ giotto create cmd<br>
+                        $ giotto cmd multiply --x=4 --y=2
+                    </b>
+                </div>
+
+                <p class="lead"><b>Also:
+
+                    </b>
+                </p>
+                <div class="shadow p-3 mb-5  bg-white rounded"><b>
+                        $ giotto cmd multiply.html --x=4 --y=2
+                    </b>
+                </div>
+
+                <p class="lead"><b>You can also use positional arguments:
+                    </b>
+                </p>
+
+                <div class="shadow p-3 mb-5  bg-white rounded"><b>
+                        $ giotto cmd multiply/4/6
+                    </b>
+                </div>
+                <p class="lead">
+                    <b>For Documentation Click
+                        <a href="http://giotto.readthedocs.org/en/latest/index.html">
+                            Here.
+
+                        </a>
+                    </b>
+                </p>
+                <hr class="separate" style="border-top: 3px solid #fff">
+
+                <!-- ************************************************************************************** -->
+                <img class="size-full wp-image-2202 align:left" style="float: left;" src="https://hackr.io/blog/uploads/images/1570190913HhoKuUW18j.jpg" alt="Growler" width="120" height="80">
+                <br><br><br><br>
+                <h4><b>Framework-Name:-Growler<br>Type:-Asynchronous Framework</b></h4>
+                <p class="lead"><b>
+                        Inspired by the NodeJS and the Express/Connect frameworks, Growler is a micro web framework
+                        written atop the Python’s asyncio library.<br>
+                        Unlike other conventional Python frameworks, requests in Growler aren’t handled in the framework but by passing
+                        through middleware technology.<br>
+                        A top choice among Python frameworks for easily and quickly implementing complex applications, Growler was originally developed by its author to simply learn how to use asyncio
+                        library at its lowest levels.<br>
+                    </b>
+                </p>
+                <h5><b>Key Highlights:-</b></h5>
+                <p class="lead"><b>
+                        - Easy to see program flow due to lack of required
+                        callbacks and proper try/except blocks.<br>
+                        - Support for a multitude of open-source packages.<br>
+                        - Use decorators for writing clean, reusable code.<br>
+                        - Ziapp module allows zipping an entire application into
+                        a single executable file.<br>
+                    </b>
+                </p>
+                <p class="lead"><b>To install it:-</b>
+                </p>
+                <div class="shadow p-3 mb-5  bg-white rounded">
+                    pip install growler
+                </div>
+
+                <p class="lead">
+                    <b>How to use it ?,Click
+                        <a href="https://www.youtube.com/watch?v=vs7XOn1TXVQ">
+                            Here.
+
+                        </a>
+                        <br>
+                        For documentation and example Click
+                        <a href="https://pypi.org/project/growler/0.5.5/">Here. </a>
+                    </b>
+                </p>
+
+
+
+
+                <hr class="separate" style="border-top: 3px solid #fff">
+
+                <!-- ************************************************************************************** -->
+
+                <img class="size-medium wp-image-2209 align:left" style="float: left;" src="https://hackr.io/blog/uploads/images/1570190913CB7aHiQeNV.jpg" alt="Web2Py" width="130" height="60">
+
+                <br><br><br><br>
+                <h4><b>Framework-Name:-WEB2PY<br>Type:-Full-Stack Framework</b></h4>
+                <p class="lead"><b>
+                        For Python developers looking for a scalable full-stack framework, Web2Py might be the answer. The open-source Python framework comes with its own web-based IDE,
+                        which includes a code editor, debugger, and one-click deployment.<br>
+                        Though Web2Py allow users to create dynamic web content in Python, it doesn’t provide support for Python 3. The ticketing system is one of the most important features of the Python framework.
+                        The system issues a ticket to the user whenever an error occurs.
+                    </b>
+                </p>
+                <h5><b>Key Highlights:-</b></h5>
+                <p class="lead"><b>
+                        - Ability to run on any web hosting platform that provides support for either Python or Java and Python.<br>
+                        - Backward compatibility.<br>
+                        - Built-in data security for preventing several common vulnerabilities, including cross-site scripting, injection flaws, and malicious file execution.<br>
+                        - Devoid of installation and configuration requirements.<br>
+                        - Follows MVC-pattern.<br>
+                        - Provides support for internationalization.<br>
+                        - Readability of multiple protocols.<br>
+                        - Role-based access control.<br>
+                    </b>
+                </p>
+
+                <p class="lead" style="font-size:25px;font-weight:200px"><b>
+                        To Download Web2Py follow below steps:-
+                    </b>
+                </p>
+
+                <p class="lead">
+                    <b>
+                        1)Download the source package from web2py official website:
+                        <a href="http://www.web2py.com/examples/static/web2py_src.zip"></a>, and unzip it.<br>
+                        As web2py doesn't requires installation, you can unzip it in any folder.<br>Using C:\web2py is convenient, to keep pathnames short.
+                    </b>
+                </p>
+                <p class="lead"><b>
+                        2)To start it, double-click web2py.py. You can also start it from the console:
+                    </b>
+                </p>
+                <div class="shadow p-3 mb-5  bg-white rounded"><b>
+                        cd c:\web2py<br>
+                        c:\python27\python.exe web2py.py</b>
+                </div>
+                <p class="lead"><b>
+                        3)Here you can add command-line parameters (-a to set an admin password, -p to specify an alternate port,
+                        and so on). You can see all the startup options with:
+                    </b>
+                </p>
+                <p class="lead">
+                    <b>For usage of this framework, Click
+                        <a href="https://www.digitalocean.com/community/tutorials/how-to-use-the-web2py-framework-to-quickly-build-your-python-app">
+                            Here.
+                        </a>
+                    </b>
+                </p>
+
+                <hr class="separate" style="border-top: 3px solid #fff">
+                <!-- ************************************************************************************** -->
+                <img class="size-full wp-image-2208 align:left" style="float: left;" src="https://hackr.io/blog/uploads/images/1570190913Nj0IngoxA6.jpg" alt="TurboGears" width="150" height="80">
+
+                <br><br><br><br>
+                <h4><b>Framework-Name:-TurboGears<br>Type:-Full-Stack Framework</b></h4>
+                <p class="lead"><b>
+                        TurboGears is a web application framework written in Python. Originally created by Kevin Dangoor in 2005, its latest version TurboGears (ver 2.3.7) is managed by a
+                        group of developers led by Mark Ramm and Florent Aide.<br>
+                        TurboGears follows the Model-View-Controller paradigm as do most modern web frameworks like Rails, Django, Struts, etc<br>
+
+                        TurboGears is a data-driven, open-source, full-stack web application framework for Python. The framework
+                        allows developers to rapidly develop extensible data-driven
+                        web apps.<br>
+                        In addition to supporting a flexible and powerful ORM, TurboGears come with intelligible templating. The full-stack framework makes use of components such as Genshi, Repoze, SQLAlchemy,
+                        and WebOb to easily and quickly develop apps requiring
+                        database connectivity.
+                    </b>
+                </p>
+                <h5><b>Key Highlights:-</b></h5>
+                <p class="lead"><b>
+                        - All features are implemented as function decorators.
+                        - Available command-line tools.<br>
+                        - MochiKit JavaScript library integration.<br>
+                        - Multi-database support.<br>
+                        - MVC-style architecture.<br>
+                        - PasteScript templates.<br>
+                        - ToscaWidgets for simplifying coordination of frontend design and server deployment.<br>
+                        - Uses Pylons as a web server.<br>
+                        - Validation support with FormEncode.<br>
+                    </b>
+                </p>
+                <div class="shadow p-3 mb-5  bg-white rounded"><b>
+                        pip install TurboGears</b>
+                </div>
+
+                <p class="lead"><b>
+                        For Example:-<br>
+                        <strong>app.py</strong>
+                    </b></p>
+                <div class="shadow p-3 mb-5  bg-white rounded"><b>
+                        from wsgiref.simple_server import make_server<br>
+                        from tg import expose, TGController, AppConfig<br>
+                        <br>
+                        class MyController(TGController):<br>
+                        <br>
+                        @expose()<br>
+                        def index(self):<br>
+                        return 'Hello World TurboGears'<br>
+                        <br>
+                        config = AppConfig(minimal = True, root_controller = MyController())<br>
+                        application = config.make_wsgi_app()<br>
+                        <br>
+                        print "Serving on port 8080..."<br>
+                        server = make_server('', 8080, application)<br>
+                        server.serve_forever()<br></b>
+                </div>
+                <p class="lead"><b>Run the above script from Python shell.</b></p>
+                <div class="shadow p-3 mb-5  bg-white rounded"><b>
+                        Python app.py</b>
+
+                </div>
+                <p class="lead">
+                    <b>
+                        Enter <strong>http://localhost:8080</strong> in browser’s address bar to view ‘Hello World TurboGears’ message.
+                        <br>
+                        The tg.devtools of TurboGears contains Gearbox. It is a set of commands, which are useful for management of more complex TG projects. Full stack projects can be quickly created by the following Gearbox command −<br>
+
+                    </b>
+                </p>
+                <div class="shadow p-3 mb-5  bg-white rounded"><b>
+                        gearbox quickstart HelloWorld</b>
+
+                </div>
+                <p class="lead">
+                    <b>
+                        This will create a project called <strong>HelloWorld</strong>.<br>
+                        For more information, Click <a href="https://www.tutorialspoint.com/turbogears/turbogears_first_program.htm">Here.</a>
+                    </b>
+                </p>
+
+                <hr class="separate" style="border-top: 3px solid #fff">
+
+                <!-- ************************************************************************************** -->
+
+
+
+                <!-- 
+            <img class=" wp-image-2207 alignleft" style="float: left;" src="https://hackr.io/blog/uploads/images/15701909133IPGawQymN.jpg" alt="Tornado" width="120" height="80">
+
+
+                        -->
+                <p class="lead"><b><a href="Python_2.html" style="font-size:35px;color:white;text-decoration:none"><i>Next--></i></a></b></p>
+
+
+                <!-- ************************************************************************************** -->
+
+
+            </div>
+
+        </div>
+
+        </div>
+        <!-- End demo content -->
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+
+        <script>
+            $(function() {
+                // Sidebar toggle behavior
+                $('#sidebarCollapse').on('click', function() {
+                    $('#sidebar, #content').toggleClass('active');
+                });
+            });
+        </script>
+
+    </body>
+
+
+
+
+    </html>
+

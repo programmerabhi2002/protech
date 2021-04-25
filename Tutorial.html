@@ -1,0 +1,657 @@
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+
+        <title>
+            Tutorial
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    </head>
+
+    <style>
+        .vertical-nav {
+            min-width: 17rem;
+            width: 17rem;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s;
+        }
+
+        .page-content {
+            width: calc(100% - 17rem);
+            margin-left: 17rem;
+            transition: all 0.4s;
+        }
+
+        /* for toggle behavior */
+
+        #sidebar.active {
+            margin-left: -17rem;
+        }
+
+        #content.active {
+            width: 100%;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            #sidebar {
+                margin-left: -17rem;
+            }
+
+            #sidebar.active {
+                margin-left: 0;
+            }
+
+            #content {
+                width: 100%;
+                margin: 0;
+            }
+
+            #content.active {
+                margin-left: 17rem;
+                width: calc(100% - 17rem);
+            }
+        }
+
+        body {
+            background: #599fd9;
+            background: -webkit-linear-gradient(to right, #599fd9, #c2e59c);
+            background: linear-gradient(to right, #599fd9, #c2e59c);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .separator {
+            margin: 3rem 0;
+            border-bottom: 1px dashed #fff;
+        }
+
+        .text-uppercase {
+            letter-spacing: 0.1em;
+        }
+
+        .text-gray {
+            color: #525252;
+        }
+
+        a {
+            color: #525252;
+        }
+    </style>
+
+    <body>
+
+        <!-- Vertical navbar -->
+        <div class="vertical-nav " id="sidebar">
+            <!-- bg-white -->
+            <div class="py-4 px-3 mb-4 ">
+                <!-- bg-white -->
+                <div class="media d-flex align-items-center"><img src="Img/T.png" alt="" width="80" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+
+                <div class="media-body">
+                    <h4 class="m-0" style="font-size:20px"><i></i></h4>
+                    <p class="font-weight text-dark mb-0"><i>
+                            
+                        </i></p>
+                </div>
+
+
+             </div>
+            </div>
+
+            <div class="separator"></div>
+            <!--         <hr class="solid" style="border-top: 3px solid #bbb"> -->
+            <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">
+            <b>
+            Index
+            </b>
+            </p>
+
+            <ul class="nav flex-column  mb-0"><b>
+                <!-- bg-white -->
+
+                <li class="nav-item">
+                    <a href="#python" class="nav-link text-dark font-italic ">
+                        <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                        Python
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#java" class="nav-link text-dark font-italic ">
+                        <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                        Java
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#javascript" class="nav-link text-dark font-italic">
+                        <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                        Javascript
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#r" class="nav-link text-dark font-italic">
+                        <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                       R
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#cpp" class="nav-link text-dark font-italic">
+                        <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                       C++
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#go" class="nav-link text-dark font-italic">
+                        <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                        GO
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#kotlin" class="nav-link text-dark font-italic">
+                        <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                        Kotlin
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#ruby" class="nav-link text-dark font-italic">
+                        <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                        Ruby
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#php" class="nav-link text-dark font-italic">
+                        <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                        PHP
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link text-dark font-italic">
+                        <i class="fa fa-line-chart mr-3 text-primary fa-fw"></i>
+                        <-BACK TO HOME</a>
+                </li>
+                </b>
+            </ul>
+
+        </div>
+        <!-- End vertical navbar -->
+
+        <!-- Page content holder -->
+        <div class="page-content p-5" id="content">
+            <!-- Toggle button -->
+            <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">MENU</small></button>
+
+            <!-- ************************************************************************************** -->
+            <div class="row text-white-bold">
+                <div class="col-lg-12">
+
+                    <div class="lead" id="python">
+
+                        <h3 class="text-dark" style="font-weight:600">Python</h3>
+                        <ul>
+                            <b>
+                                <li>
+                                    To Download latest version of Python:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://www.python.org/downloads/release/python-391/';" value="Download" />
+                                </li>
+                                <li>
+                                    To watch Tutorial in Hindi:<br>
+
+                                    <center>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/gfDE2a7MKjA?start=60" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </center>
+
+                                    To watch Tutorial in English:<br>
+
+                                    <center>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/_uQrJ0TkZlc?start=60" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </center>
+
+                                </li>
+
+                                <li>
+                                    To Download Cheatsheet of Python:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://github.com/ehmatthes/pcc/releases/download/v1.0.0/beginners_python_cheat_sheet_pcc_all.pdf';" value="Download" />
+
+                                </li>
+
+                                <li>
+                                    To Download of Python Tutorial PDF:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://bugs.python.org/file47781/Tutorial_EDIT.pdf';" value="Download" />
+
+                                </li>
+
+                                <li>
+                                    To know more about various Libraries or packages of Python:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://pypi.org/';" value="Click Here" />
+                                </li>
+
+                            </b>
+                        </ul>
+
+                    </div>
+
+                    <hr class="separate" style="border-top: 3px solid #fff">
+
+                    <div class="lead" id="java">
+
+                        <h3 class="text-dark" style="font-weight:600">Java</h3>
+                        <ul>
+                            <b>
+                                <li>
+                                    To Download latest version of Java:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://www.java.com/en/download/manual.jsp';" value="Download" />
+                                </li>
+                                <li>
+                                    To watch Tutorial in Hindi:<br>
+
+                                    <center>
+
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ntLJmHOJ0ME?start=61" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </center>
+
+                                    To watch Tutorial in English:<br>
+
+                                    <center>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/5W568dNIVPM?start=61" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </center>
+
+                                </li>
+
+                                <li>
+                                    To Download Cheatsheet of Java:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://drive.google.com/file/d/1TMHMh9aTqKv4-nx1B27RXWWoyyKzhImM/view?usp=sharing';" value="Download" />
+
+                                </li>
+
+                                <li>
+                                    To Download of Java Tutorial PDF:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://www.tutorialspoint.com/java/java_tutorial.pdf';" value="Download" />
+
+                                </li>
+
+                                <li>
+                                    To know more about various Libraries or packages of Java:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://docs.oracle.com/javase/10/core/java-core-libraries1.htm';" value="Click Here" />
+                                </li>
+
+                            </b>
+                        </ul>
+
+                    </div>
+
+                    <hr class="separate" style="border-top: 3px solid #fff">
+
+                    <div class="lead" id="javascript">
+
+                        <h3 class="text-dark" style="font-weight:600">Javascript</h3>
+                        <ul>
+                            <b>
+
+                                <li>
+                                    To watch Tutorial in Hindi:<br>
+
+                                    <center>
+
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/hKB-YGF14SY?start=61" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </center>
+
+                                    To watch Tutorial in English:<br>
+
+                                    <center>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/W6NZfCO5SIk?start=61" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </center>
+
+                                </li>
+
+                                <li>
+                                    To Download Cheatsheet of Javascript:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://websitesetup.org/wp-content/uploads/2020/09/Javascript-Cheat-Sheet.pdf';" value="Download" />
+
+                                </li>
+
+                                <li>
+                                    To Download of Javascript Tutorial PDF:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://matfuvit.github.io/UVIT/predavanja/literatura/TutorialsPoint%20JavaScript.pdf';" value="Download" />
+
+                                </li>
+
+                                <li>
+                                    To know more about Javascript:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://javascript.info/';" value="Click Here" />
+                                </li>
+
+                            </b>
+                        </ul>
+
+                    </div>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+                    <div class="lead" id="r">
+
+                        <h3 class="text-dark" style="font-weight:600">R</h3>
+                        <ul>
+                            <b>
+                                <li>
+                                    To Download latest version of R:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://cran.r-project.org/mirrors.html';" value="Download" />
+                                </li>
+                                <li>
+                                    To watch Tutorial in Hindi:<br>
+
+                                    <center>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SBhpLnPuNlI?start=61" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </center>
+
+                                    To watch Tutorial in English:<br>
+
+                                    <center>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/_V8eKsto3Ug?start=61" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </center>
+
+                                </li>
+
+                                <li>
+                                    To Download Cheatsheet of Python:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='http://datasciencefree.com/basicR.pdf';" value="Download" />
+
+                                </li>
+
+                                <li>
+                                    To Download of Python Tutorial PDF:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://www.tutorialspoint.com/r/r_tutorial.pdf';" value="Download" />
+
+                                </li>
+
+                                <li>
+                                    To know more about various Libraries or packages of Python:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://www.r-project.org/about.html';" value="Click Here" />
+                                </li>
+
+                            </b>
+                        </ul>
+
+                    </div>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+                    <div class="lead" id="cpp">
+
+                        <h3 class="text-dark" style="font-weight:600">C++</h3>
+                        <ul>
+                            <b>
+                                <li>
+                                    To Download latest version of C++:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0';" value="Download" />
+                                </li>
+                                <li>
+                                    To watch Tutorial in Hindi:<br>
+
+                                    <center>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/yGB9jhsEsr8?start=61" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </center>
+
+                                    To watch Tutorial in English:<br>
+
+                                    <center>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/vLnPwxZdW4Y?start=61" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </center>
+
+                                </li>
+
+                                <li>
+                                    To Download Cheatsheet of C++:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://github.com/ehmatthes/pcc/releases/download/v1.0.0/beginners_python_cheat_sheet_pcc_all.pdf';" value="Download" />
+
+                                </li>
+
+                                <li>
+                                    To Download of C++ Tutorial PDF:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://www.tutorialspoint.com/cplusplus/cpp_tutorial.pdf';" value="Download" />
+
+                                </li>
+
+                                <li>
+                                    To know more about C++:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://isocpp.org/';" value="Click Here" />
+                                </li>
+
+                            </b>
+                        </ul>
+
+                    </div>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+                    <div class="lead" id="go">
+
+                        <h3 class="text-dark" style="font-weight:600">GO</h3>
+                        <ul>
+                            <b>
+                                <li>
+                                    To Download latest version of GO:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://golang.org/dl/';" value="Download" />
+                                </li>
+                                <li>
+                                    To watch Tutorial in Hindi:<br>
+
+                                    <center>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/nK6qzdJ2-bc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </center>
+
+                                    To watch Tutorial in English:<br>
+
+                                    <center>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/YS4e4q9oBaU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>>
+                                    </center>
+
+                                </li>
+
+                                <li>
+                                    To Download Cheatsheet of GO:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='http://www.cheat-sheets.org/saved-copy/go-lang-cheat-sheet-master.20181212/golang_refcard.pdf';" value="Download" />
+
+                                </li>
+
+                                <li>
+                                    To Download of GO Tutorial PDF:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://www.tutorialspoint.com/go/go_tutorial.pdf';" value="Download" />
+
+                                </li>
+
+                                <li>
+                                    To know more about GO:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://golang.org/';" value="Click Here" />
+                                </li>
+
+                            </b>
+                        </ul>
+
+                    </div>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+                    <div class="lead" id="kotlin">
+
+                        <h3 class="text-dark" style="font-weight:600">Kotlin</h3>
+                        <ul>
+                            <b>
+                                <li>
+                                    To Download latest version of Kotlin:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://kotlinlang.org/api/latest/jvm/stdlib/org.w3c.dom.svg/-s-v-g-a-element/download.html';" value="Download" />
+                                </li>
+                                <li>
+                                    To watch Tutorial in Hindi:<br>
+
+                                    <center>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/yV97y7qcMP4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </center>
+
+                                    To watch Tutorial in English:<br>
+
+                                    <center>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/F9UC9DY-vIU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </center>
+
+                                </li>
+
+                                <li>
+                                    To Download Cheatsheet of Kotlin:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://medium.com/androiddevelopers/kotlin-standard-functions-cheat-sheet-27f032dd4326';" value="Download" />
+
+                                </li>
+
+                                <li>
+                                    To Download of Kotlin Tutorial PDF:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://www.tutorialspoint.com/kotlin/kotlin_tutorial.pdf';" value="Download" />
+
+                                </li>
+
+                                <li>
+                                    To know more about various Libraries or packages of Python:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://kotlinlang.org/';" value="Click Here" />
+                                </li>
+
+                            </b>
+                        </ul>
+
+                    </div>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+                    
+                    <div class="lead" id="ruby">
+
+                        <h3 class="text-dark" style="font-weight:600">Ruby</h3>
+                        <ul>
+                            <b>
+                                <li>
+                                    To Download latest version of Ruby:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://www.ruby-lang.org/en/downloads/';" value="Download" />
+                                </li>
+                                <li>
+                                    To watch Tutorial in Hindi:<br>
+
+                                    <center>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6GMPxYsvTss" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </center>
+
+                                    To watch Tutorial in English:<br>
+
+                                    <center>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/t_ispmWmdjY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </center>
+
+                                </li>
+
+                                <li>
+                                    To Download Cheatsheet of Ruby:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='http://www.testingeducation.org/conference/wtst3_pettichord9.pdf';" value="Download" />
+
+                                </li>
+
+                                <li>
+                                    To Download of Ruby Tutorial PDF:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://www.tutorialspoint.com/ruby/ruby_tutorial.pdf';" value="Download" />
+
+                                </li>
+
+                                <li>
+                                    To know more about Ruby:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://www.ruby-lang.org/en/';" value="Click Here" />
+                                </li>
+
+                            </b>
+                        </ul>
+
+                    </div>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+                    
+                    <div class="lead" id="php">
+
+                        <h3 class="text-dark" style="font-weight:600">PHP</h3>
+                        <ul>
+                            <b>
+                                <li>
+                                    To Download latest version of PHP:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://www.php.net/downloads.php';" value="Download" />
+                                </li>
+                                <li>
+                                    To watch Tutorial in Hindi:<br>
+
+                                    <center>
+                                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/1SnPKhCdlsU?start=300" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </center>
+
+                                    To watch Tutorial in English:<br>
+
+                                    <center>
+                                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/OK_JCtrrv-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </center>
+
+                                </li>
+
+                                <li>
+                                    To Download Cheatsheet of PHP:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://websitesetup.org/wp-content/uploads/2020/09/PHP-Cheat-Sheet.pdf';" value="Download" />
+
+                                </li>
+
+                                <li>
+                                    To Download of PHP Tutorial PDF:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://www.tutorialspoint.com/php/php_tutorial.pdf';" value="Download" />
+
+                                </li>
+
+                                <li>
+                                    To know more about PHP:<br>
+                                    <input class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4" type="button" onclick="window.location.href='https://www.php.net/manual/en/tutorial.php';" value="Click Here" />
+                                </li>
+
+                            </b>
+                        </ul>
+
+                    </div>
+
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+                  
+                </div>
+            </div>
+
+        </div>
+        <!-- End demo content -->
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+
+        <script>
+            $(function() {
+                // Sidebar toggle behavior
+                $('#sidebarCollapse').on('click', function() {
+                    $('#sidebar, #content').toggleClass('active');
+                });
+            });
+        </script>
+
+    </body>
+
+    </html>
+

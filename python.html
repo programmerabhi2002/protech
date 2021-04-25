@@ -1,0 +1,1800 @@
+
+
+    <!-- HTML Starts here -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+
+        <title>
+
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+
+    </head>
+
+    <!-- CSS starts from here -->
+
+    <style>
+        .vertical-nav {
+            min-width: 17rem;
+            width: 17rem;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s;
+        }
+
+        .page-content {
+            width: calc(100% - 17rem);
+            margin-left: 17rem;
+            transition: all 0.4s;
+        }
+
+        /* for toggle behavior */
+
+        #sidebar.active {
+            margin-left: -17rem;
+        }
+
+        #content.active {
+            width: 100%;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            #sidebar {
+                margin-left: -17rem;
+            }
+
+            #sidebar.active {
+                margin-left: 0;
+            }
+
+            #content {
+                width: 100%;
+                margin: 0;
+            }
+
+            #content.active {
+                margin-left: 17rem;
+                width: calc(100% - 17rem);
+            }
+        }
+
+
+        body {
+            background: #599fd9;
+            background: -webkit-linear-gradient(to right, #599fd9, #c2e59c);
+            background: linear-gradient(to right, #599fd9, #c2e59c);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .separator {
+            margin: 3rem 0;
+            border-bottom: 1px dashed #fff;
+        }
+
+        .text-uppercase {
+            letter-spacing: 0.1em;
+        }
+
+        .text-gray {
+            color: #525252;
+        }
+    </style>
+
+    <!-- CSS ENds here -->
+
+
+    <body>
+
+        <!-- Vertical navbar Starts Here -->
+
+        <div class="vertical-nav " id="sidebar">
+            <!-- style="position:fixed" -->
+            <!-- bg-white -->
+            <div class="py-4 px-3 mb-4 ">
+                <!-- bg-white -->
+                <div class="media d-flex align-items-center"><img src="Img/download.jfif" alt="..." width="70" class="mr-3 rounded-circle img-thumbnail shadow-sm">  
+
+                    <div class="media-body">
+                        <h4 class="m-0" style="font-size:20px"><i> </i></h4>
+                        <p class="font-weight text-dark mb-0"><i>
+                               
+                            </i></p>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="separator"></div>
+            <!--         <hr class="solid" style="border-top: 3px solid #bbb"> -->
+            <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Index</p>
+
+            <ul class="nav flex-column  mb-0" style="font-weight:bold">
+                <!-- bg-white -->
+                <li class="nav-item">
+                    <a href="#py" class="nav-link text-dark font-italic ">
+                        <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                        Start
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#in" class="nav-link text-dark font-italic ">
+                        <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                        Introduction
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#hi" class="nav-link text-dark font-italic">
+                        <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                        History
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#adop" class="nav-link text-dark font-italic">
+                        <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                        Advantages and &nbsp;&nbsp;&nbsp;&nbsp;Disadvantages of Python
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#ap" class="nav-link text-dark font-italic">
+                        <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                        Applications of Python
+                    </a>
+                </li>
+                <!--  <li class="nav-item">
+                <a href="#li" class="nav-link text-dark font-italic">
+                    <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                    Useful Links
+                </a>
+            </li> -->
+            </ul>
+
+            <ul class="nav flex-column  mb-0" style="font-weight:bold">
+                <!-- bg-white -->
+                <li class="nav-item">
+                    <a href="#bif" class="nav-link text-dark font-italic">
+                        <i class="fa fa-area-chart mr-3 text-primary fa-fw"></i>
+                        Python Built-in functions
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#fw" class="nav-link text-dark font-italic">
+                        <i class="fa fa-bar-chart mr-3 text-primary fa-fw"></i>
+                        Python Frameworks
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="Python_2.html" class="nav-link text-dark font-italic">
+                        <i class="fa fa-pie-chart mr-3 text-primary fa-fw"></i>
+                        Python Libraries
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link text-dark font-italic">
+                        <i class="fa fa-line-chart mr-3 text-primary fa-fw"></i>
+                        <-BACK TO HOME </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Vertical navbar ends here -->
+
+
+        <!-- Page content holder -->
+
+        <div class="page-content p-5" id="content">
+
+            <!-- Toggle button -->
+
+            <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">MENU</small></button>
+
+            <!-- Toggle button ends here -->
+
+            <!-- *************************************************************************************** -->
+           
+            <h2 class="display-4 text-white" id="py">Python</h2>
+            <p class="lead text-white mb-0"> <i>By Guido van Rossum</i></p>
+            <p class="lead text-white">Snippet by <a href="https://www.python.org/doc/" class="text-white">
+                    <u>python.org</u></a>
+            </p>
+
+            <p class="lead text-white">For downloading latest version Click <a href="https://www.python.org/ftp/python/3.9.1/python-3.9.1-amd64.exe" class="text-white">
+                    <u>Here</u></a>
+            </p>
+            <div class="separator"></div>
+            <div class="row text-white-bold">
+                <div class="col-lg-7">
+                    <h3 class="text-dark" style="font-weight:600" id="in">Introduction</h3>
+                    <p class="lead text"><b>Python is a
+                            widely used general-purpose, high-level
+                            programming language. It was initially designed by
+                            <i>Guido van Rossum</i> in 1991 and developed by Python
+                            Software Foundation. It was mainly developed for
+                            emphasis on code readability, and its syntax
+                            allows programmers to express concepts in fewer
+                            lines of code.</b></p>
+                    <div class="separator"></div>
+                    <h4><b style="font-weight:600" id="hi">Lets know more about history of Python-</b></h4>
+                    <p class="lead"> <b> In the late 1980s, history was about to be written. It was that time when working on Python started. Soon after that, Guido Van Rossum began doing its application based work in December of 1989 by at Centrum Wiskunde & Informatica (CWI) which is situated in Netherland. It was started firstly as a hobby project because he was looking for an interesting project to keep him occupied during Christmas. The programming language which Python is said to have succeeded is ABC Programming Language, which had the interfacing with the Amoeba Operating System and had the feature of exception handling. He had already helped to create ABC earlier in his career and he had seen some issues with ABC but liked most of the features. After that what he did as really very clever. He had taken the syntax of ABC, and some of its good features. It came with a lot of complaints too, so he fixed those issues completely and had created a good scripting language which had removed all the flaws.
+                            The inspiration for the name came from BBC’s TV
+                            Show – ‘Monty Python’s Flying Circus’,
+                            as he was a big fan of the TV show and also he
+                            wanted a short, unique and slightly mysterious
+                            name for his invention and hence he named it
+                            Python! He was the <i> “Benevolent dictator for
+                                life” (BDFL) </i>until he stepped down from the
+                            position as the leader on 12th July 2018.
+                            For quite some time he used to work for Google, but currently,
+                            he is working at Dropbox.</b>
+                    </p>
+                    <!-- *************************************************************************************** -->
+                    <div id="adop">
+                        <h3> Advantages and Disadvantages of Python</h3>
+                        <h4>Advantages:</h4>
+                        <ul class="lead">
+                            <b>
+                                <li>Extensive Support Libraries<br>
+                                    It provides large standard libraries that include the areas like string operations, Internet, web service tools, operating system interfaces and protocols. Most of the highly used programming tasks are already scripted into it that limits the length of the codes to be written in Python.</li>
+                                <li> Integration Feature<br> Python integrates the Enterprise Application Integration that makes it easy to develop Web services by invoking COM or COBRA components. It has powerful control capabilities as it calls directly through C, C++ or Java via Jython. Python also processes XML and other markup languages as it can run on all modern operating systems through same byte code.</li>
+                                <li>Improved Programmer’s Productivity<br>
+                                    The language has extensive support libraries and clean object-oriented designs that increase two to ten fold of programmer’s productivity while using the languages like Java, VB, Perl, C, C++ and C#.</li>
+                                <li>Productivity<br>
+                                    With its strong process integration features, unit testing framework and enhanced control capabilities contribute towards the increased speed for most applications and productivity of applications. It is a great option for building scalable multi-protocol network applications. </li>
+                            </b>
+                        </ul>
+                        <h4>Disadvantages:</h4>
+                        <ul class="lead">
+                            <b>
+                                <li>Difficulty in Using Other Languages<br>
+                                    The Python lovers become so accustomed to its features and its extensive libraries, so they face problem in learning or working on other programming languages. Python experts may see the declaring of cast “values” or variable “types”, syntactic requirements of adding curly braces or semi colons as an onerous task.</li>
+                                <li>Weak in Mobile Computing<br>
+                                    Python has made its presence on many desktop and server platforms, but it is seen as a weak language for mobile computing. This is the reason very few mobile applications are built in it like Carbonnelle.</li>
+                                <li>Gets Slow in Speed<br>
+                                    Python executes with the help of an interpreter instead of the compiler, which causes it to slow down because compilation and execution help it to work normally. On the other hand, it can be seen that it is fast for many web applications too.</li>
+                                <li>Run-time Errors<br>
+                                    The Python language is dynamically typed so it has many design restrictions that are reported by some Python developers. It is even seen that it requires more testing time, and the errors show up when the applications are finally run.</li>
+                            </b>
+                        </ul>
+
+                    </div>
+
+                    <!-- *************************************************************************************** -->
+                    <!-- Image Section -->
+
+                    <div>
+                        <p class="lead" style=" font-weight:500"><b>Timeline Of Python:-</b></p>
+                        <img class="responsive" src="Python Timeline.jpg" width="650" height="800">
+                    </div>
+
+                    <!-- *************************************************************************************** -->
+                    <!-- Quotes -->
+
+                    <div class="bg-white p-5 rounded my-5 shadow-sm">
+                        <p class="lead font-italic mb-0 text-muted"><b>"
+                                The joy of coding Python should be in seeing short, concise,
+                                readable classes that express a lot of action in a small amount of clear
+                                code — not in reams of trivial code that bores the reader to death".</b></p>
+                        <p class="lead font-italic mb-0 text-muted" style=" font-weight:400"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Guido van Rossum </b></p>
+                    </div>
+
+                    <!-- *************************************************************************************** -->
+
+                    <br>
+
+                    <!-- *************************************************************************************** -->
+
+
+                    <h2 class="lead text-dark display-5" style="font-weight:650;font-size:35px" id="ap">Applications for Python
+                    </h2>
+                    <p class="lead">
+                        <b>Python’s standard library is very extensive,
+                            offering a wide range of facilities as indicated by the long table of
+                            contents listed below. The library contains built-in modules (written in C) that
+                            provide access to system functionality such as file I/O that would otherwise be
+                            inaccessible to Python programmers, as well as modules written in Python that provide
+                            standardized solutions for many problems that occur in everyday programming.
+                            Some of these modules are explicitly designed to encourage and enhance the portability
+                            of Python programs by abstracting away platform-specifics into platform-neutral APIs.
+
+                        </b>
+                    </p>
+                    <p class="lead"><b>The Python installers for the Windows platform usually
+                            include the entire standard library and often also include many additional
+                            components. For Unix-like operating systems Python is normally provided as a
+                            collection of packages, so it may be necessary to use the packaging tools provided
+                            with the operating system to obtain some or all of the optional components.
+                            For more details regarding Python Standard Library <a href="http://pypi.org/">click here.</a>
+                        </b>
+                    </p>
+
+                    <div>
+                        <h3><i>Application for Python:-</i></h3>
+                        <h5>1)Web and Internet Development </h5>
+                        <h5>2)Scientific and Numeric </h5>
+                        <h5>3)Education </h5>
+                        <h5>4)Desktops GUI's </h5>
+                        <h5>5)Software Development </h5>
+                        <h5>6)Business Applications </h5>
+
+                    </div>
+
+                </div>
+
+                <!-- *************************************************************************************** -->
+
+                <!--    <div class="separator"></div>
+
+
+            <div class="separator"></div> -->
+
+                <!-- Right Page Starts from here -->
+
+                <!-- *************************************************************************************** -->
+
+                <div class="col-lg-5">
+                    <p class="lead"><b>Python is an interpreted, high-level and general-purpose programming language.
+                            Python's design philosophy emphasizes code readability with its notable use of
+                            significant whitespace.
+                            Its language constructs and object-oriented approach aim to help programmers
+                            write clear, logical code for small and large-scale projects.</b></p>
+                    <p class="lead"><b>Python is dynamically typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly, procedural), object-oriented and functional programming. Python is often described as a "batteries included"
+                            language due to its comprehensive standard library.</b>
+                    </p>
+                    <p class="lead"> <b>Python 2.0, released in 2000, introduced new features,
+                            such as list comprehensions, and a garbage collection system with reference
+                            counting, and was discontinued with version 2.7 in 2020.[30] Python 3.0,
+                            released in 2008, was a major revision of the language that is not completely
+                            backward-compatible and much Python 2 code does not run unmodified on
+                            Python 3. With Python 2's end-of-life, only Python 3.6.x[31] and later are
+                            supported, with older versions still supporting
+                            e.g. Windows 7 (and old installers not restricted to 64-bit Windows).
+                        </b>
+                    </p>
+                    <p class="lead"><b>Python interpreters are supported for mainstream operating systems and available for a few more (and in the past supported many more). A global community of programmers develops and maintains CPython, a free and open-source[32] reference implementation. A non-profit organization, the Python Software Foundation, manages and directs resources for Python and CPython development.
+
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+
+                            <br>
+
+                            <i style="font-weight:300">"As of December 2020 Python ranked third in TIOBE’s index of most popular programming
+                                languages, behind C and Java."</br></i>
+                    </p>
+                    <!--  <p class="lead">Hurram ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                    dolor.
+                </p> -->
+
+                    <hr class="solid" style="border-top: 4px solid #999">
+
+                </div>
+            </div>
+            <!-- *************************************************************************************** -->
+
+
+            <p class="lead " style="font-weight:200"><a class="text-white" href="https://blog.finxter.com/python-cheat-sheet/">!!!!!! <u> Python Cheat Sheets</u> !!!!!!</a>
+            </p>
+            <h5><i>
+                    <p class="lead" style="font-weight:500" id="li"> Complete list of Beginner's Guide pages</p>
+                    <a href="https://wiki.python.org/moin/BeginnersGuide/Download" class="text-dark">-->BeginnersGuide/Download </a>
+                    <br>
+                    <a class="text-dark" href="https://wiki.python.org/moin/BeginnersGuide/Examples">--> BeginnersGuide/Examples</a>
+                    <br>
+                    <a class="text-dark" href="https://wiki.python.org/moin/BeginnersGuide/Help"> -->BeginnersGuide/Help</a>
+                    <br>
+                    <a class="text-dark" href="https://wiki.python.org/moin/BeginnersGuide/Mathematics"> -->BeginnersGuide/Mathematics</a>
+                    <br>
+                    <a class="text-dark" href="https://wiki.python.org/moin/BeginnersGuide/NonProgrammers"> -->BeginnersGuide/NonProgrammers</a>
+                    <br>
+                    <a class="text-dark" href="https://wiki.python.org/moin/BeginnersGuide/Overview">--> BeginnersGuide/Overview</a>
+                    <br>
+                    <a class="text-dark" href="https://wiki.python.org/moin/BeginnersGuide/Programmers">--> BeginnersGuide/Programmers</a>
+                    <br>
+                    <a class="text-dark" href="https://wiki.python.org/moin/BeginnersGuide/Programmers?action=AttachFile&do=view&target=Cpp2Python.pdf"> -->BeginnersGuide/Programmers (Cpp2Python.pdf)</a>
+                    <br>
+                    <a class="text-dark" href="https://wiki.python.org/moin/BeginnersGuide/Programmers/SimpleExamples"> --> BeginnersGuide/Programmers/SimpleExamples</a>
+                </i> </h5>
+
+            <!-- *************************************************************************************** -->
+
+
+            <hr class="solid" style="border-top: 3px solid #999">
+            <br>
+
+            <h2 id="bif">Python Built-in Functions</h2>
+            &nbsp;
+            &nbsp;
+            <p class="lead"><b>There are many built-in function in python from which most useful and handy
+                    functions and there details provided below.</b></p>
+            <!-- *************************************************************************************** -->
+
+            <div class="separator"></div>
+
+            <h4>Python abs()</h4>
+            <br>
+
+            <p class="lead"><b>The abs() method returns the absolute value of
+                    the given number. If the number is a complex number, abs()
+                    returns its magnitude.</b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>The syntax of <code>abs()</code> method is:</b></p>
+                <h5>abs(num)</h5>
+            </div>
+            <hr>
+
+            <h4>Example:-Get absolute value of a number</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"> # random integer<br>
+                    <b> integer = -20<br>
+                        print('Absolute value of -20 is:', abs(integer))</b><br>
+
+                    #random floating number<br>
+                    <b> floating = -30.33<br>
+                        print('Absolute value of -30.33 is:', abs(floating)) </b>
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>Absolute value of -20 is: 20<br>
+                        Absolute value of -30.33 is: 30.33</b></p>
+            </div>
+
+            <!-- *************************************************************************************** -->
+
+            <div class="separator"></div>
+
+            <h4>Python ascii()</h4>
+            <br>
+
+            <p class="lead"><b>The ascii() method returns a string containing a printable representation of an object. It escapes the non-ASCII characters in the string using \x, \u or
+                    \U escapes.</b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>The syntax of <code>ascii()</code> method is:</b></p>
+                <h5>ascii(object)</h5>
+            </div>
+            <hr>
+
+
+            <h4>Example:-How ascii() method works?</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>normalText = 'Python is interesting'<br>
+
+                        print(ascii(normalText))<br>
+
+                        otherText = 'Pythön is interesting'<br>
+
+                        print(ascii(otherText)) <br>
+                        print('Pyth\xf6n is interesting') </b>
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>'Python is interesting'<br>
+                        'Pyth\xf6n is interesting'<br>
+                        Pythön is interesting</b></p>
+            </div>
+
+            <!-- *************************************************************************************** -->
+
+            <div class="separator"></div>
+
+            <h4>Python bool()</h4>
+            <br>
+
+            <p class="lead"><b>The bool() method converts a value to Boolean (True or False) using the standard truth testing procedure.</b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>The syntax of <code>bool()</code> method is:</b></p>
+                <h5>bool([value])</h5>
+            </div>
+            <hr>
+
+
+            <h4>Example:-How bool() works?</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>test = []<br>
+                        print(test,'is',bool(test))<br>
+                        <br>
+                        test = [0]<br>
+                        print(test,'is',bool(test))<br>
+                        <br>
+                        test = 0.0<br>
+                        print(test,'is',bool(test))<br>
+                        <br>
+                        test = None<br>
+                        print(test,'is',bool(test))<br>
+                        <br>
+                        test = True<br>
+                        print(test,'is',bool(test))<br>
+                        <br>
+                        test = 'Easy string'<br>
+                        print(test,'is',bool(test))</b>
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>[] is False<br>
+                        [0] is True<br>
+                        0.0 is False<br>
+                        None is False<br>
+                        True is True<br>
+                        Easy string is True</b></p>
+            </div>
+
+            <!-- *************************************************************************************** -->
+
+            <div class="separator"></div>
+
+
+            <h4>Python bytes()</h4>
+            <br>
+            <p class="lead"><b>The bytes() method returns a immutable bytes object initialized with the given
+                    size and data.</b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>The syntax of <code>bytes()</code> method is:</b></p>
+                <h5>bytes([source[, encoding[, errors]]])</h5>
+            </div>
+            <hr>
+
+
+            <h4>Example:-Convert string to bytes</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>string = "Python is interesting."<br></b>
+
+                    # string with encoding 'utf-8'<br>
+                    <b> <br> arr = bytes(string, 'utf-8')<br>
+                        print(arr)</br></b>
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>
+                        b'Python is interesting.'</b></p>
+            </div>
+
+            <h4>Example:-Create a byte of given integer size</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>size = 5<br>
+
+                        arr = bytes(size)<br>
+                        print(arr)</b>
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>
+                        b'\x00\x00\x00\x00\x00'</b></p>
+            </div>
+
+
+            <h4>Example:-Convert iterable list to bytes</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>rList = [1, 2, 3, 4, 5]<br>
+                        <br>
+                        arr = bytes(rList)<br>
+                        print(arr)</b>
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>
+                        b'\x01\x02\x03\x04\x05'</b></p>
+            </div>
+
+            <div class="separator"></div>
+
+            <!-- *************************************************************************************** -->
+
+            <h4>Python chr()</h4>
+            <br>
+            <p class="lead"><b>The chr() method returns a character (a string) from an integer
+                    (represents unicode code point of the character).</b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>The syntax of <code>chr()</code> method is:</b></p>
+                <h5>chr(i)</h5>
+            </div>
+            <hr>
+
+
+            <h4>Example:-How chr() works?</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead">
+                    <b>print(chr(97))<br>
+                        print(chr(65))<br>
+                        print(chr(1200))</b>
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>
+                        a<br>
+                        A<br>
+                        Ұ</b></p>
+            </div>
+
+            <!-- *************************************************************************************** -->
+
+            <div class="separator"></div>
+
+            <h4>Python complex()</h4>
+            <br>
+            <p class="lead"><b>The complex() method returns a complex number when real and imaginary parts are provided, or it converts a string to
+                    a complex number.</b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>The syntax of <code>complex()</code> method is:</b></p>
+                <h5>complex([real[, imag]])</h5>
+            </div>
+            <hr>
+
+
+            <h4>Example:-How to create a complex number in Python?</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead">
+                    <b>z = complex(2, -3)<br>
+                        print(z)<br>
+                        <br>
+                        z = complex(1)<br>
+                        print(z)<br>
+                        <br>
+                        z = complex()<br>
+                        print(z)<br>
+                        <br>
+                        z = complex('5-9j')<br>
+                        print(z)</b>
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>
+                        (2-3j)<br>
+                        (1+0j)<br>
+                        0j<br>
+                        (5-9j)</b></p>
+            </div>
+
+            <!-- *************************************************************************************** -->
+
+            <div class="separator"></div>
+
+            <h4>Python dir()</h4>
+            <br>
+            <p class="lead"><b>The dir() method tries to return a list of valid attributes of the
+                    object.</b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>The syntax of <code>dir()</code> method is:</b></p>
+                <h5>dir([object])</h5>
+            </div>
+            <hr>
+
+
+            <h4>Example:-How dir() works?</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead">
+                    <b>number = [1, 2, 3]<br>
+                        print(dir(number))<br>
+                        <br>
+                        print('\nReturn Value from empty dir()')<br>
+                        print(dir())</b>
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>
+                        ['__add__', '__class__', '__contains__', '__delattr__',<br>
+                        '__delitem__', '__dir__', '__doc__', '__eq__', '__format__',<br>
+                        '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__',<br>
+                        '__iadd__', '__imul__', '__init__', '__init_subclass__',<br>
+                        '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__',<br>
+                        '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__',<br>
+                        '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__',<br>
+                        '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend',<br>
+                        'index', 'insert', 'pop', 'remove', 'reverse', 'sort']<br>
+                        <br>
+                        Return Value from empty dir()<br>
+                        ['__annotations__', '__builtins__', '__doc__', '__loader__',<br>
+                        '__name__', '__package__', '__spec__', 'number']</b></p>
+            </div>
+
+            <div class="separator"></div>
+
+            <!-- *************************************************************************************** -->
+
+            <h4>Python divmod()</h4>
+            <br>
+            <p class="lead"><b>The divmod() method takes two numbers and returns a pair of numbers (a tuple)
+                    consisting of their quotient and remainder.</b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>The syntax of <code>divmod()</code> method is:</b></p>
+                <h5>divmod(x, y)</h5>
+            </div>
+            <hr>
+
+
+            <h4>Example:-How divmod() works in Python?</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead">
+                    <b>print('divmod(8, 3) = ', divmod(8, 3))<br>
+                        print('divmod(3, 8) = ', divmod(3, 8))<br>
+                        print('divmod(5, 5) = ', divmod(5, 5))</b><br>
+                    <br>
+                    # divmod() with Floats
+                    <b> print('divmod(8.0, 3) = ', divmod(8.0, 3))<br>
+                        print('divmod(3, 8.0) = ', divmod(3, 8.0))<br>
+                        print('divmod(7.5, 2.5) = ', divmod(7.5, 2.5))<br>
+                        print('divmod(2.6, 0.5) = ', divmod(2.6, 0.5))<br></b>
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>
+                        divmod(8, 3) = (2, 2)<br>
+                        divmod(3, 8) = (0, 3)<br>
+                        divmod(5, 5) = (1, 0)<br>
+                        divmod(8.0, 3) = (2.0, 2.0)<br>
+                        divmod(3, 8.0) = (0.0, 3.0)<br>
+                        divmod(7.5, 2.5) = (3.0, 0.0)<br>
+                        divmod(2.6, 0.5) = (5.0, 0.10000000000000009)</b></p>
+            </div>
+
+
+            <div class="separator"></div>
+
+
+            <!-- *************************************************************************************** -->
+
+            <h4>Python enumerate()</h4>
+            <br>
+            <p class="lead"><b>The enumerate() method adds counter to an iterable and returns it
+                    (the enumerate object).</b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>The syntax of <code>enumerate()</code> method is:</b></p>
+                <h5>enumerate(iterable, start=0)</h5>
+            </div>
+            <hr>
+
+
+            <h4>Example:-How enumerate() works in Python?</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead">
+                    <b>grocery = ['bread', 'milk', 'butter']<br>
+                        enumerateGrocery = enumerate(grocery)<br>
+                        <br>
+                        print(type(enumerateGrocery))<br></b>
+                    <br>
+                    # converting to list<br>
+                    <b> print(list(enumerateGrocery))<br></b>
+                    <br>
+                    # changing the default counter<br>
+                    <b> enumerateGrocery = enumerate(grocery, 10)<br>
+                        print(list(enumerateGrocery))</b>
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>
+                        <class 'enumerate'><br>
+                            [(0, 'bread'), (1, 'milk'), (2, 'butter')]<br>
+                            [(10, 'bread'), (11, 'milk'), (12, 'butter')]
+                    </b></p>
+            </div>
+
+
+            <!-- *************************************************************************************** -->
+
+
+            <div class="separator"></div>
+
+            <h4>Python float()</h4>
+
+            <br>
+            <p class="lead"><b>The float() method returns a floating point number from a
+                    number or a string.</b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>The syntax of <code>float()</code> method is:</b></p>
+                <h5>float([x])</h5>
+            </div>
+            <hr>
+
+
+            <h4>Example:-How float() works in Python?</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead">
+                    # for integers<br>
+                    <b> print(float(10))</b><br>
+                    <br>
+                    # for floats<br>
+                    <b>print(float(11.22))</b><br>
+                    <br>
+                    # for string floats<br>
+                    <b> print(float("-13.33"))</b><br>
+                    <br>
+                    # for string floats with whitespaces<br>
+                    <b>print(float(" -24.45\n"))</b><br>
+                    <br>
+                    # string float error<br>
+                    <b>print(float("abc"))</b>
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>
+                        10.0<br>
+                        11.22<br>
+                        -13.33<br>
+                        -24.45<br>
+                        ValueError: could not convert string to float: 'abc'
+                    </b></p>
+            </div>
+
+
+            <!-- *************************************************************************************** -->
+
+            <div class="separator"></div>
+
+
+            <h4>Python format()</h4>
+
+            <br>
+
+            <p class="lead"><b>The built-in format() method returns a formatted representation of the
+                    given value controlled by the format specifier.</b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>The syntax of <code>format()</code> method is:</b></p>
+                <h5>format(value[, format_spec])</h5>
+            </div>
+            <hr>
+
+
+            <h4>Example:-Number formatting with format()</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead">
+                    # d, f and b are type<br>
+                    <br>
+                    # integer<br>
+                    <b> print(format(123, "d"))</b><br>
+                    <br>
+                    # float arguments<br>
+                    <b> print(format(123.4567898, "f"))</b><br>
+                    <br>
+                    # binary format<br>
+                    <b> print(format(12, "b"))</b>
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>
+                        123<br>
+                        123.456790<br>
+                        1100<br>
+                    </b></p>
+            </div>
+
+            <!-- *************************************************************************************** -->
+
+
+            <div class="separator"></div>
+
+
+            <h4>Python hex()</h4>
+            <br>
+            <p class="lead"><b>The hex() function converts an integer number to
+                    the corresponding hexadecimal string.</b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>The syntax of <code>hex()</code> method is:</b></p>
+                <h5>hex(x)</h5>
+            </div>
+            <hr>
+
+
+            <h4>Example:-How hex() works?</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>
+                        number = 435<br>
+                        print(number, 'in hex =', hex(number))<br>
+                        <br>
+                        number = 0<br>
+                        print(number, 'in hex =', hex(number))<br>
+                        <br>
+                        number = -34<br>
+                        print(number, 'in hex =', hex(number))<br>
+                        <br>
+                        returnType = type(hex(number))<br>
+                        print('Return type from hex() is', returnType)<br>
+                    </b>
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>
+                        435 in hex = 0x1b3<br>
+                        0 in hex = 0x0<br>
+                        -34 in hex = -0x22<br>
+                        Return type from hex() is <class 'str'><br>
+                    </b></p>
+            </div>
+
+
+            <!-- *************************************************************************************** -->
+
+
+            <div class="separator"></div>
+
+
+            <h4>Python input()</h4>
+            <br>
+
+            <p class="lead"><b>The input() method reads a line from input, converts
+                    into a string and returns it.</b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>The syntax of <code>input()</code> method is:</b></p>
+                <h5>input([prompt])</h5>
+            </div>
+            <hr>
+
+
+            <h4>Example:-Get input from user with a prompt</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead">
+                    # get input from user<br>
+
+                    <b> inputString = input('Enter a string:')<br>
+                        <br>
+                        print('The inputted string is:', inputString)</b>
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>
+                        Enter a string: Python is interesting.<br>
+                        The inputted string is: Python is interesting<br>
+                    </b></p>
+            </div>
+
+
+            <!-- *************************************************************************************** -->
+
+            <div class="separator"></div>
+
+            <h4>Python len()</h4>
+            <br>
+            <p class="lead"><b>The len() function returns the number of
+                    items (length) in an object.</b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>The syntax of <code>len()</code> method is:</b></p>
+                <h5>len(s)</h5>
+            </div>
+            <hr>
+
+
+            <h4>Example:-How len() works with tuples, lists and range?</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead">
+                    <b>
+                        testlist=[1,2,3]<br>
+                        print(testlist,"Length is",len(testlist))<br>
+                    </b>
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b><br>
+                        [1,2,3] Length is 3<br>
+                    </b></p>
+            </div>
+
+
+
+            <!-- *************************************************************************************** -->
+
+            <div class="separator"></div>
+
+            <h4>Python max()</h4>
+            <br>
+
+            <p class="lead"><b>The Python max() function returns the largest item in an iterable. It can also be used to find the
+                    largest item between two or more parameters.</b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>The syntax of <code>max()</code> method is:</b></p>
+                <h5>max(arg1, arg2, *args, key)</h5>
+                <h5>max(iterable, *iterables, key, default)</h5>
+            </div>
+            <hr>
+
+
+            <h4>Example:-Get the largest item in a list</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead">
+                    <b>
+                        number = [3, 2, 8, 5, 10, 6]<br>
+                        largest_number = max(number);<br>
+                        <br>
+                        print("The largest number is:", largest_number)<br>
+                    </b>
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b><br>
+                        The largest number is: 10<br>
+                    </b></p>
+            </div>
+
+            <h4>Example:-the largest string in a list</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead">
+                    <b><br>
+                        languages = ["Python", "C Programming", "Java", "JavaScript"]<br>
+                        largest_string = max(languages);<br>
+                        <br>
+                        print("The largest string is:", largest_string)<br>
+                    </b>
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b><br>
+                        The largest string is: Python<br>
+                    </b></p>
+            </div>
+
+            <!-- *************************************************************************************** -->
+
+            <div class="separator"></div>
+
+
+            <h4>Python min()</h4>
+            <br>
+            <p class="lead"><b>The Python min() function returns the smallest item in an iterable. It can also be used to find the smallest
+                    item between two or more parameters.</b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>The syntax of <code>min()</code> method is:</b></p>
+                <h5>min(iterable, *iterables, key, default)</h5>
+                <h5> min(arg1, arg2, *args, key)</h5>
+            </div>
+            <hr>
+
+
+            <h4>Example:-Get the smallest item in a list</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead">
+                    <b>
+                        number = [3, 2, 8, 5, 10, 6]<br>
+                        smallest_number = min(number);<br>
+                        <br>
+                        print("The smallest number is:", smallest_number)<br>
+                    </b>
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b><br>
+                        The smallest number is: 2<br>
+                    </b></p>
+            </div>
+
+
+            <h4>Example:-The smallest string in a list</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead">
+                    <b>
+                        languages = ["Python", "C Programming", "Java", "JavaScript"]<br>
+                        smallest_string = min(languages);<br>
+                        <br>
+                        print("The smallest string is:", smallest_string)<br>
+                    </b>
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b><br>
+                        The smallest string is: C Programming<br>
+                    </b></p>
+            </div>
+
+            <!-- *************************************************************************************** -->
+
+
+            <div class="separator"></div>
+
+            <h4>Python map()</h4>
+            <br>
+            <p class="lead"><b>The map() function applies a given function to each item
+                    of an iterable (list, tuple etc.) and returns a list of the results.
+                </b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>The syntax of <code>map()</code> method is:</b></p>
+                <h5>map(function, iterable, ...)</h5>
+            </div>
+            <hr>
+
+
+            <h4>Example:-Working of map()</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead">
+                    <b>
+                        def calculateSquare(n):<br>
+                        return n*n<br>
+                        <br>
+                        <br>
+                        numbers = (1, 2, 3, 4)<br>
+                        result = map(calculateSquare, numbers)<br>
+                        print(result)<br> </b>
+                    <br>
+                    # converting map object to set<br>
+                    <b> numbersSquare = set(result)<br>
+                        print(numbersSquare)<br></b>
+
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b><br>
+                        <map object at 0x7f722da129e8>
+                            {16, 1, 4, 9}<br>
+                    </b></p>
+            </div>
+
+            <!-- *************************************************************************************** -->
+
+
+            <div class="separator"></div>
+
+            <h4>Python open()</h4>
+            <br>
+            <p class="lead"><b>The open() function opens the file (if possible) and returns the
+                    corresponding file object.</b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>The syntax of <code>open()</code> method is:</b></p>
+                <h5>open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)</h5>
+            </div>
+            <hr>
+
+
+            <h4>Example:-How to open a file in Python?</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><br>
+                    # opens test.text file of the current directory<br>
+                    <b> f = open("test.txt")</b><br>
+                    <br>
+                    # specifying the full path<br>
+                    <b> f = open("C:/Python33/README.txt")</b><br>
+                </p>
+            </div>
+            <p class="lead"><b>Since the mode is omitted, the file is opened in 'r' mode; opens for reading.</b></p>
+
+            <!-- *************************************************************************************** -->
+
+            <div class="separator"></div>
+
+            <h4>Python pow()</h4>
+            <br>
+
+            <p class="lead"><b>The pow() function returns the power of a number.</b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>The syntax of <code>pow()</code> method is:</b></p>
+                <h5>pow(x, y, z)</h5>
+            </div>
+            <hr>
+
+
+            <h4>Example:-Python pow()</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><br>
+                    # positive x, positive y (x**y)<br>
+                    <br> print(pow(2, 2))</br> # 4<br>
+                    <br>
+                    # negative x, positive y<br>
+                    <b> print(pow(-2, 2)) </b># 4<br>
+                    <br>
+                    # positive x, negative y<br>
+                    <b> print(pow(2, -2)) </b># 0.25<br>
+                    <br>
+                    # negative x, negative y<br>
+                    <b> print(pow(-2, -2))</b> # 0.25<br>
+
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b><br>
+                        4 <br>4<br> 0.25<br> 0.25<br>
+                    </b></p>
+            </div>
+
+            <!-- *************************************************************************************** -->
+
+            <div class="separator"></div>
+
+            <h4>Python print()</h4>
+            <br>
+            <p class="lead"><b>The print() function prints the given object to the standard output device (screen)
+                    or to the text stream file.</b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>The syntax of <code>print()</code> method is:</b></p>
+                <h5>print("statement",variable)</h5>
+            </div>
+            <hr>
+
+
+            <h4>Example:- How print() works in Python?</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><br>
+                    <b> print("Python is fun.")<br>
+                        <br>
+                        a = 5</b><br>
+                    # Two objects are passed<br>
+                    <b> print("a =", a)<br>
+                        <br>
+                        b = a</b><br>
+                    # Three objects are passed<br>
+                    <b> print('a =', a, '= b')</b><br>
+
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><br>
+                    Python is fun.<br>
+                    a = 5<br>
+                    a = 5 = b<br>
+                </p>
+            </div>
+            <!-- *************************************************************************************** -->
+
+
+            <div class="separator"></div>
+
+            <h4>Python range()</h4>
+            <br>
+            <p class="lead"><b>The range() type returns an immutable sequence of numbers between the given start
+                    integer to the stop integer.</b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>The syntax of <code>range()</code> method is:</b></p>
+                <h5>range(stop)</h5>
+                <h5>range(start, stop[, step])</h5>
+            </div>
+            <hr>
+
+
+            <h4>Example:- How range works in Python?</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"># empty range<br>
+                    <b> print(list(range(0)))</b> <br>
+                    <br>
+                    # using range(stop)<br>
+                    <b> print(list(range(10))) </b> <br>
+                    <br>
+                    # using range(start, stop)<br>
+                    <b> print(list(range(1, 10))) </b> <br>
+
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><br><b>
+                        []<br>
+                        [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]<br>
+                        [1, 2, 3, 4, 5, 6, 7, 8, 9]<br>
+                    </b> </p>
+            </div>
+
+
+            <!-- *************************************************************************************** -->
+
+            <div class="separator"></div>
+
+            <h4>Python reversed()</h4>
+            <br>
+
+            <p class="lead"><b>The reversed() function returns the reversed
+                    iterator of the given sequence.</b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>The syntax of <code>reversed()</code> method is:</b></p>
+                <h5>reversed(seq)</h5>
+
+            </div>
+            <hr>
+
+
+            <h4>Example:-Using reveresed() in string, tuple, list, and range</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"># for string<br>
+                    <b> seq_string = 'Python'<br>
+                        print(list(reversed(seq_string)))</b> <br>
+                    <br>
+                    # for tuple<br>
+                    <b> seq_tuple = ('P', 'y', 't', 'h', 'o', 'n')<br>
+                        print(list(reversed(seq_tuple)))</b> <br>
+                    <br>
+                    # for range<br>
+                    <b> seq_range = range(5, 9)<br>
+                        print(list(reversed(seq_range)))<br>
+                    </b> <br>
+                    #for list<br>
+                    <b>seq_list = [1, 2, 4, 3, 5]<br>
+                        print(list(reversed(seq_list)))<br></b>
+
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><br><b>
+                        ['n', 'o', 'h', 't', 'y', 'P']<br>
+                        ['n', 'o', 'h', 't', 'y', 'P']<br>
+                        [8, 7, 6, 5]<br>
+                        [5, 3, 4, 2, 1]<br>
+                    </b> </p>
+            </div>
+
+            <!-- *************************************************************************************** -->
+
+            <div class="separator"></div>
+
+            <h4>Python sum()</h4>
+            <br>
+            <p class="lead"><b>The sum() function adds the items of an iterable
+                    and returns the sum.</b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>The syntax of <code>sum()</code> method is:</b></p>
+                <h5>sum(iterable, start)</h5>
+
+            </div>
+            <hr>
+
+
+            <h4>Example:-Working of Python sum()</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead">
+                    <b>numbers = [2.5, 3, 4, -5]</b><br>
+                    <br>
+                    # start parameter is not provided<br>
+                    <b> numbers_sum = sum(numbers)</b><br>
+                    <b>print(numbers_sum)</b><br>
+                    <br>
+                    # start = 10<br>
+                    <b>numbers_sum = sum(numbers, 10)</b><br>
+                    <b>print(numbers_sum)</b><br>
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>
+                        4.5<br>
+                        14.5
+                    </b> </p>
+            </div>
+
+            <!-- *************************************************************************************** -->
+
+
+            <div class="separator"></div>
+
+            <h4>Python type()</h4>
+            <br>
+            <p class="lead"><b>The type() function either returns the type of the object or returns a new type object
+                    based on the arguments passed.</b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>The syntax of <code>type()</code> method is:</b></p>
+                <h5>type(object)<br>
+                    type(name, bases, dict)</h5>
+
+            </div>
+            <hr>
+
+
+            <h4>Example:-Get Type of an Object</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>numbers_list = [1, 2]<br>
+                        print(type(numbers_list))<br>
+                        <br>
+                        numbers_dict = {1: 'one', 2: 'two'}<br>
+                        print(type(numbers_dict))<br>
+                        <br>
+                        class Foo:<br>
+                        a = 0<br>
+                        <br>
+                        foo = Foo()<br>
+                        print(type(foo))<br></b>
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b><br>
+                        class 'list'<br>
+                        class 'dict'<br>
+                        class '__main__.Foo'<br>
+                    </b>
+                </p>
+            </div>
+
+            <!-- *************************************************************************************** -->
+
+            <div class="separator"></div>
+
+
+            <h4>Python sorted()</h4>
+            <br>
+
+            <p class="lead"><b>The sorted() function returns a sorted list from the items in an iterable</b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>The syntax of <code>sorted()</code> method is:</b></p>
+                <h5>sorted(iterable, key=None, reverse=False)</h5>
+
+            </div>
+            <hr>
+
+
+            <h4>Example:-Sort string, list, and tuple</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"># vowels list<br>
+                    <b> py_list = ['e', 'a', 'u', 'o', 'i']<br>
+                        print(sorted(py_list))</b> <br>
+                    <br>
+                    # String<br>
+                    <b> py_string = 'Python'<br>
+                        print(sorted(py_string))</b> <br>
+                    <br>
+                    # vowels tuple<br>
+                    <b> py_tuple = ('e', 'a', 'u', 'o', 'i')<br>
+                        print(sorted(py_tuple))<br>
+                    </b> <br>
+                </p>
+            </div>
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><br><b>
+                        ['a', 'e', 'i', 'o', 'u']<br>
+                        ['n', 'o', 'h', 't', 'y', 'P']<br>
+                        ['a', 'e', 'i', 'o', 'u']<br>
+
+                    </b> </p>
+            </div>
+            <!-- *************************************************************************************** -->
+
+            <p class="lead"><b>
+                    There is more function which you will find <a href="https://docs.python.org/3/library/functions.html">here.
+
+                    </a></b></p>
+            <hr class="solid" style="border-top: 3px solid #999">
+
+            <!-- *************************************************************************************** -->
+            <!-- Web Development Frameworks -->
+            <br id="fw">
+            <h2>Python Web Development Frameworks</h2><br>
+            <p class="lead"><b>Because it is one of the leading programming languages, there is no scarcity of frameworks for Python. Different frameworks have their own set of advantages and issues. Hence, the selection needs to be made
+                    on the basis of project requirements and developer preference.<br>
+                    There are primarily three types of Python frameworks, namely full-stack, micro-framework, and asynchronous.
+                </b></p><br>
+
+            <h3>Web Frameworks</h3>
+
+            <p class="lead"><b>A web framework is a code library that makes web development faster and easier by providing common patterns for building reliable, scalable and maintainable web applications. After the early 2000s, professional web development projects
+                    always use an existing web framework except in very unusual situations. </b></p>
+
+            <h3>Why are web frameworks useful? </h3>
+            <p class="lead"><b>Web frameworks encapsulate what developers have learned over the past twenty years while programming sites and applications for the web. Frameworks make it easier to reuse code for common HTTP operations and to structure projects so other developers with knowledge
+                    of the framework can quickly build and maintain the application. </b></p>
+
+            <h3>Model View Controller</h3>
+            <p class="lead"><b>
+                    MVC is a software design pattern for developing web applications. A Model View Controller pattern is made up of three parts −<br>
+                    <br><strong>Model-</strong>The lowest level of the pattern is responsible for maintaining data.<br><br>
+                    <strong>View-</strong>This is responsible for displaying all or a portion of data to the user.<br><br>
+                    <strong>Controller-</strong> Software Code that controls the interactions between the Model and View.<br><br>
+                    MVC is popular as it isolates the application logic from the user interface layer and supports separation of concerns. Here, the Controller receives all requests for the application and then works with the Model to prepare any data needed by the View. The View then uses the data prepared by the Controller to generate a final presentable response.
+                    The MVC abstraction can be graphically represented as follows −<br></b>
+            </p><br>
+            <center>
+                <img src="mvc.jpg" alt="MVC" style="height:500px;width:250px;border:3px solid green;padding:10px">
+            </center><br><br>
+
+            <p class="lead">
+                <b>
+                    <strong> The Model</strong><br>
+                    The Model is responsible for managing the data of the application. It responds to the request from the view and it also responds to instructions from the controller to update itself.<br>
+
+                    <strong> The View</strong> <br>
+                    A presentation of data in a particular format, triggered by a controller's decision to present the data. They are script based templating systems very easy to integrate with AJAX technology.<br>
+
+                    <strong> The Controller</strong> <br>
+                    The controller is responsible for responding to the user input and perform interactions on the data model objects. The Controller receives the input, it validates the input and then performs the business
+                    operation that modifies the state of the data model.<br>
+                </b>
+            </p>
+
+            <h3>Types of Python Frameworks</h3><br>
+            <p style="font-size:20px"><b></b> 1) Full-Stack Framework </p>
+
+            <p class="lead"><b>Such frameworks are a one-stop-solution for all developer requirements. Form generators, form validation, and template
+                    layouts are usually available with a typical full-stack framework.</b></p>
+
+            <p style="font-size:20px"><b></b> 2) Micro-Framework </p>
+
+            <p class="lead"><b>These are lightweight frameworks that don’t offer additional functionalities and features, such as database abstraction layer, form validation, and specific tools and libraries. Developers using a microframework
+                    need to add a lot of code and additional requirements manually. </b></p>
+
+            <p style="font-size:20px"><b></b> 3) Asynchronous Framework </p>
+
+            <p class="lead"><b>Gaining popularity recently, any asynchronous framework is a microframework that allows for handling a large set of concurrent connections. Typically, an asynchronous framework built for
+                    Python uses the programming language’s asyncio library. </b></p>
+
+            <h3> Frameworks:-</h3>
+            <br>
+            <!-- ****************************************************************************** -->
+            <img class="size-medium wp-image-2196 align:left" style="float: left;" src="https://hackr.io/blog/uploads/images/1570190913ZVR3DRSZe7.jpg" alt="Bottle" width="100" height="50">
+            <br><br><br>
+            <h4><b>Framework-Name:-Bottle<br>Type:- Micro-Framework</b></h4>
+
+            <br>
+            <p class="lead"><b>Bottle is a fast, simple and lightweight WSGI micro web-framework for Python. It is distributed as a single file module and has no dependencies other than the Python Standard Library.<br>Bottle creates a single source file for every application developed using it. It is one of the best python web framework.The microframework for Python was originally developed for building APIs. Other than the Python Standard Library, Bottle has no dependencies required for crafting small web applications. One of the most important advantages of using Bottle is that it allows developers to work closer to the hardware. In addition to building simplistic personal-use apps, Bottle is an apt
+                    fit for learning the organization of web frameworks and prototyping.</b></p>
+            <h5><b>Key Highlights:-</b></h5>
+
+            <p class="lead" style="font-size:20px">-<b> Adapter support for 3rd-party
+                    template engines and WSGI/HTTP servers.</b></p>
+            <p class="lead" style="font-size:20px">-<b>Allows simple access from cookies,
+                    data, file uploads, and other HTTP-related metadata.</b></p>
+            <p class="lead" style="font-size:20px">-<b> Built-in HTTP server.</b></p>
+            <p class="lead" style="font-size:20px">-<b> Plugin support for different
+                    databases.</b></p>
+            <p class="lead" style="font-size:20px">-<b>Provides request-dispatching routes
+                    having URL-parameter support.</b></p>
+
+            <h5><b>Example:- "Hello World" in a bottle.</b></h5>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>from bottle import route, run, template
+                        <br>
+                        @route('/hello/<name>')<br>
+                            def index(name):<br>
+                            return template('<b>Hello {{name}}</b>!', name=name)<br>
+                            <br>
+                            run(host='localhost', port=8080)</b></p>
+            </div>
+            <p class="lead" style="font-size:20px"> Run this script or paste it into a Python console, then point your browser to
+                http://localhost:8080/hello/world. That’s it.</p>
+
+            <br>
+            <p class="lead" style="font-size:20px"><b>To install Bottle:-</b>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                pip install bottle
+            </div>
+            <p class="lead" style="font-size:20px">Bottle supports Python 2.7 and Python 3.</p>
+            <p class="lead"><b>To download this Documentation as PDF<br>click<a href="http://bottlepy.org/docs/dev/bottle-docs.pdf"> Here</a></p>
+            </b> </p>
+            <hr class="separate" style="border-top: 3px solid #fff">
+
+            <!-- ****************************************************************************** -->
+
+            <img class="size-medium wp-image-2195 align:left" style="float: left;" src="https://hackr.io/blog/uploads/images/1570190913Cdq03PdNvD.jpg" alt="AIOhttp" width="100" height="50">
+            <br><br><br>
+            <h4><b>Framework-Name:-AIOHTTP<br>Type:- Asynchronous Framework</b></h4>
+
+            <br>
+            <p class="lead"><b>AIOHTTP is a Python framework that relies heavily on Python 3.5+ features, such as async & awaits. The Python framework makes use of Python’s asyncio library, and is hence an asynchronous framework. In addition to being a server web framework, AIOHTTP can also serve as a client framework. It provides a request object and router to enable the redirection of queries to functions
+                    developed to handle the same.</b></p>
+            <h5><b>Key Highlights:-</b></h5>
+            <p class="lead" style="font-size:20px"><b>
+                    - Allows effectively building the views.<br>
+                    - Middlewares support.<br>
+                    - Pluggable routing.<br>
+                    - Signals.<br>
+                    - Supports both Client WebSockets and Server
+                    WebSockets without the Callback Hell.
+                </b></p>
+
+            <p class="lead"><b>To install it:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">pip install aiohttp</div>
+
+            <p class="lead"><b>Example:Client </b><br></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>
+                        import aiohttp<br>
+                        import asyncio<br>
+                        <br>
+                        async def main():<br>
+                        <br>
+                        async with aiohttp.ClientSession() as session:<br>
+                        async with session.get('http://python.org') as response:<br>
+                        <br>
+                        print("Status:", response.status)<br>
+                        print("Content-type:", response.headers['content-type'])<br>
+                        <br>
+                        html = await response.text()<br>
+                        print("Body:", html[:15], "...")<br>
+                        <br>
+                        loop = asyncio.get_event_loop()<br>
+                        loop.run_until_complete(main())<br></b></p>
+            </div>
+
+            <p class="lead"><b>Output:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>
+                        Status: 200<br>
+                        Content-type: text/html; charset=utf-8<br>
+                        Body:<br>
+                        <!doctype html> ...
+
+                    </b></p>
+            </div>
+
+
+            <p class="lead"><b>Example:Server </b><br></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>
+                        from aiohttp import web
+                        <br>
+                        async def handle(request):<br>
+                        name = request.match_info.get('name', "Anonymous")<br>
+                        text = "Hello, " + name<br>
+                        return web.Response(text=text)<br>
+                        <br>
+                        app = web.Application()<br>
+                        app.add_routes([web.get('/', handle),
+                        web.get('/{name}', handle)])<br>
+                        <br>
+                        if __name__ == '__main__':<br>
+                        web.run_app(app)<br>
+                    </b></p>
+            </div>
+            <p class="lead"><b>To Download this documentation
+                    <a href="https://github.com/aio-libs/aiohttp">Click Here.</a>
+                </b> </p>
+            <hr class="separate" style="border-top: 3px solid #fff">
+
+            <!-- ******************************************************************************** -->
+
+            <img class="wp-image-2194 size-medium align:left" style="float: left;" src="https://hackr.io/blog/uploads/images/15701909139cFK9ELHBM.jpg" alt="CherryPy" width="100" height="50">
+            <br><br><br>
+            <h4><b>Framework-Name:-CherryPy<br>Type:- Micro-Framework</b></h4>
+            <p class="lead"><b>CherryPy is a popular open-source, object-oriented Python framework that follows a minimalistic approach. The micro-framework is one of
+                    the oldest Python frameworks, debuting in the June of 2002.<br>
+                    Any CherryPy-powered web application is a standalone Python application with its own embedded multi-threaded web server and runs on any OS with support for Python.
+                    Such an app can be deployed anywhere an ordinary Python app is able to run.<br>
+
+                    There is no need for an Apache server for running apps developed using CherryPy. The micro-framework allows the developer(s) to
+                    make use of any type of technology for data access, templating, et cetera.<br>
+                </b></p>
+            <h5><b>Key Highlights:-</b></h5>
+            <p class="lead"><b>
+                    - It is now more than ten years old and has proven fast and very stable.<br>
+                    - A number of out-of-the-box tools for authentication, caching, encoding,
+                    sessions, static content, and much more.<br>
+                    - A flexible built-in plugin system.<br>
+                    - HTTP/1.1-compliant WSGI thread-pooled web server.<br>
+                    - Inbuilt support for coverage, profiling, and testing.<br>
+                    - Offers simplicity for running multiple HTTP servers simultaneously.<br>
+                    - Powerful configuration system.<br>
+                    - Runs on Android.
+                </b> </p>
+            <p class="lead"><b>To install it:-</b></p>
+            <div class="shadow p-3 mb-5  bg-white rounded">pip install CherryPy</div>
+            <h5><b>Example:- "Hello World" in CherryPy.</b></h5>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                <p class="lead"><b>import cherrypy
+                        <br>
+                        class HelloWorld(object):<br>
+                        @cherrypy.expose<br>
+                        def index(self):<br>
+                        return "Hello World!"<br>
+                        <br>
+                        cherrypy.quickstart(HelloWorld())</b></p>
+            </div>
+            <p class="lead"><b>To Download this documentation
+                    <a href="https://docs.cherrypy.org/en/latest/">Click Here.</a>
+                    <br>
+                    For
+                    <a href="https://github.com/cherrypy/cherrypy/tree/master/cherrypy/tutorial">Tutorial.</a>
+                </b> </p>
+            <hr class="separate" style="border-top: 3px solid #fff">
+            <!-- *************************************************************************************** -->
+
+
+
+            <p class="lead"><b><a href="Python_1.html" style="font-size:35px;color:white;text-decoration:none"><i>Next--></i></a></b></p>
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- *************************************************************************************** -->
+
+        </div>
+
+
+        <!-- End of content -->
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+
+        <script>
+            $(function() {
+                // Sidebar toggle behavior
+                $('#sidebarCollapse').on('click', function() {
+                    $('#sidebar, #content').toggleClass('active');
+                });
+            });
+        </script>
+
+    </body>
+
+
+
+
+    </html>

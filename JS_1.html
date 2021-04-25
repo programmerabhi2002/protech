@@ -1,0 +1,712 @@
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+
+        <title>
+            Javascript
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    </head>
+
+    <style>
+        .vertical-nav {
+            min-width: 17rem;
+            width: 17rem;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s;
+        }
+
+        .page-content {
+            width: calc(100% - 17rem);
+            margin-left: 17rem;
+            transition: all 0.4s;
+        }
+
+        /* for toggle behavior */
+
+        #sidebar.active {
+            margin-left: -17rem;
+        }
+
+        #content.active {
+            width: 100%;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            #sidebar {
+                margin-left: -17rem;
+            }
+
+            #sidebar.active {
+                margin-left: 0;
+            }
+
+            #content {
+                width: 100%;
+                margin: 0;
+            }
+
+            #content.active {
+                margin-left: 17rem;
+                width: calc(100% - 17rem);
+            }
+        }
+
+        body {
+            background: #599fd9;
+            background: -webkit-linear-gradient(to right, #599fd9, #c2e59c);
+            background: linear-gradient(to right, #599fd9, #c2e59c);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .separator {
+            margin: 3rem 0;
+            border-bottom: 1px dashed #fff;
+        }
+
+        .text-uppercase {
+            letter-spacing: 0.1em;
+        }
+
+        .text-gray {
+            color: #525252;
+        }
+    </style>
+
+    <body>
+
+        <!-- Vertical navbar -->
+        <div class="vertical-nav " id="sidebar">
+            <!-- bg-white -->
+            <div class="py-4 px-3 mb-4 ">
+                <!-- bg-white -->
+                <div class="media d-flex align-items-center"><img src="Img/JS.png" alt="..." width="70" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+
+               <div class="media-body">
+                    <h4 class="m-0" style="font-size:20px"><i></i></h4>
+                    <p class="font-weight text-dark mb-0"><i>
+                            
+                        </i></p>
+                </div>
+                 </div> 
+            </div>
+
+            <div class="separator"></div>
+            <!--         <hr class="solid" style="border-top: 3px solid #bbb"> -->
+            <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0" style="font-weight:bold">Index</p>
+
+            <ul class="nav flex-column  mb-0" style="font-weight:bold">
+                <!-- bg-white -->
+                <li class="nav-item">
+                    <a href="#j" class="nav-link text-dark font-italic ">
+                        <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                        Introduction
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#JSJ" class="nav-link text-dark font-italic">
+                        <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                        Comparison between &nbsp;&nbsp;&nbsp;&nbsp;Javascript and Java
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#GJS" class="nav-link text-dark font-italic">
+                        <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                        Getting started with &nbsp;&nbsp;&nbsp;&nbsp;Javascript
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#aj" class="nav-link text-dark font-italic">
+                        <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                        Applications of JavaScript
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#jl" class="nav-link text-dark font-italic">
+                        <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                        JavaScript Libraries
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="JS_1.html" class="nav-link text-dark font-italic">
+                        <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                        JavaScript Frameworks
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link text-dark font-italic">
+                        <i class="fa fa-line-chart mr-3 text-primary fa-fw"></i>
+                        <-BACK TO HOME</a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- End vertical navbar -->
+
+
+        <!-- Page content holder -->
+        <div class="page-content p-5" id="content">
+            <!-- Toggle button -->
+            <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">MENU</small></button>
+
+            <!-- Demo content -->
+            <h2 class="display-4 text-white">Javascript</h2>
+            <p class="lead text-white mb-0"> <i>Designed by Brendan Eich initially, plus other key contributors to the ECMAScript specification (4 DEC 1995)</i></p>
+
+            <div class="separator" id="ja"></div>
+
+            <!-- ************************************************************************************** -->
+            <p class="lead"><b><a href="JS.html" style="font-size:35px;color:white;text-decoration:none"><i>
+                            <-- BACK</i></a></b></p>
+            <hr class="separate" style="border-top: 3px solid #fff">
+
+            <!-- ************************************************************************************** -->
+
+
+            <div class="row text-white-bold">
+                <div class="col-lg-12" >
+
+                    <p class="lead"><b>
+                            <span style="font-weight: 400;">JavaScript is a multi-paradigm language that supports event-driven, functional, and imperative (including object-oriented and prototype-based) programming styles. </span><span style="font-weight: 400;">JavaScript was initially used only for the client-side. However, these days, JavaScript is used as a server-side programming language as well. To summarize, in just a simple sentence - JavaScript is the language of the web.
+                            </span>
+                        </b>
+                    </p>
+
+                    <h2><strong>What is JavaScript Framework ?</strong></h2>
+                    <p class="lead">
+                        <b>
+                            <span style="font-weight: 400;">A software framework is an abstraction in which software providing generic functionality can be selectively changed by additional user-written code. JavaScript framework is an application framework written in JavaScript where the programmers can manipulate the functions and use them for their convenience.
+                            </span>
+                        </b>
+                    </p>
+                    <p class="lead">
+                        <b>
+                            <span style="font-weight: 400;">Frameworks are more adaptable for the designing of websites, and hence, most website developers prefer them. JavaScript frameworks are a type of tool that makes working with JavaScript easier and smoother. </span><span style="font-weight: 400;">These frameworks also make it possible for the programmer to code the application as a device responsive. This responsiveness is yet another reason why the JavaScript frameworks are quite popular when it comes to the question of using a high-level machine language. Let's have a look at the best JS Frameworks in 2021.
+                            </span>
+                        </b>
+                    </p>
+
+                    <h2>10 Top Javascript Frameworks</h2><br>
+
+                    <h3><a style=" color:black" href="https://angular.io/">Angular</a></h3>
+                    <center>
+                        <img class="aligncenter wp-image-1305 size-full" src="https://hackr.io/blog/uploads/images/1570190909rF4xFLDbsx.jpg" alt="Angular - JavaScript Framework" width="400 height=" 200">
+                    </center>
+                    <br>
+                    <p class="lead">
+                        <b>
+                            <span style="font-weight: 400;">One of the most powerful, efficient, and open-source JavaScript frameworks is Angular. Google operates this framework and is implemented to use for <a href="https://hackr.io/blog/why-should-you-learn-angular#angular-supports-single-page-applications" target="_blank" rel="noopener">developing a Single Page Application (SPA)</a>. It extends the HTML into the application and interprets the attributes to perform data binding.
+                            </span>
+                        </b>
+                    </p>
+                    <h2><strong>Features</strong></h2>
+                    <p class="lead"><strong>Cross-Platform</strong></p>
+                    <ul class="lead">
+                        <li><strong>Progressive Web Apps:</strong><span style="font-weight: 400;"> Modern web platform capabilities to deliver app-like experiences that are high performance, offline, and zero-step installation.</span></li>
+                        <li><strong>Native:</strong><span style="font-weight: 400;"> Strategies from Cordova, Ionic, or NativeScript are used to build the native app.</span></li>
+                        <li><strong>Desktop:</strong><span style="font-weight: 400;"> Desktop-installed apps across Mac, Windows, and Linux can be created using the same Angular methods like the web plus the ability to access native OS APIs.</span></li>
+                    </ul>
+
+                    <p class="lead"><strong>Speed and Performance</strong></p>
+                    <ul class="lead">
+                        <li><strong>Code Generation:</strong><span style="font-weight: 400;"> Angular turns templates into code that's highly optimized for JavaScript virtual machines, giving hand-written code benefits.&nbsp;</span></li>
+                        <li><strong>Universal:</strong><span style="font-weight: 400;"> Serve the first view of Node.js, .NET, PHP, and other servers for near-instant rendering in just HTML and CSS.&nbsp;</span></li>
+                        <li><strong>Code Splitting:</strong><span style="font-weight: 400;"> With the new Component Router, angular apps load quickly, delivering automatic code-splitting. So users load the code required to render the view they request.</span></li>
+                    </ul>
+
+                    <p><strong>Productivity</strong></p>
+                    <ul class="lead">
+                        <li><strong>Templates:</strong><span style="font-weight: 400;"> Create UI views with simple and powerful template syntax.</span></li>
+                        <li><strong>Angular CLI:</strong><span style="font-weight: 400;"> Command line tools: start building fast, add components and tests, then instantly deploy.</span></li>
+                        <li><strong>IDEs: </strong><span style="font-weight: 400;">Get intelligent code completion, instant errors, and other feedback in popular editors and IDEs.</span></li>
+                    </ul>
+
+                    <p><strong>Full Development Story&nbsp;</strong></p>
+                    <ul class="lead">
+                        <li><strong>Testing:</strong><span style="font-weight: 400;"> Protractor makes your scenario tests run faster and in a stable manner.</span></li>
+                        <li><strong>Animation:</strong><span style="font-weight: 400;"> Create high-performance, complex choreographies, and animation timelines with very little code through Angular's intuitive API.</span></li>
+                        <li><strong>Accessibility: </strong><span style="font-weight: 400;">Create accessible applications with ARIA-enabled components, developer guides, and built-in a11y test infrastructure.</span></li>
+                    </ul>
+
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/pCewaWYNnu4?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+                    <br>
+
+                    <h3>2. <a style="color:black" href="https://reactjs.org/"><strong>React</strong></a></h3>
+                    <center><strong><img src="https://hackr.io/blog/media/react-2.png" alt="React" width="250" height="150"><br></strong>
+                    </center>
+
+                    <p class="lead">
+                        <b>
+                            <span style="font-weight: 400;">Created by Facebook, the React framework has earned popularity within a short period. It is used to develop and operate the dynamic User Interface of the web pages with high incoming traffic. It makes the use of a virtual DOM, and hence, the integration of the same with any application is more straightforward.
+                            </span>
+                        </b>
+                    </p>
+
+                    <h2><strong>Features</strong></h2>
+                    <ul class="lead">
+                        <li><strong>Declarative: </strong><span style="font-weight: 400;">Creates interactive and dynamic UI for websites and mobile applications. React updates efficiently and render the right components when data changes. Declarative views make the code readable and easy to debug.</span></li>
+                        <li><strong>Virtual DOM:</strong><span style="font-weight: 400;"> For every DOM object, there is a corresponding "virtual DOM object." It creates a virtual copy of the original DOM and is a representation of a DOM object,</span></li>
+                        <li><strong>Event handling:</strong><span style="font-weight: 400;"> React has its fully compatible W3C object model event system created. It also provides a cross-browser interface to a native event, meaning no need to worry about incompatible event names and fields. React reduces memory head by as event system is implemented through event delegation and has a pool of event objects.</span></li>
+                        <li><strong>JSX:</strong><span style="font-weight: 400;"> JSX is a markup syntax that closely resembles HTML. JSX makes writing React components easier by making the syntax almost identical to the HTML injected into the web page.</span></li>
+                        <li><strong>Performance:</strong><span style="font-weight: 400;"> React uses one-way data binding with an application architecture called Flux controls. ReactJS helps update the View for the user and, Flux controls the application workflow. Virtual DOM adds advantages as it compares the new data with original DOM and updates the View automatically.&nbsp;</span></li>
+                        <li><strong>React Native: </strong><span style="font-weight: 400;">React Native is a custom renderer for React; it uses native components instead of web components like React as building blocks. It also serves access to these platforms' features, apart from transforming React code to work on iOS and Android.</span></li>
+                        <li><span style="font-weight: 400;"><strong>Component-Based: </strong>In React, everything is a component of the web page divided into small components to create a view(or UIs). Every part of the application visuals would be wrapped inside a self-contained module known as a component. Components in ReactJS use to define the visuals and interactions in applications.</span></li>
+                    </ul>
+
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/DLX62G4lc44?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+                    <br>
+
+
+                    <h3>3. <a style="color:black" href="https://vuejs.org/" target="_blank" rel="noopener"><strong>Vue.js</strong></a></h3>
+                    <center>
+                        <img class="alignnone wp-image-1307 size-full" src="https://hackr.io/blog/uploads/images/1570190909ugzxr0Xhgs.jpg" alt="Vue - JavaScript Framework" width="200" height="100">
+
+                    </center>
+
+                    <p class="lead">
+                        <b>
+                            <span style="font-weight: 400;">Though developed in the year 2016, this JavaScript framework has already made its way into the market and has proven its worth by offering various features. Its dual integration mode is one of the most attractive features for creating high-end SPA or Single Page Application. It is a much reliable platform for developing cross-platform.
+                            </span>
+                        </b>
+                    </p>
+
+                    <h2><strong>Features</strong></h2>
+
+                    <ul class="lead">
+                        <li><strong>Virtual DOM: </strong><span style="font-weight: 400;">Vue.js utilizes virtual DOM. Virtual DOM is a clone of the principal DOM element. The virtual DOM absorbs every change intended for the DOM presents in the form of JavaScript data structures, which are compared with the original data structure.</span></li>
+                        <li><span style="font-weight: 400;">The viewers view final changes that reflect in the real DOM. The method is creative and cost-effective; also, the changes are done quickly.</span></li>
+                        <li><strong>Data Binding: </strong><span style="font-weight: 400;">This feature facilitates to manipulate or assign values to HTML attributes., change the style, assign classes with v-bind available, which is a binding directive.</span></li>
+                        <li><strong>CSS Transitions and Animations: </strong><span style="font-weight: 400;">This feature provides several methods to apply a transition to HTML elements when added, updated, or removed from the DOM. Its features consist of a built-in component that wraps the element responsible for returning the transition effect.</span></li>
+                        <li><strong>Template: </strong><span style="font-weight: 400;">It provides HTML-based templates that bind the DOM with the Vue.js instance data. The templates are compiled into Virtual DOM Render functions. A developer can use the render functions template and can replace the template with the render function.</span></li>
+                        <li><strong>Methods:&nbsp; </strong><span style="font-weight: 400;">We use methods when an event occurs that isn’t necessarily related to the instance data being mutated or want to change a component’s state. Methods do not keep records of any dependencies but can take arguments.&nbsp;</span></li>
+                        <li><strong>Complexity: </strong><span style="font-weight: 400;">Vue.js is simpler in terms of API and design. A web developer builds simple applications in a single day.</span></li>
+                    </ul>
+
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/Wy9q22isx3U?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+                    <br>
+
+                    <h3 style="color:black">4. <a href="https://www.emberjs.com/" target="_blank" rel="noopener"><strong>Ember.js</strong></a></h3>
+
+                    <center><strong><img style="display: block; margin-left: auto; margin-right: auto;" src="https://hackr.io/blog/media/emberjs.png" alt="EmberJS" width="124" height="108"></strong>
+                    </center>
+
+                    <p class="lead"><b>
+                            <span style="font-weight: 400;">The introduction of Ember.js to the software market was 2015, and since then, it has gained popularity with its wide application area. The features of Ember.js support two-way data binding and hence, establish a reliable platform for handling the complicated User Interfaces. Popular websites like LinkedIn, Netflix, Nordstrom, and many more use the Ember.JS platform for their websites.
+                            </span>
+                        </b>
+                    </p>
+
+                    <ul class="lead">
+                        <li style="font-weight: 400;"><span style="font-weight: 400;">Creation of usable and comfortable to maintain JavaScript web applications.</span></li>
+                        <li style="font-weight: 400;"><span style="font-weight: 400;">It offers HTML and CSS</span><span style="font-weight: 400;"> of the development model at the core.&nbsp;</span></li>
+                        <li style="font-weight: 400;"><span style="font-weight: 400;">Provides instance initializers.</span></li>
+                        <li style="font-weight: 400;"><span style="font-weight: 400;">Ember.js offers routes that are the core features used for managing the URL.</span></li>
+                        <li style="font-weight: 400;"><span style="font-weight: 400;">Ember.js provides </span><span style="font-weight: 400;">the Ember Inspector</span><span style="font-weight: 400;"> tool for debugging Ember applications.</span></li>
+                        <li style="font-weight: 400;"><span style="font-weight: 400;">Ember.js uses templates that help to automatically update the model if the content of applications gets changed.</span></li>
+                    </ul>
+
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/_JfNuppX1n8?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+                    <br>
+
+                    <h3>5. <a style="color:black" href="https://www.meteor.com/" target="_blank" rel="noopener"><strong>Meteor</strong></a></h3>
+
+                    <center><img class="alignnone wp-image-1308 size-full" src="https://hackr.io/blog/uploads/images/1570190909g1yEqokQxp.jpg" alt="Meteor - JavaScript Framework" width="430" height="248">
+                    </center>
+                    <p class="lead"><b>
+                            <span style="font-weight: 400;">Meteor's application area (aka Meteor.js or MeteorJS) serves the name itself since it is varied as it covers almost the significant portion of the software development. Uses of this framework include significant areas like back-end development, management of the database, business logic, and rendering of the front-end.
+                            </span>
+                        </b>
+                    </p>
+                    <h4><strong>Full-Stack Solution</strong></h4>
+
+                    <p class="lead"><b>
+                            <span style="font-weight: 400;">Meteor proves to be a full-stack solution for developing and deploying web applications.&nbsp;
+                            </span>
+                        </b>
+                    </p>
+                    <p class="lead"><b>
+                            <span style="font-weight: 400;">The framework offers several built-in features, such as automatic CSS, reactive templates, and JS minification on the production server.&nbsp;
+                            </span>
+                        </b>
+                    </p>
+
+                    <p class="lead"><b>
+                            <span style="font-weight: 400;">Galaxy, its cloud platform, is powerful for deploying, scaling, and monitoring client applications.
+                            </span>
+                        </b>
+                    </p>
+
+                    <p class="lead">
+                        <b>
+                            <span style="font-weight: 400;">It is also bundled with useful client-side technologies, including templates, helpers, and events.
+                            </span>
+                        </b>
+                    </p>
+
+                    <h4><strong>Development Ecosystem</strong></h4>
+
+                    <p><b>
+                            <span style="font-weight: 400;">Meteor.js is not just a JavaScript development framework, but an open-source Isomorphic Development Ecosystem (IDevE). It facilitates building real-time web applications from scratch as it contains all the necessary front-end and back-end components. Thus, it aids the developers through the entire app development lifecycle, right from setup and development to deployment.
+                            </span>
+                        </b>
+                    </p>
+
+                    <h4><strong>Isomorphic JavaScript Code</strong></h4>
+
+                    <p class="lead"><b>
+                            <span style="font-weight: 400;">The same code can be used on the front-end, the back-end, and mobile and web applications. It saves developers from requiring to install and configure different module managers, libraries, drivers, APIs, and more.
+                            </span>
+                        </b>
+                    </p>
+
+                    <p class="lead">
+                        <b>
+
+                            <span style="font-weight: 400;">With Meteor, developers can leverage JavaScript's power while reducing code length and complexity, saving a lot of production time of developers to perform context switching between server language and JavaScript.
+                            </span>
+                        </b>
+                    </p>
+
+                    <h4 style="color:black"><strong>Front-end Solution&nbsp;</strong></h4>
+                    <p class="lead"><b>
+                            <span style="font-weight: 400;">Meteor offers a front-end development framework, Blaze.js, which offers some useful features. It also integrates with popular modern front-end frameworks like Backbone.js to yield better results.
+                            </span>
+                        </b>
+                    </p>
+
+                    <p class="lead">
+                        <b>
+                            <span style="font-weight: 400;">Meteor offers isomorphic APIs that help in communication between front-end and back-end, allowing developers to handle client-server management and server-session management.&nbsp;
+                            </span>
+                        </b>
+                    </p>
+
+                    <p class="lead"><b>
+                            <span style="font-weight: 400;">Data communication between client and server is automatic in this framework and does not require to write any boilerplate code.
+                            </span>
+                        </b>
+                    </p>
+
+                    <h4 style="color:black"><strong>Database Integration&nbsp;</strong></h4>
+                    <p class="lead"><b>
+                            <span style="font-weight: 400;">Meteor.js supports only MongoDB as of now, and that is the biggest disadvantage. So, one can not use Meteor if they need to include NoSQL database support for your applications.
+                            </span>
+                        </b>
+                    </p>
+
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/9494-2E4riQ?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+                    <br>
+
+                    <h3>6. <a style="color:black" href="https://mithril.js.org/" target="_blank" rel="noopener"><strong>Mithril</strong></a></h3>
+                    <p><strong><img style="display: block; margin-left: auto; margin-right: auto;" src="https://hackr.io/blog/media/mithril.png" alt="Mithril" width="500" height="100"></strong></p>
+
+                    <p class="lead"><b>
+                            <span style="font-weight: 400;">Mithril is a client-side JavaScript framework that is used primarily in developing the Single Page Applications. A</span><span style="font-size: 1.125rem; letter-spacing: 0px; font-family: 'Akkurat Std', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;">s there are no derived functions from a base class, t</span><span style="font-size: 1.125rem; letter-spacing: 0px; font-family: 'Akkurat Std', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;">he framework's implementation is more straightforward. It's small (&lt; 8kb gzip), fast and provides routing and XHR utilities out of the box. It has a few features similar to React.
+                            </span>
+                        </b>
+                    </p>
+
+                    <h4><strong>Full-Stack Solution</strong></h4>
+
+                    <ul class="lead">
+                        <li><span style="font-weight: 400;">Meteor proves to be a full-stack solution for developing and deploying web applications.&nbsp;</span></li>
+                        <li><span style="font-weight: 400;">The framework offers several built-in features, such as automatic CSS, reactive templates, and JS minification on the production server.&nbsp;</span></li>
+                        <li><span style="font-weight: 400;">Galaxy, its cloud platform, is powerful for deploying, scaling, and monitoring client applications.</span></li>
+                        <li><span style="font-weight: 400;">It is also bundled with useful client-side technologies, including templates, helpers, and events.</span></li>
+                    </ul>
+
+                    <h4><strong>Development Ecosystem</strong></h4>
+                    <p class="lead"><b>
+                            <span style="font-weight: 400;">Meteor.js is not just a JavaScript development framework, but an open-source Isomorphic Development Ecosystem (IDevE). It facilitates building real-time web applications from scratch as it contains all the necessary front-end and back-end components. Thus, it aids the developers through the entire app development lifecycle, right from setup and development to deployment.
+                            </span>
+                        </b>
+                    </p>
+
+                    <h4><strong>Isomorphic JavaScript Code</strong></h4>
+
+                    <ul class="lead">
+                        <li><span style="font-weight: 400;">The same code can be used on the front-end, the back-end, and mobile and web applications. It saves developers from requiring to install and configure different module managers, libraries, drivers, APIs, and more.</span></li>
+                        <li><span style="font-weight: 400;">With Meteor, developers can leverage JavaScript's power while reducing code length and complexity, saving a lot of production time of developers to perform context switching between server language and JavaScript.</span></li>
+                    </ul>
+
+                    <h4><strong>Front-end Solution&nbsp;</strong></h4>
+
+                    <ul class="lead">
+                        <li><span style="font-weight: 400;">Meteor offers a front-end development framework, Blaze.js, which offers some useful features. It also integrates with popular modern front-end frameworks like Backbone.js to yield better results.</span></li>
+                        <li><span style="font-weight: 400;">Meteor offers isomorphic APIs that help in communication between front-end and back-end, allowing developers to handle client-server management and server-session management.&nbsp;</span></li>
+                        <li><span style="font-weight: 400;">Data communication between client and server is automatic in this framework and does not require to write any boilerplate code.</span></li>
+                    </ul>
+
+                    <h4><strong>Full-Stack Solution</strong></h4>
+
+                    <ul class="lead">
+                        <li><span style="font-weight: 400;">Meteor proves to be a full-stack solution for developing and deploying web applications.&nbsp;</span></li>
+                        <li><span style="font-weight: 400;">The framework offers several built-in features, such as automatic CSS, reactive templates, and JS minification on the production server.&nbsp;</span></li>
+                        <li><span style="font-weight: 400;">Galaxy, its cloud platform, is powerful for deploying, scaling, and monitoring client applications.</span></li>
+                        <li><span style="font-weight: 400;">It is also bundled with useful client-side technologies, including templates, helpers, and events.</span></li>
+                    </ul>
+
+                    <h4><strong>Development Ecosystem</strong></h4>
+
+                    <p class="lead"><b>
+                            <span style="font-weight: 400;">Meteor.js is not just a JavaScript development framework, but an open-source Isomorphic Development Ecosystem (IDevE). It facilitates building real-time web applications from scratch as it contains all the necessary front-end and back-end components. Thus, it aids the developers through the entire app development lifecycle, right from setup and development to deployment.
+                            </span>
+                        </b>
+                    </p>
+
+                    <h4><strong>Isomorphic JavaScript Code</strong></h4>
+                    <p class="lead"><b>
+                            <span style="font-weight: 400;">The same code can be used on the front-end, the back-end, and mobile and <a href="https://hackr.io/blog/web-application-architecture-definition-models-types-and-more">web applications</a>. It saves developers from requiring to install and configure different module managers, libraries, drivers, APIs, and more.
+                            </span>
+                        </b>
+                    </p>
+
+                    <h4><strong>Front-end Solution&nbsp;</strong></h4>
+                    <ul class="lead">
+                        <li><span style="font-weight: 400;">Meteor offers a front-end development framework, Blaze.js, which offers some useful features. It also integrates with popular modern <a href="https://hackr.io/blog/top-10-web-development-frameworks-in-2020">front-end frameworks</a> like Backbone.js to yield better results.</span></li>
+                        <li><span style="font-weight: 400;">Meteor offers isomorphic APIs that help in communication between front-end and back-end, allowing developers to handle client-server management and server-session management.&nbsp;</span></li>
+                        <li><span style="font-weight: 400;">Data communication between client and server is automatic in this framework and does not require to write any boilerplate code.</span></li>
+                    </ul>
+
+                    <h4><strong>Database Integration&nbsp;</strong></h4>
+
+                    <p class="lead"><b>
+                            <span style="font-weight: 400;">Meteor.js supports only MongoDB as of now, and that is the biggest disadvantage. So, one can not use Meteor if they need to include NoSQL database support for your applications.
+                            </span>
+                        </b>
+                    </p>
+
+                    <h4><strong>Database Integration&nbsp;</strong></h4>
+
+                    <p class="lead"><b><span style="font-weight: 400;">Meteor.js supports only MongoDB as of now, and that is the biggest disadvantage. So, one can not use Meteor if they need to include NoSQL database support for your applications.
+                            </span></b></p>
+
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/tNMiCr39Fx0?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+                    <br>
+
+                    <h3>7. <a style="color:black" href="https://nodejs.org/en/" target="_blank" rel="noopener"><strong>Node.js</strong></a></h3>
+                    <p><strong><img style="display: block; margin-left: auto; margin-right: auto;" src="https://hackr.io/blog/media/nodejs.png" alt="NodeJS" width="200" height="100"></strong></p>
+
+                    <p class="lead"><b><span style="font-weight: 400;">Node.js is a server-side JavaScript run-time environment, which works on cross platforms and is open-source. The framework is capable of driving asynchronous I/O with its event-driven architecture. It works in the JavaScript Runtime environment and shows JAVA's similar properties like threading, packaging, o forming loops.
+                            </span>
+                        </b>
+                    </p>
+
+                    <h2 id="features-3"><strong>Features:</strong></h2>
+
+                    <ol class="lead">
+                        <li><strong> It is swift:</strong></li>
+                    </ol>
+
+                    <p class="lead"><b><span style="font-weight: 400;">The library of Node.js is fast when it comes to code execution, as it is built on the V8 JavaScript engine of Google Chrome.
+                            </span>
+                        </b>
+                    </p>
+
+                    <ol class="lead" start="2">
+                        <li><strong> I/O is asynchronous and Event-Driven:</strong></li>
+                    </ol>
+
+                    <p class="lead">
+                        <b>
+                            <span style="font-weight: 400;">All the APIs are asynchronous, which means that its server does not wait for the API to come back with data. Here the server calls the APIs one by one and keeps moving to the next one while using a notification mechanism of Events to generate a response from the API, called previously. This makes it fast too.
+                            </span>
+                        </b>
+                    </p>
+
+                    <ol class="lead" start="3">
+                        <li><strong> Single-threaded:</strong></li>
+                    </ol>
+
+                    <p class="lead"><b><span style="font-weight: 400;">Node.js, along with event looping, follows a single-threaded model.
+                            </span>
+                        </b>
+                    </p>
+
+                    <ol class="lead" start="4">
+                        <li><strong> Highly scalable:</strong></li>
+                    </ol>
+
+                    <p class="lead"><b><span style="font-weight: 400;">Node.js follows an event mechanism that makes it possible for the server to respond in a non-blocking manner, which eventually makes it scalable.
+                            </span></b></p>
+
+                    <ol class="lead" start="5">
+                        <li><strong> No buffering:</strong></li>
+                    </ol>
+
+                    <p class="lead"><b><span style="font-weight: 400;">When it comes to uploading audio and video files, Node.js cuts down the processing time significantly. It does not buffer any data, and here the application gets out the data in chunks.
+                            </span></b></p>
+
+                    <ol class="lead" start="6">
+                        <li><strong> Open source:</strong></li>
+                    </ol>
+
+                    <p class="lead"><b><span style="font-weight: 400;">Being open-source, Node.js's community has come up with several amazing models that can be used to add better capabilities to the Node.js applications.
+                            </span></b></p>
+
+                    <ol class="lead" start="7">
+                        <li><strong> License:</strong></li>
+                    </ol>
+
+                    <p class="lead"><b><span style="font-weight: 400;">It has been released under MIT license.
+                            </span></b></p>
+
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/RLtyhwFtXQA?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+                    <br>
+
+                    <h3 id="8-polymer">8. <a style="color:black" href="https://www.polymer-project.org/" target="_blank" rel="noopener"><strong>Polymer</strong></a></h3>
+
+                    <p><strong><img style="display: block; margin-left: auto; margin-right: auto;" src="https://hackr.io/blog/media/polymer-1.png" alt="Polymer" width="245" height="103"></strong></p>
+
+                    <p class="lead"><b><span style="font-weight: 400;">The polymer is an open-source JavaScript library developed by Google, which can create the website's elements without going into a complex level. Also, it supports both one-way and two-way data binding, hence making a more extensive application area.
+                            </span></b></p>
+
+                    <p class="lead"><strong>Features:</strong></p>
+
+                    <ul class="lead">
+                        <li style="font-weight: 400;"><span style="font-weight: 400;">Polymer.js is a <a href="https://hackr.io/blog/top-javascript-libraries">JavaScript library</a> built on top of the web-standard APIs that provides the simplest way to create custom HTML elements.&nbsp;</span></li>
+                        <li style="font-weight: 400;"><span style="font-weight: 400;">It gives the polyfills for creating customized and reusable elements.</span></li>
+                        <li style="font-weight: 400;"><span style="font-weight: 400;">It is used for the creation of reusable widgets in web documents and applications.</span></li>
+                        <li style="font-weight: 400;"><span style="font-weight: 400;">It uses Google material design to develop mobile applications for fast and easy to development of mobile applications.</span></li>
+                        <li style="font-weight: 400;"><span style="font-weight: 400;">The custom elements are distributed across the network and allow users to use these elements with the help of HTML Imports.</span></li>
+                    </ul>
+
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/N1DJ5PFcQH4?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+                    <br>
+
+                    <h3 id="9-aurelia">9. <a style="color:black" href="https://aurelia.io/" target="_blank" rel="noopener"><strong>Aurelia</strong></a></h3>
+
+                    <p><strong><img style="display: block; margin-left: auto; margin-right: auto;" src="https://hackr.io/blog/media/aurelia-1.png" alt="Aurelia" width="273" height="120"></strong></p>
+
+                    <p class="lead"><b><span style="font-weight: 400;">Aurelia framework is the latest version of JavaScript, which can be used to implement any interface. It is the next generation of the framework for developing far more robust websites. The framework of Aurelia can extend the HTML for various purposes, including data binding. Also, its modern architecture ensures that the purpose of toll is for interpretation client-side and server-side at a time.
+                            </span></b></p>
+
+                    <p class="lead"><strong>Features:</strong></p>
+
+                    <ul class="lead">
+                        <li style="font-weight: 400;"><strong>Components</strong><span style="font-weight: 400;">: Components are building blocks of the Aurelia framework and are composed of JavaScript view-model pairs and HTML views.&nbsp;</span></li>
+                        <li style="font-weight: 400;"><strong>Web Standards:</strong><span style="font-weight: 400;"> It is one of the cleanest modern frameworks. It completely focuses on web standards without unnecessary abstractions.</span></li>
+                        <li style="font-weight: 400;"><strong>Extensible:</strong><span style="font-weight: 400;"> The framework facilitates an easy way to integrate with the other needed tools.</span></li>
+                        <li style="font-weight: 400;"><strong>Commercial Support: </strong><span style="font-weight: 400;">&nbsp;This framework offers commercial and enterprise support.&nbsp;</span></li>
+                        <li style="font-weight: 400;"><strong>License: </strong><span style="font-weight: 400;">&nbsp;Aurelia is open-sourced and licensed under MIT license.</span></li>
+                    </ul>
+
+
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/yaX34x3OgQI?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+                    <br>
+
+                    <h3 id="10-backbone-js">10. <a style="color:black" href="http://backbonejs.org/" target="_blank" rel="noopener"><strong>Backbone.js</strong></a></h3>
+                    <center>
+                        <p><img class="alignnone wp-image-1309 size-full" src="https://hackr.io/blog/uploads/images/1570190908wb5UQG54mg.jpg" alt="Backbone - JavaScript Framework" width="400" height="160"> <span style="font-weight: 400;">
+                        
+                            </span></p>
+                    </center>
+                    <p class="lead">
+                    <b>
+                    It is one of the most popular JavaScript frameworks. It is effortless to understand and learn. It can be used to create Single Page Applications. The development of this framework involves the idea that all the server-side functions must flow through an API, which would help achieve complex functionalities by writing less code.
+
+                    </b>
+                    </p>
+
+                    <p class="lead"><strong>Features:</strong></p>
+
+                    <ul class="lead">
+                        <li style="font-weight: 400;"><span style="font-weight: 400;">BackboneJS uses JavaScript functions, making the development of applications and the frontend in a much easier.&nbsp;</span></li>
+                        <li style="font-weight: 400;"><span style="font-weight: 400;">Building blocks such as models, views, events, routers, and collections are provided for assembling the client-side web applications.</span></li>
+                        <li style="font-weight: 400;"><span style="font-weight: 400;">It is a simple library that helps in separating business and user interface logic.</span></li>
+                        <li style="font-weight: 400;"><span style="font-weight: 400;">It is a free and open-source library and contains over 100 available extensions.</span></li>
+                        <li style="font-weight: 400;"><span style="font-weight: 400;">It is a backbone for any project and helps in the organization of the code.</span></li>
+                        <li style="font-weight: 400;"><span style="font-weight: 400;">BackboneJS has a soft dependency on jQuery and a hard dependency on Underscore.js.</span></li>
+                        <li style="font-weight: 400;"><span style="font-weight: 400;">It allows us to create client-side web applications or mobile applications in a well-structured and organized format.</span></li>
+                    </ul>
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/HOAU-nfy5Sc?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+                    <br>
+
+                    <h4>Conclusion</h4>
+
+                    <p class="lead">
+                        <b>
+                            When it comes to web development, Javascript continues to be the dominant language, and therefore, we have several Javascript frameworks to choose from. We hope our suggested list of frameworks for Javascript helps you choose the perfect one for your project. Therefore, carefully study your project requirements before choosing your framework for your application as every framework comes with unique features that you may require during development. Apart from the features, also consider the learning curve, complexity, compatibility documentation, and community support.
+                            <br>
+                            If you are want to learn JavaScript in-depth, udemy's <a href="https://click.linksynergy.com/deeplink?id=jU79Zysihs4&mid=39197&murl=https://www.udemy.com/course/the-complete-javascript-course/">The Complete JavaScript Course</a>
+                            would be a great stepping stone for you.
+                        </b>
+                    </p>
+
+                    <hr class="separate" style="border-top: 3px solid #fff">
+
+                    <!-- ************************************************************************************** -->
+                    <p class="lead"><b><a href="#content" style="font-size:35px;color:white;text-decoration:none"><i>
+                                     go to top</i></a></b></p>
+                    <!-- ************************************************************************************** -->
+                    <hr class="separate" style="border-top: 3px solid #fff">
+
+
+                </div>
+            </div>
+
+        </div>
+        <!-- End demo content -->
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+
+        <script>
+            $(function() {
+                // Sidebar toggle behavior
+                $('#sidebarCollapse').on('click', function() {
+                    $('#sidebar, #content').toggleClass('active');
+                });
+            });
+        </script>
+
+    </body>
+
+    </html>
+

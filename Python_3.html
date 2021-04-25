@@ -1,0 +1,1037 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>
+
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+</head>
+<style>
+    .vertical-nav {
+        min-width: 17rem;
+        width: 17rem;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s;
+    }
+
+    .page-content {
+        width: calc(100% - 17rem);
+        margin-left: 17rem;
+        transition: all 0.4s;
+    }
+
+    /* for toggle behavior */
+
+    #sidebar.active {
+        margin-left: -17rem;
+    }
+
+    #content.active {
+        width: 100%;
+        margin: 0;
+    }
+
+    @media (max-width: 768px) {
+        #sidebar {
+            margin-left: -17rem;
+        }
+
+        #sidebar.active {
+            margin-left: 0;
+        }
+
+        #content {
+            width: 100%;
+            margin: 0;
+        }
+
+        #content.active {
+            margin-left: 17rem;
+            width: calc(100% - 17rem);
+        }
+    }
+
+    body {
+        background: #599fd9;
+        background: -webkit-linear-gradient(to right, #599fd9, #c2e59c);
+        background: linear-gradient(to right, #599fd9, #c2e59c);
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    .separator {
+        margin: 3rem 0;
+        border-bottom: 1px dashed #fff;
+    }
+
+    .text-uppercase {
+        letter-spacing: 0.1em;
+    }
+
+    .text-gray {
+        color: #525252;
+    }
+</style>
+
+<body>
+
+    <!-- Vertical navbar Starts Here -->
+
+    <div class="vertical-nav " id="sidebar">
+        <!-- style="position:fixed" -->
+        <!-- bg-white -->
+        <div class="py-4 px-3 mb-4 ">
+            <!-- bg-white -->
+
+            <div class="media d-flex align-items-center"><img src="Img/download.jfif" alt="..." width="70" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+            <div class="media-body">
+                    <h4 class="m-0" style="font-size:20px"><i></i></h4>
+                    <p class="font-weight text-dark mb-0"><i>
+                            
+                        </i></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="separator"></div>
+        <!--         <hr class="solid" style="border-top: 3px solid #bbb"> -->
+        <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Index</p>
+
+        <ul class="nav flex-column  mb-0" style="font-weight:bold">
+            <!-- bg-white -->
+            <li class="nav-item">
+                <a href="#py" class="nav-link text-dark font-italic ">
+                    <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                    Start
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#in" class="nav-link text-dark font-italic ">
+                    <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                    Introduction
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#hi" class="nav-link text-dark font-italic">
+                    <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                    History
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#ap" class="nav-link text-dark font-italic">
+                    <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                    Applications of Python
+                </a>
+            </li>
+
+        </ul>
+
+        <ul class="nav flex-column  mb-0" style="font-weight:bold">
+            <!-- bg-white -->
+            <li class="nav-item">
+                <a href="#bif" class="nav-link text-dark font-italic">
+                    <i class="fa fa-area-chart mr-3 text-primary fa-fw"></i>
+                    Python Built-in functions
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Python.html" class="nav-link text-dark font-italic">
+                    <i class="fa fa-bar-chart mr-3 text-primary fa-fw"></i>
+                    Python Frameworks
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Python_2.html" class="nav-link text-dark font-italic">
+                    <i class="fa fa-pie-chart mr-3 text-primary fa-fw"></i>
+                    Python Libraries
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="index.html" class="nav-link text-dark font-italic">
+                    <i class="fa fa-line-chart mr-3 text-primary fa-fw"></i>
+                    <-BACK TO HOME</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Vertical navbar ends here -->
+    <!-- Page content holder -->
+
+    <div class="page-content p-5" id="content">
+
+        <!-- Toggle button -->
+
+        <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">MENU</small></button>
+
+        <!-- Toggle button ends here -->
+
+        <!-- *************************************************************************************** -->
+        <h2 class="display-4 text-white" id="py">Python</h2>
+        <p class="lead text-white mb-0"> <i>By Guido van Rossum</i></p>
+        <p class="lead text-white">Snippet by <a href="https://www.python.org/doc/" class="text-white">
+                <u>python.org</u></a>
+        </p>
+
+        <p class="lead text-white">For downloading latest version Click <a href="https://www.python.org/ftp/python/3.9.1/python-3.9.1-amd64.exe" class="text-white">
+                <u>Here</u></a>
+        </p>
+
+        <hr class="separate" style="border-top: 3px solid #fff">
+
+        <p class="lead"><b><a href="Python_2.html" style="font-size:35px;color:white;text-decoration:none"><i>
+                        <--Back </i></a></b></p>
+        <hr class="separate" style="border-top: 3px solid #fff">
+
+        <!-- *********************************************************************8 -->
+        <div class="col-lg-12">
+
+            <img src="opencv.png" alt="python libraries" class="wp-image-5968 lazyloaded" data-ll-status="loaded" width="120" height="100">
+            <br><br>
+            <p class="lead" style="font-size:22px">
+                <b><strong>
+                        <u> OpenCV </u>
+                    </strong>
+                </b>
+            </p>
+
+
+            <p class="lead">
+                <b>
+                    <strong>License:</strong> Apache license<br>
+                    <strong>Initial release:</strong>June 2000(20 years ago)<br>
+                    <strong>Operating system:</strong> Linux, macOS, Windows<br>
+                    <strong>Programming languages: </strong> C, C++<br>
+                    <strong>Repository:</strong>Click <a href="github.com/opencv/opencv">Here.</a>
+                </b>
+            </p>
+
+            <h4>Computer Vision</h4>
+            <p class="lead">
+                <b>OpenCV is a cross-platform library using which we can develop real-time computer vision applications. It mainly focuses on image processing, video capture and analysis
+                    including features like face detection and object detection.<br>
+
+
+                    <br>Computer Vision can be defined as a discipline that explains how to reconstruct, interrupt, and understand a 3D scene from its 2D images, in terms of the properties of the structure present in the scene.
+                    It deals with modeling and replicating human vision using computer software and hardware.<br>
+                    <br>
+                    Computer Vision overlaps significantly with the following fields:-<br><br>
+                    &nbsp;&nbsp;1)&nbsp;<strong>Image Processing:- </strong>It focuses on image manipulation.<br><br>
+                    &nbsp;&nbsp;2)&nbsp;<strong>Pattern Recognition:-</strong> It explains various techniques to classify patterns.<br><br>
+                    &nbsp;&nbsp;3)&nbsp;<strong>Photogrammetry:-</strong>It is concerned with obtaining accurate measurements from images.<br><br>
+                    <strong>Image processing:-</strong> deals with image-to-image transformation.
+                    The input and output of image processing are both images.
+                    <br>
+                    <br>
+                    <strong>Computer vision:-</strong> is the construction of explicit, meaningful descriptions of physical objects from their image. The output of computer
+                    vision is a description or an interpretation of structures in 3D scene.<br>
+                    <br>
+                    <st> OpenCV (Open Source Computer Vision Library)</strong> is a library of programming
+                        functions mainly aimed at real-time computer vision.
+                        Originally developed by Intel, it was later supported by Willow
+                        Garage then Itseez (which was later acquired by Intel). The library is cross-platform and free for
+                        use under the open-source Apache 2 License. Starting with 2011,
+                        OpenCV features GPU acceleration for real-time operations.
+                        <br>
+                        <br>
+                        Officially launched in 1999 the OpenCV project was initially an Intel Research initiative to advance CPU-intensive applications,
+                        part of a series of projects including real-time ray tracing and 3D display walls. The main contributors to the project included a number of optimization experts in Intel Russia,
+                        as well as Intel's Performance Library Team. In the
+                        early days of OpenCV, the goals of the project were described as:-
+                        <br>
+                        <br> <strong> 1)</strong> Advance vision research by providing not only open but also optimized code for basic vision infrastructure.
+                        No more reinventing the wheel.<br>
+                        <br> <strong> 2)</strong> Disseminate vision knowledge by providing a common infrastructure that developers could build on, so that code would be more
+                        readily readable and transferable.<br>
+                        <br> <strong> 3)</strong> Advance vision-based commercial applications by making portable, performance-optimized code available for free – with a license
+                        that did not require code to be open or free itself.<br>
+                        <br>
+                        In July 2020, OpenCV announced and began a Kickstarter campaign for the OpenCV AI Kit, a series of hardware
+                        modules and additions to OpenCV supporting Spatial AI.
+                </b>
+            </p>
+            <p class="lead"><b>Some Useful Courses:-<br>
+                    <a href="https://opencv.org/courses/course-computer-vision-one.html"> Computer Vision I</a><br>
+                    <a href="https://opencv.org/courses/course-computer-vision-two.html"> Computer Vision II</a>
+                </b>
+            </p>
+
+            <p class="lead">
+                <b>
+                    For Tutorial Click <a href="https://docs.opencv.org/master/d9/df8/tutorial_root.html">Here</a><br>
+                    For Example Visit<a href="https://docs.opencv.org/master/examples.html">Here.</a>
+                </b>
+            </p>
+
+            <hr class="separate" style="border-top: 3px solid #fff">
+
+            <!-- ************************************************************************************** -->
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Matplotlib_logo.svg/450px-Matplotlib_logo.svg.png" alt="python libraries" class="wp-image-5968 lazyloaded" data-ll-status="loaded" width="200" height="100">
+            <br><br>
+            <p class="lead" style="font-size:22px">
+                <b><strong>
+                        <u> Matplotlib</u>
+                    </strong>
+                </b>
+            </p>
+
+
+            <p class="lead">
+                <b>
+                    <strong>License:</strong>Matplotlib <a href="https://matplotlib.org/users/license.html">license</a><br>
+                    <strong>Developers:</strong> Michael Droettboom, et al.<br>
+                    <strong>Initial release:</strong>2003(18 years ago)<br>
+                    <strong>Operating system:</strong> Linux, macOS, Windows<br>
+                    <strong>Programming languages: </strong> Python<br>
+                    <strong>Repository:</strong>Click <a href="github.com/matplotlib/matplotlib">Here.</a>
+                </b>
+            </p>
+
+            <p class="lead">
+                <strong><b>What is Matplotlib ?</b></strong><br>
+                <b>Matplotlib is one of the most popular Python packages used for data visualization. It is a cross-platform library for making 2D plots from data in arrays. It provides an object-oriented API that helps in embedding plots in applications using Python GUI toolkits such as PyQt, WxPythonotTkinter.
+                    It can be used in Python and IPython shells, Jupyter notebook and web application servers also.<br>
+                    <br>Matplotlib has a procedural interface named the Pylab, which is designed to resemble MATLAB, a proprietary programming language developed by MathWorks. Matplotlib along with NumPy can be considered as the open source equivalent of MATLAB.
+                    <i> Matplotlib was originally written by John D. Hunter in 2003. The current stable version is 2.2.0 released in January 2018.</i><br>
+                    To Install Matplotlib:-<i> "pip install matplotlib"</i> in CMD.
+
+
+                    Pyplot is a Matplotlib module which provides a MATLAB-like interface.Matplotlib is designed to be as usable as MATLAB, with the ability to use Python, and the advantage of being free and open-source.<br>
+                    <strong> For Example:-</strong>
+                </b>
+            </p>
+            <center>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Synchrotron_Functions.svg/405px-Synchrotron_Functions.svg.png" height="250px" width="300px">&nbsp;
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Matplotlib_3d_v.svg/360px-Matplotlib_3d_v.svg.png" height="250px" width="300px">&nbsp;
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Matplotlib_histogram_v.svg/360px-Matplotlib_histogram_v.svg.png" height="250px" width="300px">&nbsp;
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Matplotlib_scatter_v.svg/360px-Matplotlib_scatter_v.svg.png" height="250px" width="300px">&nbsp;
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Mpl_example_qbo.svg/540px-Mpl_example_qbo.svg.png" height="250px" width="300px">&nbsp;
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Temp-sunspot-co2.svg/360px-Temp-sunspot-co2.svg.png" height="250px" width="300px">&nbsp;
+            </center>
+            <br>
+            <br>
+            <p class="lead">
+                <strong><b>
+                        For Example:-</b>
+                </strong>
+            </p>
+            <div class="shadow p-3 mb-5  bg-white rounded"><b>
+                    import matplotlib.pyplot as plt<br>
+                    plt.plot([1, 2, 3, 4])<br>
+                    plt.ylabel('some numbers')<br>
+                    plt.show()</b>
+            </div>
+            <center>
+                <img src="https://matplotlib.org/_images/sphx_glr_pyplot_001.png" width="400px" height="350px" </center>
+
+            </center>
+            <br>
+            <p class="lead">
+                <b>
+                    For tutorial click<a href="https://matplotlib.org/tutorials/introductory/pyplot.html">here.</a>
+                </b>
+            </p>
+
+            <hr class="separate" style="border-top: 3px solid #fff">
+            <!-- *********************************************************************8 -->
+
+            <!-- <p class="lead" style="font-size:22px">
+                <b><strong>
+                        <u> SQLAlchemy </u>
+                    </strong>
+                </b>
+            </p> -->
+            <h3><u>SQLAlchemy</u></h3>
+
+
+            <p class="lead">
+                <b>
+                    <strong>License:</strong> MIT License<br>
+                    <strong>Initial release:</strong> February 14, 2006(14 years ago)<br>
+                    <strong>Operating system:</strong> Cross-platform<br>
+                    <strong>Programming languages: </strong> Python<br>
+                    <strong>Repository:</strong>Click <a href="github.com/sqlalchemy/sqlalchemy">Here.</a>
+                </b>
+            </p>
+            <p class="lead">
+                <b>
+                    SQLAlchemy is an open-source SQL toolkit and object-relational mapper (ORM) for the Python
+                    programming language released under the MIT License.<br>
+                    SQLAlchemy's philosophy is that relational databases behave less like object collections as the scale gets larger and performance starts being a concern, while object collections behave less like tables and rows as more abstraction is designed into them. For this reason it has adopted the data mapper pattern (similar to Hibernate for Java) rather than the active record pattern used by a
+                    number of other object-relational mappers.<br>
+                    However, optional plugins allow users to develop using declarative syntax.<br>
+                </b>
+            </p>
+            <h4>For Example:-</h4>
+            <p class="lead">
+                <b>
+                    Creating two Python classes and according database tables in the DBMS:<br>
+                </b>
+            </p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded"><b><br>
+                    from sqlalchemy import *<br>
+                    from sqlalchemy.ext.declarative import declarative_base<br>
+                    from sqlalchemy.orm import relation, sessionmaker<br>
+                    <br>
+                    Base = declarative_base()<br>
+                    <br>
+                    class Movie(Base):<br>
+                    __tablename__ = "movies"<br>
+                    <br>
+                    id = Column(Integer, primary_key=True)<br>
+                    title = Column(String(255), nullable=False)<br>
+                    year = Column(Integer)<br>
+                    directed_by = Column(Integer, ForeignKey("directors.id"))<br>
+                    <br>
+                    director = relation("Director", backref="movies", lazy=False)<br>
+                    <br>
+                    def __init__(self, title=None, year=None):<br>
+                    self.title = title<br>
+                    self.year = year<br>
+                    <br>
+                    def __repr__(self):<br>
+                    return "Movie(%r, %r, %r)" % (self.title, self.year, self.director)<br>
+                    <br>
+                    class Director(Base):<br>
+                    __tablename__ = "directors"<br>
+                    <br>
+                    id = Column(Integer, primary_key=True)<br>
+                    name = Column(String(50), nullable=False, unique=True)<br>
+                    <br>
+                    def __init__(self, name=None):<br>
+                    self.name = name<br>
+                    <br>
+                    def __repr__(self):<br>
+                    return "Director(%r)" % (self.name)<br>
+                    <br>
+                    engine = create_engine("dbms://user:pwd@host/dbname")<br>
+                    Base.metadata.create_all(engine)</b><br>
+            </div>
+            <h4>Data Insertion</h4>
+            <p class="lead"><b>One can insert a director-movie relationship via either entity:<br> </b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded"><b>
+                    Session = sessionmaker(bind=engine)<br>
+                    session = Session()<br>
+                    <br>
+                    m1 = Movie("Robocop", 1987)<br>
+                    m1.director = Director("Paul Verhoeven")<br>
+                    <br>
+                    d2 = Director("George Lucas")<br>
+                    d2.movies = [Movie("Star Wars", 1977), Movie("THX 1138", 1971)]<br>
+                    <br>
+                    try:<br>
+                    session.add(m1)<br>
+                    session.add(d2)<br>
+                    session.commit()<br>
+                    except:<br>
+                    session.rollback()</b>
+            </div>
+
+            <h4>Querying</h4>
+
+            <div class="shadow p-3 mb-5  bg-white rounded"><b>
+                    alldata = session.query(Movie).all()<br>
+                    for somedata in alldata:<br>
+                    print(somedata)</b>
+            </div>
+            <p class="lead"><b> SQLAlchemy issues the following query to the DBMS (omitting aliases):-<br></b></p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded"><br>
+                SELECT movies.id, movies.title, movies.year, movies.directed_by, directors.id,<br> directors.name
+                FROM movies LEFT OUTER JOIN directors ON directors.id = movies.directed_by<br></br>
+            </div>
+
+            <h5>Output:-</h5>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                Movie('Robocop', 1987L, Director('Paul Verhoeven'))<br>
+                Movie('Star Wars', 1977L, Director('George Lucas'))<br>
+                Movie('THX 1138', 1971L, Director('George Lucas'))
+            </div>
+
+
+            <p class="lead"><b>For Tutorial Click<a href="https://docs.sqlalchemy.org/en/13/orm/tutorial.html"> Here.</a></b></p>
+
+            <hr class="separate" style="border-top: 3px solid #fff">
+
+            <!-- *********************************************************************8 -->
+
+            <p class="lead" style="font-size:22px">
+                <b><strong>
+                        <u> NLTK(Natural Language Toolkit) </u>
+                    </strong>
+                </b>
+            </p>
+
+
+            <p class="lead">
+                <b>
+                    <strong>License:</strong> Apache 2.0<br>
+                    <strong>Developers:</strong> Team NLTK<br>
+                    <strong>Initial release:</strong>2001(20 years ago)<br>
+                    <strong>Programming languages: </strong>Python<br>
+                    <strong>Repository:</strong>Click <a href="github.com/nltk/nltk">Here.</a>
+                </b>
+            </p>
+
+            <h4>What is NLP(Natural Language Processing)?</h4>
+            <p class="lead">
+                <b>
+                    The method of communication with the help of which humans can speak, read, and write, is language. In other words, we humans can think, make plans, make decisions in our natural language. Here the big question is, in the era of artificial intelligence, machine learning and deep learning, can humans communicate in natural language with computers/machines? Developing NLP applications is a huge challenge for us because computers require structured data, but on the other hand,
+                    human speech is unstructured and often ambiguous in nature.<br>
+                    Natural language is that subfield of computer science, more specifically of AI, which enables computers/machines to understand, process and manipulate human language. In simple words, NLP is a way of machines to analyze, understand and derive meaning from human natural languages like Hindi, English,
+                    French, Dutch, etc.
+                </b>
+            </p>
+
+            <h4>How NLP works?</h4>
+            <p class="lead">
+                <b>
+                    Before getting deep dive into the working of NLP, we must have to understand how human beings use language. Every day, we humans use hundreds or thousands of words and other humans interpret them and answer accordingly. It’s a simple communication for humans, isn’t it? But we know words run much-much deeper than that and we always derive a context from what we say and how we say. That’s why we can say rather than focuses on voice modulation,
+                    NLP does draw on contextual pattern.<br>
+                </b>
+            </p>
+
+            <h4>Component of NLP</h4>
+            <h6>following diagram represents the components of natural language processing(NLP):-</h6><br>
+
+            <center>
+                <img src="https://www.tutorialspoint.com/natural_language_toolkit/images/components.jpg" width="450px" height="500px">
+            </center>
+            <br>
+            <p class="lead"><b><strong>Morphological Processing</strong><br>
+                    Morphological processing is the first component of NLP. It includes breaking of chunks of language input into sets of tokens corresponding to paragraphs, sentences and words. For example, a word like “everyday”
+                    can be broken into two sub-word tokens as “every-day”.
+                </b></p><br>
+
+            <p class="lead"><b><strong>Syntax analysis </strong><br>
+                    Syntax Analysis, the second component, is one of the most important components of NLP. The purposes of this component are as follows −<br>
+                    <strong>1)</strong>&nbsp;To check that a sentence is well formed or not.<br>
+                    <strong>2)</strong>&nbsp;To break it up into a structure that shows the syntactic relationships between the different words.<br>
+                    <strong>3)</strong>&nbsp;E.g. The sentences like “The school goes to the student” would be rejected by syntax analyzer.<br>
+                </b></p>
+            <p class="lead"><b><strong>Semantic analysis</strong><br>
+                    Semantic Analysis is the third component of NLP which is used to check the meaningfulness of the text. It includes drawing exact meaning, or we can say dictionary meaning from the text. E.g. The sentences like “It’s a hot ice-cream.” would be discarded by semantic analyzer.<br>
+                    <br>
+                    <strong>Pragmatic analysis</strong><br>
+                    Pragmatic analysis is the fourth component of NLP. It includes fitting the actual objects or events that exist in each context with object references obtained by previous component i.e. semantic analysis. E.g. The sentences like “Put the fruits in the basket on the table” can have two semantic interpretations hence the pragmatic analyzer will choose between these two possibilities.<br>
+                    </>
+            </p>
+
+            <h4>NLKT</h4>
+            <p class="lead">
+                <b>
+                    The Natural Language Toolkit, or more commonly NLTK, is a suite of libraries and programs for symbolic and statistical natural language processing (NLP) for English written in the Python programming language. It was developed by Steven Bird and Edward Loper in the Department of Computer and Information Science
+                    at the University of Pennsylvania. NLTK includes graphical demonstrations and sample data. It is accompanied by a book that explains the underlying concepts behind the language processing tasks
+                    supported by the toolkit,plus a cookbook.
+                    <br>
+                    NLTK is intended to support research and teaching in NLP or closely related areas, including empirical linguistics, cognitive science, artificial intelligence, information
+                    retrieval, and machine learning.
+                    <br>
+                    NLTK has been used successfully as a teaching tool, as an individual study tool, and as a platform for prototyping and building research systems. There are 32 universities in the US and 25 countries using NLTK in their courses. NLTK supports classification, tokenization, stemming, tagging, parsing,
+                    and semantic reasoning functionalities.<br>
+                    NLTK is a leading platform for building Python programs to work with human language data. It provides easy-to-use interfaces to over 50 corpora and lexical resources such as WordNet, along with a suite of text processing libraries for classification, tokenization, stemming, tagging, parsing, and semantic reasoning, wrappers
+                    for industrial-strength NLP libraries, and an active discussion forum.<br>
+                    For installing it type :-<i>"pip install nltk"</i> in CMD.
+                </b>
+            </p>
+            <h4> For Example:-</h4>
+
+            <p class="lead"><b>Tokenize and tag some text:-</b></p><br>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                import nltk<br>
+                >>> sentence = """At eight o'clock on Thursday morning<br>
+                ... Arthur didn't feel very good."""<br>
+                >>> tokens = nltk.word_tokenize(sentence)<br>
+                >>> tokens<br>
+                ['At', 'eight', "o'clock", 'on', 'Thursday', 'morning',<br>
+                'Arthur', 'did', "n't", 'feel', 'very', 'good', '.']<br>
+                >>> tagged = nltk.pos_tag(tokens)<br>
+                >>> tagged[0:6]<br>
+                [('At', 'IN'), ('eight', 'CD'), ("o'clock", 'JJ'), ('on', 'IN'),<br>
+                ('Thursday', 'NNP'), ('morning', 'NN')]<br>
+            </div>
+
+            <p class="lead">
+                <b>
+                    Identify named entities:-
+                </b>
+            </p>
+
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                >>> entities = nltk.chunk.ne_chunk(tagged)<br>
+                >>> entities<br>
+                Tree('S', [('At', 'IN'), ('eight', 'CD'), ("o'clock", 'JJ'),<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;('on', 'IN'), ('Thursday', 'NNP'), ('morning', 'NN'),<br>
+                &nbsp;&nbsp;&nbsp;&nbsp; Tree('PERSON', [('Arthur', 'NNP')]),<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;('did', 'VBD'), ("n't", 'RB'), ('feel', 'VB'),<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;('very', 'RB'), ('good', 'JJ'), ('.', '.')])<br>
+            </div>
+
+            <p class="lead">
+                <b>
+                    Display a parse tree:-
+                </b>
+            </p>
+            <br>
+            <div class="shadow p-3 mb-5  bg-white rounded">
+                >>> from nltk.corpus import treebank<br>
+                >>> t = treebank.parsed_sents('wsj_0001.mrg')[0]<br>
+                >>> t.draw()<br>
+            </div>
+            <center>
+                <img src="https://www.nltk.org/_images/tree.gif" width="500px" height="200px">
+
+            </center>
+            <br>
+            <p class="lead"><b>
+                    For Tutorial Click <a href="https://data-flair.training/blogs/nltk-python-tutorial/"> Here.</a><br>
+                    For NLTK Book<a href="https://www.nltk.org/book/"> Here.</a><br>
+                </b></p>
+            <hr class="separate" style="border-top: 3px solid #fff">
+            <!-- *********************************************************************8 -->
+
+
+            <p class="lead" style="font-size:22px">
+                <b><strong>
+                        <u> Pillow </u>
+                    </strong>
+                </b>
+            </p>
+
+
+            <p class="lead">
+                <b>
+                    <strong>License:</strong> Python Imaging Library license<br>
+                    <strong>Developers:</strong>Secret Labs AB<br>
+                    <strong>Initial release:</strong> 1995(26 years ago)<br>
+                    <strong>Programming languages: </strong>Python, C<br>
+                </b>
+            </p>
+
+            <p class="lead">
+                <b>
+                    <i>Python Imaging Library</i> (abbreviated as PIL) (in newer versions known as Pillow) is a free and open-source additional library for the Python programming language that adds support for opening, manipulating, and saving many different image file formats. It is available for Windows, Mac OS X and Linux. The latest version of PIL is 1.1.7, was released in September 2009 and supports
+                    Python 1.5.2–2.7, with Python 3 support to be released "later".
+                    <br>
+                    Development appears to be discontinued, with the last commit to the PIL repository coming in 2011. Consequently, a successor project called Pillow has forked the PIL repository and added Python 3.x support. This fork has been adopted as a
+                    replacement for the original PIL in Linux distributions including Debian and Ubuntu (since 13.04).
+                    <br>
+                </b>
+            </p>
+            <h5>For Example 1:-</h5>
+            <pre class="code shadow p-3 mb-5  bg-white rounded">
+ #!/usr/bin/python
+                    
+from PIL import Image
+import sys
+
+try:
+    tatras = Image.open("tatras.jpg")
+                    
+except IOError:
+    print("Unable to load image")
+    sys.exit(1)
+                    
+tatras.show()</pre>
+
+            <p class="lead"><b>In the above example we read image file and show it in an external program.</b></p>
+
+            <h5>For Example 2:-</h5>
+
+            <pre class="code shadow p-3 mb-5  bg-white rounded">
+ #!/usr/bin/python
+
+from PIL import Image
+import sys
+
+try:
+    tatras = Image.open("tatras.jpg")
+
+except IOError:
+    print("Unable to load image")
+    sys.exit(1)
+    
+print("Format: {0}\nSize: {1}\nMode: {2}".format(tatras.format, 
+    tatras.size, tatras.mode))
+            </pre>
+            <p class="lead"><b>Above program will show some basic information about image.
+                    <br>
+                    </strong>Output:-<br></strong>
+                </b></p>
+            <pre class="code shadow p-3 mb-5  bg-white rounded">
+Format: JPEG
+Size: (350, 232)
+Mode: RGB </pre>
+            <p class="lead">
+                <b>
+                    For Tutorial you can visit on any links:-<br>
+                    <a href="https://zetcode.com/python/pillow/">Link_1</a><br>
+                    <a href="https://pillow.readthedocs.io/en/stable/handbook/tutorial.html">Link_2</a>
+
+                </b>
+            </p>
+
+            <hr class="separate" style="border-top: 3px solid #fff">
+
+            <!-- *********************************************************************8 -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Keras_logo.svg/270px-Keras_logo.svg.png" alt="python libraries" class="wp-image-5968 lazyloaded" data-ll-status="loaded" width="200" height="100">
+            <br><br>
+
+            <p class="lead" style="font-size:22px">
+                <b><strong>
+                        <u> Keras </u>
+                    </strong>
+                </b>
+            </p>
+
+
+            <p class="lead">
+                <b>
+                    <strong>Repository:</strong>Click <a href="github.com/keras-team/keras"> Here.</a> <br>
+                    <strong>License:</strong> MIT<br>
+                    <strong>Initial release:</strong>27 March 2015; 5 years ago<br>
+                    <strong>Programming languages: </strong>Python<br>
+                </b>
+            </p>
+
+            <p class="lead">
+                <b>
+                    Keras is an open-source software library that provides a Python interface for artificial neural networks. Keras acts as an interface for the TensorFlow library.
+                    Up until version 2.3 Keras supported multiple backends, including TensorFlow, Microsoft Cognitive Toolkit, R, Theano, and PlaidML. As of version 2.4, only TensorFlow is supported. Designed to enable fast experimentation with deep neural networks, it focuses on being user-friendly, modular, and extensible. It was developed as part of the research effort of project ONEIROS
+                    (Open-ended Neuro-Electronic Intelligent Robot Operating System) and its primary author and maintainer is François Chollet, a Google engineer. Chollet also is the author of the XCeption deep neural network model.<br>
+                    Keras contains numerous implementations of commonly used neural-network building blocks such as layers, objectives, activation functions, optimizers, and a host of tools to make working with image and text data easier to simplify the coding necessary for writing deep neural network code. The code is hosted on GitHub, and community support forums include the GitHub issues page, and a Slack channel.<br>
+                    In addition to standard neural networks, Keras has support for convolutional and recurrent neural networks. It supports other
+                    common utility layers like dropout, batch normalization, and pooling.Keras allows users to productize deep models on smartphones (iOS and Android), on the web, or on the Java Virtual Machine.[3] It also allows use of distributed training of deep-learning models on clusters of Graphics processing units (GPU) and tensor processing units (TPU).<br>
+
+                </b>
+            </p>
+            <h4>Why Keras?</h4>
+            <p class="lead">
+                <b>
+                    Keras is our recommended library for deep learning in Python, especially for beginners. Its minimalistic, modular approach makes it a breeze to get deep neural networks up and running. You can read more about it here:<br>
+                    <a href="https://elitedatascience.com/python-deep-learning-libraries#keras"> Click Here.</a>
+                </b>
+            </p>
+            <p class="lead">
+                <b><u>
+                        For example Click <a href="https://keras.io/examples/" style="color:black"> Here.</a><br>
+                        For Tutorial:-<br><a href="https://keras.io/getting_started/" style="color:black">Link_1</a><br>
+                        <a href="https://www.tutorialspoint.com/keras/keras_installation.htm" style="color:black">Link_2</a><br>
+
+                        <a href="https://www.youtube.com/watch?v=98sLySmptKY&list=PLtCBuHKmdxOdO88sgcFyDdL5ATg1WY-_U" style="color:black">Video Tutorial Hindi </a><br>
+                        <a href="https://www.youtube.com/watch?v=Mubj_fqiAv8&list=PLeo1K3hjS3uu7CxAacxVndI4bE_o3BDtO" style="color:black">Video Tutorial English</a>
+                    </u>
+                </b>
+            </p>
+            <hr class="separate" style="border-top: 3px solid #fff">
+
+
+            <!-- *********************************************************************8 -->
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Scrapy_logo.jpg/330px-Scrapy_logo.jpg" alt="python libraries" class="wp-image-5968 lazyloaded" data-ll-status="loaded" width="200" height="100">
+            <br><br>
+
+            <p class="lead" style="font-size:22px">
+                <b><strong>
+                        <u> Keras </u>
+                    </strong>
+                </b>
+            </p>
+
+
+            <p class="lead">
+                <b>
+                    <strong>Repository:</strong>Click <a href="github.com/scrapy/scrapy"> Here.</a> <br>
+                    <strong>License:</strong> 	BSD License<br>
+                    <strong>Initial release:</strong>26 June 2008<br>
+                    <strong>Programming languages: </strong>Python<br>
+                    <strong>Developers:</strong>	Scrapinghub, Ltd.<br>
+                </b>
+            </p>
+
+            <p class="lead">
+                <b>
+                Scrapy is a free and open-source web-crawling framework written in Python. Originally designed for web scraping, it can 
+                also be used to extract data using APIs or as a general-purpose web crawler. It is currently maintained by Scrapinghub Ltd., 
+                a web-scraping development and services company.<br>
+                Scrapy project architecture is built around "spiders", which are self-contained crawlers that are given a set of instructions. Following 
+                the spirit of other don't repeat yourself frameworks, such as Django, it makes it easier to build and scale large crawling projects by allowing developers to reuse
+                 their code. Scrapy also provides a web-crawling shell, which can be used by developers to test their assumptions on a site’s behavior.<br>
+                 
+                 To install Scrapy just type:-<i>"pip install scrapy"</i> in CMD.
+                </b>
+            </p>
+
+            <h4>For Example:-</h4>
+
+
+           
+            <pre class="code shadow p-3 mb-5  bg-white rounded">
+import scrapy
+
+class HeadphonesSpider(scrapy.Spider):
+
+    name = "headphones"
+
+    def start_requests(self):
+        urls = [
+        'https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=headphones&rh=i%3Aaps%2Ck%3Aheadphones&ajr=2',
+        ]
+
+        for url in urls:
+            yield scrapy.Request(url=url, callback=self.parse)
+
+    def parse(self, response):
+        img_urls = response.css('img::attr(src)').extract()
+        with open('urls.txt', 'w') as f:
+            for u in img_urls:
+                f.write(u + "\n")
+
+            </pre>
+            <p class="lead">
+                <b>
+                    To run your Code Type:-<br>
+                </b>
+            </p>
+            <div class="code shadow p-3 mb-5  bg-white rounded">
+            scrapy crawl headphones
+            </div>
+
+            <p class="lead">
+                <b>
+                    For Video Tutorial Click <a href="https://youtu.be/ve_0h4Y8nuI"> Here.</a>
+                    For tutorial click <a href="https://docs.scrapy.org/en/latest/intro/tutorial.html"> Here.</a><br>
+                    To Download  example Click <a href="https://github.com/scrapy/quotesbot/archive/master.zip"> Here.</a>
+                </b>
+            </p>
+            <hr class="separate" style="border-top: 3px solid #fff">
+
+            <!-- *********************************************************************8 -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Pygame_logo.gif/330px-Pygame_logo.gif" alt="python libraries" class="wp-image-5968 lazyloaded" data-ll-status="loaded" width="200" height="100">
+            <br><br>
+
+            <p class="lead" style="font-size:22px">
+                <b><strong>
+                        <u> Pygame </u>
+                    </strong>
+                </b>
+            </p>
+
+
+            <p class="lead">
+                <b>
+                    <strong>Repository:</strong>Click <a href="github.com/pygame/pygame/"> Here.</a> <br>
+                    <strong>License:</strong> 	GNU Lesser General Public License<br>
+                    <strong>Initial release:</strong>	28 October 2000(20 years ago)<br>
+                    <strong>Programming languages: </strong>	Python, C, Cython, and Assembly<br>
+                    <strong>Developers:</strong>Pygame Community<br>
+                </b>
+            </p>
+
+            <p class="lead">
+                <b>
+                Pygame is a cross-platform set of Python modules designed for writing video games. It includes computer graphics and sound libraries designed to be 
+                used with the Python programming language.
+                <br>
+                The Pygame library is probably the most well known python library when it comes to making games. It’s not the most advanced or high level library, but it’s simple and easy to learn (comparatively). Other more advanced game libraries such as Panda3D are for those who wish to take it to another level. Pygame should serve as a great
+                 entry point into the world of graphics and game development.
+                 <br>
+                 The Pygame framework includes several modules with functions for drawing graphics, playing sounds, handling mouse input, and other things that you’ll need while developing games in Python.
+                 <br>
+                 <br>
+                 <strong>For Example:-We Create simple car game </strong>
+                </b>
+            </p>
+
+            <pre class="code shadow p-3 mb-5  bg-white rounded">
+#Imports
+import pygame, sys
+from pygame.locals import *
+import random, time
+ 
+#Initializing 
+pygame.init()
+ 
+#Setting up FPS 
+FPS = 60
+FramePerSec = pygame.time.Clock()
+ 
+#Creating colors
+BLUE  = (0, 0, 255)
+RED   = (255, 0, 0)
+GREEN = (0, 255, 0)
+BLACK = (0, 0, 0)
+WHITE = (255, 255, 255)
+ 
+#Other Variables for use in the program
+SCREEN_WIDTH = 400
+SCREEN_HEIGHT = 600
+SPEED = 5
+SCORE = 0
+ 
+#Setting up Fonts
+font = pygame.font.SysFont("Verdana", 60)
+font_small = pygame.font.SysFont("Verdana", 20)
+game_over = font.render("Game Over", True, BLACK)
+ 
+background = pygame.image.load("Command Center/Lessons/AnimatedStreet.png")
+ 
+#Create a white screen 
+DISPLAYSURF = pygame.display.set_mode((400,600))
+DISPLAYSURF.fill(WHITE)
+pygame.display.set_caption("Game")
+ 
+class Enemy(pygame.sprite.Sprite):
+      def __init__(self):
+        super().__init__() 
+        self.image = pygame.image.load("Enemy.png")
+        self.surf = pygame.Surface((42, 70))
+        self.rect = self.surf.get_rect(center = (random.randint(40,SCREEN_WIDTH-40)
+                                                 , 0))
+ 
+      def move(self):
+        global SCORE
+        self.rect.move_ip(0,SPEED)
+        if (self.rect.top > 600):
+            SCORE += 1
+            self.rect.top = 0
+            self.rect.center = (random.randint(40, SCREEN_WIDTH - 40), 0)
+ 
+ 
+class Player(pygame.sprite.Sprite):
+    def __init__(self):
+        super().__init__() 
+        self.image = pygame.image.load("Player.png")
+        self.surf = pygame.Surface((40, 75))
+        self.rect = self.surf.get_rect(center = (160, 520))
+        
+    def move(self):
+        pressed_keys = pygame.key.get_pressed()
+       #if pressed_keys[K_UP]:
+            #self.rect.move_ip(0, -5)
+       #if pressed_keys[K_DOWN]:
+            #self.rect.move_ip(0,5)
+         
+        if self.rect.left > 0:
+              if pressed_keys[K_LEFT]:
+                  self.rect.move_ip(-5, 0)
+        if self.rect.right < SCREEN_WIDTH:        
+              if pressed_keys[K_RIGHT]:
+                  self.rect.move_ip(5, 0)
+                   
+#Setting up Sprites        
+P1 = Player()
+E1 = Enemy()
+ 
+#Creating Sprites Groups
+enemies = pygame.sprite.Group()
+enemies.add(E1)
+all_sprites = pygame.sprite.Group()
+all_sprites.add(P1)
+all_sprites.add(E1)
+ 
+#Adding a new User event 
+INC_SPEED = pygame.USEREVENT + 1
+pygame.time.set_timer(INC_SPEED, 1000)
+ 
+#Game Loop
+while True:
+       
+    #Cycles through all events occurring  
+    for event in pygame.event.get():
+        if event.type == INC_SPEED:
+              SPEED += 0.5     
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
+ 
+    DISPLAYSURF.blit(background, (0,0))
+    scores = font_small.render(str(SCORE), True, BLACK)
+    DISPLAYSURF.blit(scores, (10,10))
+ 
+    #Moves and Re-draws all Sprites
+    for entity in all_sprites:
+        DISPLAYSURF.blit(entity.image, entity.rect)
+        entity.move()
+ 
+    #To be run if collision occurs between Player and Enemy
+    if pygame.sprite.spritecollideany(P1, enemies):
+          pygame.mixer.Sound('crash.wav').play()
+          time.sleep(0.5)
+                    
+          DISPLAYSURF.fill(RED)
+          DISPLAYSURF.blit(game_over, (30,250))
+           
+          pygame.display.update()
+          for entity in all_sprites:
+                entity.kill() 
+          time.sleep(2)
+          pygame.quit()
+          sys.exit()        
+         
+    pygame.display.update()
+    FramePerSec.tick(FPS)
+            </pre>
+            
+            <figure class="wp-block-video aligncenter">
+                <video controls="" src="https://coderslegacy.com/wp-content/uploads/2020/06/Pygame_Tutorial.mp4" width="400px" height="500px"></video>
+            </figure>
+            
+            
+            <p class="lead">
+                <b>
+                    For examples Click <a href="https://www.pygame.org/tags/all"> Here.</a><br>
+                    For Tutorial Click <a href="https://www.javatpoint.com/pygame"> Here.</a><br>
+                </b>
+            </p>
+            
+            
+            <hr class="separate" style="border-top: 3px solid #fff">
+
+
+            <!-- ************************************************************************************** -->
+            <p class="lead"><b><a href="index.html" style="font-size:35px;color:white;text-decoration:none"><i><--Back To Home</i></a></b></p>
+            <!-- ************************************************************************************** -->
+            <hr class="separate" style="border-top: 3px solid #fff">
+
+        </div>
+
+    </div>
+
+    </div>
+    <!-- End demo content -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+
+    <script>
+        $(function() {
+            // Sidebar toggle behavior
+            $('#sidebarCollapse').on('click', function() {
+                $('#sidebar, #content').toggleClass('active');
+            });
+        });
+    </script>
+
+</body>
+
+
+
+
+</html>

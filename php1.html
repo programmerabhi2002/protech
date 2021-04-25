@@ -1,0 +1,1383 @@
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+
+        <title>
+            PHP
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    </head>
+
+    <style>
+        .vertical-nav {
+            min-width: 17rem;
+            width: 17rem;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s;
+        }
+
+        .page-content {
+            width: calc(100% - 17rem);
+            margin-left: 17rem;
+            transition: all 0.4s;
+        }
+
+        /* for toggle behavior */
+
+        #sidebar.active {
+            margin-left: -17rem;
+        }
+
+        #content.active {
+            width: 100%;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            #sidebar {
+                margin-left: -17rem;
+            }
+
+            #sidebar.active {
+                margin-left: 0;
+            }
+
+            #content {
+                width: 100%;
+                margin: 0;
+            }
+
+            #content.active {
+                margin-left: 17rem;
+                width: calc(100% - 17rem);
+            }
+        }
+
+        body {
+            background: #599fd9;
+            background: -webkit-linear-gradient(to right, #599fd9, #c2e59c);
+            background: linear-gradient(to right, #599fd9, #c2e59c);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .separator {
+            margin: 3rem 0;
+            border-bottom: 1px dashed #fff;
+        }
+
+        .text-uppercase {
+            letter-spacing: 0.1em;
+        }
+
+        .text-gray {
+            color: #525252;
+        }
+
+        a {
+            color: #525252;
+        }
+    </style>
+
+    <body>
+
+        <!-- Vertical navbar -->
+        <div class="vertical-nav " id="sidebar">
+            <!-- bg-white -->
+            <div class="py-4 px-3 mb-4 ">
+                <!-- bg-white -->
+                <div class="media d-flex align-items-center"><img src="Img/php1.png" alt="" width="80" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+
+                    <div class="media-body">
+                        <h4 class="m-0" style="font-size:20px"><i></i></h4>
+                        <p class="font-weight text-dark mb-0"><i>
+                               
+                            </i></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="separator"></div>
+            <!--         <hr class="solid" style="border-top: 3px solid #bbb"> -->
+            <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">
+                <b>
+                    Index
+                </b>
+            </p>
+
+            <ul class="nav flex-column  mb-0"><b>
+                    <!-- bg-white -->
+                    <li class="nav-item">
+                        <a href="#php1" class="nav-link text-dark font-italic ">
+                            <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                            Introduction
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#php2" class="nav-link text-dark font-italic">
+                            <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                            History
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#php3" class="nav-link text-dark font-italic">
+                            <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                            PHP VS Python/ PHP VS &nbsp;&nbsp;&nbsp;&nbsp;JAVA
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#php4" class="nav-link text-dark font-italic">
+                            <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                            Advantages & Disadvantages &nbsp;&nbsp;&nbsp;&nbsp;of PHP
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#php5" class="nav-link text-dark font-italic">
+                            <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                            PHP Libraries
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#php6" class="nav-link text-dark font-italic">
+                            <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                            PHP Frameworks
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.php" class="nav-link text-dark font-italic">
+                            <i class="fa fa-line-chart mr-3 text-primary fa-fw"></i>
+                            <-BACK TO HOME</a>
+                    </li>
+                </b>
+            </ul>
+
+        </div>
+        <!-- End vertical navbar -->
+
+
+        <!-- Page content holder -->
+        <div class="page-content p-5" id="content">
+            <!-- Toggle button -->
+            <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">MENU</small></button>
+
+            <!-- Demo content -->
+            <h2 class="display-4 text-white">PHP</h2>
+            <p class="lead text-white mb-0"> <i>Designed by Rasmus Lerdorf </i></p>
+            <p class="lead text-white mb-0"> <i>Developed by The PHP Development Team, <a href="https://en.wikipedia.org/wiki/Zend_Technologies">Zend Technologies</a></i></p>
+
+            <div class="separator" id="p"></div>
+
+            <!-- ************************************************************************************** -->
+            <div class="row text-white-bold">
+                <div class="col-lg-12" id="r">
+                    <h3 class="text-dark" style="font-weight:600" id="php1">Introduction</h3>
+
+                    <p class="lead">
+                        <b>
+                            PHP is a general-purpose scripting language especially suited to web development.
+                            It was originally created by Danish-Canadian programmer Rasmus Lerdorf in 1994.
+                            The PHP reference implementation is now produced by The PHP Group.
+                            PHP originally stood for Personal Home Page, but it now stands for the recursive initialism PHP: Hypertext Preprocessor.
+                            PHP code is usually processed on a web server by a PHP interpreter implemented as a module, a daemon or as a Common Gateway Interface (CGI) executable. On a web server, the result of the interpreted and executed PHP code – which may be any type of data, such as generated HTML or binary image data – would form the whole or part of an HTTP response. Various web template systems, web content management systems, and web frameworks exist which can be employed to orchestrate or facilitate the generation of that response.
+                            Additionally, PHP can be used for many programming tasks outside of the web context, such as standalone graphical applications and robotic drone control.
+                            <br>
+                            Arbitrary PHP code can also be interpreted and executed via command-line interface (CLI).
+                            The standard PHP interpreter, powered by the Zend Engine, is free software released under the PHP License. PHP has been widely ported and can be deployed on most web servers on almost every operating system and platform, free of charge.
+                            <br>
+                            As of January 2021, 72% of PHP websites use discontinued versions of PHP, i.e. PHP 7.2 or lower, which are no longer supported by The PHP Development Team. A large additional fraction uses PHP 7.3, which is only (up to December 6, 2021) "supported for critical security issues only."
+                            Over 40% of all PHP websites use version 5.6 or older,[14] that not even Debian supports (Debian 9 supported version 7.0 and 7.1).
+                        </b>
+                    </p>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+
+                    <h3 class="text-dark" style="font-weight:600" id="php2">History</h3>
+
+                    <ul class="lead">
+                        <b>
+                            <li>
+                                PHP development began in 1994 when Rasmus Lerdorf wrote several Common Gateway Interface (CGI) programs in C
+                                ,which he used to maintain his personal homepage. He extended them to work with web forms and to communicate with databases, and called this implementation "Personal Home Page/Forms Interpreter" or PHP/FI.
+                            </li>
+
+                            <li>
+                                PHP/FI could be used to build simple, dynamic web applications. To accelerate bug reporting and improve the code, Lerdorf initially announced the release of PHP/FI as "Personal Home Page Tools (PHP Tools) version 1.0" on the Usenet discussion group comp.infosystems.www.authoring.cgi on June 8, 1995.
+                            </li>
+
+                            <li>
+                                This release already had the basic functionality that PHP has today. This included Perl-like variables, form handling, and the ability to embed HTML. The syntax resembled that of Perl, but was simpler, more limited and less consistent.
+                            </li>
+
+                            <li>
+                                Early PHP was not intended to be a new programming language, and grew organically, with Lerdorf noting in retrospect: "I don't know how to stop it, there was never any intent to write a programming language [...] I have absolutely no idea how to write a programming language, I just kept adding the next logical step on the way."
+
+                            </li>
+                            <li>
+                                The fact that PHP was not originally designed, but instead was developed organically has led to inconsistent naming of functions and inconsistent ordering of their parameters.
+
+                            </li>
+                            <li>
+                                In some cases, the function names were chosen to match the lower-level libraries which PHP was "wrapping",
+                                while in some very early versions of PHP the length of the function names was used internally as a hash function, so names were chosen to improve the distribution of hash values.
+                            </li>
+                        </b>
+                    </ul>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+
+                    <p class="lead" id="php3">
+                        <b>
+                            <strong>Why we should use PHP ?</strong>
+                            <br>
+                            <ul class="lead">
+                                <li>
+                                    <strong>Fast Load Time –</strong> PHP results in faster site loading speeds. PHP codes runs much faster than ASP because it runs in its own memory space while ASP uses an overhead server and a COM based architecture.
+                                </li>
+                                <li>
+                                    <strong>Less Expensive Software –</strong> In working with PHP, most tools associated with the program are open source software, such as WordPress, so you need not pay for them. As for ASP, you might need to buy additional tools to work with its programs.
+                                </li>
+                                <li>
+                                    <strong>Less Expensive Hosting – </strong>ASP programs need to run on Windows servers with IIS installed. Hosting companies need to purchase both of these components in order for ASP to work, this often results in a more expensive cost for monthly hosting services. On the other hand, a PHP would only require running on a Linux server, which is available through a hosting provider at no additional cost.
+                                </li>
+                                <li>
+                                    <strong> Database Flexibility –</strong> PHP is flexible for database connectivity. It can connect to several databases the most commonly used is the MySQL. MySQL can be used for free. If ASP is used, MS-SQL, a Microsoft product must be purchased.
+                                </li>
+                                <li> TO know more about PHP Click <a href="https://www.php.net/"> Here.</a></li>
+                            </ul>
+                        </b>
+                    </p>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+                    <div class="lead">
+                        <b>
+
+                            <h3>Difference Between PHP and Python</h3>
+
+                            <p>PHP and Python are the two most popular server-side languages that most businesses prefer:</p>
+
+                            <h3 class="lead"> Python </h3>
+                            <ul>
+                                <li>Easy to learn, read and maintain</li>
+                                <li>It can run on various hardware platforms &amp; using the same interface. </li>
+                                <li>You can include low-level modules to the Python interpreter.</li>
+                                <li>Python offers an ideal structure and support for large programs.</li>
+                                <li>Python offers support for automatic garbage collection. </li>
+                                <li>It supports for an interactive mode of testing and debugging.</li>
+                                <li>It offers high-level dynamic data types and also supports dynamic type checking.</li>
+                                <li>Python language can be integrated with Java, C, and C++ programming code. </li>
+                            </ul>
+
+                            <h3 class="lead">PHP</h3>
+
+                            <ul>
+                                <li>Database Integration Supports many databases, such as Oracle, MySQL, etc. </li>
+                                <li>It is easy to use, compare to another scripting language </li>
+                                <li>It is faster than another scripting language, e.g., ASP and JSP </li>
+                                <li>Open source means you don't need to pay for using PHP; you can freely download and use it</li>
+                                <li>PHP has some predefined error reporting constants to generate an error notice or warning </li>
+                                <li>PHP offers access logging by creating the summary of recent accesses of the user.</li>
+                            </ul>
+                            <!-- <img src="Img/Java-Vs-Kotlin.png" width="400" height="auto"> -->
+
+                            <h3 class="lead"><b>JAVA</b></h3>
+
+
+                            <p><img class="aligncenter size-full wp-image-13312" src="https://scand.com/wp-content/uploads/2019/08/Java-vs-PHP-interpreter-and-compiler.jpg" alt="Java vs PHP interpreter and compiler" width="880" height="350">
+                            </p>
+
+                            <p><img class="aligncenter size-full wp-image-13307" src="https://scand.com/wp-content/uploads/2019/08/Table-Comparison-PHP-vs-Java.jpg" alt="Table Comparison PHP vs Java" width="880" height="350">
+                            </p>
+
+
+                            <div style="overflow-x:auto;">
+                                <h2><a id="7"></a>Python vs. PHP</h2>
+                                <table class="table1 table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th><strong>Parameter</strong> </th>
+                                            <th><strong>Python</strong> </th>
+                                            <th><strong>PHP</strong> </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> Frameworks </td>
+                                            <td>Python has a smaller number of frameworks </td>
+                                            <td>PHP users have access to mature frameworks. </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Popularity </td>
+                                            <td>Widely used in AI, data science and scientific community </td>
+                                            <td>Language of choice for web development </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Database Connectivity </td>
+                                            <td>Does not support database connectivity as broadly as PHP </td>
+                                            <td>It is possible to access more than 20 different databases. </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Community Support </td>
+                                            <td>Currently growing at fast pace. </td>
+                                            <td>Wider community support. </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Learning curve </td>
+                                            <td>Python is better in the long-term projects. </td>
+                                            <td> PHP has a very low learning curve, and it is straightforward to get started with. </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Readability </td>
+                                            <td>Python uses indentation enforcements that are quite strict. This makes it more readable than PHP. </td>
+                                            <td>PHP language is highly documented and follows a classic approach </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Type of language </td>
+                                            <td>General purpose programming language </td>
+                                            <td>Specialized for Web development programming language. </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Syntax </td>
+                                            <td>A very clear and concise, syntax of codes </td>
+                                            <td>The built-in library has a wide range of naming conventions </td>
+                                        </tr>
+                                        <tr>
+                                            <td>A famous company using this technology </td>
+                                            <td>Uber, Pinterest, Mozilla </td>
+                                            <td>Hootsuite, Viber, Appcelerator </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Git hub stars </td>
+                                            <td>30.4 K </td>
+                                            <td>30 K </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Fork </td>
+                                            <td>8.23 K </td>
+                                            <td>8.04 K </td>
+                                        </tr>
+                                        <tr>
+                                            <td>TIOBE rating </td>
+                                            <td>4<sup>th</sup> position </td>
+                                            <td>7<sup>th</sup> position </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Key Features </td>
+                                            <td>Rapid development, Dynamic typing and beautiful code. </td>
+                                            <td>Open source, Easy Deployment, Continual Improvements. </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Best frameworks </td>
+                                            <td>Flask, Django, jam.py. </td>
+                                            <td>Slim, Laravel, Fast-free framework. </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Salaries </td>
+                                            <td>The average salary for a professional Python Developer is $120,024 per year in the United States. </td>
+                                            <td>The avg salary for a PHP Developer is $86,017 per year in the United States. </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+
+                        </b>
+                    </div>
+
+                    <br>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+                    <div class="lead" id="php4"><b>
+                            <h3>Advantages and Disadvantages of PHP</h3>
+
+                            <h4><strong>Advantages of PHP </strong></h4>
+
+                            <ol>
+                                <li>Most important advantage of PHP is that it’s open source and freed from cost. It are often downloaded anywhere and readily available to use for event of web applications.</li>
+                                <li>It is platform independent. PHP based applications can run on any OS like UNIX, Linux and windows, etc.</li>
+                                <li>Application can easily be loaded which are based on PHP and connected to database. it’s mainly used due to its faster rate of loading over slow internet and speed than another programing language.</li>
+                                <li>It has less learning curve, because it is straightforward and straightforward to use. If a private knows C programming can easily work on PHP.</li>
+                                <li>It is more stable from a few years with assistance of providing continuous support to various versions.</li>
+                                <li>It helps in reusing an equivalent code and no got to write lengthy code and sophisticated structure for event of web applications.</li>
+                                <li>It helps in managing code easily.</li>
+                                <li>It has powerful library support to use various function modules for data representation.</li>
+                                <li>PHP’s built-in database connection modules help in connecting database easily reduce trouble and time for development of web applications and content based sites.</li>
+                                <li>Popularity of PHP gave rise to various community of developers, a fraction of which may be potential candidates for hire.</li>
+                                <li>Flexibility makes PHP ready to effectively combine with many other programming languages in order that the software package could use foremost effective technology for every particular feature.</li>
+                            </ol>
+
+                            <h4><strong>Disadvantages of PHP</strong></h4>
+
+                            <ol>
+                                <li>It is not that secure due to its open-source, because the ASCII text file are often easily available.</li>
+                                <li>It is not suitable for giant content-based web applications.</li>
+                                <li>It has a weak type, which can cause incorrect data and knowledge to user.</li>
+                                <li>PHP frameworks got to learn to use PHP built-in functionalities to avoid writing additional code.</li>
+                                <li>Using more features of PHP framework and tools cause poor performance of online applications.</li>
+                                <li>PHP don’t allow change or modification in core behavior of online applications.</li>
+                                <li>The PHP frameworks aren’t an equivalent in behavior so does their performance and features.</li>
+                                <li>While PHP may be a powerful tool supported by an outsized community and plentiful reference documentation, there are easier programming languages for web apps.</li>
+                                <li>It is widely believed by the developers that PHP features a poor quality of handling errors. PHP lacks debugging tools, which are needed to look for errors and warnings. PHP has less number of debugging tools in comparison to other programming languages.</li>
+                                <li>It’s highly tough to manage because, it’s not competent modular. It already imitates the features of Java language.</li>
+                            </ol>
+                        </b>
+                    </div>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+                    <div class="lead" id="php5">
+                        <h3> PHP Libraries</h3><br>
+                        <b>
+                            <div class="ad-container adsbygoogle hidden-xs hidden-sm">
+                                <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <ins class="adsbygoogle" style="display: block; text-align: center; height: 200px;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4243460155472587" data-ad-slot="8608740309" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:200px;margin:0;padding:0;position:relative;visibility:visible;width:928px;background-color:transparent;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_0_anchor" style="display:block;border:none;height:200px;margin:0;padding:0;position:relative;visibility:visible;width:928px;background-color:transparent;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:928px;height:200px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="928" height="200" frameborder="0" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-4243460155472587&amp;output=html&amp;h=200&amp;slotname=8608740309&amp;adk=2115233804&amp;adf=2746673523&amp;pi=t.ma~as.8608740309&amp;w=928&amp;fwrn=4&amp;lmt=1590501325&amp;rafmt=11&amp;psa=1&amp;format=928x200&amp;url=https%3A%2F%2Ftutorialzine.com%2F2013%2F02%2F24-cool-php-libraries-you-should-know-about&amp;flash=0&amp;wgl=1&amp;uach=WyJXaW5kb3dzIiwiMTAuMCIsIng4NiIsIiIsIjg5LjAuNDM4OS45MCIsW11d&amp;tt_state=W3siaXNzdWVyT3JpZ2luIjoiaHR0cHM6Ly9hZHNlcnZpY2UuZ29vZ2xlLmNvbSIsInN0YXRlIjo2fSx7Imlzc3Vlck9yaWdpbiI6Imh0dHBzOi8vYXR0ZXN0YXRpb24uYW5kcm9pZC5jb20iLCJzdGF0ZSI6N31d&amp;dt=1617283466059&amp;bpp=11&amp;bdt=1078&amp;idt=227&amp;shv=r20210329&amp;cbv=r20190131&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3Dfc2f1ec622b56405-2265382dd1c6006b%3AT%3D1616571074%3ART%3D1616571074%3AS%3DALNI_MbLay1BQVIdckfRurHFtG8jlSczRQ&amp;correlator=5375633308794&amp;frm=20&amp;pv=2&amp;ga_vid=1965126551.1616571073&amp;ga_sid=1617283466&amp;ga_hid=670801651&amp;ga_fc=1&amp;rplot=4&amp;u_tz=330&amp;u_his=1&amp;u_java=0&amp;u_h=864&amp;u_w=1536&amp;u_ah=824&amp;u_aw=1536&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;adx=136&amp;ady=1476&amp;biw=1519&amp;bih=754&amp;scr_x=0&amp;scr_y=0&amp;eid=42530672%2C44740079%2C21067496%2C44739387&amp;oid=3&amp;pvsid=1910601278107893&amp;pem=813&amp;rx=0&amp;eae=0&amp;fc=896&amp;brdim=0%2C0%2C0%2C0%2C1536%2C0%2C1536%2C824%2C1536%2C754&amp;vis=1&amp;rsz=%7C%7CoeEbr%7C&amp;abl=CS&amp;pfx=0&amp;fu=8320&amp;bc=31&amp;ifi=1&amp;uci=a!1&amp;btvi=1&amp;fsb=1&amp;xpc=f4VArkFz4v&amp;p=https%3A//tutorialzine.com&amp;dtd=254" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" trusttoken="{&quot;type&quot;:&quot;send-redemption-record&quot;,&quot;issuers&quot;:[&quot;https://adservice.google.com&quot;],&quot;refreshPolicy&quot;:&quot;none&quot;,&quot;signRequestData&quot;:&quot;include&quot;,&quot;includeTimestampHeader&quot;:true,&quot;additionalSignedHeaders&quot;:[&quot;sec-time&quot;,&quot;Sec-Redemption-Record&quot;],&quot;additionalSigningData&quot;:&quot;eyJ1cmwiOiJodHRwczovL3R1dG9yaWFsemluZS5jb20vMjAxMy8wMi8yNC1jb29sLXBocC1saWJyYXJpZXMteW91LXNob3VsZC1rbm93LWFib3V0In0.&quot;}" allow="conversion-measurement 'src'" data-google-container-id="a!1" data-google-query-id="CPD7krSS3e8CFeVAfAodNpoGwA" data-load-complete="true"></iframe></ins></ins></ins>
+                                <script>
+                                    (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                            </div>
+
+                           
+
+                            <h2>Klein – Lightning fast router for PHP</h2>
+                            <p><a href="https://github.com/chriso/klein.php" target="_blank" rel="noreferrer noopener">Klein</a> is another light weight routing library for PHP 5.3+. It has a bit more verbose syntax than Dispatch, but is quite fast. Here is an example:</p>
+
+<pre class="bg-white p-5 rounded my-5 shadow-sm">
+respond(<span class="hljs-string">'/[:name]'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">($request)</span> </span>{
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">'Hello '</span> . $request-&gt;name;
+});
+</pre>
+                            <p>You can also subscribe to specific HTTP methods and use regexes as paths:</p>
+
+<pre class="bg-white p-5 rounded my-5 shadow-sm">
+respond(<span class="hljs-string">'GET'</span>, <span class="hljs-string">'/posts'</span>, $callback);
+respond(<span class="hljs-string">'POST'</span>, <span class="hljs-string">'/posts/create'</span>, $callback);
+respond(<span class="hljs-string">'PUT'</span>, <span class="hljs-string">'/posts/[i:id]'</span>, $callback);
+respond(<span class="hljs-string">'DELETE'</span>, <span class="hljs-string">'/posts/[i:id]'</span>, $callback);
+
+<span class="hljs-comment">// To match multiple request methods:</span>
+respond(<span class="hljs-keyword">array</span>(<span class="hljs-string">'POST'</span>,<span class="hljs-string">'GET'</span>), $route, $callback);
+
+<span class="hljs-comment">// Or you might want to handle the requests in the same place</span>
+respond(<span class="hljs-string">'/posts/[create|edit:action]?/[i:id]?'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">($request, $response)</span> </span>{
+    <span class="hljs-keyword">switch</span> ($request-&gt;action) {
+        <span class="hljs-comment">// do something</span>
+    }
+});
+</pre>
+
+
+                            <p>This is great for small projects, but you have to be disciplined when using a library like this for larger apps, as your code can become unmaintainable very fast. For this purpose, you would be better off with a full blown MVC framework like <a href="http://www.laravel.com/" target="_blank" rel="noreferrer noopener">Laravel</a> or <a href="https://www.codeigniter.com/" target="_blank" rel="noreferrer noopener">CodeIgniter</a>.</p>
+                            
+                                <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h2>Ham - Routing Library with Caching</h2>
+                            <p><a href="https://github.com/radiosilence/Ham" target="_blank" rel="noreferrer noopener">Ham</a> is also a lightweight routing framework but it utilizes caching for even more speed gains. It achieves this by caching anything I/O related in XCache/APC. Here is an example:</p>
+<pre class="bg-white p-5 rounded my-5 shadow-sm">
+<span class="hljs-keyword">require</span> <span class="hljs-string">'../ham/ham.php'</span>;
+
+$app = <span class="hljs-keyword">new</span> Ham(<span class="hljs-string">'example'</span>);
+$app-&gt;config_from_file(<span class="hljs-string">'settings.php'</span>);
+
+$app-&gt;route(<span class="hljs-string">'/pork'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">($app)</span> </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-string">"Delicious pork."</span>;
+});
+
+$hello = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">($app, $name=<span class="hljs-string">'world'</span>)</span> </span>{
+    <span class="hljs-keyword">return</span> $app-&gt;render(<span class="hljs-string">'hello.html'</span>, <span class="hljs-keyword">array</span>(
+        <span class="hljs-string">'name'</span> =&gt; $name
+    ));
+};
+$app-&gt;route(<span class="hljs-string">'/hello/&lt;string&gt;'</span>, $hello);
+$app-&gt;route(<span class="hljs-string">'/'</span>, $hello);
+
+$app-&gt;run();
+</pre>
+
+                            <p>The library requires that you have either XCache or APC installed, which would mean that it won't work on most hosting providers. But if you do have one of these installed or if you control your webserver, you should try this very fast framework.</p>
+                           
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h2>Assetic - Asset Management</h2>
+                            <p><a href="https://github.com/kriswallsmith/assetic" target="_blank" rel="noreferrer noopener">Assetic</a> is am asset management framework for PHP. It combines and minifies your CSS/JS assets. Here is how it is used:</p>
+                            
+<pre class="bg-white p-5 rounded my-5 shadow-sm">
+<span class="hljs-keyword">use</span> <span class="hljs-title">Assetic</span>\<span class="hljs-title">Asset</span>\<span class="hljs-title">AssetCollection</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">Assetic</span>\<span class="hljs-title">Asset</span>\<span class="hljs-title">FileAsset</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">Assetic</span>\<span class="hljs-title">Asset</span>\<span class="hljs-title">GlobAsset</span>;
+
+$js = <span class="hljs-keyword">new</span> AssetCollection(<span class="hljs-keyword">array</span>(
+    <span class="hljs-keyword">new</span> GlobAsset(<span class="hljs-string">'/path/to/js/*'</span>),
+    <span class="hljs-keyword">new</span> FileAsset(<span class="hljs-string">'/path/to/another.js'</span>),
+));
+
+<span class="hljs-comment">// the code is merged when the asset is dumped</span>
+<span class="hljs-keyword">echo</span> $js-&gt;dump();
+</pre>
+
+                            <p>Combining assets in this manner is a good idea, as it can speed up your site. Not only is the total download size reduced, but also a lot of unnecessary HTTP requests are eliminated (two of the things that affect page load time the most).</p>
+                           
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h2>ImageWorkshop - Image Manipulation with Layers</h2>
+                            <p><a href="http://phpimageworkshop.com/" target="_blank" rel="noreferrer noopener">ImageWorkshop</a> is an Open Source library that lets you manipulate images with layers. With it you can resize, crop, make thumbnails, add watermarks and more. Here is an example:</p>
+                            
+<pre class="hljs php"><span class="hljs-comment">// We initialize the norway layer from the picture norway.jpg</span>
+$norwayLayer = ImageWorkshop::initFromPath(<span class="hljs-string">'/path/to/images/norway.jpg'</span>); 
+
+<span class="hljs-comment">// We initialize the watermark layer from the picture watermark.png</span>
+$watermarkLayer = ImageWorkshop::initFromPath(<span class="hljs-string">'/path/to/images/watermark.png'</span>); 
+
+$image = $norwayLayer-&gt;getResult(); <span class="hljs-comment">// This is the generated image ! </span>
+
+header(<span class="hljs-string">'Content-type: image/jpeg'</span>);
+imagejpeg($image, <span class="hljs-keyword">null</span>, <span class="hljs-number">95</span>); <span class="hljs-comment">// We choose to show a JPG with a quality of 95%</span>
+<span class="hljs-keyword">exit</span>;
+</pre>
+
+                            <p>ImageWorkshop is developed to make easy the most common cases for manipulating images in PHP. If you need something more powerful though, you should look at the <a href="https://github.com/avalanche123/Imagine" target="_blank" rel="noreferrer noopener">Imagine library</a>.</p>
+                            
+                                <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h2>Snappy - Snapshot/PDF Library</h2>
+                            <p><a href="https://github.com/KnpLabs/snappy" target="_blank" rel="noreferrer noopener">Snappy</a> is a PHP5 library that allows you to take snapshots or PDFs of URLs or HTML documents. It depends on the <a href="https://code.google.com/p/wkhtmltopdf/" target="_blank" rel="noreferrer noopener">wkhtmltopdf</a> binary, which is available on Linux, Windows and OSX. You use it like this:</p>
+
+<pre class="bg-white p-5 rounded my-5 shadow-sm">
+<span class="hljs-keyword">require_once</span> <span class="hljs-string">'/path/to/snappy/src/autoload.php'</span>; 
+
+<span class="hljs-keyword">use</span> <span class="hljs-title">Knp</span>\<span class="hljs-title">Snappy</span>\<span class="hljs-title">Pdf</span>; 
+
+<span class="hljs-comment">// Initialize the library with the</span>
+<span class="hljs-comment">// path to the wkhtmltopdf binary:</span>
+$snappy = <span class="hljs-keyword">new</span> Pdf(<span class="hljs-string">'/usr/local/bin/wkhtmltopdf'</span>); 
+
+<span class="hljs-comment">// Display the resulting pdf in the browser</span>
+<span class="hljs-comment">// by setting the Content-type header to pdf: </span>
+
+header(<span class="hljs-string">'Content-Type: application/pdf'</span>);
+header(<span class="hljs-string">'Content-Disposition: attachment; filename="file.pdf"'</span>); 
+
+<span class="hljs-keyword">echo</span> $snappy-&gt;getOutput(<span class="hljs-string">'http://www.github.com'</span>);
+</pre>
+
+                            <p>Keep in mind that calling external binaries might not be allowed by your hosting provider.</p>
+                           
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h2>Idiorm - Lightweight ORM Library</h2>
+                            <p><a href="https://github.com/j4mie/idiorm/" target="_blank" rel="noreferrer noopener">Idiorm</a> is a personal favorite that I have used in tutorials in this site before. It is a lightweight ORM library and a fluent query builder for PHP5 that is built on top of PDO. With it, you can forget writing tedious SQL:</p>
+
+<pre class="bg-white p-5 rounded my-5 shadow-sm">
+$user = ORM::for_table(<span class="hljs-string">'user'</span>)
+    -&gt;where_equal(<span class="hljs-string">'username'</span>, <span class="hljs-string">'j4mie'</span>)
+    -&gt;find_one();
+
+$user-&gt;first_name = <span class="hljs-string">'Jamie'</span>;
+$user-&gt;save();
+
+$tweets = ORM::for_table(<span class="hljs-string">'tweet'</span>)
+    -&gt;select(<span class="hljs-string">'tweet.*'</span>)
+    -&gt;join(<span class="hljs-string">'user'</span>, <span class="hljs-keyword">array</span>(
+        <span class="hljs-string">'user.id'</span>, <span class="hljs-string">'='</span>, <span class="hljs-string">'tweet.user_id'</span>
+    ))
+    -&gt;where_equal(<span class="hljs-string">'user.username'</span>, <span class="hljs-string">'j4mie'</span>)
+    -&gt;find_many();
+
+<span class="hljs-keyword">foreach</span> ($tweets <span class="hljs-keyword">as</span> $tweet) {
+    <span class="hljs-keyword">echo</span> $tweet-&gt;text;
+}
+</pre>
+
+                            <p>Idiorm has a sister library called <a href="https://github.com/j4mie/paris" target="_blank" rel="noreferrer noopener">Paris</a>, which is an Active Record implementation built on top of it.</p>
+                           
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h2>Underscore - PHP's Utility Belt</h2>
+                            <p><a href="https://brianhaveri.github.com/Underscore.php/" target="_blank" rel="noreferrer noopener">Underscore</a> is a port of the original <a href="https://documentcloud.github.com/underscore/" target="_blank" rel="noreferrer noopener">Underscore.js</a> – the utility belt for JavaScript applications. The PHP version doesn't disappoint and has support for nearly all of the original's functionality. Some examples:</p>
+
+<pre class="bg-white p-5 rounded my-5 shadow-sm">
+__::each(<span class="hljs-keyword">array</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>), <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">($num)</span> </span>{ <span class="hljs-keyword">echo</span> $num . <span class="hljs-string">','</span>; }); <span class="hljs-comment">// 1,2,3,</span>
+
+$multiplier = <span class="hljs-number">2</span>;
+__::each(<span class="hljs-keyword">array</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>), <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">($num, $index)</span> <span class="hljs-title">use</span> <span class="hljs-params">($multiplier)</span> </span>{
+  <span class="hljs-keyword">echo</span> $index . <span class="hljs-string">'='</span> . ($num * $multiplier) . <span class="hljs-string">','</span>;
+});
+<span class="hljs-comment">// prints: 0=2,1=4,2=6,</span>
+
+__::reduce(<span class="hljs-keyword">array</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>), <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">($memo, $num)</span> </span>{ <span class="hljs-keyword">return</span> $memo + $num; }, <span class="hljs-number">0</span>); <span class="hljs-comment">// 6</span>
+
+__::find(<span class="hljs-keyword">array</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>), <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">($num)</span> </span>{ <span class="hljs-keyword">return</span> $num % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>; }); <span class="hljs-comment">// 2</span>
+
+__::filter(<span class="hljs-keyword">array</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>), <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">($num)</span> </span>{ <span class="hljs-keyword">return</span> $num % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>; }); <span class="hljs-comment">// array(2, 4)</span>
+</pre>
+
+                            <p>The library also has support for chaining, which makes it even more powerful.</p>
+                           
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h2>Requests - Easy HTTP Requests</h2>
+                            <p><a href="https://github.com/rmccue/Requests" target="_blank" rel="noreferrer noopener">Requests</a> is a library that makes it easy to issue HTTP requests. If you are like me, and can never seem to remember the various options passed to Curl, this is for you:</p>
+                            
+<pre class="bg-white p-5 rounded my-5 shadow-sm">
+$headers = <span class="hljs-keyword">array</span>(<span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>);
+$options = <span class="hljs-keyword">array</span>(<span class="hljs-string">'auth'</span> =&gt; <span class="hljs-keyword">array</span>(<span class="hljs-string">'user'</span>, <span class="hljs-string">'pass'</span>));
+$request = Requests::get(<span class="hljs-string">'https://api.github.com/gists'</span>, $headers, $options);
+
+var_dump($request-&gt;status_code);
+<span class="hljs-comment">// int(200)</span>
+
+var_dump($request-&gt;headers[<span class="hljs-string">'content-type'</span>]);
+<span class="hljs-comment">// string(31) "application/json; charset=utf-8"</span>
+
+var_dump($request-&gt;body);
+<span class="hljs-comment">// string(26891) "[…]"</span>
+</pre>
+
+
+                            <p>With this library, you can send HEAD, GET, POST, PUT, DELETE and PATCH HTTP requests, add files and parameters with arrays, and access all the response data.</p>
+
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h2>Buzz - Simple HTTP Request Library</h2>
+                            <p><a href="https://github.com/kriswallsmith/Buzz" target="_blank" rel="noreferrer noopener">Buzz</a> is another PHP library for issuing HTTP requests. Here is an example:</p>
+
+<pre class="bg-white p-5 rounded my-5 shadow-sm">
+$request = <span class="hljs-keyword">new</span> Buzz\Message\Request(<span class="hljs-string">'HEAD'</span>, <span class="hljs-string">'/'</span>, <span class="hljs-string">'http://google.com'</span>);
+$response = <span class="hljs-keyword">new</span> Buzz\Message\Response();
+
+$client = <span class="hljs-keyword">new</span> Buzz\Client\FileGetContents();
+$client-&gt;send($request, $response);
+
+<span class="hljs-keyword">echo</span> $request;
+<span class="hljs-keyword">echo</span> $response;
+</pre>
+
+                            <p>It is lacking in documentation, so you will have to read through the source code to get a feel of all the options that it supports. Or you can go with the Requests library that I presented above.</p>
+                            
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h2>Goutte - Web Scraping Library</h2>
+                            <p><a href="https://github.com/fabpot/Goutte" target="_blank" rel="noreferrer noopener">Goutte</a> is a library for scraping websites and extracting data. It provides a nice API that makes it easy to select specific elements from the remote pages.</p>
+
+<pre class="bg-white p-5 rounded my-5 shadow-sm">
+<span class="hljs-keyword">require_once</span> <span class="hljs-string">'/path/to/goutte.phar'</span>; 
+
+<span class="hljs-keyword">use</span> <span class="hljs-title">Goutte</span>\<span class="hljs-title">Client</span>; 
+
+$client = <span class="hljs-keyword">new</span> Client();
+$crawler = $client-&gt;request(<span class="hljs-string">'GET'</span>, <span class="hljs-string">'http://www.symfony-project.org/'</span>); 
+
+<span class="hljs-comment">// Click on links: </span>
+
+$link = $crawler-&gt;selectLink(<span class="hljs-string">'Plugins'</span>)-&gt;link();
+$crawler = $client-&gt;click($link); 
+
+<span class="hljs-comment">// Extract data with a CSS-like syntax: </span>
+
+$t = $crawler-&gt;filter(<span class="hljs-string">'#data'</span>)-&gt;text(); 
+
+<span class="hljs-keyword">echo</span> <span class="hljs-string">"Here is the text: $t"</span>;
+</pre>
+
+<hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h2>Carbon - DateTime Library</h2>
+                            <p><a href="https://github.com/briannesbitt/Carbon" target="_blank" rel="noreferrer noopener">Carbon</a> is a simple API extension for the DateTime. It enhances the class with some useful methods for working with dates and time. For example:</p>
+
+<pre class="bg-white p-5 rounded my-5 shadow-sm">
+printf(<span class="hljs-string">"Right now is %s"</span>, Carbon::now()-&gt;toDateTimeString());
+printf(<span class="hljs-string">"Right now in Vancouver is %s"</span>, Carbon::now(<span class="hljs-string">'America/Vancouver'</span>));
+
+$tomorrow = Carbon::now()-&gt;addDay();
+$lastWeek = Carbon::now()-&gt;subWeek();
+$nextSummerOlympics = Carbon::createFromDate(<span class="hljs-number">2012</span>)-&gt;addYears(<span class="hljs-number">4</span>);
+
+$officialDate = Carbon::now()-&gt;toRFC2822String();
+
+$howOldAmI = Carbon::createFromDate(<span class="hljs-number">1975</span>, <span class="hljs-number">5</span>, <span class="hljs-number">21</span>)-&gt;age;
+
+$noonTodayLondonTime = Carbon::createFromTime(<span class="hljs-number">12</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-string">'Europe/London'</span>);
+
+$endOfWorld = Carbon::createFromDate(<span class="hljs-number">2012</span>, <span class="hljs-number">12</span>, <span class="hljs-number">21</span>, <span class="hljs-string">'GMT'</span>);
+
+<span class="hljs-comment">// comparisons are always done in UTC</span>
+<span class="hljs-keyword">if</span> (Carbon::now()-&gt;gte($endOfWorld)) {
+    <span class="hljs-keyword">die</span>();
+}
+
+<span class="hljs-keyword">if</span> (Carbon::now()-&gt;isWeekend()) {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">'Party!'</span>;
+}
+
+<span class="hljs-keyword">echo</span> Carbon::now()-&gt;subMinutes(<span class="hljs-number">2</span>)-&gt;diffForHumans(); <span class="hljs-comment">// '2 minutes ago'</span>
+</pre>
+
+                            <p>Carbon hasn't seen new commits in the last few months, so you might want to check out <a href="https://github.com/dandoescode/datum" target="_blank" rel="noreferrer noopener">Datum</a>, a fork that continues to be worked on.</p>
+                            
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h2>Ubench - Micro Benchmarking Library</h2>
+                            <p><a href="https://github.com/devster/ubench" target="_blank" rel="noreferrer noopener">Ubench</a> is a micro library for benchmarking your PHP code. It monitors execution time and memory usage. Here's an example:</p>
+
+<pre class="bg-white p-5 rounded my-5 shadow-sm">
+<span class="hljs-keyword">use</span> <span class="hljs-title">Ubench</span>\<span class="hljs-title">Ubench</span>;
+
+$bench = <span class="hljs-keyword">new</span> Ubench;
+
+$bench-&gt;start();
+
+<span class="hljs-comment">// Execute some code</span>
+
+$bench-&gt;end();
+
+<span class="hljs-comment">// Get elapsed time and memory</span>
+<span class="hljs-keyword">echo</span> $bench-&gt;getTime(); <span class="hljs-comment">// 156ms or 1.123s</span>
+<span class="hljs-keyword">echo</span> $bench-&gt;getTime(<span class="hljs-keyword">true</span>); <span class="hljs-comment">// elapsed microtime in float</span>
+<span class="hljs-keyword">echo</span> $bench-&gt;getTime(<span class="hljs-keyword">false</span>, <span class="hljs-string">'%d%s'</span>); <span class="hljs-comment">// 156ms or 1s</span>
+
+<span class="hljs-keyword">echo</span> $bench-&gt;getMemoryPeak(); <span class="hljs-comment">// 152B or 90.00Kb or 15.23Mb</span>
+<span class="hljs-keyword">echo</span> $bench-&gt;getMemoryPeak(<span class="hljs-keyword">true</span>); <span class="hljs-comment">// memory peak in bytes</span>
+<span class="hljs-keyword">echo</span> $bench-&gt;getMemoryPeak(<span class="hljs-keyword">false</span>, <span class="hljs-string">'%.3f%s'</span>); <span class="hljs-comment">// 152B or 90.152Kb or 15.234Mb</span>
+
+<span class="hljs-comment">// Returns the memory usage at the end mark</span>
+<span class="hljs-keyword">echo</span> $bench-&gt;getMemoryUsage(); <span class="hljs-comment">// 152B or 90.00Kb or 15.23Mb</span>
+</pre>
+
+
+                            <p>It would be a good idea to run these checks only while developing.</p>
+                            
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h2>Validation - Input Validation Engine</h2>
+                            <p><a href="https://github.com/Respect/Validation" target="_blank" rel="noreferrer noopener">Validation</a> claims to be the most awesome validation engine ever created for PHP. But can it deliver? See for yourself:</p>
+
+<pre class="bg-white p-5 rounded my-5 shadow-sm">
+<span class="hljs-keyword">use</span> <span class="hljs-title">Respect</span>\<span class="hljs-title">Validation</span>\<span class="hljs-title">Validator</span> <span class="hljs-title">as</span> <span class="hljs-title">v</span>; 
+
+<span class="hljs-comment">// Simple Validation </span>
+
+$number = <span class="hljs-number">123</span>;
+v::numeric()-&gt;validate($number); <span class="hljs-comment">//true </span>
+
+<span class="hljs-comment">// Chained Validation </span>
+
+$usernameValidator = v::alnum()-&gt;noWhitespace()-&gt;length(<span class="hljs-number">1</span>,<span class="hljs-number">15</span>);
+$usernameValidator-&gt;validate(<span class="hljs-string">'alganet'</span>); <span class="hljs-comment">//true </span>
+
+<span class="hljs-comment">// Validating Object Attributes </span>
+
+$user = <span class="hljs-keyword">new</span> stdClass;
+$user-&gt;name = <span class="hljs-string">'Alexandre'</span>;
+$user-&gt;birthdate = <span class="hljs-string">'1987-07-01'</span>; 
+
+<span class="hljs-comment">// Validate its attributes in a single chain: </span>
+
+$userValidator = v::attribute(<span class="hljs-string">'name'</span>, v::string()-&gt;length(<span class="hljs-number">1</span>,<span class="hljs-number">32</span>))
+                  -&gt;attribute(<span class="hljs-string">'birthdate'</span>, v::date()-&gt;minimumAge(<span class="hljs-number">18</span>)); 
+
+$userValidator-&gt;validate($user); <span class="hljs-comment">//true</span>
+
+</pre>
+
+
+                            <p>With this library you can validate your forms or other user-submitted data. In addition, it supports a wide number of existing checks, throwing exceptions and customizable error messages.</p>
+                            
+                            <hr class="separate" style="border-top: 2px solid #fff">
+                            
+                            <h2>Filterus - Filtering Library</h2>
+                            <p><a href="https://github.com/ircmaxell/filterus" target="_blank" rel="noreferrer noopener">Filterus</a> is another filtering library, but it can not only validate, but also filter input to match a preset pattern. Here is an example:</p>
+
+<pre class="bg-white p-5 rounded my-5 shadow-sm">
+$f = Filter::factory(<span class="hljs-string">'string,max:5'</span>);
+$str = <span class="hljs-string">'This is a test string'</span>; 
+
+$f-&gt;validate($str); <span class="hljs-comment">// false</span>
+$f-&gt;filter($str); <span class="hljs-comment">// 'This '</span>
+</pre>
+
+                            <p>Filterus has a lot of built-in patterns, supports chaining and can even validate array elements with individual validation rules.</p>
+
+                        </b>
+                    </div>
+
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+                    <div class="lead" id="php6">
+                        <h3> PHP Frameworks</h3><br>
+                        <b>
+                            <h3>What Is a PHP Framework?</h3>
+
+                            <p>A PHP framework is a platform to create PHP web applications.
+                                PHP frameworks provide code libraries for commonly used functions, cutting down on the amount of original code you need to write.
+                            </p>
+
+                            <h3>Why Use a PHP Framework?</h3>
+
+                            <ol>
+                                <li> Faster Development </li>
+                                <li>Less Code to Write</li>
+                                <li>Libraries for Common Tasks</li>
+                                <li>Follow Good Coding Practices</li>
+                                <li>More Secure Than Writing Your Own Apps</li>
+                                <li> Easier to Maintain</li>
+                            </ol>
+
+                            <h3>Some of the best PHP Frameworks</h3>
+
+                            <h3 class="has-anchor-hash">Laravel<a href="#laravel" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="laravel" aria-hidden="true" class="anchor-hash"></span></h3>
+                            <div id="attachment_79493" class="wp-caption alignnone" style="max-width: 1500px;"><a href="https://kinsta.com/wp-content/uploads/2020/09/laravel.png"><img loading="lazy" class="size-full wp-image-79493" src="https://kinsta.com/wp-content/uploads/2020/09/laravel.png" alt="Laravel" width="900" height="650" srcset="https://kinsta.com/wp-content/uploads/2020/09/laravel.png 1500w, https://kinsta.com/wp-content/uploads/2020/09/laravel-300x137.png 300w, https://kinsta.com/wp-content/uploads/2020/09/laravel-1024x466.png 1024w, https://kinsta.com/wp-content/uploads/2020/09/laravel-768x350.png 768w" sizes="(max-width: 1500px) 100vw, 1500px"></a>
+                                <p class="wp-caption-text">Laravel</p>
+                            </div>
+
+                            <p><a href="https://laravel.com/" target="_blank" rel="noopener noreferrer">Laravel</a> is billed as “The PHP Framework for Web Artisans.” It was developed by Taylor Otwell, who wanted a framework with elements that CodeIgniter didn’t have, such as user authentication.</p>
+
+                            <h4 class="has-anchor-hash">Quick Specs<a href="#quick-specs" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="quick-specs" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <p>Launched: June 2011</p>
+                            <p>Current version: 8, released on September 8th, 2020.</p>
+                            <p>Technical requirements:</p>
+                            <ul>
+                                <li>PHP &gt;= 7.2.5 (or use Laravel Homestead)</li>
+                                <li>Composer installed</li>
+                                <li>Database support for MySQL 5.6+, PostgreSQL 9.4+, SQLite 3.8.8+, SQL Server 2017+.</li>
+                            </ul>
+
+                            <p>&nbsp;</p>
+
+                            <h4 class="has-anchor-hash">Pros of Laravel<a href="#pros-of-laravel" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="pros-of-laravel" aria-hidden="true" class="anchor-hash"></span></h4>
+
+                            <p>It’s easy to get started with <a href="https://laravel.com/docs/7.x/homestead" target="_blank" rel="noopener noreferrer">Laravel Homestead</a>, a done-for-you virtual development environment.</p>
+                            <p>Laravel Homestead is an official, pre-packaged Vagrant box that provides you a wonderful development environment without requiring you to <a href="https://kinsta.com/blog/install-php/">install PHP</a>, a web server, and any other server software on your local machine. No more worrying about messing up your operating system!</p>
+                            <p>If you’re a Mac user, you also have the choice of using <strong>Laravel Valet </strong>as your development environment. Incidentally, Laravel Valet supports Symfony, CakePHP 3, Slim, and Zend, as well as WordPress.</p>
+                            <p>Laravel uses a templating engine called <strong>Blade</strong>. One advantage it has over other templating engines is that you can use PHP within Blade, which you cannot do with the others.</p>
+                            <p><a href="https://packalyst.com/" target="_blank" rel="noopener noreferrer">Packalyst</a>, a collection of Laravel packages, has more than 15,000 packages you can use in your projects.</p>
+                            <p>Laravel provides a range of <strong>security features</strong> and methods, covering the following:</p>
+                            <ul>
+                                <li>Authentication</li>
+                                <li>Authorization</li>
+                                <li>Email verification</li>
+                                <li>Encryption</li>
+                                <li>Hashing</li>
+                                <li>Password reset</li>
+                            </ul>
+
+                            <p>Laravel’s <strong>Eloquent ORM</strong> and <strong>Fluent Query Builder</strong> guard against SQL injection attacks as they use PDO parameter binding. Cross-Site Request Forgery (CSRF) protection, which uses a hidden CSRF form token, is also enabled by default.</p>
+                            <p>The <strong>Artisan Console</strong> command-line tool that Laravel has speeds up development by allowing developers to automate repetitive tasks and generate skeleton code fast.</p>
+                            <p>When we did PHP benchmark testing, <a href="https://kinsta.com/blog/php-benchmarks/#laravel-benchmarks">Laravel was the fastest of the PHP frameworks we tried</a>.</p>
+                            <p>The Laravel ecosystem has several useful tools such as <strong>Mix</strong> for compiling CSS and JS assets, and <strong>Socialite</strong> for OAuth authentication.</p>
+                            <p>Laravel benefits from a large community of developers (<a href="https://kinsta.com/blog/wordpress-support/#forums-groups-and-channels">like WordPress</a>). You can find them at:</p>
+                            <ol>
+                                <li><a href="https://laracasts.com/" target="_blank" rel="noopener noreferrer">Laracasts</a>: a learning portal with courses, blog, podcast, and forum.</li>
+                                <li><a href="https://laravel.io/" target="_blank" rel="noopener noreferrer">Laravel.io</a>: a community portal with over 45,000 users.</li>
+                                <li><a href="https://www.reddit.com/r/laravel/" target="_blank" rel="noopener noreferrer">The Laravel subreddit</a>: home to 50,000 Laravel artisans.</li>
+                            </ol>
+
+                            <h4 class="has-anchor-hash">Who Uses Laravel?<a href="#who-uses-laravel" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="who-uses-laravel" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <ul>
+                                <li><a href="https://archive.vogue.com/" target="_blank" rel="noopener noreferrer">Vogue archive</a> – fashion</li>
+                                <li><a href="https://ascot.co.uk/" target="_blank" rel="noopener noreferrer">Ascot</a> – racecourse</li>
+                                <li><a href="https://rv.campingworld.com/" target="_blank" rel="noopener noreferrer">Camping World RV &amp; Outdoors</a> – retail</li>
+                                <li><a href="https://www.restaurants.com/" target="_blank" rel="noopener noreferrer">Restaurants.com</a> – search engine for restaurants</li>
+                                <li><a href="https://www.barchart.com/" target="_blank" rel="noopener noreferrer">Barchart</a> – stocks and shares</li>
+                                <li><a href="https://visitmaine.com/" target="_blank" rel="noopener noreferrer">Visit Maine</a> – tourism</li>
+                                <li><a href="https://www.fischerhomes.com/" target="_blank" rel="noopener noreferrer">Fischer Homes</a> – construction</li>
+                                <li><a href="https://www.exploregeorgia.org/" target="_blank" rel="noopener noreferrer">Explore Georgia</a> – tourism</li>
+                            </ul>
+
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h3 class="has-anchor-hash"><strong>Symfony</strong><a href="#symfony" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="symfony" aria-hidden="true" class="anchor-hash"></span></h3>
+                            <div id="attachment_79494" class="wp-caption alignnone responsive" style="max-width: 1500px;"><a href="https://kinsta.com/wp-content/uploads/2020/09/symfony.png"><img loading="lazy" width="900" height="650" class="size-full wp-image-79494" src="https://kinsta.com/wp-content/uploads/2020/09/symfony.png" alt="Symfony" srcset="https://kinsta.com/wp-content/uploads/2020/09/symfony.png 1500w, https://kinsta.com/wp-content/uploads/2020/09/symfony-300x130.png 300w, https://kinsta.com/wp-content/uploads/2020/09/symfony-1024x444.png 1024w, https://kinsta.com/wp-content/uploads/2020/09/symfony-768x333.png 768w" sizes="(max-width: 1500px) 100vw, 1500px"></a>
+                                <p class="wp-caption-text">Symfony</p>
+                            </div>
+
+                            <p><a href="https://symfony.com/" target="_blank" rel="noopener noreferrer">Symfony</a> is both a PHP framework and a collection of PHP components for building websites.</p>
+                            <h4 class="has-anchor-hash">Quick Specs<a href="#quick-specs" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="quick-specs" aria-hidden="true" class="anchor-hash"></span></h4>
+
+                            <p>Launched: October 2005</p>
+                            <p>Current version: 5.1.4</p>
+                            <p>Technical requirements:</p>
+
+                            <ul>
+                                <li>PHP &gt;= 7.2.5</li>
+                                <li>Composer installed</li>
+                            </ul>
+
+                            <h4 class="has-anchor-hash">Pros of Symfony<a href="#pros-of-symfony" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="pros-of-symfony" aria-hidden="true" class="anchor-hash"></span></h4>
+
+                            <p>Symfony is an excellent choice for websites and apps that need to be scalable. Its <strong>modular component system</strong> is very flexible and lets you choose the components you need for your project.</p>
+
+                            <p>Symfony supports the <strong>most databases</strong> out of the popular PHP frameworks:</p>
+                            <ul>
+                                <li>Drizzle</li>
+                                <li><a href="https://kinsta.com/knowledgebase/what-is-mysql/">MySQL</a></li>
+                                <li>Oracle</li>
+                                <li>PostgreSQL</li>
+                                <li>SAP Sybase SQL Anywhere</li>
+                                <li>SQLite</li>
+                                <li>SQLServer</li>
+                            </ul>
+                            <p>The best way to interact with your databases is via the <strong>Doctrine</strong> ORM. Symfony uses data mappers to map objects to the database. This keeps your object model and the database schema separate, meaning that if you change a database column you don’t need to make many changes in your codebase.</p>
+                            <p><strong>Debugging</strong> Symfony projects is straightforward with the in-built toolbar.</p>
+                            <p>Symfony uses the <strong>Twig</strong> templating engine, which is easy to learn, fast, and secure.</p>
+                            <p>Packagist lists <strong>over 4,000 Symfony packages</strong> available for you to download and use.</p>
+
+                            <p>Symfony has commercial backing from Sensio Labs. This means there is <strong>professional support</strong> available, unlike most other PHP frameworks. It also has long-term support releases that have 3 full years of support.</p>
+                            <p>Symfony developers can train and get help through multiple channels:</p>
+                            <ul>
+                                <li><a href="https://symfony.com/doc/current/index.html" target="_blank" rel="noopener noreferrer">Full documentation</a></li>
+                                <li><a href="https://university.sensiolabs.com/" target="_blank" rel="noopener noreferrer">Sensio Labs University</a>, the Symfony e-learning platform</li>
+                                <li><a href="https://symfonycasts.com/" target="_blank" rel="noopener noreferrer">SymfonyCasts</a></li>
+                                <li><a href="https://certification.symfony.com/" target="_blank" rel="noopener noreferrer">Symfony Certification</a></li>
+                                <li>Symfony conferences</li>
+                            </ul>
+                            <p>In addition, the <a href="https://symfony.com/community" target="_blank" rel="noopener noreferrer">Symfony Community</a> is huge with over 600,000 developers actively involved.
+                            <p>In addition, the <a href="https://symfony.com/community" target="_blank" rel="noopener noreferrer">Symfony Community</a> is huge with over 600,000 developers actively involved.</p>
+                            </p>
+                            <h4 class="has-anchor-hash">Who Uses Symfony?<a href="#who-uses-symfony" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="who-uses-symfony" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <ul>
+                                <li><a href="https://www.sainsburysmagazine.co.uk/" target="_blank" rel="noopener noreferrer">Sainsbury’s Magazine</a> – publishing</li>
+                                <li><a href="https://www.intelius.com/" target="_blank" rel="noopener noreferrer">Intelius</a> – search for public data about people</li>
+                                <li><a href="https://uk.vaio.com/" target="_blank" rel="noopener noreferrer">Sony VAIO UK site</a> – retail</li>
+                                <li><a href="https://www.sabatier-shop.com/" target="_blank" rel="noopener noreferrer">Sabatier Shop</a> – retail</li>
+                                <li><a href="https://footdistrict.com/" target="_blank" rel="noopener noreferrer">Foot District</a> – retail</li>
+                                <li><a href="https://www.nobelpeaceprize.org/" target="_blank" rel="noopener noreferrer">Nobel Peace Prize</a></li>
+                            </ul>
+
+                            <p>Other big names use Symfony components within their projects, including <a href="https://kinsta.com/blog/wordpress-vs-drupal/">Drupal</a>, <a href="https://kinsta.com/blog/joomla-vs-wordpress/">Joomla</a>, and <a href="https://kinsta.com/magento-market-share/">Magento</a>.</p>
+
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h3 class="has-anchor-hash">CodeIgniter<a href="#codeigniter" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="codeigniter" aria-hidden="true" class="anchor-hash"></span></h3>
+
+                            <div id="attachment_79495" class="wp-caption alignnone" style="max-width: 1500px;"><a href="https://kinsta.com/wp-content/uploads/2020/09/codeigniter.png"><img loading="lazy" class="size-full wp-image-79495" src="https://kinsta.com/wp-content/uploads/2020/09/codeigniter.png" alt="CodeIgniter" width="900" height="650" srcset="https://kinsta.com/wp-content/uploads/2020/09/codeigniter.png 1500w, https://kinsta.com/wp-content/uploads/2020/09/codeigniter-300x134.png 300w, https://kinsta.com/wp-content/uploads/2020/09/codeigniter-1024x458.png 1024w, https://kinsta.com/wp-content/uploads/2020/09/codeigniter-768x344.png 768w" sizes="(max-width: 1500px) 100vw, 1500px"></a>
+                                <p class="wp-caption-text">CodeIgniter</p>
+                            </div>
+                            <p><a href="https://codeigniter.com/" target="_blank" rel="noopener noreferrer">CodeIgniter</a> framework helps you build web apps quickly, as it has minimal configuration.</p>
+
+                            <h4 class="has-anchor-hash">Quick Specs<a href="#quick-specs" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="quick-specs" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <p>Launched: February 2006</p>
+                            <p>Current version: 4.0.3</p>
+                            <p>Technical requirements:</p>
+                            <ul>
+                                <li>PHP &gt;= 7.2</li>
+                                <li>Database support for MySQL, PostgreSQL, SQLite3</li>
+                            </ul>
+                            <h4 class="has-anchor-hash">Pros of CodeIgniter<a href="#pros-of-codeigniter" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="pros-of-codeigniter" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <p>CodeIgniter is known for its <strong>speed</strong>. It was the <a href="https://kinsta.com/blog/php-benchmarks/#codeigniter">second-fastest of the four PHP frameworks we tried</a> in our PHP benchmark tests.</p>
+                            <p>The framework’s <strong>light footprint</strong> (it’s a 1.2MB download) means there is no bloat. You can add exactly the components you need.</p>
+                            <p>CodeIgniter is <strong>flexible</strong>: it encourages development with the MVC architecture, but you can code non-MVC applications too.</p>
+                            <p>The framework includes defenses against CSRF and XSS attacks, plus context-sensitive escaping and a Content Security Policy.</p>
+                            <p>CodeIgniter supports multiple methods of <strong>caching</strong>, speeding up your apps.</p>
+                            <p>As noted earlier, CodeIgniter has an easy learning curve compared to other frameworks and&nbsp;is quite extensible.</p>
+                            <p>CodeIgniter’s community consists of a <a href="https://forum.codeigniter.com/" target="_blank" rel="noopener noreferrer">forum</a> and <a href="https://codeigniterchat.slack.com/" target="_blank" rel="noopener noreferrer">Slack group</a>.</p>
+                            <h4 class="has-anchor-hash">Who Uses CodeIgniter?<a href="#who-uses-codeigniter" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="who-uses-codeigniter" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <ul>
+                                <li><a href="https://www.gshock.com/" target="_blank" rel="noopener noreferrer">G-Shock</a> – retail</li>
+                                <li><a href="https://woobox.com/" target="_blank" rel="noopener noreferrer">WooBox</a> – marketing</li>
+                                <li><a href="https://buffer.com/" target="_blank" rel="noopener noreferrer">Buffer</a> – technology</li>
+                                <li><a href="https://www.testandtrack.io/" target="_blank" rel="noopener noreferrer">TestandTrack</a> – education</li>
+                                <li><a href="https://www.casio.com/" target="_blank" rel="noopener noreferrer">Casio</a> – technology</li>
+                                <li><a href="https://bikeeasy.org/" target="_blank" rel="noopener noreferrer">Bike Easy</a> – Outdoors</li>
+                                <li><a href="https://www.barracuda.com/" target="_blank" rel="noopener noreferrer">Barracuda</a> – IT security</li>
+                                <li><a href="https://www.getfuelcms.com/" target="_blank" rel="noopener noreferrer">FuelCMS</a> – content management system</li>
+                            </ul>
+                            <h3 class="has-anchor-hash">Zend Framework / Laminas Project<a href="#zend-framework--laminas-project" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="zend-framework--laminas-project" aria-hidden="true" class="anchor-hash"></span></h3>
+                            <div id="attachment_79496" class="wp-caption alignnone" style="max-width: 1500px;"><a href="https://kinsta.com/wp-content/uploads/2020/09/zend.png"><img loading="lazy" class="size-full wp-image-79496" src="https://kinsta.com/wp-content/uploads/2020/09/zend.png" alt="Zend Framework" width="900" height="650" srcset="https://kinsta.com/wp-content/uploads/2020/09/zend.png 1500w, https://kinsta.com/wp-content/uploads/2020/09/zend-300x137.png 300w, https://kinsta.com/wp-content/uploads/2020/09/zend-1024x466.png 1024w, https://kinsta.com/wp-content/uploads/2020/09/zend-768x350.png 768w" sizes="(max-width: 1500px) 100vw, 1500px"></a>
+                                <p class="wp-caption-text">Zend Framework</p>
+                            </div>
+
+                            <p>The <a href="https://framework.zend.com/" target="_blank" rel="noopener noreferrer">Zend Framework</a> is a long-established PHP framework that is now transitioning to the <a href="https://getlaminas.org/" target="_blank" rel="noopener noreferrer">Laminas Project</a>. Migration to Laminas is strongly recommended, as Zend is no longer updated.</p>
+
+                            <p>The Laminas Project consists of 3 parts:</p>
+                            <ol>
+                                <li>Laminas Components and MVC</li>
+                                <li>Mezzio</li>
+                                <li>Laminas API Tools</li>
+                            </ol>
+                            <h4 class="has-anchor-hash">Quick Specs<a href="#quick-specs" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="quick-specs" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <p>Launched: March 2006</p>
+                            <p>Current version: 3.0.0 (Zend) or 1.3.0 (Laminas)</p>
+                            <p>Technical requirements:</p>
+                            <ul>
+                                <li>PHP &gt;= 5.6 (Zend) or &gt;=7.3 (Laminas)</li>
+                                <li>Composer installed</li>
+                                <li>Database support for <a href="https://kinsta.com/blog/mariadb-vs-mysql/">MariaDB</a>, MySQL, Oracle, IBM DB2, Microsoft SQL Server, PostgreSQL, SQLite, and Informix Dynamic Server.</li>
+                            </ul>
+                            <h4 class="has-anchor-hash">Pros of Zend/Laminas<a href="#pros-of-zendlaminas" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="pros-of-zendlaminas" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <p>The Zend Framework has had more than<strong> 570 million installations</strong>. It’s also the most used PHP framework by <a href="https://kinsta.com/enterprise-wordpress-hosting/">enterprises</a>.</p>
+                            <p>Zend follows the PHP Framework Interop Group (PHP-FIG) standards, meaning that its code can be ported across to other frameworks without difficulty.</p>
+                            <p>Like Symfony, you can use just the components you need.</p>
+                            <p>You can use Zend to build <a href="https://kinsta.com/blog/wordpress-rest-api/">RESTful APIs</a>.</p>
+                            <p>The Laminas community has a <a href="https://discourse.laminas.dev/" target="_blank" rel="noopener noreferrer">forum</a> and <a href="https://laminas.slack.com/" target="_blank" rel="noopener noreferrer">Slack group</a> for collaboration and support.</p>
+                            <h4 class="has-anchor-hash">Who Uses Zend/Laminas?<a href="#who-uses-zendlaminas" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="who-uses-zendlaminas" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <p>According to the Zend homepage the framework has been used by large companies including</p>
+                            <ul>
+                                <li><a href="https://www.bbc.co.uk/" target="_blank" rel="noopener noreferrer">BBC</a> – media</li>
+                                <li><a href="https://group.bnpparibas/en/" target="_blank" rel="noopener noreferrer">BNP Paribas</a> – finance</li>
+                                <li><a href="https://www.webex.com/" target="_blank" rel="noopener noreferrer">Cisco Webex</a> – videoconferencing</li>
+                            </ul>
+
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h3 class="has-anchor-hash">Yii (Framework)<a href="#yii-framework" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="yii-framework" aria-hidden="true" class="anchor-hash"></span></h3>
+                            <div id="attachment_79497" class="wp-caption alignnone" style="max-width: 1500px;"><a href="https://kinsta.com/wp-content/uploads/2020/09/yii-framework.png"><img loading="lazy" class="size-full wp-image-79497" src="https://kinsta.com/wp-content/uploads/2020/09/yii-framework.png" alt="Yii Framework" width="1500" height="683" srcset="https://kinsta.com/wp-content/uploads/2020/09/yii-framework.png 1500w, https://kinsta.com/wp-content/uploads/2020/09/yii-framework-300x137.png 300w, https://kinsta.com/wp-content/uploads/2020/09/yii-framework-1024x466.png 1024w, https://kinsta.com/wp-content/uploads/2020/09/yii-framework-768x350.png 768w" sizes="(max-width: 1500px) 100vw, 1500px"></a>
+                                <p class="wp-caption-text">Yii Framework</p>
+                            </div>
+                            <p>This framework’s name, <a href="https://www.yiiframework.com/" target="_blank" rel="noopener noreferrer">Yii</a>, means “simple and evolutionary” in Chinese. It also stands for “Yes, It Is!”</p>
+
+                            <h4 class="has-anchor-hash">Quick Specs<a href="#quick-specs" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="quick-specs" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <p>Launched: December 2008</p>
+                            <p>Current version: 2.0.35</p>
+                            <p>Technical requirements:</p>
+                            <ul>
+                                <li>PHP &gt;= 5.4.0, 7+ recommended</li>
+                                <li>Composer installed</li>
+                                <li>Database support for SQLite, MySQL, PostgreSQL, MSSQL, or Oracle databases</li>
+                            </ul>
+                            <h4 class="has-anchor-hash">Pros of Yii<a href="#pros-of-yii" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="pros-of-yii" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <p>You can get up and running with Yii within minutes. The <strong>documentation</strong> is well-written and easy to follow.</p>
+                            <p>Yii Framework has several <a href="https://kinsta.com/blog/wordpress-security/">security measures</a> such as bcrypt password hashing, encryption, authentication, and authorization. The documentation offers best practices to prevent <a href="https://kinsta.com/blog/sql-injection/">SQL injection</a>, XSS, and CSRF attacks.</p>
+                            <p>The <strong>Gii code generator</strong> can quickly build skeleton code for you, saving time.</p>
+                            <div id="attachment_79499" class="wp-caption alignnone" style="max-width: 1500px;"><a href="https://kinsta.com/wp-content/uploads/2020/09/Gii-code-generator-e1599232207871.png"><img loading="lazy" class="size-full wp-image-79499" src="https://kinsta.com/wp-content/uploads/2020/09/Gii-code-generator-e1599232207871.png" alt="Gii code generator" width="900" height="650"></a>
+                                <p class="wp-caption-text">Gii code generator</p>
+                            </div>
+                            <p>Yii supports four types of <strong>caching</strong> to speed up web apps: data caching, fragment caching, <a href="https://kinsta.com/blog/wordpress-cache/#page-cache">page caching</a>, and HTTP caching.</p>
+                            <p>You can run <strong>third-party code</strong> within Yii projects.</p>
+                            <p>The Yii community offers <a href="https://www.yiiframework.com/chat" target="_blank" rel="noopener noreferrer">live support via Slack or IRC</a>. There is also a <a href="https://www.yiiframework.com/community" target="_blank" rel="noopener noreferrer">discussion forum and social media channels</a>. The community rewards its active members with badges and entries in a Hall of Fame.</p>
+                            <h4 class="has-anchor-hash">Who Uses Yii?<a href="#who-uses-yii" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="who-uses-yii" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <ul>
+                                <li><a href="https://www.crowdcube.com/" target="_blank" rel="noopener noreferrer">Crowdcube</a> – crowdfunding platform</li>
+                                <li><a href="https://wordcounter.net/" target="_blank" rel="noopener noreferrer">WordCounter</a> – editing tool</li>
+                                <li><a href="https://www.which.co.uk/" target="_blank" rel="noopener noreferrer">Which?</a> – consumer website</li>
+                                <li><a href="https://purple.com/" target="_blank" rel="noopener noreferrer">Purple</a> – retail</li>
+                                <li><a href="https://www.ymca.net/" target="_blank" rel="noopener noreferrer">YMCA</a> – nonprofit</li>
+                                <li><a href="https://pastebin.com/" target="_blank" rel="noopener noreferrer">Pastebin</a> – online tool</li>
+                                <li><a href="https://events.fastcompany.com/" target="_blank" rel="noopener noreferrer">Fast Company Events</a> – live and virtual events</li>
+                            </ul>
+
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h3 class="has-anchor-hash">CakePHP<a href="#cakephp" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="cakephp" aria-hidden="true" class="anchor-hash"></span></h3>
+                            <div id="attachment_80809" class="wp-caption alignnone" style="max-width: 1819px;"><img loading="lazy" class="wp-image-80809 size-full" src="https://kinsta.com/wp-content/uploads/2020/09/CakePHP.png" alt="CakePHP - PHP frameworks" width="900" height="650" srcset="https://kinsta.com/wp-content/uploads/2020/09/CakePHP.png 1819w, https://kinsta.com/wp-content/uploads/2020/09/CakePHP-300x160.png 300w, https://kinsta.com/wp-content/uploads/2020/09/CakePHP-1024x548.png 1024w, https://kinsta.com/wp-content/uploads/2020/09/CakePHP-768x411.png 768w, https://kinsta.com/wp-content/uploads/2020/09/CakePHP-1536x822.png 1536w" sizes="(max-width: 1819px) 100vw, 1819px">
+                                <p class="wp-caption-text">CakePHP</p>
+                            </div>
+                            <p><a href="https://cakephp.org/" target="_blank" rel="noopener noreferrer">CakePHP</a> serves up fast and clean PHP development.</p>
+                            <h4 class="has-anchor-hash">Quick Specs<a href="#quick-specs" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="quick-specs" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <p>Launched: April 2005</p>
+                            <p>Current version: 4.1.1</p>
+                            <p>Technical requirements:</p>
+                            <ul>
+                                <li>PHP 7.2 (minimum), 7.4 recommended</li>
+                                <li>HTTP server with mod_rewrite preferred</li>
+                                <li>Database support for MySQL 5.6+, MariaDB 5.6+, PostgreSQL 9.4+, SQLite 3.8, SQL Server 2012+.</li>
+                            </ul>
+                            <h4 class="has-anchor-hash">Pros of CakePHP<a href="#pros-of-cakephp" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="pros-of-cakephp" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <p><strong>Configuration is minimal</strong>. You don’t have to mess around with XML or YAML files. Once you set up your database <a href="https://kinsta.com/blog/code-review-tools/">you can begin coding</a>.</p>
+                            <div class="in-post-container">
+                                <div id="simple-promo">
+                                    <div class="mb--20 mt--0 heading--normal">
+                                        <p>Need a blazing-fast, secure, and developer-friendly hosting for your client sites? Kinsta is built with WordPress developers in mind and provides plenty of tools and a powerful dashboard. <a onclick="gtag('event', 'click', {'event_category': 'blog-article', 'event_label': 'blog-inarticle-minimaltext'})" href="https://kinsta.com/plans/?in-article-cta">Check out our plans</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>CakePHP has its own <strong>inbuilt ORM</strong>, which is quick and simple to use.</p>
+                            <p><strong>Security features</strong> include methods for encryption, password hashing, safeguarding form data, and CSRF protection.</p>
+                            <p>CakePHP’s <strong>Components and Helpers</strong> simplify development and reduce the number of pedestrian tasks you must do.</p>
+                            <p>Github hosts a helpful <a href="https://github.com/friendsofcake/awesome-cakephp" target="_blank" rel="noopener noreferrer">list of CakePHP resources and plugins</a>.</p>
+                            <p>You can learn CakePHP through the cookbook (documentation), online training, and CakeFest conferences.</p>
+                            <p>You can find friendly CakePHP bakers through their forums, Stack Overflow, IRC, and Slack. Pro support is available, too, from <a href="https://www.cakedc.com/" target="_blank" rel="noopener noreferrer">Cake DC</a>, run by CakePHP founder Larry Masters.</p>
+                            <h4 class="has-anchor-hash">Who Uses CakePHP?<a href="#who-uses-cakephp" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="who-uses-cakephp" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <ul>
+                                <li><a href="https://www.visitnc.com/" target="_blank" rel="noopener noreferrer">Visit NC</a> – tourism</li>
+                                <li><a href="https://10fastfingers.com/" target="_blank" rel="noopener noreferrer">10 Fast Fingers</a> – education</li>
+                                <li><a href="https://coconala.com/" target="_blank" rel="noopener noreferrer">Coconala</a> – e-learning marketplace</li>
+                                <li><a href="https://www.goodfirms.co/" target="_blank" rel="noopener noreferrer">GoodFirms</a> – software marketplace</li>
+                                <li><a href="https://printivo.com/" target="_blank" rel="noopener noreferrer">Printivo</a> – ecommerce</li>
+                                <li><a href="https://citizensinc.com/" target="_blank" rel="noopener noreferrer">Citizens, Inc</a> – finance</li>
+                            </ul>
+
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h3 class="has-anchor-hash">Slim<a href="#slim" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="slim" aria-hidden="true" class="anchor-hash"></span></h3>
+                            <div id="attachment_79501" class="wp-caption alignnone" style="max-width: 1500px;"><a href="https://kinsta.com/wp-content/uploads/2020/09/slim.png"><img loading="lazy" class="size-full wp-image-79501" src="https://kinsta.com/wp-content/uploads/2020/09/slim.png" alt="Slim Framework" width="900" height="650" srcset="https://kinsta.com/wp-content/uploads/2020/09/slim.png 1500w, https://kinsta.com/wp-content/uploads/2020/09/slim-300x137.png 300w, https://kinsta.com/wp-content/uploads/2020/09/slim-1024x468.png 1024w, https://kinsta.com/wp-content/uploads/2020/09/slim-768x351.png 768w" sizes="(max-width: 1500px) 100vw, 1500px"></a>
+                                <p class="wp-caption-text">Slim Framework</p>
+                            </div>
+                            <p><a href="http://www.slimframework.com/" target="_blank" rel="noopener noreferrer">Slim</a> is a stripped-down, agile, micro PHP framework, created by Josh Lockhart. It focuses on receiving an <a href="https://kinsta.com/blog/make-fewer-http-requests/">HTTP request</a>, invoking a callback, and returning an HTTP response.</p>
+                            <h4 class="has-anchor-hash">Quick Specs<a href="#quick-specs" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="quick-specs" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <p>Launched: September 2010</p>
+                            <p>Current version: 4.5.0</p>
+                            <p>Technical requirements:</p>
+                            <ul>
+                                <li>PHP 7.2 +</li>
+                                <li>Web server with <a href="https://kinsta.com/knowledgebase/what-is-a-url/">URL</a> rewriting</li>
+                            </ul>
+                            <h4 class="has-anchor-hash">Pros of Slim<a href="#pros-of-slim" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="pros-of-slim" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <p>Slim’s <strong>codebase is lean</strong> as it has no third-party dependencies. As a result, it is <strong>very fast</strong>.</p>
+                            <p>Slim is particularly suited to building small apps and APIs.&nbsp;If you need more from the framework, Slim integrates with both first-party and third-party components.</p>
+                            <p>Slim is rated as the <a href="https://www.slant.co/topics/1183/~best-php-frameworks" target="_blank" rel="noopener noreferrer">best PHP framework</a> by developers on the Slant comparison site.</p>
+                            <div id="attachment_80810" class="wp-caption alignnone" style="max-width: 1047px;"><img loading="lazy" class="wp-image-80810 size-full" src="https://kinsta.com/wp-content/uploads/2020/09/best-php-frameworks.png" alt="What are the best PHP frameworks?" width="1047" height="743" srcset="https://kinsta.com/wp-content/uploads/2020/09/best-php-frameworks.png 1047w, https://kinsta.com/wp-content/uploads/2020/09/best-php-frameworks-300x213.png 300w, https://kinsta.com/wp-content/uploads/2020/09/best-php-frameworks-1024x727.png 1024w, https://kinsta.com/wp-content/uploads/2020/09/best-php-frameworks-768x545.png 768w" sizes="(max-width: 1047px) 100vw, 1047px">
+                                <p class="wp-caption-text">What are the best PHP frameworks?</p>
+                            </div>
+                            <p>Professional support for Slim is available from <a href="https://tidelift.com/subscription/pkg/packagist-slim-slim" target="_blank" rel="noopener noreferrer">Tidelift</a>.</p>
+                            <h4 class="has-anchor-hash">Who Uses Slim?<a href="#who-uses-slim" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="who-uses-slim" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <ul>
+                                <li><a href="http://topwebcomics.com/" target="_blank" rel="noopener noreferrer">Top Web Comics</a> – publishing</li>
+                                <li><a href="https://www.canineprinciples.com/" target="_blank" rel="noopener noreferrer">Canine Principles</a> – training</li>
+                                <li><a href="https://www.cgforge.com/" target="_blank" rel="noopener noreferrer">CG Forge</a> – education</li>
+                                <li><a href="https://www.betterplace-academy.org/" target="_blank" rel="noopener noreferrer">Betterplace Academy</a> – education</li>
+                            </ul>
+                            <p>&nbsp;</p>
+
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h3 class="has-anchor-hash">Phalcon<a href="#phalcon" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="phalcon" aria-hidden="true" class="anchor-hash"></span></h3>
+                            <div id="attachment_79503" class="wp-caption alignnone" style="max-width: 1500px;"><a href="https://kinsta.com/wp-content/uploads/2020/09/phalcon.png"><img loading="lazy" class="size-full wp-image-79503" src="https://kinsta.com/wp-content/uploads/2020/09/phalcon.png" alt="Phalcon" width="900" height="650" srcset="https://kinsta.com/wp-content/uploads/2020/09/phalcon.png 1500w, https://kinsta.com/wp-content/uploads/2020/09/phalcon-300x137.png 300w, https://kinsta.com/wp-content/uploads/2020/09/phalcon-1024x467.png 1024w, https://kinsta.com/wp-content/uploads/2020/09/phalcon-768x350.png 768w" sizes="(max-width: 1500px) 100vw, 1500px"></a>
+                                <p class="wp-caption-text">Phalcon</p>
+                            </div>
+                            <p><a href="https://phalcon.io/en-us" target="_blank" rel="noopener noreferrer">Phalcon</a> is a PHP framework <a href="https://kinsta.com/learn/speed-up-wordpress/">built for speed</a>. It is delivered as a web server extension written in <a href="https://github.com/phalcon/zephir" target="_blank" rel="noopener noreferrer">Zephir</a> and C. No knowledge of C is necessary. <a href="https://kinsta.com/blog/web-developer-salary/">Developers</a> work with the PHP classes and namespaces the framework generates.</p>
+                            <h4 class="has-anchor-hash">Quick Specs<a href="#quick-specs" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="quick-specs" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <p>Launched: November 2012</p>
+                            <p>Current version: 4.0.6</p>
+                            <p>Technical requirements:</p>
+                            <ul>
+                                <li>PSR extension</li>
+                                <li>PHP 7.2 + (latest version recommended)</li>
+                            </ul>
+                            <h4 class="has-anchor-hash">Pros of Phalcon<a href="#pros-of-phalcon" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="pros-of-phalcon" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <p>Phalcon is designed to run <strong>fast</strong>, as it has the following features:</p>
+                            <ul>
+                                <li>Low-level architecture.</li>
+                                <li>One-time load of Zephir, C extensions, and PHP.</li>
+                                <li>Code is compiled rather than interpreted, so it is faster.</li>
+                                <li>Memory resident, meaning that it can be called upon whenever it’s needed.</li>
+                                <li>Does not use file reads and file stats, unlike most other PHP frameworks, resulting in improved performance.</li>
+                            </ul>
+                            <p>Phalcon is designed to run <strong>fast</strong>, as it has the following features:</p>
+                            <ul>
+                                <li>Low-level architecture.</li>
+                                <li>One-time load of Zephir, C extensions, and PHP.</li>
+                                <li>Code is compiled rather than interpreted, so it is faster.</li>
+                                <li>Memory resident, meaning that it can be called upon whenever it’s needed.</li>
+                                <li>Does not use file reads and file stats, unlike most other PHP frameworks, resulting in improved performance.</li>
+                            </ul>
+                            <p>As Phalcon is loosely coupled, you can create your own directory structure. Phalcon’s code does not live in the project directory, making the code lightweight.</p>
+                            <p>Phalcon’s <strong>security</strong> component helps with password hashing and CSRF protection.</p>
+                            <p>Phalcon’s templating engine, <strong>Volt</strong>, is extremely fast and comes with helper classes for creating views easily.</p>
+                            <p>You can seek support for Phalcon via their <a href="https://phalcon.io/docs" target="_blank" rel="noopener noreferrer">documentation</a>, <a href="https://phalcon.io/forum" target="_blank" rel="noopener noreferrer">forums</a>, <a href="https://phalcon.io/discord" target="_blank" rel="noopener noreferrer">Discord chat</a>, <a href="https://phalcon.io/so" target="_blank" rel="noopener noreferrer">Stack Overflow</a>, and multiple social media platforms.</p>
+                            <h4 class="has-anchor-hash">Who Uses Phalcon?<a href="#who-uses-phalcon" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="who-uses-phalcon" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <p>According to the <a href="https://builtwith.phalcon.io/" target="_blank" rel="noopener noreferrer">Phalcon BuiltWith</a> site Phalcon is used by:</p>
+                            <ul>
+                                <li><a href="https://learny.online/" target="_blank" rel="noopener noreferrer">Learny Online</a> – learning</li>
+                                <li><a href="https://outsmart.io/" target="_blank" rel="noopener noreferrer">Outsmart</a> – analytics</li>
+                                <li><a href="https://marchiauto.it/" target="_blank" rel="noopener noreferrer">Marchi Auto</a> – car dealership</li>
+                            </ul>
+
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+
+                            <h3 class="has-anchor-hash">FuelPHP<a href="#fuelphp" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="fuelphp" aria-hidden="true" class="anchor-hash"></span></h3>
+                            <div id="attachment_80813" class="wp-caption alignnone" style="max-width: 1818px;"><img loading="lazy" class="wp-image-80813 size-full" src="https://kinsta.com/wp-content/uploads/2020/09/FuelPHP.png" alt="FuelPHP" width="900" height="650" srcset="https://kinsta.com/wp-content/uploads/2020/09/FuelPHP.png 1818w, https://kinsta.com/wp-content/uploads/2020/09/FuelPHP-300x78.png 300w, https://kinsta.com/wp-content/uploads/2020/09/FuelPHP-1024x265.png 1024w, https://kinsta.com/wp-content/uploads/2020/09/FuelPHP-768x199.png 768w, https://kinsta.com/wp-content/uploads/2020/09/FuelPHP-1536x398.png 1536w" sizes="(max-width: 1818px) 100vw, 1818px">
+                                <p class="wp-caption-text">FuelPHP</p>
+                            </div>
+                            <p><a href="https://fuelphp.com/" target="_blank" rel="noopener noreferrer">FuelPHP</a> is a community-driven PHP framework with over 300 contributors over its lifetime.</p>
+                            <h4 class="has-anchor-hash">Quick Specs<a href="#quick-specs" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="quick-specs" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <p>Launched: June 2011</p>
+                            <p>Current version: 1.8.2</p>
+                            <p>Technical requirements:</p>
+                            <ul>
+                                <li>PHP 5.4+</li>
+                                <li>Any web server</li>
+                            </ul>
+
+                            <h4 class="has-anchor-hash">Pros of FuelPHP<a href="#pros-of-fuelphp" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="pros-of-fuelphp" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <p>FuelPHP uses MVC but also supports <strong>HMVC (Hierarchical Model View Controller)</strong>. This adds another layer between the Controller and the View. The advantages of the HMVC design pattern are:</p>
+                            <ul>
+                                <li>Better code organization</li>
+                                <li>Greater modularity</li>
+                                <li>More extensible</li>
+                                <li>Encourages code reuse</li>
+                            </ul>
+                            <p>You can <strong>choose the file and folder structure</strong> you want for your project as there are few constraints. FuelPHP takes <strong>security</strong> seriously, with the following features:</p>
+                            <ul>
+                                <li>Output encoding</li>
+                                <li>CSRF protection</li>
+                                <li>Input, URI, and XSS filtering</li>
+                                <li>Escaping user input passed into SQL statements</li>
+                            </ul>
+
+                            <ul>
+                                <li>Output encoding</li>
+                                <li>CSRF protection</li>
+                                <li>Input, URI, and XSS filtering</li>
+                                <li>Escaping user input passed into SQL statements</li>
+                            </ul>
+                            <p>FuelPHP has its own <strong>command-line utility</strong>, <a href="https://fuelphp.com/features" target="_blank" rel="noopener noreferrer">oil</a>, which you can use to run tasks, debug code, and generate common components.</p>
+                            <p>The FuelPHP ORM is potent and yet lightweight.</p>
+                            <p>You can join the FuelPHP community in their <a href="http://fuelphp.com/forums" target="_blank" rel="noopener noreferrer">forums</a> and on Facebook and Twitter.</p>
+                            <h4 class="has-anchor-hash">Who Uses FuelPHP?<a href="#who-uses-fuelphp" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="who-uses-fuelphp" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <ul>
+                                <li><a href="https://wanwizard.eu/" target="_blank" rel="noopener noreferrer">Wan Wizard</a> – Harro Verton, one of FuelPHP’s developers</li>
+                                <li><a href="https://github.com/logicent/frontdesk" target="_blank" rel="noopener noreferrer">Front Desk</a> – property management system</li>
+                            </ul>
+
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h3 class="has-anchor-hash">Fat-Free Framework<a href="#fatfree-framework" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="fatfree-framework" aria-hidden="true" class="anchor-hash"></span></h3>
+                            <div id="attachment_80814" class="wp-caption alignnone" style="max-width: 1291px;"><img loading="lazy" class="wp-image-80814 size-full" src="https://kinsta.com/wp-content/uploads/2020/09/Fat-Free-Framework.png" alt="Fat-Free Framework" width="900" height="650" srcset="https://kinsta.com/wp-content/uploads/2020/09/Fat-Free-Framework.png 1291w, https://kinsta.com/wp-content/uploads/2020/09/Fat-Free-Framework-300x235.png 300w, https://kinsta.com/wp-content/uploads/2020/09/Fat-Free-Framework-1024x803.png 1024w, https://kinsta.com/wp-content/uploads/2020/09/Fat-Free-Framework-768x603.png 768w" sizes="(max-width: 1200px) 100vw, 1200px">
+                                <p class="wp-caption-text">Fat-Free Framework</p>
+                            </div>
+                            <p>Like Slim, <a href="https://fatfreeframework.com/" target="_blank" rel="noopener noreferrer">Fat-Free Framework</a> (F3) is a micro-framework. It aims to strike a balance between useful features, simplicity, ease of use, and speed.</p>
+                            <h4 class="has-anchor-hash">Quick Specs<a href="#quick-specs" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="quick-specs" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <p>Launched: 2009</p>
+                            <p>Current version: 3.7.2</p>
+                            <p>Technical requirements:</p>
+                            <ul>
+                                <li>PHP 5.4+</li>
+                                <li>Any web server</li>
+                                <li>Database support for MySQL, SQLite, MSSQL/Sybase, PostgreSQL, and MongoDB.</li>
+                            </ul>
+                            <h4 class="has-anchor-hash">Pros of Fat-Free Framework<a href="#pros-of-fatfree-framework" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="pros-of-fatfree-framework" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <p>The codebase is around 65Kb, so it’s <strong>fast</strong>. Yet F3 still has all the functionality you would expect. You can <strong>extend</strong> it as you require with optional plugins.</p>
+                            <p>It’s <strong>very easy</strong> to pick up with Fat-Free Framework. There’s no need to use Composer, curl, or a dependency injector to get started. You can create a Hello World app in minutes.</p>
+                            <p>Nearly all of the framework is <strong>modular</strong>, so you can just use the parts you need for building your web apps. F3 doesn’t add code by default that you don’t need, keeping your apps minimal.</p>
+                            <p>The <strong>documentation is clear</strong> and easy to follow, with plenty of examples.&nbsp;Fat-Free Framework offers a choice of template engine: you can use PHP, F3’s own template engine, or others such as Smarty or Twig.</p>
+                            <p>F3 developers hang out on <a href="https://fatfreeframework-slack.herokuapp.com/" target="_blank" rel="noopener noreferrer">Slack</a> and the <a href="https://groups.google.com/forum/#!forum/f3-framework" target="_blank" rel="noopener noreferrer">Fat-Free Framework Google Group</a>.</p>
+                            <h4 class="has-anchor-hash">Who Uses Fat-Free Framework?<a href="#who-uses-fatfree-framework" class="anchor-hash-link"><svg class="anchor-hash-link__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                        <path d="M16.746 7.177l-4.101 4.101c-1.773 1.773-4.45 1.473-5.697.226-.378-.378-.275-1.093.229-1.596.433-.433.904-.588 1.594-.228.69.361 1.511.315 2.051-.224l4.101-4.101a1.61 1.61 0 0 0-2.278-2.278l-2.199 2.198a5.148 5.148 0 0 0-2.311-.545 5.18 5.18 0 0 0-.865.077l3.553-3.552a4.187 4.187 0 1 1 5.923 5.922zm-7.108 6.319a5.154 5.154 0 0 1-2.312-.544l-1.971 1.972a1.613 1.613 0 0 1-2.278 0 1.613 1.613 0 0 1 0-2.278l3.874-3.874c.54-.54 1.36-.586 2.05-.224.69.36 1.162.205 1.595-.228.504-.506.607-1.22.229-1.597-1.247-1.248-3.924-1.548-5.697.225l-3.874 3.874a4.187 4.187 0 1 0 5.923 5.923l3.326-3.327a5.068 5.068 0 0 1-.865.078z"></path>
+                                    </svg></a><span id="who-uses-fatfree-framework" aria-hidden="true" class="anchor-hash"></span></h4>
+                            <ul>
+                                <li><a href="https://jobs.malwarebytes.com/" target="_blank" rel="noopener noreferrer">Malwarebytes Jobs</a> – recruitment</li>
+                                <li><a href="https://devpathfinder.eveuniversity.org/" target="_blank" rel="noopener noreferrer">Eve University Dev Pathfinder</a> – gaming</li>
+                                <li><a href="https://www.andiamogo.com/" target="_blank" rel="noopener noreferrer">Andiamo</a> – recruitment</li>
+                                <li><a href="https://bakeronline.uk" target="_blank" rel="noopener noreferrer">Baker Online</a> – retail</li>
+                                <li><a href="https://www.eloquens.com/" target="_blank" rel="noopener noreferrer">Eloquens</a> – business</li>
+                                <li><a href="http://www.pc-specs.com/" target="_blank" rel="noopener noreferrer">PC Specs</a> – technology</li>
+                            </ul>
+
+
+                        </b>
+                    </div>
+
+                    <hr class="separate" style="border-top: 3px solid #fff">
+
+                   
+
+                </div>
+            </div>
+
+        </div>
+        <!-- End demo content -->
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+
+        <script>
+            $(function() {
+                // Sidebar toggle behavior
+                $('#sidebarCollapse').on('click', function() {
+                    $('#sidebar, #content').toggleClass('active');
+                });
+            });
+        </script>
+
+    </body>
+
+    </html>
+

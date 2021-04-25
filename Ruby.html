@@ -1,0 +1,890 @@
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+
+        <title>
+            Ruby
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    </head>
+
+    <style>
+        .vertical-nav {
+            min-width: 17rem;
+            width: 17rem;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s;
+        }
+
+        .page-content {
+            width: calc(100% - 17rem);
+            margin-left: 17rem;
+            transition: all 0.4s;
+        }
+
+        /* for toggle behavior */
+
+        #sidebar.active {
+            margin-left: -17rem;
+        }
+
+        #content.active {
+            width: 100%;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            #sidebar {
+                margin-left: -17rem;
+            }
+
+            #sidebar.active {
+                margin-left: 0;
+            }
+
+            #content {
+                width: 100%;
+                margin: 0;
+            }
+
+            #content.active {
+                margin-left: 17rem;
+                width: calc(100% - 17rem);
+            }
+        }
+
+        body {
+            background: #599fd9;
+            background: -webkit-linear-gradient(to right, #599fd9, #c2e59c);
+            background: linear-gradient(to right, #599fd9, #c2e59c);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .separator {
+            margin: 3rem 0;
+            border-bottom: 1px dashed #fff;
+        }
+
+        .text-uppercase {
+            letter-spacing: 0.1em;
+        }
+
+        .text-gray {
+            color: #525252;
+        }
+
+        a {
+            color: #525252;
+        }
+    </style>
+
+    <body>
+
+        <!-- Vertical navbar -->
+        <div class="vertical-nav " id="sidebar">
+            <!-- bg-white -->
+            <div class="py-4 px-3 mb-4 ">
+                <!-- bg-white -->
+                <div class="media d-flex align-items-center"><img src="Img/ruby.png" alt="..." width="65" class="mr-3 rounded-circle img-thumbnail shadow-sm"> 
+
+                <div class="media-body">
+                    
+                    
+                </div>
+
+             </div> 
+            </div>
+
+            <div class="separator"></div>
+            <!--         <hr class="solid" style="border-top: 3px solid #bbb"> -->
+            <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Index</p>
+
+            <ul class="nav flex-column  mb-0" style="font-weight:bold" >
+                <!-- bg-white -->
+                <li class="nav-item">
+                    <a href="#r" class="nav-link text-dark font-italic ">
+                        <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                        Introduction
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#rh" class="nav-link text-dark font-italic">
+                        <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                        History
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#wr" class="nav-link text-dark font-italic">
+                        <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                        Why use Ruby ?
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#pcr" class="nav-link text-dark font-italic">
+                        <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                        Pros & Cons of Ruby
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#cr" class="nav-link text-dark font-italic">
+                        <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                        Comparison of Ruby with &nbsp;&nbsp;&nbsp;&nbsp;other &nbsp;&nbsp;&nbsp;&nbsp;Programming &nbsp;&nbsp;&nbsp;&nbsp;languages
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#rl" class="nav-link text-dark font-italic">
+                        <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                        Ruby Libraries
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#rf" class="nav-link text-dark font-italic">
+                        <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                        Ruby Framework
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link text-dark font-italic">
+                        <i class="fa fa-line-chart mr-3 text-primary fa-fw"></i>
+                        <-BACK TO HOME</a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- End vertical navbar -->
+
+
+        <!-- Page content holder -->
+        <div class="page-content p-5" id="content">
+            <!-- Toggle button -->
+            <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">MENU</small></button>
+
+            <!-- Demo content -->
+            <h2 class="display-4 text-white">Ruby</h2>
+            <p class="lead text-white mb-0"> <i>Designed by Bjarne Stroustrup (1985)</i></p>
+            <p class="lead text-white mb-0"> <i>Developed by ISO/IEC JTC1 (Joint Technical Committee 1) / SC22 (Subcommittee 22) / WG21 (Working Group 21) </i></p>
+
+            <div class="separator" id="ja"></div>
+
+            <!-- ************************************************************************************** -->
+            <div class="row text-white-bold">
+                <div class="col-lg-12" id="r">
+                    <h3 class="text-dark" style="font-weight:600" id="cpp">Introduction</h3>
+                    <br>
+                    <p class="lead">
+                        <b>
+                            Ruby is an interpreted, high-level, general-purpose programming language. It was designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan.
+                            <br>
+                            Ruby is dynamically typed and uses garbage collection. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming.
+                            <br>
+                            According to the creator, Ruby was influenced by Perl, Smalltalk, Eiffel, Ada, BASIC, and Lisp.
+                            <br>
+                            Ruby is
+                            A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.
+                            <br>
+
+                            <i>"RubyLearning.com is a thorough collection of Ruby Study Notes for those who are new to the Ruby programming language and in search of a solid introduction to Ruby's concepts and constructs."</i>
+                        </b>
+                    </p>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+                    <h3 id="rh">History</h3>
+                    <p class="lead">
+                        <b>
+                            Matsumoto has said that Ruby was conceived in 1993. In a 1999 post to the ruby-talk mailing list, he describes some of his early ideas about the language:
+                            <br>
+                            I was talking with my colleague about the possibility of an object-oriented scripting language. I knew Perl (Perl4, not Perl5), but I didn't like it really, because it had the smell of a toy language (it still has). The object-oriented language seemed very promising. I knew Python then. But I didn't like it, because I didn't think it was a true object-oriented language – OO features appeared to be add-on to the language. As a language maniac and OO fan for 15 years, I really wanted a genuine object-oriented, easy-to-use scripting language. I looked for but couldn't find one. So I decided to make it.
+                            <br>
+                            Matsumoto describes the design of Ruby as being like a simple Lisp language at its core, with an object system like that of Smalltalk, blocks inspired by higher-order functions, and practical utility like that of Perl.
+                            <br>
+                            <strong>
+                                The name Ruby:
+                            </strong>
+                            <br>
+                            The name "Ruby" originated during an online chat session between Matsumoto and Keiju Ishitsuka on February 24, 1993, before any code had been written for the language.[18] Initially two names were proposed: "Coral" and "Ruby". Matsumoto chose the latter in a later e-mail to Ishitsuka.
+                            Matsumoto later noted a factor in choosing the name "Ruby" – it was the birthstone of one of his colleagues.
+                            Matsumoto has said that Ruby is designed for programmer productivity and fun, following the principles of good user interface design.
+                            <br>
+                            At a Google Tech Talk in 2008 Matsumoto further stated, "I hope to see Ruby help every programmer in the world to be productive, and to enjoy programming, and to be happy. That is the primary purpose of Ruby language."
+                        </b>
+                    </p>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+
+
+                    <h3 id="wr">Why use Ruby ?</h3>
+                    <ul class="lead">
+                        <b>
+                            <li>
+                                Ruby came into existence as Yukihiro Matsumoto, wanted a scripting language more powerful than Perl, and more object oriented than Python.
+                            </li>
+                            <li>
+                                The name Ruby for the language got originated in an online chat session between Matsumoto and Keiju Ishitsuka on February 24, 1993 before even any code was written in the language. Initially two names were suggested ie Coral or Ruby. The name Ruby was later chosen by Matsumoto in an email to Ishitsuka.
+                            </li>
+                            <li>
+                                Ruby is often confused with Ruby on Rails, which is a server-side framework written in Ruby under the MIT License for implementing web applications.
+                            </li>
+                            <li>
+                                Ruby’s libraries and packages are managed through central library management system called Rubygems.
+                            </li>
+                            <li>
+                                Ruby supports multiple programming paradigms, such as procedural programming, object-oriented programming, as well as functional programming, which makes it unique in the programming world.
+                            </li>
+                            <li>
+                                Ruby Interpreter (Interactive Ruby/irb) can be used as a calculator.
+                            </li>
+                            <li>
+                                Ruby has built in support for Rational numbers and Complex numbers, which helps in solving complex mathematical problems.
+                            </li>
+                            <li>
+                                Ruby allows code embedding. For example, Ruby can be embedded into Hypertext Markup Language (HTML).
+                            </li>
+                            <li>
+                                Ruby users can take the advantage of Dynamic typing and Duck typing.
+                            </li>
+                            <li>Ruby understands and uses “nil” instead of “null”.</li>
+                        </b>
+                    </ul>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+                    <h3 id=pcr>Pros and Cons of Ruby</h3>
+
+                    <strong style="font-size:25px">Pros</strong>
+
+                    <ul class="lead">
+                        <b>
+                            <li>Ruby is a dynamic programming language therefore, it does not have hard rules on how to build features and it is very close to spoken languages.</li>
+                            <li>One of the goals of Ruby is to allow the simple and fast creation of Web applications. Because of this there is much less tedious work than many other programming languages.</li>
+                            <li>Ruby provides small, elegant and powerful code.</li>
+                            <li>Ruby is an open source language. It is free to copy, use, modify and distribute. Since Ruby is available to be used in other projects, programmers can make necessary changes and can code without feeling restricted.</li>
+                            <li>Programmers are allowed to maintain reference counts in extension libraries with the help of mark-and-sweep garbage collection, which is one of the features of Ruby. It can also dynamically load extension libraries.</li>
+                        </b>
+                    </ul>
+
+                    <strong style="font-size:25px">Cons</strong>
+
+                    <ul class="lead">
+                        <b>
+                            <li>
+                                The Runtime Speed is slow, yet, developers don’t have to worry about it −that much− if they don’t have a huge successful application.
+                            </li>
+                            <li>
+                                The Boot Speed can have troubles depending on gems and files. Users and developers continue to thinking it could be faster.
+                            </li>
+                            <li>
+                                The Slow Processing: this seems to be the common point. Programmer’s magic word is faster. Programming takes time, that’s not a secret and using a slow programming languages is not ideal.
+                            </li>
+                            <li>The natural area to use Ruby is building web applications. There, this technology will work best. The matter becomes more complicated if the product is to have some non-standard features as adjusting it may be a bit more difficult. The entire development process can be extended by configuring routing, database migrations or other necessary actions.</li>
+                            <li>
+                                <strong> consumes a lot of resources (CPU, RAM) </strong>— although new versions try to improve that, Ruby and RoR have hard time competing with other technologies in that area.
+                            </li>
+                            <li>
+                                <strong>support for websockets</strong> — there is ActionCable library introduced in Rails 5 but still it needs some work and doesn’t have best performance.
+                            </li>
+                        </b>
+                    </ul>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+                    <h3 id="cr">
+                        Comparison of Ruby with other languages
+                    </h3>
+                    <br>
+                    <h4>Ruby Vs Python</h4>
+                    <br>
+                    <table class="table table-striped lead">
+                        <tbody><b>
+                                <tr>
+                                    <td><strong>Python</strong> </td>
+                                    <td><strong>Ruby</strong> </td>
+                                </tr>
+                                <tr>
+                                    <td>Created in 1991 by Guido Van Rossum </td>
+                                    <td>Created in 1995 by Yukihiro Matsumoto </td>
+                                </tr>
+                                <tr>
+                                    <td>Python framework Django-Started in 2003 by Adrian Holovaty and Simon Willison. </td>
+                                    <td><a href="/ruby-on-rails-tutorial.html">Ruby on Rail</a> framework started in 2005 by David Heinemeier Hansson. </td>
+                                </tr>
+                                <tr>
+                                    <td>It is very explicit and elegant to read </td>
+                                    <td>It can be very hard to debug at times </td>
+                                </tr>
+                                <tr>
+                                    <td>Python is a high-level programming language. </td>
+                                    <td>Ruby is a general purpose programming language. </td>
+                                </tr>
+                                <tr>
+                                    <td>Not fully object-oriented programming language. </td>
+                                    <td>Fully object-oriented programming language. </td>
+                                </tr>
+                                <tr>
+                                    <td>It has a larger range of libraries. </td>
+                                    <td>It has a smaller library than Python. </td>
+                                </tr>
+                                <tr>
+                                    <td>When a variable is set, you can't unset it back. </td>
+                                    <td>It will be present in the symbol table as long as variable in scope. </td>
+                                </tr>
+                                <tr>
+                                    <td>Support multiple inheritance </td>
+                                    <td>Support single inheritance. </td>
+                                </tr>
+                                <tr>
+                                    <td>Its lambda functions are larger. </td>
+                                    <td>It supports only a single line lambda function. </td>
+                                </tr>
+                                <tr>
+                                    <td>It has methods. </td>
+                                    <td>It has functions. </td>
+                                </tr>
+                                <tr>
+                                    <td>Python mainly used for academic and scientific programming. </td>
+                                    <td>Ruby is used for web development and functional programming. </td>
+                                </tr>
+                                <tr>
+                                    <td>Python community is very innovative and very web focused. </td>
+                                    <td>Ruby community is very stable and but innovates slower. </td>
+                                </tr>
+                                <tr>
+                                    <td>Python has simple learning curve. </td>
+                                    <td>Ruby has stiff learning curve. </td>
+                                </tr>
+                                <tr>
+                                    <td>Most important characteristics of Python are: Conservative, code readability, speedy, and efficient. </td>
+                                    <td>Most important characteristics of Ruby are: Expressive, efficient, elegant, and powerful. </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <pre class="bg-white p-2 rounded my-5 shadow-sm">#!/usr/bin/python
+# Python count to 10
+i = 0
+num = 11
+while i &lt; num:
+    print("Inside the loop i = " + str(i))
+    i = i + 1
+</pre>
+                                    </td>
+                                    <td>
+                                        <pre class="bg-white p-2 rounded my-5 shadow-sm">#!/usr/bin/ruby
+# Ruby count to 10
+
+$i = 0
+$num = 11
+
+while $i &lt; $num  do
+   puts("Inside the loop i = #$i" )
+   $i +=1
+End
+</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Companies using Python are YouTube, Instagram, Spotify, Reddit, Dropbox. </td>
+                                    <td>Companies using Ruby are Hulu, Basecamp, GitHub, and Airbnb, etc. </td>
+                                </tr>
+                                <tr>
+                                    <td>TIBOE rating of Python is 3 </td>
+                                    <td>TIBOE rating of a ruby language is 11 </td>
+                                </tr>
+                                <tr>
+                                    <td>The average salary for a Python developer is $120,255 per year in the United States. </td>
+                                    <td>The average salary for a Ruby Developer is $134,029 per year in the United States </td>
+                                </tr>
+                            </b>
+                        </tbody>
+                    </table>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+
+                    <h4>Ruby Vs Java</h4>
+
+                    <ul class="lead">
+                        <b>
+                            <li>Ruby based program runs directly as it is an interpreted scripting language whereas Java-based codes are first compiled then executed.</li>
+                            <li>Ruby does not have any data types as Java.</li>
+                            <li>In Ruby the constructor name is always “initialize” whereas in case of Java the constructor name is the name of the class.</li>
+                            <li>Ruby uses dynamic typing whereas Java uses static typing.</li>
+                        </b>
+                    </ul>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+                    <h4>Ruby Vs PHP</h4>
+
+                    <ul class="lead">
+                        <b>
+                            <li>Web development and deployment is very simple with PHP as compared to Ruby.</li>
+                            <li>Using Ruby, Ruby on Rails was created for the designing of Web applications whereas PHP is designed for back-end Web development.</li>
+                            <li>Facebook is PHP based application whereas Twitter is Ruby-based application.</li>
+                            <li>PHP has a better performance on the basis of execution as compared to Ruby. PHP executes faster than Ruby as PHP has fewer lines of code as compared to Ruby </li>
+                        </b>
+                    </ul>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+                    <h4>Ruby Vs Perl</h4>
+
+                    <ul class="lead">
+                        <b>
+                            <li>Perl is unorganized, messy because of its free nature whereas Ruby is a well-organized language.</li>
+                            <li>Perl has multiple variable types whereas Ruby has only one variable type reference to an object.</li>
+                            <li>Perl is less object-oriented whereas Ruby is more object-oriented programming language.</li>
+                            <li>Perl supports more Unicode properties than Ruby.</li>
+                        </b>
+                    </ul>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+                    <div class="lead" id="rl">
+                        <h3>Some popular Ruby Libraries</h3>
+
+                        <b>
+                            <p>
+                                Ruby on Rails Gems is a package manager containing libraries, software packages, and utilities for standard format distribution of Ruby programs and libraries. RoR Gems have functionality with related files to help save time in web development.
+                            </p>
+
+
+                            <h4><strong>Byebug</strong>:</h4>
+
+                            <p>Byebug is an effective solution for debugging. This gem takes time between tasks and implementing code by changing variables to perform the robust debugging function.</p>
+
+                            <h4>How to install Byebug:</h4>
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh4.googleusercontent.com/nMObet23RSRtA6EVGfAmzaGLulBSBeiZqUkr04X5k8wUGQZzyUiKrlEJ7Smn-1FL2v73j3RZMlnKmluTj1yXScJKGqZ8fK9wcVeVExmzrDZbZNQkyAcYNAaru-YmE3zTPy9tAcsr8_CZgigsaQ" data-lazy-type="image" data-src="https://lh4.googleusercontent.com/nMObet23RSRtA6EVGfAmzaGLulBSBeiZqUkr04X5k8wUGQZzyUiKrlEJ7Smn-1FL2v73j3RZMlnKmluTj1yXScJKGqZ8fK9wcVeVExmzrDZbZNQkyAcYNAaru-YmE3zTPy9tAcsr8_CZgigsaQ" alt=""><noscript><img src="https://lh4.googleusercontent.com/nMObet23RSRtA6EVGfAmzaGLulBSBeiZqUkr04X5k8wUGQZzyUiKrlEJ7Smn-1FL2v73j3RZMlnKmluTj1yXScJKGqZ8fK9wcVeVExmzrDZbZNQkyAcYNAaru-YmE3zTPy9tAcsr8_CZgigsaQ" alt="" /></noscript></figure>
+
+                            <p>If you use bundler:</p>
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh4.googleusercontent.com/Kn05OuDyf-BJU9iEK0SUtey4bBER_-GYPOJvniyJoMS5rW3-HttF3WRaDg-Ier4y9_nqN5O9Qpuifrg0MInFSm9S79KlL_Tz2enJJ2ZxAaklNak4bcI2zR86-bSojj_7vFWgM2-ZbzJX3zcEgw" data-lazy-type="image" data-src="https://lh4.googleusercontent.com/Kn05OuDyf-BJU9iEK0SUtey4bBER_-GYPOJvniyJoMS5rW3-HttF3WRaDg-Ier4y9_nqN5O9Qpuifrg0MInFSm9S79KlL_Tz2enJJ2ZxAaklNak4bcI2zR86-bSojj_7vFWgM2-ZbzJX3zcEgw" alt=""><noscript><img src="https://lh4.googleusercontent.com/Kn05OuDyf-BJU9iEK0SUtey4bBER_-GYPOJvniyJoMS5rW3-HttF3WRaDg-Ier4y9_nqN5O9Qpuifrg0MInFSm9S79KlL_Tz2enJJ2ZxAaklNak4bcI2zR86-bSojj_7vFWgM2-ZbzJX3zcEgw" alt="" /></noscript></figure>
+
+
+                            <p>The Usage of Byebug:</p>
+
+                            <p>Add byebug to initiate debugging. Here is an example of how to add byebug to your code to debug rails:</p>
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh4.googleusercontent.com/I3sPGsBTOcFNbiK700ESzRZ7a8PY5Gpc2jeoUAh8C44F7Xd4w8opmj39eR5GleI1EKtensk3qOREBwgsngR_YHFG1cCdkUrIre0oZqyPbe6y2Wg5GhazTFkZdz_F8hhLhfwAVZPpsjcwHxIvHQ" data-lazy-type="image" data-src="https://lh4.googleusercontent.com/I3sPGsBTOcFNbiK700ESzRZ7a8PY5Gpc2jeoUAh8C44F7Xd4w8opmj39eR5GleI1EKtensk3qOREBwgsngR_YHFG1cCdkUrIre0oZqyPbe6y2Wg5GhazTFkZdz_F8hhLhfwAVZPpsjcwHxIvHQ" alt=""><noscript><img src="https://lh4.googleusercontent.com/I3sPGsBTOcFNbiK700ESzRZ7a8PY5Gpc2jeoUAh8C44F7Xd4w8opmj39eR5GleI1EKtensk3qOREBwgsngR_YHFG1cCdkUrIre0oZqyPbe6y2Wg5GhazTFkZdz_F8hhLhfwAVZPpsjcwHxIvHQ" alt="" /></noscript></figure>
+
+                            <p>The rail server initiates:</p>
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh6.googleusercontent.com/6mJO6jxmNf66HOXRfMvdA35stEtapdI8J7XQvkJ3piw1Iiv849KS1OYH2SHnGxS3jaJXQ79d0qe3XEHf80ciRrNIkLjY8RyvV8_Il6WlfUjiXP6X0CDNXz_srEUvHRs9CbFLvJLHaXp7bn06Nw" data-lazy-type="image" data-src="https://lh6.googleusercontent.com/6mJO6jxmNf66HOXRfMvdA35stEtapdI8J7XQvkJ3piw1Iiv849KS1OYH2SHnGxS3jaJXQ79d0qe3XEHf80ciRrNIkLjY8RyvV8_Il6WlfUjiXP6X0CDNXz_srEUvHRs9CbFLvJLHaXp7bn06Nw" alt=""><noscript><img src="https://lh6.googleusercontent.com/6mJO6jxmNf66HOXRfMvdA35stEtapdI8J7XQvkJ3piw1Iiv849KS1OYH2SHnGxS3jaJXQ79d0qe3XEHf80ciRrNIkLjY8RyvV8_Il6WlfUjiXP6X0CDNXz_srEUvHRs9CbFLvJLHaXp7bn06Nw" alt="" /></noscript></figure>
+
+                            <p>After this, you will receive a debugging prompt.</p>
+
+
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h3><strong>Bettor_errors:</strong></h3>
+
+
+                            <p>This gem shows errors in the web page or website to help users with information. Better_errors is an advanced gem that replaces the Rail error page. Use this gem as Rack middleware in Rack application.&nbsp;</p>
+
+
+                            <h4>How to install Bettor_errors:</h4>
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh3.googleusercontent.com/KC3Xw6xt6VXb6phkGsGq68I4VMRe2xc7Oj_Sjq3_r_b1QqHV-nyYw_PLC7EgXMLpQsXhjA30CEXxAqSOCn7Gu9J0sFRMmDBfY7x7uv0LJO9fLBDkaGdrIr4MeiXmkT_WwsqcuzLc120A-LTlSw" data-lazy-type="image" data-src="https://lh3.googleusercontent.com/KC3Xw6xt6VXb6phkGsGq68I4VMRe2xc7Oj_Sjq3_r_b1QqHV-nyYw_PLC7EgXMLpQsXhjA30CEXxAqSOCn7Gu9J0sFRMmDBfY7x7uv0LJO9fLBDkaGdrIr4MeiXmkT_WwsqcuzLc120A-LTlSw" alt=""><noscript><img src="https://lh3.googleusercontent.com/KC3Xw6xt6VXb6phkGsGq68I4VMRe2xc7Oj_Sjq3_r_b1QqHV-nyYw_PLC7EgXMLpQsXhjA30CEXxAqSOCn7Gu9J0sFRMmDBfY7x7uv0LJO9fLBDkaGdrIr4MeiXmkT_WwsqcuzLc120A-LTlSw" alt="" /></noscript></figure>
+
+                            <p>Binding_of_caller is mandatory for Better Errors’ advance feature, i.e., REPL, local/instance variable inspection, stack frame names.<br></p>
+
+                            <p>Tip:&nbsp; Set config.consider_all_requests_local = true in config/environments/development.rb. If the version 0.5.0 or older, follow the above step.</p>
+
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h2>Search</h2>
+
+                            <h3><strong>ElasticSearch:</strong></h3>
+
+                            <p><a href="https://stackify.com/monitoring-elasticsearch-getting-right/"><strong>ElasticSearch</strong></a> is an application integration for helping users search instead of scrolling.&nbsp;</p>
+
+
+                            <h4>How to use ElasticSearch for Ruby on Rails applications:</h4>
+
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh5.googleusercontent.com/_NoRYcEwlSwWjCPz_FydL02g3bzRtNm2SYvBeJTsGWeK7A8P3sWSr7737MPxRYY3EH1cYxQvpp5d_Ny_OSXUaMFLJEh8gR9WIJcYjkKAKnFcMovLhxu8BzY6urTBxedGzatFlAW0XObEGA6SpQ" data-lazy-type="image" data-src="https://lh5.googleusercontent.com/_NoRYcEwlSwWjCPz_FydL02g3bzRtNm2SYvBeJTsGWeK7A8P3sWSr7737MPxRYY3EH1cYxQvpp5d_Ny_OSXUaMFLJEh8gR9WIJcYjkKAKnFcMovLhxu8BzY6urTBxedGzatFlAW0XObEGA6SpQ" alt=""><noscript><img src="https://lh5.googleusercontent.com/_NoRYcEwlSwWjCPz_FydL02g3bzRtNm2SYvBeJTsGWeK7A8P3sWSr7737MPxRYY3EH1cYxQvpp5d_Ny_OSXUaMFLJEh8gR9WIJcYjkKAKnFcMovLhxu8BzY6urTBxedGzatFlAW0XObEGA6SpQ" alt="" /></noscript></figure>
+
+                            <p>The above gems require bundle install to run the application.&nbsp;</p>
+
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h2><strong>Admin Panels</strong></h2>
+
+
+                            <h3><strong>Administrate:</strong></h3>
+
+                            <p>Create an admin dashboard with the help of Administrate RubyGems.</p>
+
+                            <h4>How to install Administrate:</h4>
+
+                            <p>This new gem supports Rail from 4.2 and up to 5.0 and above.&nbsp;</p>
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh5.googleusercontent.com/y4r2bZSOLmVCIvZm5MXcWzqZV6Pg9j7glMQxrp8YduiGnpnqOidTbjilSWIieGuvir3UXpcrpDE95quX0EKoGL9qQEhxuwU72EvZzSMvEikyIJTcokXBZL4jXKvlsi-za1BLkICzrRItBKyq0w" data-lazy-type="image" data-src="https://lh5.googleusercontent.com/y4r2bZSOLmVCIvZm5MXcWzqZV6Pg9j7glMQxrp8YduiGnpnqOidTbjilSWIieGuvir3UXpcrpDE95quX0EKoGL9qQEhxuwU72EvZzSMvEikyIJTcokXBZL4jXKvlsi-za1BLkICzrRItBKyq0w" alt=""><noscript><img src="https://lh5.googleusercontent.com/y4r2bZSOLmVCIvZm5MXcWzqZV6Pg9j7glMQxrp8YduiGnpnqOidTbjilSWIieGuvir3UXpcrpDE95quX0EKoGL9qQEhxuwU72EvZzSMvEikyIJTcokXBZL4jXKvlsi-za1BLkICzrRItBKyq0w" alt="" /></noscript></figure>
+                            <p>The installer includes an application dashboard.</p>
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh5.googleusercontent.com/fDyIFa7Gb7rmTWO8bXoB68KedfTMJnrd1pxUmImFRFn8L6k4iRF0n7npC1rYlwSOZ4ebjmKyw4KcMRV4Jgih4F_YVaC4LmWlGPug5GTEZhp50l31dt8tQqNC55AaP7oKYoIKWG0mhctIPqa9yg" data-lazy-type="image" data-src="https://lh5.googleusercontent.com/fDyIFa7Gb7rmTWO8bXoB68KedfTMJnrd1pxUmImFRFn8L6k4iRF0n7npC1rYlwSOZ4ebjmKyw4KcMRV4Jgih4F_YVaC4LmWlGPug5GTEZhp50l31dt8tQqNC55AaP7oKYoIKWG0mhctIPqa9yg" alt=""><noscript><img src="https://lh5.googleusercontent.com/fDyIFa7Gb7rmTWO8bXoB68KedfTMJnrd1pxUmImFRFn8L6k4iRF0n7npC1rYlwSOZ4ebjmKyw4KcMRV4Jgih4F_YVaC4LmWlGPug5GTEZhp50l31dt8tQqNC55AaP7oKYoIKWG0mhctIPqa9yg" alt="" /></noscript></figure>
+
+                            <p>After, restart your server and visit<strong> </strong><a href="http://localhost:3000/admin" rel="noopener noreferrer" target="_blank"><strong>http://localhost:3000/admin</strong></a>.&nbsp;</p>
+
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h3><strong>Activeadmin:</strong></h3>
+
+                            <p>The only framework for building admin panels for Ruby on rails. There are plugins for an&nbsp; administrative style interface. The gem comes with distinctive features to simplify tasks for the developers.</p>
+
+                            <h4>How to install Activeadmin:</h4>
+
+                            <p>Add the following to your Gemfile:</p>
+
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh4.googleusercontent.com/PjDaeblN6vwOQWrOwZxMbfzcW_0QkD9j_ZkpMbk1eTpvAM0XdLNaFCzd5i6RI_QgxmHvLxhMNjGJDIl6-VJg2GZ29e9DxUwUFhcK9EYrBe9tPRF_Ld5phxv_zA8FJ4CqK1Oy35QcCOnsLQ41Yg" data-lazy-type="image" data-src="https://lh4.googleusercontent.com/PjDaeblN6vwOQWrOwZxMbfzcW_0QkD9j_ZkpMbk1eTpvAM0XdLNaFCzd5i6RI_QgxmHvLxhMNjGJDIl6-VJg2GZ29e9DxUwUFhcK9EYrBe9tPRF_Ld5phxv_zA8FJ4CqK1Oy35QcCOnsLQ41Yg" alt=""><noscript><img src="https://lh4.googleusercontent.com/PjDaeblN6vwOQWrOwZxMbfzcW_0QkD9j_ZkpMbk1eTpvAM0XdLNaFCzd5i6RI_QgxmHvLxhMNjGJDIl6-VJg2GZ29e9DxUwUFhcK9EYrBe9tPRF_Ld5phxv_zA8FJ4CqK1Oy35QcCOnsLQ41Yg" alt="" /></noscript></figure>
+
+                            <p>Run the installer after updating your bundle:</p>
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh6.googleusercontent.com/eB7ehpKajfM7X8DLZCIeO60htfAaLCMjgYt7LSRFMg3PMJfQmMZ55sKMW0YRBr2jQrsP4-UhJVycaueVbQtEY2MGCVfwfT6AX0piPy508BWgDBCc7HDplhBesDxUbRHRYbMdESQWtozjvC989w" data-lazy-type="image" data-src="https://lh6.googleusercontent.com/eB7ehpKajfM7X8DLZCIeO60htfAaLCMjgYt7LSRFMg3PMJfQmMZ55sKMW0YRBr2jQrsP4-UhJVycaueVbQtEY2MGCVfwfT6AX0piPy508BWgDBCc7HDplhBesDxUbRHRYbMdESQWtozjvC989w" alt=""><noscript><img src="https://lh6.googleusercontent.com/eB7ehpKajfM7X8DLZCIeO60htfAaLCMjgYt7LSRFMg3PMJfQmMZ55sKMW0YRBr2jQrsP4-UhJVycaueVbQtEY2MGCVfwfT6AX0piPy508BWgDBCc7HDplhBesDxUbRHRYbMdESQWtozjvC989w" alt="" /></noscript></figure>
+
+                            <p>Migrate the database and start the server:</p>
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh3.googleusercontent.com/T6SxK-ABfhskXXfCdsd3BReh5SX01bNwnvGzkQBEYVlegDQ70YRZct3RZkcM4vEiaTOVy2vcsENxZUxQSfyoT075YvYIt3S35LHoU7llxNth4E0qqog4gwTHrR-dIGV5ARq9z9Hpz85HQUTjFg" data-lazy-type="image" data-src="https://lh3.googleusercontent.com/T6SxK-ABfhskXXfCdsd3BReh5SX01bNwnvGzkQBEYVlegDQ70YRZct3RZkcM4vEiaTOVy2vcsENxZUxQSfyoT075YvYIt3S35LHoU7llxNth4E0qqog4gwTHrR-dIGV5ARq9z9Hpz85HQUTjFg" alt=""><noscript><img src="https://lh3.googleusercontent.com/T6SxK-ABfhskXXfCdsd3BReh5SX01bNwnvGzkQBEYVlegDQ70YRZct3RZkcM4vEiaTOVy2vcsENxZUxQSfyoT075YvYIt3S35LHoU7llxNth4E0qqog4gwTHrR-dIGV5ARq9z9Hpz85HQUTjFg" alt="" /></noscript></figure>
+
+
+
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+
+                            <h3>Uploading Files</h3>
+                            <br>
+                            <h4><strong>Minimagick</strong>:
+                            </h4>
+
+                            <p>RMagic was the traditional library before Minimagick. The command line-option of ImageMagick is available for building the “uploading file” feature.</p>
+
+                            <h4>How to install Minimagick:</h4>
+
+                            <p>You can add the following gem to your gem file to initiate the installation process:</p>
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh4.googleusercontent.com/5DYn_9cA2X7MLHVHuYTqU75UcjxryL2nmAxGOyjsU80jLtogZXRbEM4gmOwZCXjOuDiXoREtiqxrg8scMtqd5cx_XfvsxVQyi4mSrjAZJXuTOTvQVz68Ve7XOfzkM5Ubu6PhYzk9Hi8eCdOcMg" data-lazy-type="image" data-src="https://lh4.googleusercontent.com/5DYn_9cA2X7MLHVHuYTqU75UcjxryL2nmAxGOyjsU80jLtogZXRbEM4gmOwZCXjOuDiXoREtiqxrg8scMtqd5cx_XfvsxVQyi4mSrjAZJXuTOTvQVz68Ve7XOfzkM5Ubu6PhYzk9Hi8eCdOcMg" alt=""><noscript><img src="https://lh4.googleusercontent.com/5DYn_9cA2X7MLHVHuYTqU75UcjxryL2nmAxGOyjsU80jLtogZXRbEM4gmOwZCXjOuDiXoREtiqxrg8scMtqd5cx_XfvsxVQyi4mSrjAZJXuTOTvQVz68Ve7XOfzkM5Ubu6PhYzk9Hi8eCdOcMg" alt="" /></noscript></figure>
+
+                            <h3><strong>Carrierwave</strong>:&nbsp;</h3>
+
+                            <p>The new option for uploading and processing files in Sinatra, Ruby and other Ruby web frameworks. Use Carrierwave to add, remove, and upload versions from remote locations. Carrierwave works with S3, AWS and fits with fog gem to integrate with cloud servers.</p>
+
+                            <h4>How to install Carrierwave:</h4>
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh4.googleusercontent.com/e1R0V3T5FlsNf7Ah5Qgxiz9Jk-wAkNKuXR6H2GBCWdqhy28ynHDa3NTaMUCiQCUtKIcGtKYxCT3MpL2ho5x9X6bDmVoaKXtzue6Up61LpQFt8bMGNFnVLxzKHpivmoRXZlacFaXdl6D0VfI1dA" data-lazy-type="image" data-src="https://lh4.googleusercontent.com/e1R0V3T5FlsNf7Ah5Qgxiz9Jk-wAkNKuXR6H2GBCWdqhy28ynHDa3NTaMUCiQCUtKIcGtKYxCT3MpL2ho5x9X6bDmVoaKXtzue6Up61LpQFt8bMGNFnVLxzKHpivmoRXZlacFaXdl6D0VfI1dA" alt=""><noscript><img src="https://lh4.googleusercontent.com/e1R0V3T5FlsNf7Ah5Qgxiz9Jk-wAkNKuXR6H2GBCWdqhy28ynHDa3NTaMUCiQCUtKIcGtKYxCT3MpL2ho5x9X6bDmVoaKXtzue6Up61LpQFt8bMGNFnVLxzKHpivmoRXZlacFaXdl6D0VfI1dA" alt="" /></noscript></figure>
+
+                            <p>Add the latest version</p>
+
+                            <p>Add to your gem file in rails</p>
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh6.googleusercontent.com/yCPmx3OwF4I70oUdcqe3TwsVbm7f1cNIySt8RFcyvEk1rz0wN2BbugFcKqNdt7cAzVWbKnL_9ija8-fptFvFqZGHrVEDoZFu52aoXcnd7DG_K_B6yM9_U-bjQikL4UJ8wYcmaK_1BHaZ9ERaTw" data-lazy-type="image" data-src="https://lh6.googleusercontent.com/yCPmx3OwF4I70oUdcqe3TwsVbm7f1cNIySt8RFcyvEk1rz0wN2BbugFcKqNdt7cAzVWbKnL_9ija8-fptFvFqZGHrVEDoZFu52aoXcnd7DG_K_B6yM9_U-bjQikL4UJ8wYcmaK_1BHaZ9ERaTw" alt=""><noscript><img src="https://lh6.googleusercontent.com/yCPmx3OwF4I70oUdcqe3TwsVbm7f1cNIySt8RFcyvEk1rz0wN2BbugFcKqNdt7cAzVWbKnL_9ija8-fptFvFqZGHrVEDoZFu52aoXcnd7DG_K_B6yM9_U-bjQikL4UJ8wYcmaK_1BHaZ9ERaTw" alt="" /></noscript></figure>
+
+                            <p>Restart the server.&nbsp;</p>
+
+                            <p>Tip: For Ruby 4, use 1times. This gem requires a 5.0 version and Ruby 2.2 above.</p>
+
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h3><strong>Carrierwave_ backgrounder:</strong></h3>
+
+                            <p>Allows image processing and compressing into the background. It bolsters Delayed Job, Resque, Sideqik, and Queue Classic.</p>
+
+                            <h4>How to install Carrierwave_backgrounder:</h4>
+
+                            <p>Add the following into your Gemfile in Rails:</p>
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh5.googleusercontent.com/RzIN4p21EF7UEQZOZnHvGv1BMGQBQkKQyz7Wbr9veE0-a1_WM75voi_zkVYRDCs3eDeusFj5FcLJ5U4DKT9KwbeTaevUsWuXwclTaICiZszeOUOY139-qrqaxmOdlYwFD__BH4E-oMehTDbeQA" data-lazy-type="image" data-src="https://lh5.googleusercontent.com/RzIN4p21EF7UEQZOZnHvGv1BMGQBQkKQyz7Wbr9veE0-a1_WM75voi_zkVYRDCs3eDeusFj5FcLJ5U4DKT9KwbeTaevUsWuXwclTaICiZszeOUOY139-qrqaxmOdlYwFD__BH4E-oMehTDbeQA" alt=""><noscript><img src="https://lh5.googleusercontent.com/RzIN4p21EF7UEQZOZnHvGv1BMGQBQkKQyz7Wbr9veE0-a1_WM75voi_zkVYRDCs3eDeusFj5FcLJ5U4DKT9KwbeTaevUsWuXwclTaICiZszeOUOY139-qrqaxmOdlYwFD__BH4E-oMehTDbeQA" alt="" /></noscript></figure>
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh4.googleusercontent.com/ZlOLUZIqP9hbIsbxow8-3ZEXAnfvrG6mvt9Q8jOYOQORWhLckl1g_8gLECcJgP97rfXp6nuHewj4vVr5KsjOE8t6WhVRVJJIp5ho7OkYEWYiW1dV9q7B4SBDsn8SV_llFgk04R8ifkVMfmKGyg" data-lazy-type="image" data-src="https://lh4.googleusercontent.com/ZlOLUZIqP9hbIsbxow8-3ZEXAnfvrG6mvt9Q8jOYOQORWhLckl1g_8gLECcJgP97rfXp6nuHewj4vVr5KsjOE8t6WhVRVJJIp5ho7OkYEWYiW1dV9q7B4SBDsn8SV_llFgk04R8ifkVMfmKGyg" alt=""><noscript><img src="https://lh4.googleusercontent.com/ZlOLUZIqP9hbIsbxow8-3ZEXAnfvrG6mvt9Q8jOYOQORWhLckl1g_8gLECcJgP97rfXp6nuHewj4vVr5KsjOE8t6WhVRVJJIp5ho7OkYEWYiW1dV9q7B4SBDsn8SV_llFgk04R8ifkVMfmKGyg" alt="" /></noscript></figure>
+
+                            <p>Running generator will create an initializer in config/initializers</p>
+
+                            <h3>Background Processing&nbsp;</h3>
+
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h4><strong>Sidekiq: </strong></h4>
+
+                            <p>Sidekiq is a simple and efficient tool for running applications in the background and simplifies the background process.</p>
+
+                            <h4>How to install Sidekiq:</h4>
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh5.googleusercontent.com/z6h5R36-mfIVbLC0pCQSjhwB8Q6088btWNoFV5k8TvVM5vNaMQ_DkYjzYYPP5Bif_sbDoaiiFTw_S-Dn-sq3TiZ0MiF7sGYcjDnBpw8CsALY2DeTU-WnYGnOxM0_9jjsaE0dXmMakafTnQkcrw" data-lazy-type="image" data-src="https://lh5.googleusercontent.com/z6h5R36-mfIVbLC0pCQSjhwB8Q6088btWNoFV5k8TvVM5vNaMQ_DkYjzYYPP5Bif_sbDoaiiFTw_S-Dn-sq3TiZ0MiF7sGYcjDnBpw8CsALY2DeTU-WnYGnOxM0_9jjsaE0dXmMakafTnQkcrw" alt=""><noscript><img src="https://lh5.googleusercontent.com/z6h5R36-mfIVbLC0pCQSjhwB8Q6088btWNoFV5k8TvVM5vNaMQ_DkYjzYYPP5Bif_sbDoaiiFTw_S-Dn-sq3TiZ0MiF7sGYcjDnBpw8CsALY2DeTU-WnYGnOxM0_9jjsaE0dXmMakafTnQkcrw" alt="" /></noscript></figure>
+
+                            <p>Add the above command into your gem file.&nbsp;</p>
+
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h3>Authentication</h3>
+
+
+                            <h4><strong>Ruby-JWT:</strong></h4>
+
+                            <p>This is considered to be one of the safest data transfer systems between two parties. It is the implementation of RFC 7519OAuth JSON Web Token (JWT).</p>
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh6.googleusercontent.com/GRi5e7GhlxN7b6pwiuMzg16xMr7RWLE5BEzodHV7H5o5BsHnaf7JPf9caFyzIDlx8evg5DyGbNMDnvlm-pQTe7uiUzcR8DetoVK1RbD9fhO4DgTWPvFF_F3VmlXAJtLBtWygAa_L_yjjl1SvWw" data-lazy-type="image" data-src="https://lh6.googleusercontent.com/GRi5e7GhlxN7b6pwiuMzg16xMr7RWLE5BEzodHV7H5o5BsHnaf7JPf9caFyzIDlx8evg5DyGbNMDnvlm-pQTe7uiUzcR8DetoVK1RbD9fhO4DgTWPvFF_F3VmlXAJtLBtWygAa_L_yjjl1SvWw" alt=""><noscript><img src="https://lh6.googleusercontent.com/GRi5e7GhlxN7b6pwiuMzg16xMr7RWLE5BEzodHV7H5o5BsHnaf7JPf9caFyzIDlx8evg5DyGbNMDnvlm-pQTe7uiUzcR8DetoVK1RbD9fhO4DgTWPvFF_F3VmlXAJtLBtWygAa_L_yjjl1SvWw" alt="" /></noscript></figure>
+
+                            <h4>How to install Ruby-JWT:</h4>
+
+                            <p>Add the above and below gem into gem file:</p>
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh6.googleusercontent.com/RCw8-YmntRfTQ17ty-7phBnAXG34a5Qsd1o1j5egXMNKXbiq-yOACFxR4GWhA1MA-G06WsW6gfyK48_vZwUfEAPsf27eRy2utPi92F1MKqW6eKgjWyJmw-uZxO7gJRMi0i1EkvCnIYe_6ZAw6g" data-lazy-type="image" data-src="https://lh6.googleusercontent.com/RCw8-YmntRfTQ17ty-7phBnAXG34a5Qsd1o1j5egXMNKXbiq-yOACFxR4GWhA1MA-G06WsW6gfyK48_vZwUfEAPsf27eRy2utPi92F1MKqW6eKgjWyJmw-uZxO7gJRMi0i1EkvCnIYe_6ZAw6g" alt=""><noscript><img src="https://lh6.googleusercontent.com/RCw8-YmntRfTQ17ty-7phBnAXG34a5Qsd1o1j5egXMNKXbiq-yOACFxR4GWhA1MA-G06WsW6gfyK48_vZwUfEAPsf27eRy2utPi92F1MKqW6eKgjWyJmw-uZxO7gJRMi0i1EkvCnIYe_6ZAw6g" alt="" /></noscript></figure>
+
+                            <p>Run bundle install.</p>
+
+                            <p>With&nbsp; security being the utmost priority, artificial intelligence is important.&nbsp;</p>
+
+                            <ul>
+                                <li>Devise:&nbsp; It operates to perform complex security levels – from authorization via email and password to a referral system.</li>
+                                <li> Recoverable: Resets user password and sends reset instructions.</li>
+                                <li>Trackable: Monitors timestamps, IP addresses, and sign-in accounts.</li>
+                                <li>Rememberable: Manages the token generation and clears the user from saved cookies.</li>
+                                <li>Confirmable: Sends emails with confirmation instructions and verifies whether the account is signed-in or not.</li>
+                            </ul>
+
+                            <p>How to install Devise:</p>
+
+                            <p> Add the following to gem file:</p>
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh3.googleusercontent.com/eZAzp13IvcaaeyAqPUc3rh4nW9u9wfGYvmrgS46WtLkhWlMCMDExrqV1hnanHigsGPZFFC9zcr6WLPEiQYWbvvelNXLYsm8qNRxYjFDAxpZQy1EXbSSMgjIt9-9tDEBUlJnYAtKJgzcrCcKBVA" data-lazy-type="image" data-src="https://lh3.googleusercontent.com/eZAzp13IvcaaeyAqPUc3rh4nW9u9wfGYvmrgS46WtLkhWlMCMDExrqV1hnanHigsGPZFFC9zcr6WLPEiQYWbvvelNXLYsm8qNRxYjFDAxpZQy1EXbSSMgjIt9-9tDEBUlJnYAtKJgzcrCcKBVA" alt=""><noscript><img src="https://lh3.googleusercontent.com/eZAzp13IvcaaeyAqPUc3rh4nW9u9wfGYvmrgS46WtLkhWlMCMDExrqV1hnanHigsGPZFFC9zcr6WLPEiQYWbvvelNXLYsm8qNRxYjFDAxpZQy1EXbSSMgjIt9-9tDEBUlJnYAtKJgzcrCcKBVA" alt="" /></noscript></figure>
+
+                            <p>It works with Devise 4.0 with Rails 4.1.&nbsp;</p>
+
+                            <p>Run bundle install and then&nbsp; the generator:</p>
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh4.googleusercontent.com/Xq2K_dCAbq-SPhM1Kc_s1U3lTfrgp-4fIAFBdH-ZlwVO7RBYvShZNDSSrGreVddofXBBfp6GvHZEg-DRuCTVyb6FglKGl6fKYeX4uyJpP7TlYfU59i-jBPDlU8CjPZDSAH-h4YAjnU_Ai5PWww" data-lazy-type="image" data-src="https://lh4.googleusercontent.com/Xq2K_dCAbq-SPhM1Kc_s1U3lTfrgp-4fIAFBdH-ZlwVO7RBYvShZNDSSrGreVddofXBBfp6GvHZEg-DRuCTVyb6FglKGl6fKYeX4uyJpP7TlYfU59i-jBPDlU8CjPZDSAH-h4YAjnU_Ai5PWww" alt=""><noscript><img src="https://lh4.googleusercontent.com/Xq2K_dCAbq-SPhM1Kc_s1U3lTfrgp-4fIAFBdH-ZlwVO7RBYvShZNDSSrGreVddofXBBfp6GvHZEg-DRuCTVyb6FglKGl6fKYeX4uyJpP7TlYfU59i-jBPDlU8CjPZDSAH-h4YAjnU_Ai5PWww" alt="" /></noscript></figure>
+
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h3><strong>HTTPClient: </strong></h3>
+
+                            <p>It provides access to web resources via HTTP with MT-Safe design. After setting up an instance, call&nbsp; through several threads without synchronization:</p>
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh3.googleusercontent.com/9lc0Izw6ARLvk8IyQobQysXfPchLZ46KT9f8LV9zTuGmIBQH_Ww7lJZ21hTgKl-UpVes3xHPjxNWFpQERMBkR2sEw0-yMtDBHYeX3q6EtCLLHtcnDjbB5ySGnK-hQHxCQWsFfQRZY_e2qFYHvQ" data-lazy-type="image" data-src="https://lh3.googleusercontent.com/9lc0Izw6ARLvk8IyQobQysXfPchLZ46KT9f8LV9zTuGmIBQH_Ww7lJZ21hTgKl-UpVes3xHPjxNWFpQERMBkR2sEw0-yMtDBHYeX3q6EtCLLHtcnDjbB5ySGnK-hQHxCQWsFfQRZY_e2qFYHvQ" alt=""><noscript><img src="https://lh3.googleusercontent.com/9lc0Izw6ARLvk8IyQobQysXfPchLZ46KT9f8LV9zTuGmIBQH_Ww7lJZ21hTgKl-UpVes3xHPjxNWFpQERMBkR2sEw0-yMtDBHYeX3q6EtCLLHtcnDjbB5ySGnK-hQHxCQWsFfQRZY_e2qFYHvQ" alt="" /></noscript></figure>
+
+                            <h4>How to install HTTPClient:</h4>
+
+                            <p>Create a simple client:</p>
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh4.googleusercontent.com/sgNPf5Fpde6iO2kt_fuhWCZXVsRpqdnH4lZELTfPmOMizFCRSCdxOVVa5Y-GksqnvFLuJzho7EPdU-RQlwbfc4POEikjO8kfMgbABuObNbRPLHZhL7bEoG_c1jM8JsEHjBvpIL6pqdvEOATb6Q" data-lazy-type="image" data-src="https://lh4.googleusercontent.com/sgNPf5Fpde6iO2kt_fuhWCZXVsRpqdnH4lZELTfPmOMizFCRSCdxOVVa5Y-GksqnvFLuJzho7EPdU-RQlwbfc4POEikjO8kfMgbABuObNbRPLHZhL7bEoG_c1jM8JsEHjBvpIL6pqdvEOATb6Q" alt=""><noscript><img src="https://lh4.googleusercontent.com/sgNPf5Fpde6iO2kt_fuhWCZXVsRpqdnH4lZELTfPmOMizFCRSCdxOVVa5Y-GksqnvFLuJzho7EPdU-RQlwbfc4POEikjO8kfMgbABuObNbRPLHZhL7bEoG_c1jM8JsEHjBvpIL6pqdvEOATb6Q" alt="" /></noscript></figure>
+
+                            <p>Utilize “http_proxy” or “HTTP_PROXY instsead, HTTP proxy.</p>
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh6.googleusercontent.com/H_7f5AXo-NQSgTe6JY6WnBvOh9aWky8ChSL_QXLcJYdO0f7t3pF6NaT-agxJ71E8Gee-yLe4IQB0If45IB-iw-ODSXxFYBha89DDjLshQScPf6CI_R99QjLi2TxPtHvQHDZ5LEP5UOX0tGme2A" data-lazy-type="image" data-src="https://lh6.googleusercontent.com/H_7f5AXo-NQSgTe6JY6WnBvOh9aWky8ChSL_QXLcJYdO0f7t3pF6NaT-agxJ71E8Gee-yLe4IQB0If45IB-iw-ODSXxFYBha89DDjLshQScPf6CI_R99QjLi2TxPtHvQHDZ5LEP5UOX0tGme2A" alt=""><noscript><img src="https://lh6.googleusercontent.com/H_7f5AXo-NQSgTe6JY6WnBvOh9aWky8ChSL_QXLcJYdO0f7t3pF6NaT-agxJ71E8Gee-yLe4IQB0If45IB-iw-ODSXxFYBha89DDjLshQScPf6CI_R99QjLi2TxPtHvQHDZ5LEP5UOX0tGme2A" alt="" /></noscript></figure>
+
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h3><strong>Curb</strong>:</h3>
+
+                            <p>Curb is a Ruby language that binds the client-side URL transfer library. You can install Curb into Gem file:</p>
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh3.googleusercontent.com/PLZGLsMS3mpgFKeXAqKJAwP9zQLBubyaGACwNH5VjIESghjKztuGu_LfoIrSH03kL-eAIXfk3WUBjkghX4ohCU28SX4pAPxHl7sMcgdp_Nek6lKRz3BaF_dpkqgk2aVCrmcGwuUOJwCN_4_C_g" data-lazy-type="image" data-src="https://lh3.googleusercontent.com/PLZGLsMS3mpgFKeXAqKJAwP9zQLBubyaGACwNH5VjIESghjKztuGu_LfoIrSH03kL-eAIXfk3WUBjkghX4ohCU28SX4pAPxHl7sMcgdp_Nek6lKRz3BaF_dpkqgk2aVCrmcGwuUOJwCN_4_C_g" alt=""><noscript><img src="https://lh3.googleusercontent.com/PLZGLsMS3mpgFKeXAqKJAwP9zQLBubyaGACwNH5VjIESghjKztuGu_LfoIrSH03kL-eAIXfk3WUBjkghX4ohCU28SX4pAPxHl7sMcgdp_Nek6lKRz3BaF_dpkqgk2aVCrmcGwuUOJwCN_4_C_g" alt="" /></noscript></figure>
+                            <p>If you are using Windows, make sure you use the DevKit and development version of libcurl. Unzip and run in your command line.</p>
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh5.googleusercontent.com/Ozu2D_9RrpG_4acHxovG0qbkf5_StDqX1rzu-md2zY6bZVdElkvPm5e1o3WPYryc-JyqRmwJehvpjH-llJQQSors_YiyGgLr5piP_ALmVKI2SyB4ezr0aC5tfcfaojkGWgdJMvZnUZKefLZ-Aw" data-lazy-type="image" data-src="https://lh5.googleusercontent.com/Ozu2D_9RrpG_4acHxovG0qbkf5_StDqX1rzu-md2zY6bZVdElkvPm5e1o3WPYryc-JyqRmwJehvpjH-llJQQSors_YiyGgLr5piP_ALmVKI2SyB4ezr0aC5tfcfaojkGWgdJMvZnUZKefLZ-Aw" alt=""><noscript><img src="https://lh5.googleusercontent.com/Ozu2D_9RrpG_4acHxovG0qbkf5_StDqX1rzu-md2zY6bZVdElkvPm5e1o3WPYryc-JyqRmwJehvpjH-llJQQSors_YiyGgLr5piP_ALmVKI2SyB4ezr0aC5tfcfaojkGWgdJMvZnUZKefLZ-Aw" alt="" /></noscript></figure>
+
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h3><strong>Net::HTTP</strong>:</h3>
+
+                            <p>This can be used to build net:: HTTP user-agents. Below is the example of request types using persistent connections:</p>
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh5.googleusercontent.com/BAHdGM45xXeq1gevABPhE6Mrf3g_V0djettKIm2pRq7VGqzqc8w6YX3E402Xq888914-RY-LNeyQAZDNkNxB7p5KrFzsNBCCq0y9h4eRMjS91txT4CiQnC4AJV22GuBDBGE-EuJRotbVtkbuHg" data-lazy-type="image" data-src="https://lh5.googleusercontent.com/BAHdGM45xXeq1gevABPhE6Mrf3g_V0djettKIm2pRq7VGqzqc8w6YX3E402Xq888914-RY-LNeyQAZDNkNxB7p5KrFzsNBCCq0y9h4eRMjS91txT4CiQnC4AJV22GuBDBGE-EuJRotbVtkbuHg" alt=""><noscript><img src="https://lh5.googleusercontent.com/BAHdGM45xXeq1gevABPhE6Mrf3g_V0djettKIm2pRq7VGqzqc8w6YX3E402Xq888914-RY-LNeyQAZDNkNxB7p5KrFzsNBCCq0y9h4eRMjS91txT4CiQnC4AJV22GuBDBGE-EuJRotbVtkbuHg" alt="" /></noscript></figure>
+
+                            <p>: start creates a connection to the HTTP server kept open for the duration of the block. There are request types Net:: HTTP described below:</p>
+
+                            <p>Here is the request class:</p>
+
+                            <ul>
+                                <li>Net::HTTP::GET</li>
+                                <li>Net::HTTP::HEAD</li>
+                                <li>Net::HTTP::POST</li>
+                                <li>Net::HTTP::PATCH</li>
+                                <li>Net::HTTP::PUT</li>
+                                <li>Net::HTTP::PRO PATCH</li>
+                            </ul>
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h3><strong>HttpRb</strong>:</h3>
+
+                            <p>It is used for making requests from Ruby. The method is used for chaining system to build requests, similar to Python’s request. Http.rb uses http_paser.RB to parse native extensions based on node.js parser and Java port.</p>
+                            <h4>How to install HttpRb:</h4>
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh5.googleusercontent.com/ooS4RQD94OPbJ4EOShJnYV1ERyEuytMqvyI_4GZ8SYXIO_PRORa5OtLOwIWc-EzV0Qt2Zf1fn8JuyXHsjwFDetPJBYXi3fNIiyDQqE4ROjG7csiZcUqVdrpdBZwpsR_rJUgmBPR5tCzlxO6b1A" data-lazy-type="image" data-src="https://lh5.googleusercontent.com/ooS4RQD94OPbJ4EOShJnYV1ERyEuytMqvyI_4GZ8SYXIO_PRORa5OtLOwIWc-EzV0Qt2Zf1fn8JuyXHsjwFDetPJBYXi3fNIiyDQqE4ROjG7csiZcUqVdrpdBZwpsR_rJUgmBPR5tCzlxO6b1A" alt=""><noscript><img src="https://lh5.googleusercontent.com/ooS4RQD94OPbJ4EOShJnYV1ERyEuytMqvyI_4GZ8SYXIO_PRORa5OtLOwIWc-EzV0Qt2Zf1fn8JuyXHsjwFDetPJBYXi3fNIiyDQqE4ROjG7csiZcUqVdrpdBZwpsR_rJUgmBPR5tCzlxO6b1A" alt="" /></noscript></figure>
+
+                            <h2>Testing</h2>
+
+                            <h3><strong>Capybara:</strong></h3>
+                            <p>A test framework for web applications, running with RSpec. The gem is responsible for the user’s prompt action and suggests various methods of tests and debugging.</p>
+
+                            <h4>How to install:</h4>
+
+                            <p>It requires Ruby 2.4.0 and above version. And to install, add it to gem file and run bundle install</p>
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh3.googleusercontent.com/V54I1wMuroQmbI94K_8qNm2yQSF3q-dLS2ewh1hny4bYSUMoK_ti-4INZDX42bCDHCYPj5xBUjHbLUyOtkknl0fvN_3SHUSDePJAnFHxmDSwCCYcJ1CSoSYu7FN2SCiXIF_SSZ-xlL-TYTg57Q" data-lazy-type="image" data-src="https://lh3.googleusercontent.com/V54I1wMuroQmbI94K_8qNm2yQSF3q-dLS2ewh1hny4bYSUMoK_ti-4INZDX42bCDHCYPj5xBUjHbLUyOtkknl0fvN_3SHUSDePJAnFHxmDSwCCYcJ1CSoSYu7FN2SCiXIF_SSZ-xlL-TYTg57Q" alt=""><noscript><img src="https://lh3.googleusercontent.com/V54I1wMuroQmbI94K_8qNm2yQSF3q-dLS2ewh1hny4bYSUMoK_ti-4INZDX42bCDHCYPj5xBUjHbLUyOtkknl0fvN_3SHUSDePJAnFHxmDSwCCYcJ1CSoSYu7FN2SCiXIF_SSZ-xlL-TYTg57Q" alt="" /></noscript></figure>
+
+                            <p>Add below line to help test helper file:</p>
+
+                            <figure class="wp-block-image alignwide"><img class="lazy-loaded" src="https://lh5.googleusercontent.com/_z5OquEUqt5XuACyIk-jYarvOv8Dph1NcqiWrku9YmPa1HONkgSEs8Oec80ZuMnR9oncC3UpoX6nZLoCZdBSC6DhaF4lMg7OtWiFPBTUTtAKQ5LcKLRvLIs53BKpFCHep1d6OGU_CkwGFW50vw" data-lazy-type="image" data-src="https://lh5.googleusercontent.com/_z5OquEUqt5XuACyIk-jYarvOv8Dph1NcqiWrku9YmPa1HONkgSEs8Oec80ZuMnR9oncC3UpoX6nZLoCZdBSC6DhaF4lMg7OtWiFPBTUTtAKQ5LcKLRvLIs53BKpFCHep1d6OGU_CkwGFW50vw" alt=""><noscript><img src="https://lh5.googleusercontent.com/_z5OquEUqt5XuACyIk-jYarvOv8Dph1NcqiWrku9YmPa1HONkgSEs8Oec80ZuMnR9oncC3UpoX6nZLoCZdBSC6DhaF4lMg7OtWiFPBTUTtAKQ5LcKLRvLIs53BKpFCHep1d6OGU_CkwGFW50vw" alt="" /></noscript></figure>
+
+                        </b>
+                    </div>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+                    <div class="lead" id="rf">
+                        <b>
+                            <h3 class="text-dark" style="font-weight:600">Ruby Framework</h3>
+                            <br>
+                            <h4>Top 7 Ruby Frameworks</h4>
+                            <br>
+                            <h3>1.&nbsp;Ruby on Rails</h3>
+
+                            <p>I know you could’ve seen this coming&nbsp;miles away, but it’s impossible to talk about Ruby frameworks without mentioning the most famous among them. So, Rails it is.</p>
+
+                            <p>Ruby on Rails, sometimes called just “Rails,” is an open-source web development framework. David Heinemeier Hansson, a.k.a. DHH, released the first version of Rails as an open-source project back in 2005, after using it to build what would become the Basecamp project management system.</p>
+
+                            <p>Besides using the popular model-view-controller (MVC) pattern, Rails is based upon some well-known&nbsp;software development guidelines and philosophies. Probably chief among them is <strong>“convention over configuration.”</strong> That means that, unlike many popular frameworks, Rails doesn’t generally require the user to create a lot of mappings and configurations. Instead, the framework itself makes many assumptions based on some simple conventions.</p>
+
+                            <p>The Rails framework enables developers to get a database-backed website up and running in way less time than it would’ve been possible by using its competitors. Due to its convention-based approach, the Rails framework saves developers from writing a lot of boilerplate code, freeing them to focus on the business part of the code.</p>
+
+                            <p>Ruby on Rails has been successful in increasing the popularity of not only <a href="https://stackify.com/ruby-tutorials/" target="_blank" rel="noopener noreferrer">Ruby</a> itself, but also the convention-based approach to web frameworks. Nowadays, there are database-backed, MVC-convention-based web frameworks available in a variety of languages and platforms that clearly took inspiration from the “Rails way.”</p>
+
+                            <ul>
+                                <li>Website:&nbsp;<a href="https://rubyonrails.org/" target="_blank" rel="noopener noreferrer">https://rubyonrails.org/</a></li>
+                                <li>Source code:&nbsp;<a href="https://github.com/rails/rails" target="_blank" rel="noopener noreferrer">https://github.com/rails/rails</a></li>
+                            </ul>
+
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h3>2. Hanami</h3>
+
+                            <p>The second Ruby framework on our list is Hanami. Released initially as Lotus by Luca Guidi, <a href="http://hanamirb.org/blog/2016/01/22/lotus-is-now-hanami.html" target="_blank" rel="noopener noreferrer">the framework was renamed to Hanami in 2016</a>, due to trademark issues.</p>
+
+                            <p>The <a href="http://hanamirb.org/" target="_blank" rel="noopener noreferrer">framework’s site</a>&nbsp;describes it as a “modern web framework for Ruby”, and claims it’s optimized for performance. Hanami makes use of CDNs (content delivery networks) to deliver responses&nbsp;as fast as possible, and it consumes 60% less memory than other Ruby frameworks.</p>
+
+                            <p>Hanami is heavily influenced by Robert “Uncle Bob” Martin’s clean architecture.&nbsp;Its architectural style assumes your project can contain <em>n</em> apps. The same Ruby process runs all apps in your project, and they all reside in the same codebase. The most popular type of application is the web app, so Hanami automatically generates that one for you. You could have different apps for what Martin calls “delivery mechanisms.” In clean architecture lingo, a delivery mechanism is just a way of delivering functionalities to the final user.</p>
+
+                            <p>Similar to Rails (and several other Ruby frameworks), Hanami follows the MVC pattern. Unlike Rails, though, it splits the functionality of the Model class into two parts. One is an entity class that models the behavior you need to express. The other is a repository class that handles the persistence for the entity.</p>
+
+                            <ul>
+                                <li>Website:&nbsp;<a href="http://hanamirb.org/" target="_blank" rel="noopener noreferrer">http://hanamirb.org/</a></li>
+                                <li>Source code:&nbsp;<a href="https://github.com/hanami" target="_blank" rel="noopener noreferrer">https://github.com/hanami</a></li>
+                            </ul>
+
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+
+                            <h3>3. Sinatra</h3>
+
+                            <p>Sinatra is a web application framework, first released in 2007. According to <a href="http://sinatrarb.com/" target="_blank" rel="noopener noreferrer">its site</a>, Sinatra is a “DSL for quickly creating web applications in Ruby with minimal effort.” As you’ve probably guessed, the creators named the framework after singer Frank Sinatra.</p>
+
+                            <p>Sinatra aims to be small and flexible. It doesn’t follow the typical MVC patterns used in other Ruby frameworks (and web frameworks in general, not only Ruby ones). Instead, it provides the developer a DSL with which they can define routes.</p>
+
+                            <p>A route in Sinatra is a pair composed of an HTTP method and a pattern. The pattern is used to match URLs to <a href="http://rubylearning.com/satishtalim/ruby_blocks.html" target="_blank" rel="noopener noreferrer">blocks.</a></p>
+
+                            <ul>
+                                <li>Website:&nbsp;<a href="http://sinatrarb.com/" target="_blank" rel="noopener noreferrer">http://sinatrarb.com/</a></li>
+                                <li>Source code:&nbsp;<a href="https://github.com/sinatra/sinatra" rel="noopener noreferrer" target="_blank">https://github.com/sinatra/sinatra</a></li>
+                            </ul>
+
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h3>4. Cuba</h3>
+
+                            <p>The next Ruby framework on our list is Cuba. According to the <a href="https://github.com/soveran/cuba" target="_blank" rel="noopener noreferrer">description on its GitHub repository</a>, Cuba is “a microframework for web development originally inspired by&nbsp;<a href="https://github.com/chneukirchen/rum" target="_blank" rel="noopener noreferrer">Rum</a>, a tiny but powerful mapper for&nbsp;<a href="https://github.com/rack/rack" target="_blank" rel="noopener noreferrer">Rack</a>&nbsp;applications.”</p>
+
+                            <p>It integrates many templates via&nbsp;<a href="https://github.com/rtomayko/tilt" target="_blank" rel="noopener noreferrer">Tilt</a>, and it integrates testing via&nbsp;<a href="https://github.com/djanowski/cutest" target="_blank" rel="noopener noreferrer">Cutest</a>&nbsp;and&nbsp;<a href="https://github.com/jnicklas/capybara" target="_blank" rel="noopener noreferrer">Capybara</a>.</p>
+
+                            <ul>
+                                <li>Website:&nbsp;<a href="http://cuba.is/" target="_blank" rel="noopener noreferrer">http://cuba.is/</a></li>
+                                <li>Source code:&nbsp;<a href="https://github.com/soveran/cuba" target="_blank" rel="noopener noreferrer">https://github.com/soveran/cuba</a></li>
+                            </ul>
+
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+
+                            <h3>5. Nancy</h3>
+
+                            <p>The next Ruby framework on our list is Nancy. Nancy is a web development microframework that took inspiration from other frameworks such as Cuba and Sinatra. Sinatra’s influence on Nancy goes all the way to the naming of the framework: Nancy is Frank Sinatra’s daughter.</p>
+
+                            <p>According to its GitHub repo, some of Nancy’s main features include its high speed, support for “Sinatra-like” routes, the possibility of halting execution at any point by employing Ruby’s native throw/catch mechanism, and last but not least, thread-safety.</p>
+
+                            <ul>
+                                <li>Website:&nbsp;<a href="https://guilleiguaran.github.io/nancy/" target="_blank" rel="noopener noreferrer">http://guilleiguaran.github.io/nancy/</a></li>
+                                <li>Source code:&nbsp;<a href="https://github.com/guilleiguaran/nancy" target="_blank" rel="noopener noreferrer">https://github.com/guilleiguaran/nancy</a></li>
+                            </ul>
+
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h3>6. Grape</h3>
+
+                            <p>The next item on our list is Grape, which is yet another Ruby framework that falls into the category of microframeworks. Grape is one of the newest Ruby frameworks out there. <a href="http://www.ruby-grape.org/" target="_blank" rel="noopener noreferrer">Its website</a> describes it as an “opinionated framework for creating REST-like APIs in Ruby.” That pretty much sums it up.</p>
+
+                            <p>You can run Grape on Rack or use it as a complement to other frameworks.</p>
+
+
+                            <ul>
+                                <li>Website:&nbsp;<a href="http://www.ruby-grape.org/" target="_blank" rel="noopener noreferrer">http://www.ruby-grape.org/</a></li>
+                                <li>Source code:&nbsp;<a href="https://github.com/ruby-grape/grape" target="_blank" rel="noopener noreferrer">https://github.com/ruby-grape/grape</a></li>
+                            </ul>
+
+                            <hr class="separate" style="border-top: 2px solid #fff">
+
+                            <h3>7. Padrino</h3>
+
+                            <p>After covering so many minimalist frameworks, it’s time to get back to a more full-fledged framework with Padrino. This framework uses Sinatra as its core. According to its site, Padrino “was created to make it fun and easy to code more advanced web applications while still adhering to the spirit that makes&nbsp;<a href="http://sinatrarb.com/" target="_blank" rel="noopener noreferrer">Sinatra</a>&nbsp;great!”</p>
+
+                            <p>So, while Padrino is a “full” framework, closer to Rails in essence than to Grape, Cuba, or other microframeworks, it also strives to be as small, fast, and lightweight as possible.</p>
+
+                            <p>One of the main selling points of Padrino is probably its agnosticism. It doesn’t ship with default libraries for concerns such as <a href="https://stackify.com/learn-javascript-tutorials/" target="_blank" rel="noopener noreferrer">JavaScript</a>, testing, mocking, and ORM. Instead, it allows the developer to choose among available libraries according to their own needs and preferences.</p>
+
+                            <ul>
+                                <li>Website:&nbsp;<a href="http://padrinorb.com/" target="_blank" rel="noopener noreferrer">http://padrinorb.com/</a></li>
+                                <li>Source code:&nbsp;<a href="https://github.com/padrino/padrino-framework" target="_blank" rel="noopener noreferrer">https://github.com/padrino/padrino-framework</a></li>
+                            </ul>
+                        </b>
+                    </div>
+
+
+
+                   
+
+                </div>
+            </div>
+
+        </div>
+        <!-- End demo content -->
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+
+        <script>
+            $(function() {
+                // Sidebar toggle behavior
+                $('#sidebarCollapse').on('click', function() {
+                    $('#sidebar, #content').toggleClass('active');
+                });
+            });
+        </script>
+
+    </body>
+
+    </html>
+

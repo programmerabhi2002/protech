@@ -1,0 +1,614 @@
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+
+        <title>
+            Go Programming Language
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    </head>
+
+    <style>
+        .vertical-nav {
+            min-width: 17rem;
+            width: 17rem;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s;
+        }
+
+        .page-content {
+            width: calc(100% - 17rem);
+            margin-left: 17rem;
+            transition: all 0.4s;
+        }
+
+        /* for toggle behavior */
+
+        #sidebar.active {
+            margin-left: -17rem;
+        }
+
+        #content.active {
+            width: 100%;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            #sidebar {
+                margin-left: -17rem;
+            }
+
+            #sidebar.active {
+                margin-left: 0;
+            }
+
+            #content {
+                width: 100%;
+                margin: 0;
+            }
+
+            #content.active {
+                margin-left: 17rem;
+                width: calc(100% - 17rem);
+            }
+        }
+
+        body {
+            background: #599fd9;
+            background: -webkit-linear-gradient(to right, #599fd9, #c2e59c);
+            background: linear-gradient(to right, #599fd9, #c2e59c);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .separator {
+            margin: 3rem 0;
+            border-bottom: 1px dashed #fff;
+        }
+
+        .text-uppercase {
+            letter-spacing: 0.1em;
+        }
+
+        .text-gray {
+            color: #525252;
+        }
+
+        a {
+            color: #525252;
+        }
+    </style>
+
+    <body>
+
+        <!-- Vertical navbar -->
+        <div class="vertical-nav " id="sidebar">
+            <!-- bg-white -->
+            <div class="py-4 px-3 mb-4 ">
+                <!-- bg-white -->
+                 <div class="media d-flex align-items-center"><img src="Img/gol.png" alt="..." width="70" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+
+                <div class="media-body">
+                    <h4 class="m-0" style="font-size:20px"><i></i></h4>
+                    <p class="font-weight text-dark mb-0"><i>
+                           
+                        </i></p>
+                </div>
+             </div> 
+            </div>
+
+            <div class="separator"></div>
+            <!--         <hr class="solid" style="border-top: 3px solid #bbb"> -->
+            <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0" style="font-weight:bold">Index</p>
+
+            <ul class="nav flex-column  mb-0" style="font-weight:bold">
+                <!-- bg-white -->
+                <li class="nav-item">
+                    <a href="Go.html/#go" class="nav-link text-dark font-italic ">
+                        <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                        Introduction
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="Go.html/#wgo" class="nav-link text-dark font-italic">
+                        <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                        Why we use GO ?
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="Go.html/#adgo" class="nav-link text-dark font-italic">
+                        <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                        Advantages & Disadvantages &nbsp;&nbsp;&nbsp;&nbsp;of GO
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="Go.html/#lgo" class="nav-link text-dark font-italic">
+                        <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                        GO Libraries
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="GO_1.html" class="nav-link text-dark font-italic">
+                        <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                        GO Framework
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link text-dark font-italic">
+                        <i class="fa fa-line-chart mr-3 text-primary fa-fw"></i>
+                        <-BACK TO HOME</a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- End vertical navbar -->
+
+
+        <!-- Page content holder -->
+        <div class="page-content p-5" id="content">
+            <!-- Toggle button -->
+            <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">MENU</small></button>
+
+            <!-- Demo content -->
+            <h2 class="display-4 text-white">GO</h2>
+            <p class="lead text-white mb-0"> <i>Designed by Robert Griesemer, Rob Pike, Ken Thompson (10 November 2009)</i></p>
+            <p class="lead text-white mb-0"> <i>Developed by The Go Authors </i></p>
+            
+            <p class="lead text-white mb-0"> <i>Licensed by <a href="https://en.wikipedia.org/wiki/3-clause_BSD"> 3-clause BSD.</a> </i></p>
+
+
+            <div class="separator" id="ja"></div>
+
+            <!-- ************************************************************************************** -->
+            <div class="row text-white-bold">
+                <div class="col-lg-12" id="r">
+                    <h3 class="text-dark" style="font-weight:600" id="go">GO Framework</h3>
+                    <p class="lead">
+                        <b>
+                            Web frameworks help developers build applications as easily and quickly as possible. Go is still relatively new, so it’s important to use frameworks with sufficient documentation.
+                            <br>
+                            Here are some frameworks you can use to help you build projects using the Go Language.
+                        </b>
+                    </p>
+
+                    <h4><a href="https://github.com/revel/revel">1.Revel</a></h4>
+                    <center>
+                        <img src="http://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/Revel-framework-go.png" alt="" width="804" height="360" class="aligncenter size-full wp-image-6797">
+                    </center>
+
+                    <ul class="lead">
+                        <b>
+                            <li>
+                                <span>As a high productivity framework for Go, </span><a href="https://revel.github.io/" target="_blank" rel="noopener"><span style="font-weight: 400;">Revel</span></a><span style="font-weight: 400;"> includes a Hot Code Reload tool that lets you rebuild your project on every file change. It also includes a wide variety of comprehensive and high-performance features, so you don’t need to find external libraries to integrate into the framework.
+                                </span>
+                            </li>
+                            <li>A high-productivity web framework for the Go language.</li>
+                            <br>
+
+                            <li>
+                                <strong>Pros</strong><br>
+                                <ul>
+                                    <li>Revel is first and foremost fully featured. Unlike some of the other frameworks on this list, Revel is designed to come out of the box with much of its feature-set pre-configured and installed for optimal functionality. This means that you can get going pretty much with no setup, which is very appealing for many startups and small groups.</li>
+                                    <li>Revel doesn’t require very many third party libraries or middleware implementations in order to do complex tasks, which, unlike some entries on this list, means that it’s relatively self contained.</li>
+                                    <li>By packaging everything together out of the box and ensuring even complex tasks can be done with the default installation, Revel seems to be positioning itself as a “one stop shop” solution.</li>
+                                    <li>This also comes with the noted quality of having a relatively reduced complexity for high functionality. While other frameworks can tie into third party distributions to enable the same levels of functionality, this means added complexity and requirements for third party dependencies.</li>
+                                    <li>
+                                        <strong>Full Feature set:</strong> Revel is fully featured out of the box, with packaged libraries and feature sets for everything from small to complex tasks.
+
+                                        <br>
+                                        <strong>Self-Contained:</strong> By eschewing dependence on third party libraries, Revel works “out of the box”, reducing complexity between interacting libraries and extensions.
+                                    </li>
+                                </ul>
+                        </b>
+                    </ul>
+
+                    <ul class="lead">
+                        <b>
+                            <li>
+                                <strong>Cons</strong><br>
+                                <ul>
+                                    <li>The fact that Revel is fully featured could, for some, be a negative. While it’s great that Revel is fully featured out of the box, this also means that the code base is much larger than other solutions, and thereby not very lean.</li>
+                                    <li>This is an interesting quality when one looks at Go, which is intended to be lean for solutions from tiny to huge. While having everything preconfigured and prepackaged is great in terms of quick setup, it does mean that you lose some agility.</li>
+                                    <li>While this isn’t a big issue for many, the lack of native support for MongoDB is. While this support can be implemented using third party solutions, it’s something that one would expect with a “kitchen sink” implementation where everything else is packaged in – missing a key feature like this makes it a hard sell to some.</li>
+                                    <li>
+
+                                        <strong>Larger codebase:</strong> Revel is a “kitchen sink” implementation, including everything you need to get going. This means added framework weight and size, making it not lean.
+                                    </li>
+                                    <strong>No MongoDB:</strong> The lack of MongoDB is an issue for many people utilizing the framework, and while this support can be added using third party implementations, it adds unnecessary work you would not expect from such an otherwise complete framework.
+
+                                </ul>
+                            </li>
+                        </b>
+                    </ul>
+
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+
+                    <h4><a href="https://gin-gonic.github.io/gin/">2.Gin</a></h4>
+                    <center>
+                        <img src="http://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/Gin.png" alt="" width="804" height="360" class="aligncenter size-full wp-image-6797">
+                    </center>
+
+                    <ul class="lead">
+                        <b>
+                            <li>Gin is a web framework with a martini-like API, but with much better performance. If you’ve used Martini before, then you’ll be familiar with Gin Gonic. Otherwise, it will only take you 10 minutes to learn Gin. It’s that easy!</li>
+                            <li>The fastest full-featured web framework for Golang. Crystal clear.</li>
+                            <li>You can add middleware, nested groups, JSON validation, and rendering, but it still maintains its optimum performance. Gin Gonic uses httprouter, the fastest HTTP router for Go.</li>
+                            <li>
+                                <strong>Pros</strong>
+                                <ul>
+                                    <li>
+                                        Whereas solutions like Revel promise an all in one experience, Gin delivers a very minimalistic, trimmed down framework that carries with it only the most essential features, libraries, and functionalities. This makes Gin extremely lean – and this is really the huge selling point for frameworks like Gin.
+                                    </li>
+                                    <li>This simple, succinct design ethos is mirrored in the documentation, which is direct and effective. This makes Gin a great framework to start with, and can make for easier debugging and issue tracking.</li>
+                                    <li>Of note is that Gin was designed with Martini, another framework, in mind. By using httprouter for its traffic handling, Gin managed to increase speed by over 40 times from Martini. This makes it a good choice between spartan code and speed.</li>
+                                    <li>
+                                        <strong>Minimalist:</strong> Gin is very minimalistic, including only essential features, libraries, and functionalities. This makes it extremely lean and fit for systems with low power.
+                                    </li>
+                                    <li>
+                                        <strong>Usable:</strong> Very simple framework with decent documentation, so it’s very easy to learn and debug.
+                                    </li>
+                                    <li>
+                                        <strong>
+                                            Agile:
+                                        </strong> Extremely fast, especially compared to the genesis framework, Martini.
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </b>
+                    </ul>
+
+                    <ul class="lead">
+                        <b>
+                            <li>
+                                <strong>Cons</strong><br>
+                                <ul>
+                                    <li>Gin is very spartan, and for many, that’s a good thing. For enterprise solutions, however, Gin simply does not cut it. While you can in theory tie in third party implementations and other extensions, support for these solutions is not as robust as in other frameworks, and serves to negate much of what makes Gin a positive thing in the first place.</li>
+                                    <li>Likewise, Gin’s limitations means that, even if you do extend the framework, you’re moving a lot of the processing to the client. Thus, any limitations on the client side are going to be reflected on the server implementation and thus the actual functionality of the API.</li>
+                                    <li>The server can only do so much in Gin – and with that, you get limited functionality.</li>
+                                    <li>
+
+                                        <strong>Not for Enterprises:</strong> Gin is a very spartan framework, and thus is not suitable for applications that require a large backend or several complex server functions.
+                                    </li>
+                                    <strong>Big Client:</strong> The framework tends of offload a lot of work to the client due to server limitations, limiting potential implementations to what you have.
+
+                                </ul>
+                            </li>
+                        </b>
+                    </ul>
+
+                    <center>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RkmvVFZJJvs?start=50" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </center>
+
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+
+                    <h4><a href="https://github.com/olebedev/martini">3. Martini</a></h4>
+                    <center>
+                        <img src="Img/martini.png" alt="" width="360" height="260" class="aligncenter size-full wp-image-6797">
+                    </center>
+
+                    <ul class="lead">
+                        <b>
+                            <li>
+                                Inspired by Sinatra, Martini is an extremely light but powerful framework. It was developed for writing modular web applications and services in Golang.
+                            </li>
+                            <li>It features a non-intrusive design that’s quick and easy to use and includes a wide range of handlers and middleware.</li>
+                            <li> It’s capable of performing basic routing, exception handling, and default document serving for AngularJS apps in HTML5 mode.</li>
+                            <li>Martini’s best feature is its use of reflection, which lets developers dynamically insert data into the handler functions and add new services. Martini is also fully compatible with the http.HandlerFunc interface.</li>
+                            <li>
+                                <Strong>Pros</Strong>
+                                <ul>
+                                    <li>Martini is extremely lean, but unlike Gin, boasts impressive and easy to integrate third party support. These additional libraries take what is the otherwise incredibly lean Martini code base and allow it to magnify and leverage its functionality to be something more than just its components.</li>
+                                    <li>This additional third party support makes Martini less of a framework like Gin, and more like an ecosystem, like Revel.</li>
+                                    <li>That’s the last of the similarities with Revel, however. Martini is very lean by design, and is meant to do a lot of work with a minimal amount of overhead. This means that it occupies a space somewhere between enterprise and small team programming, offering good scalability.</li>
+                                    <li>Martini also offers a wide range of support for routing methodologies and formats, and offers support for wildcards, variable parameters, regex stricture, and more. This makes it arguably more powerful than Gin for not much more overhead.</li>
+                                    <li>Martini has been in the game for a while – accordingly, there is ample documentation and a large install base. If you have a Martini question, chances are it’s been answered.</li>
+                                    <li>
+                                        <strong>Lean:</strong> Martini is lean, and has a great third party support base, making it modular and scalable.
+                                        <br>
+                                        <strong>Good docs:</strong> Documentation for Martini is great, and the experience and age of the platform means most questions have documented answers.
+                                        <br>
+                                        <strong>Nice routing:</strong> Routing under Martini is a joy – complex parameters and various data formats are supported.
+                                    </li>
+                                </ul>
+                            </li>
+                        </b>
+                    </ul>
+
+                    <ul class="lead">
+                        <b>
+                            <li>
+                                <strong>Cons</strong>
+                                <ul>
+                                    <li>Martini isn’t all fun and games, though – there’s a reason Gin was developed as a quasi-replacement. Martini doesn’t handle traffic routing through httprouter like Gin does, meaning that it’s 40x slower, with an arguably more complex and heavy implementation of basically the same libraries and classes.</li>
+                                    <li>While the age of the platform is in one case a benefit for knowledge base and documentation, it’s also a death knell for versioning – Martini has not (in its core implementation) been maintained since 2014. While additional permutations and forks are still maintained, these each have negatives and positives that represent their Martini core.</li>
+                                    <li>Martini does something that turns a lot of developers off of the framework – dependency injection as a methodology for handler discovery. Martini discovers handlers and passing methodology using a dependency injection scheme, which is fine for the intended purpose, but has the side effect of circumventing Go’s typing system. Considering that the type system is a big reason for the adoption of Go, this is a definite negative.</li>
+                                    <li>
+                                        <strong>Slower:</strong> 40x slower than Gin.
+                                        <br>
+                                        <strong>Not actively maintained:</strong> Standard Martini (not counting forks and mutations) hasn’t been maintained since 2014. This lack of evolution could be a risk.
+                                        <br>
+                                        <strong>Dependency injection:</strong> Martini finds out what your handlers are and the passing request methodology using dependency injection. This means that for many cases, it circumvents the typing system inherent in Go.
+                                    </li>
+                                </ul>
+                            </li>
+                        </b>
+                    </ul>
+
+                    <center>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tUFzdUIjVRg?start=50" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </center>
+
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+
+                    <h4><a href="https://github.com/hoisie/web">4.Web.go</a></h4>
+                    <!--  <center>
+                        <img src="Img/martini.png" alt="" width="360" height="260" class="aligncenter size-full wp-image-6797">
+                    </center> -->
+
+                    <ul class="lead">
+                        <b>
+                            <li>
+                                <strong>Pros</strong>
+                                <br>
+                                Web.go is unique in that it’s a very lightweight framework that offers additional functionality over Go due to a tree routing system.
+                            </li>
+                            <li>
+                                This is a much more efficient system than simple list routing, as it allows for routing via relationships rather than purpose or usage. What this ultimately means is a much more lightweight, efficient, and easy to use framework that also boasts impressive gains in routing efficiencies.
+                            </li>
+                            <li>
+                                It should be noted that Web.go is designed from the ground up to be extremely basic. Web.go is spartan by choice, and any additional features are likely to not change Web.go in any significant way in terms of the underlying codebase size or requirements.
+                            </li>
+                            <li>
+                                <strong>Minimalistic:</strong> Extremely minimalistic both in form and function. Like other minimalist implementations, Web.go is meant to be basic without much added to the framework.
+                                <br>
+                                <strong>Tree Routing:</strong> Designed to route using trees rather than lists, delivering impressive efficiency gains in traffic routing. This makes the framework extremely low resource-cost.
+                            </li>
+                        </b>
+                    </ul>
+
+                    <ul class="lead">
+                        <b>
+                            <li>
+                                <strong>Cons</strong>
+                                <ul>
+                                    <li>Web.go is minimalist by design – but, just like other frameworks who attempt to make a lightweight implementation, this actually works against it in many ways.</li>
+                                    <li>This is even more pronounced considering that Web.go is meant to be minimalistic by its very nature – there’s precious little that Web.go does that Go cannot on its own.</li>
+                                    <li>Notably, what it does do differently – in this case, routing is the best example – can be done in Go with additional third party solutions that, while increasing complexity and codebase, offer more than a simple feature. The question as to whether or not path routing is worth the added complexity, however small, is an underlying current when considering Web.go.</li>
+                                    <li>
+                                        <strong>Doesn't extend Go that much:</strong> There’s extremely little what Web.go does that the standard Go framework cannot do on its own. While the path tree routing system definitely is powerful, whether or not that’s worth adding complexity to what is otherwise a basic Go implementation is questionable.
+                                    </li>
+                                </ul>
+                            </li>
+                        </b>
+                    </ul>
+
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+
+                    <h4><a href="http://www.gorillatoolkit.org/">5. Gorilla</a></h4>
+                    <center>
+                        <img src="http://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/Gorilla-web-toolkit.png" alt="" width="860" height="260" class="aligncenter size-full wp-image-6797">
+                    </center>
+
+                    <ul class="lead">
+                        <b>
+                            <li>
+                                <strong>
+                                    Pros
+                                </strong>
+                                <ul>
+                                    <li>
+                                        Gorilla is a great example of scalability through modularity. Gorilla is designed to be able to drop packages, tie in new extensions, enable modules, and more, all without sacrificing the core functionality of the framework itself.
+                                    </li>
+                                    <li>Gorilla is beloved by both enterprise and small scale groups, as it’s the perfect example of modular system scaling, representing both ease and efficacy of such a situation. </li>
+                                    <li>
+                                        its native support of websockets means that Gorilla is ready to go out of the box, with additional methodologies and approaches like HTTP routing, URL schemas, and arbitrary functions serving as additional routing mechanisms for both new and established web applications.
+                                    </li>
+                                    <li>
+                                        <strong>Websockets:</strong> Supports websockets out of the box, which is hugely valuable.
+                                        <br>
+                                        <strong>Routing:</strong> HTTP routing, URL schemes, and even arbitrary functions are likewise supported as a routing mechanism.
+                                        <br>
+                                        <strong>Scalable:</strong> Gorilla can be scaled in either direction. You can drop packages, add packages, tie into new extensions, etc., without sacrificing the core Gorilla functionality.
+
+                                    </li>
+                                </ul>
+                            </li>
+                        </b>
+                    </ul>
+
+                    <ul class="lead">
+                        <b>
+                            <li>
+                                <strong>Cons</strong>
+                                <ul>
+                                    <li> While the ability to be modular means you can get whatever you want, the effort put into configuration could mean a lot of wasted time to get functionality to where it needs to be. </li>
+                                    <li> Efficiency also takes a hit in terms of out of the box configuration versus other frameworks. While this certainly can be fixed by dropping packages and adopting more efficient routing methods, other frameworks are much more efficient out of the box.</li>
+                                    <li>
+                                        <strong>Configuration effort:</strong> Gorilla requires more time and effort to configure modular components.
+                                        <br>
+                                        <strong> Performance:</strong> There’s a marked decrease in performance between out of the box Gorilla and other out of the box more “lean” solutions. This can of course be changed, but many developers creating a new API will first use Gorilla out of the box as a base, making it a serious consideration.
+                                    </li>
+                                </ul>
+                            </li>
+                        </b>
+                    </ul>
+
+                    <center>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/DD3JlT_u0DM?start=50" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </center>
+                
+                
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+
+                    <h4><a href="https://github.com/zenazn/goji">6. Goji</a></h4>
+                    <center>
+                        <img src="Img/Goji.png" alt="" width="860" height="260" class="aligncenter size-full wp-image-6797">
+                    </center>
+
+                    <ul class="lead">
+                        <b>
+                            <li>
+                                Goji is a lightweight and fast web framework that has composability and simplicity as its main priority.
+                            </li>
+                            <li>Much like net/http.ServeMux, Goji is a minimalistic HTTP request multiplexer. It includes Einhorn support, which makes it possible for you to have websocket support in Goji.</li>
+                            <li>Additional features include URL patterns, re-configurable middleware stack, graceful shutdown, and more. Goji can be used in production and has served billions of requests across several organizations.</li>
+                            <li>
+                                <strong>Pros</strong>
+                                <br>
+                                <ul>
+                                    <li>
+                                        Like Web.go, Goji is essentially a layer over the Go language. This means that it’s a framework through abstraction, and is perhaps the smallest implementation possible. This lightweight and efficient processing makes it a good starting point for lean APIs.
+                                    </li>
+                                    <li>
+                                        Of note is that Goji comes integrated with Einhorn, a language agnostic socket manager that provides automatic, out of the box websocket support. As with Gorilla, this is hugely beneficial, and not a feature that would typically be assumed of such a small, lightweight framework.
+                                    </li>
+                                    <li>These two elements make Goji a great choice for lightweight, fast, efficient, low-resource APIs that need to get a lot done with relatively low resources available.
+                                    </li>
+                                    <li>
+                                        <strong>Very Thin:</strong>Essentially an abstraction layer – very minimal in size, and so extremely lightweight and efficient.
+                                        <br>
+                                        <strong>Einhorn:</strong>Integrates with Einhorn, a language agnostic socket manager that provides out of the box websocket support.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>Cons</strong>
+                                <br>
+                                <ul>
+                                    <li>
+                                        As with other lean implementations, unfortunately, there’s not much that Goji does that Go does not. Because of this, it’s very much a consideration between effort put forth to implement and the reward in terms of feature set.
+                                    </li>
+                                    <li>
+                                        You can get much more for less effort with other implementations out of the box. That being said, the main draw here is websockets – and that might be enough to make this con a non-issue given certain implementation requirements.
+                                    </li>
+                                    <li>
+                                        <strong>Limited:</strong> Essentially an abstraction layer – it doesn’t do anything that Go doesn’t already do.
+                                    </li>
+                                </ul>
+                            </li>
+                        </b>
+                    </ul>
+
+
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+                    <h4><a href="https://beego.me/">7. Beego</a></h4>
+                    <center>
+                        <img src="http://19yw4b240vb03ws8qm25h366-wpengine.netdna-ssl.com/wp-content/uploads/beego-219x300.png" alt="" width="171" height="266" class="aligncenter size-full wp-image-6797">
+                    </center>
+
+                    <ul class="lead">
+                        <b>
+                            <li>
+                                beego is an open-source, high-performance web framework for the Go programming language.
+                            </li>
+                            <li>
+                                Bee is a tool for helping develop with beego app framework.
+                            </li>
+                            <li>
+                                <strong>Pros</strong>
+                                <br>
+                                <ul>
+                                    <li>Rounding out our selections for this piece, Beego is a fully featured framework that owes much of its development conceptualization and approach to Revel. While Beego is relatively lean for what it does, it is a “batteries included” framework, offering quite a wide feature set for what ultimately is not a big code base.</li>
+                                    <li>Part of this functionality is the awesome “Bee tool”, a tool that checks for automated changes to the codebase and performs automated functions dependent on those changes. Bee tool can be configured to automatically build new revisions, archive function changes, etc.</li>
+                                    <li>Great functionality doesn’t stop there, either. Beego has a great ORM system in place that allows for modeling relations and resources in a highly effective manner. This ultimately means faster processing and better traffic routing, which is always a welcome feature.</li>
+                                    <li>
+                                        <strong>Full Featured:</strong> Just like Revel, Beego is more fully featured, and packs a lot into a relatively lean (for what it does) framework.
+                                        <br>
+                                        <strong>Bee Tool:</strong> “Bee tool” checks for automatic changes to the codebase, and is configurable to what it does. You can push a build with every change, have certain build archiving functions, etc.
+                                        <br>* Solid built-in ORM for application database organization.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                            <Strong>Cons</Strong>
+                            <br>
+                            <ul>
+                            <li>
+                            Beego is relatively lean, which is good – from the ground up, the framework was designed to have a great amount of functionality without much overhead. Unfortunately, this design concept has some unintended consequences when it comes to page caching.
+                            </li>
+                            <li>Beego caches content and pages in an effort to make for better user experience and decreasing the overhead that would otherwise be generated with constantly creating new representations and pages. While this is great for user experience, it does lead to silent build failure. </li>
+                            <li>Bee tool is great for versioning, but if a failed build is pushed, this is often transparent to both the user and developer by designing, meaning that, until a cache expires, your API may be rejecting an incredible amount of useful and valid traffic but presenting out of date data.</li>
+                            <li>Beego is also rather immature. Because of this, its community is very small, meaning both third party plugins and extensions as well as documentation and knowledge base articles are sparse.</li>
+                            <li> Beego, especially compared to some more lean implementations, is incredibly verbose, and promotes a sort of “chattiness” at the API level. This can be harmful to the health of related systems and in the efficacy of data delivery – while it can be negated using muting and batch processing, it’s still something that requires yet more overhead to solve.</li>
+                            <li>
+                            <strong>Caching:</strong>  Beego caches previous versions of pages, which is fine for user experience, but it can lead to silent build failure.
+                            <br>
+                            <strong>Chatty as a busy bee:</strong> Extremely verbose, especially compared to more lean frameworks.
+                            <br>
+                            <strong>No Community:</strong> Very immature – lacks the kind of community Revel revels in.
+                            </li>
+                            </ul>
+                            </li>
+                        </b>
+                    </ul>
+
+                    <center>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-WqrOptT1Tw?start=50" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </center>
+
+
+                    <!-- ************************************************************************************** -->
+
+                    <hr class="separate" style="border-top: 3px solid #fff">
+
+
+                    <p class="lead"><b><a href="#content" style="font-size:35px;color:white;text-decoration:none"><i>go to top</i></a></b></p>
+
+                    <hr class="separate" style="border-top: 3px solid #fff">
+
+                    <!-- ************************************************************************************** -->
+
+                </div>
+            </div>
+
+        </div>
+        <!-- End demo content -->
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+
+        <script>
+            $(function() {
+                // Sidebar toggle behavior
+                $('#sidebarCollapse').on('click', function() {
+                    $('#sidebar, #content').toggleClass('active');
+                });
+            });
+        </script>
+
+    </body>
+
+    </html>
+
+<?html } ?>

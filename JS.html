@@ -1,0 +1,615 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+
+        <title>
+            Javascript
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    </head>
+
+    <style>
+        .vertical-nav {
+            min-width: 17rem;
+            width: 17rem;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s;
+        }
+
+        .page-content {
+            width: calc(100% - 17rem);
+            margin-left: 17rem;
+            transition: all 0.4s;
+        }
+
+        /* for toggle behavior */
+
+        #sidebar.active {
+            margin-left: -17rem;
+        }
+
+        #content.active {
+            width: 100%;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            #sidebar {
+                margin-left: -17rem;
+            }
+
+            #sidebar.active {
+                margin-left: 0;
+            }
+
+            #content {
+                width: 100%;
+                margin: 0;
+            }
+
+            #content.active {
+                margin-left: 17rem;
+                width: calc(100% - 17rem);
+            }
+        }
+
+        body {
+            background: #599fd9;
+            background: -webkit-linear-gradient(to right, #599fd9, #c2e59c);
+            background: linear-gradient(to right, #599fd9, #c2e59c);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .separator {
+            margin: 3rem 0;
+            border-bottom: 1px dashed #fff;
+        }
+
+        .text-uppercase {
+            letter-spacing: 0.1em;
+        }
+
+        .text-gray {
+            color: #525252;
+        }
+    </style>
+
+    <body>
+
+        <!-- Vertical navbar -->
+        <div class="vertical-nav " id="sidebar">
+            <!-- bg-white -->
+            <div class="py-4 px-3 mb-4 ">
+                <!-- bg-white -->
+                <div class="media d-flex align-items-center"><img src="Img/JS.png" alt="..." width="70" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+
+              <div class="media-body">
+                    <h4 class="m-0" style="font-size:20px"><i></i></h4>
+                    <p class="font-weight text-dark mb-0"><i>
+                            
+                        </i></p>
+                </div>
+                 </div> 
+            </div>
+
+            <div class="separator"></div>
+            <!--         <hr class="solid" style="border-top: 3px solid #bbb"> -->
+            <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0" style="font-weight:bold">Index</p>
+
+            <ul class="nav flex-column  mb-0" style="font-weight:bold">
+                <!-- bg-white -->
+                <li class="nav-item">
+                    <a href="#j" class="nav-link text-dark font-italic ">
+                        <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                        Introduction
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#JSJ" class="nav-link text-dark font-italic">
+                        <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                        Comparison between &nbsp;&nbsp;&nbsp;&nbsp;Javascript and Java
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#adojs" class="nav-link text-dark font-italic">
+                        <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                        Advantages and &nbsp;&nbsp;&nbsp;&nbsp;Disadvantages of Javascript
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#GJS" class="nav-link text-dark font-italic">
+                        <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                        Getting started with &nbsp;&nbsp;&nbsp;&nbsp;Javascript
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#aj" class="nav-link text-dark font-italic">
+                        <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                        Applications of JavaScript
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#jl" class="nav-link text-dark font-italic">
+                        <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                        JavaScript Libraries
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="JS_1.html" class="nav-link text-dark font-italic">
+                        <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                        JavaScript Frameworks
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link text-dark font-italic">
+                        <i class="fa fa-line-chart mr-3 text-primary fa-fw"></i>
+                        <-BACK TO HOME</a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- End vertical navbar -->
+
+
+        <!-- Page content holder -->
+        <div class="page-content p-5" id="content">
+            <!-- Toggle button -->
+            <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">MENU</small></button>
+
+            <!-- Demo content -->
+            <h2 class="display-4 text-white">Javascript</h2>
+            <p class="lead text-white mb-0"> <i>Designed by Brendan Eich initially, plus other key contributors to the ECMAScript specification (4 DEC 1995)</i></p>
+
+            <div class="separator" id="ja"></div>
+
+            <div class="row text-white-bold">
+                <div class="col-lg-12">
+                    <h1 class="text-dark" style="font-weight:600" id="j">Introduction</h1><br>
+                    <h3 class="lead" style="font-size:35px">
+                        <b> What is Javascript ?</b>
+                    </h3>
+                    <div class="lead">
+                        <b>
+                            <p>JavaScript is a cross-platform, object-oriented scripting language used to make webpages interactive (e.g., having complex animations, clickable buttons, popup menus, etc.).&nbsp;&nbsp;There are also more advanced server side versions of JavaScript such as Node.js, which allow you to add&nbsp;more functionality to a website than downloading files (such as realtime collaboration between multiple computers).&nbsp;Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.</p>
+
+                            <p>JavaScript contains a standard library of objects, such as <code>Array</code>, <code>Date</code>, and <code>Math</code>, and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:</p>
+
+                            <ul>
+                                <li><em>Client-side JavaScript</em> extends the core language by supplying objects to control a browser and its <em>Document Object Model</em> (DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as mouse clicks, form input, and page navigation.</li>
+                                <li><em>Server-side JavaScript</em> extends the core language by supplying objects relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation to another of the application, or perform file manipulations on a server.</li>
+                            </ul>
+
+                            <p>This means that in the browser, JavaScript can change the way the webpage (DOM) looks. And, likewise, Node.js JavaScript on the server can respond to custom requests from code written in the browser.</p>
+                        </b>
+                    </div>
+
+                    <h3 class="lead" style="font-size:35px">
+                        <b> Java Vs Javascript</b>
+                    </h3>
+
+                    <div class="lead">
+                        <b>
+                            <p>JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it was renamed from LiveScript to JavaScript.</p>
+
+                            <p>In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.</p>
+
+                            <p>JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes, and methods. You do not have to be concerned with whether methods are public, private, or protected, and you do not have to implement interfaces. Variables, parameters, and function return types are not explicitly typed.</p>
+
+                            <p>Java is a class-based programming language designed for fast execution and type safety. Type safety means, for instance, that you can't cast a Java integer into an object reference or access private memory by corrupting Java bytecodes. Java's class-based model means that programs consist exclusively of classes and their methods. Java's class inheritance and strong typing generally require tightly coupled object hierarchies. These requirements make Java programming more complex than JavaScript programming.</p>
+
+                            <p>In contrast, JavaScript descends in spirit from a line of smaller, dynamically typed languages such as HyperTalk and dBASE. These scripting languages offer programming tools to a much wider audience because of their easier syntax, specialized built-in functionality, and minimal requirements for object creation.</p>
+
+                            <table id="JSJ" class="standard-table" style="border:2px solid white">
+                                <h5>JavaScript compared to Java</h5>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">JavaScript</th>
+                                        <th scope="col">Java</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Object-oriented. No distinction between types of objects. Inheritance is through the prototype mechanism, and properties and methods can be added to any object dynamically.</td>
+                                        <td>Class-based. Objects are divided into classes and instances with all inheritance through the class hierarchy. Classes and instances cannot have properties or methods added dynamically.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Variable data types are not declared (dynamic typing, loosely typed).</td>
+                                        <td>Variable data types must be declared (static typing, strongly typed).</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cannot automatically write to hard disk.</td>
+                                        <td>Can automatically write to hard disk.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br>
+                            <p>For more information on the differences between JavaScript and Java, see the chapter <a href="/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model">Details of the object model</a>.</p>
+                        </b>
+                    </div>
+
+                    <div id="adojs">
+                        <h3> Advantages and Disadvantages of Javascript</h3>
+                        <h4>Aadvantages:</h4>
+                        <ul class="lead">
+                            <li>Speed. Client-side JavaScript is very fast because it can be run immediately within the client-side browser. Unless outside resources are required, JavaScript is unhindered by network calls to a backend server.</li>
+                            <li>Simplicity. JavaScript is relatively simple to learn and implement.</li>
+                            <li>Popularity. JavaScript is used everywhere on the web.</li>
+                            <li>Interoperability. JavaScript plays nicely with other languages and can be used in a huge variety of applications.</li>
+                            <li>Server Load. Being client-side reduces the demand on the website server.</li>
+                            <li>Gives the ability to create rich interfaces.</li>
+                        </ul>
+
+                        <h4>Disadvantages:</h4>
+                        <ul class="lead">
+                            <li>Client-Side Security. Because the code executes on the users’ computer, in some cases it can be exploited for malicious purposes. This is one reason some people choose to disable Javascript.</li>
+                            <li>Browser Support. JavaScript is sometimes interpreted differently by different browsers. This makes it somewhat difficult to write cross-browser code.</li>
+                            <li>The main problem or disadvantage in JavaScript is that the code is always visible to everyone anyone can view JavaScript code.</li>
+                            <li>No matter what proportion fast JavaScript interpret, JavaScript DOM (Document Object Model) is slow and can be a never fast rendering with HTML.</li>
+                            <li>JavaScript is usually interpreted differently by different browsers. This makes it somewhat complex to read and write cross-browser code</li>
+                            <li> This continuous conversions takes longer in conversion of number to an integer. This increases the time needed to run the script and reduces its speed.</li>
+                        </ul>
+                    </div>
+
+                    <h3 id="GJS">Getting started with JavaScript</h3>
+                    <div class="lead">
+                        <b>
+                            <p>Getting started with JavaScript is easy: all you need is a modern Web browser. This guide includes some JavaScript features which are only currently available in the latest versions of Firefox, so using the most recent version of Firefox is recommended.</p>
+
+                            <p>The <em>Web Console</em> tool built into Firefox is useful for experimenting with JavaScript; you can use it into two modes: single-line input mode, and multi-line input mode.</p>
+                        </b>
+                    </div>
+                    <h4>Single-line input in the Web Console</h4>
+
+                    <div class="lead">
+                        <b>
+                            <p>The <a href="/en-US/docs/Tools/Web_Console">Web Console</a> shows you information about the currently loaded Web page, and also includes a JavaScript interpreter that you can use to execute JavaScript expressions in the current page.</p>
+
+                            <p>To open the Web Console (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> on Windows and Linux or <kbd>Cmd</kbd>-<kbd>Option</kbd>-<kbd>K</kbd> on Mac), open the <strong>Tools</strong> menu in Firefox, and select "<strong>Developer ▶ Web Console</strong>".&nbsp;</p>
+
+                            <p>The Web Console appears at the bottom of the browser window. Along the bottom of the console is an input line that you can use to enter JavaScript, and the output appears in the panel above:</p>
+
+                            <p><img alt="" src="https://mdn.mozillademos.org/files/16569/2019-04-04_00-15-29.png" width="600px" height="500px" loading="lazy"></p>
+
+                            <p>The console works the exact same way as <code>eval</code>: the last expression entered is returned. For the sake of simplicity, it can be imagined that every time something is entered into the console, it is actually surrounded by <code>console.log</code> around <code>eval</code>, like so:</p>
+
+
+                            <pre class="code shadow p-3 mb-5  bg-white rounded brush: js notranslate"><code><span class="token keyword">function</span> <span class="token function">greetMe</span><span class="token punctuation">(</span><span class="token parameter">yourName</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"Hello "</span> <span class="token operator">+</span> yourName<span class="token punctuation">)</span>
+                    <span class="token punctuation">}</span>
+                    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">eval</span><span class="token punctuation">(</span><span class="token string">'3 + 5'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                    </code>
+                    </pre>
+                        </b>
+                    </div>
+
+                    <h4>Multi-line input in the web console</h4>
+
+                    <div class="lead"><b>
+                            <p>The single-line input mode of the Web Console is great for quick testing of JavaScript expressions, but although you can execute multiple lines, it's not very convenient for that. For more complex JavaScript, you can use the <a href="/en-US/docs/Tools/Web_Console/The_command_line_interpreter#multi-line_mode">multi-line line input mode</a>.</p>
+                        </b>
+                    </div>
+
+                    <h4>
+                        Hello World
+                    </h4>
+
+                    <div>
+                        <p class="lead"><b>To get started with writing JavaScript, open the Web Console in multi-line mode, and write your first "Hello world" JavaScript code:</p>
+
+                        <pre class=" code shadow p-3 mb-5  bg-white rounded brush: js notranslate"><code><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token string">"use strict"</span><span class="token punctuation">;</span>
+  <span class="token comment">/* Start of your code */</span>
+  <span class="token keyword">function</span> <span class="token function">greetMe</span><span class="token punctuation">(</span><span class="token parameter">yourName</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'Hello '</span> <span class="token operator">+</span> yourName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">greetMe</span><span class="token punctuation">(</span><span class="token string">'World'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">/* End of your code */</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+
+                        <p class="lead"><b>Press <kbd>Cmd</kbd>+<kbd>Enter</kbd> or <kbd>Ctrl</kbd>+<kbd>Enter</kbd> (or click the <strong>Run</strong> button) to watch it unfold in your browser!</b></p>
+
+                        <p class="lead"><b>In the following pages, this guide introduces you to the JavaScript syntax and language features, so that you will be able to write more complex applications.</b></p>
+
+                        <p class="lead"><b>But&nbsp;for now, remember to always include the&nbsp;<code>(function(){"use strict";</code>&nbsp;before your code, and add&nbsp;<code>})();</code>&nbsp;to the end of your code. The <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a> and <a href="/en-US/docs/Glossary/IIFE">IIFE</a> articles explain what those do, but for now they can be thought of as doing the following:</b></p>
+                        <b>
+                            <ol class="lead"> <b>
+                                    <li>Prevent semantics in JavaScript that trip up beginners.</li>
+                                    <li>Prevent&nbsp;code snippets executed in the console from interacting with one-another (e.g., having something created in one console execution being used for a different console execution).</li>
+                                </b>
+                            </ol>
+                    </div>
+                    <hr class="separate" style="border-top: 3px solid #fff">
+
+                    <h3 id="aj">JavaScript Applications </h3>
+
+                    <div class="lead"> <b>
+                            <p><strong><a href="https://data-flair.training/blogs/javascript-tutorial/">JavaScript is the widely used programming language</a></strong>, all over the world. It has the largest open-source package repository in the world (npm). Every type of software uses JavaScript, including the server code (Node.js), productivity apps, 3D games, robots, <strong><a href="https://data-flair.training/blogs/iot-devices/">IoT devices</a></strong>. JavaScript has achieved the goal, set by Java a long time ago: write once, run anywhere. There are various JavaScript uses in different segments, let’s discuss them one by one.</p>
+
+                            <h2>Common Uses of&nbsp;JavaScript</h2>
+                            <p>JavaScript is mainly used in the following:</p>
+                            <h3>1. Websites</h3>
+                            <p>JavaScript lets you add <strong>behavior</strong> to the web page where the page responds to actions without loading a new page to request processing. It enables the website to interact with visitors and execute complex actions.</p>
+                            <h3>2. Web Applications</h3>
+                            <p>As browsers and personal computers have continued to improve, JavaScript gained the ability to create robust web applications. Consider applications like Google Maps. If you want to explore a map in Google Maps, all you have to do is click and drag with the mouse. You will see the part of the map that is less detailed and then fills itself in. That’s the work of JavaScript behind the scene.</p>
+                            <h3> 3. Presentations</h3>
+                            <p>A very popular use of JavaScript is to create presentations as websites. Using the Reveal.js framework, this becomes really easy if you are familiar with HTML and CSS.</p>
+                            <h3> 4. Server Applications</h3>
+                            <p>With the advent of Node.js a few years ago, JavaScript made its way from the browser into the server. Since then Node is adopted by major companies such as Wal-Mart, as a key part of back end infrastructure.</p>
+                            <h3> 5. Web Servers</h3>
+                            <p>You can create much more robust servers using Node or the standard server application framework Express.js. Many of the previously mentioned Nodes&nbsp;are actually built using MEAN stack (Mongo Express Angular Node) of which Express is the key component.</p>
+                            <h3> 6. Games</h3>
+                            <p>While the browser hasn’t been the traditional games platform in the past, recently it has become robust for games. Additionally, with the addition of HTML5 canvas, the level of complexity that is possible in the browser-based games has increased exponentially. There are even browser games that teach us programming.</p>
+                            <h3> 7. Art</h3>
+                            <p>One of the new features of HTML5 specification is the canvas element, which allows the browser to render three-dimensional spaces. This helps to open the browser as a new source for digital art projects.</p>
+                            <h3> 8. Smartwatch Apps</h3>
+                            <p>Popular smartwatch maker Pebble has created Pebble.js, a small JavaScript framework that allows a developer to create an application for the Pebble watches in JavaScript.</p>
+
+                            <h3 class="fittexted_for_content_h3" style="font-size: 22.5px;">9. Mobile Apps</h3>
+                            <p>One of the most powerful things you can do with JavaScript is to build an application for non-web contexts.<br>
+                                That’s the other way of saying that you can make apps for things that are aren’t on&nbsp;the internet.</p>
+                            <p><strong>For example</strong> – Mobile devices are now the most popular way to access the internet. What this means is all of the websites should be responsive. The catch is that the mobile app comes in two major applications, Apple and <strong><a href="https://data-flair.training/blogs/android-tutorial/">Android</a></strong>. And those applications are written in completely different languages.</p>
+                            <h3 class="fittexted_for_content_h3" style="font-size: 22.5px;">10. Flying Robots</h3>
+                            <p>Yes, you read that right. Several commercially available quadcopters, some outfitted with a simple OS, make it possible to install Node.js. This means that you can program a flying robot with JavaScript. JavaScript is the most accessible programming language on this planet, having many features. So, it’s good to see that it is creating such a wide range of applications.</p>
+                            <p><a href="https://data-flair.training/blogs/features-of-javascript/"><strong>Explore the various features of JavaScript.</strong></a></p>
+                            <h2 class="fittexted_for_content_h2" style="font-size: 24.38px;">Importance of JavaScript in Web Designing</h2>
+                            <p>There are different web designing and practical uses of JavaScript:</p>
+                            <h3 class="fittexted_for_content_h3" style="font-size: 22.5px;">1. Improvement in Web Interface</h3>
+                            <p>In these days, what we are doing with JavaScript is we enhance the old, tired and true web interface – clicking links, entering information and sending off, etc – to be more responsive to the end-user.</p>
+                            <p><strong>For example</strong> – A sign-up form can check if your name is available when you enter it, preventing you from having to endure a frustrating reload of the page.</p>
+
+                            <h3 class="fittexted_for_content_h3" style="font-size: 22.5px;">2. Word Suggestion in Search Box</h3>
+                            <p>A search box can give you suggested results when you type, based on what has been entered so far.</p>
+                            <p><strong>For example</strong> – “bi”, could bring up suggestions to choose from that contain the string such as “bird”, “big”, and “bicycle”. This usage pattern is called Autocomplete.</p>
+                            <h3 class="fittexted_for_content_h3" style="font-size: 22.5px;">3. Instant Update of Information</h3>
+                            <p>Information that changes constantly can load periodically without the need for user interactions.</p>
+                            <p><strong>For example</strong> – Sports match results or stock market tickers.</p>
+                            <h3 class="fittexted_for_content_h3" style="font-size: 22.5px;">4. Loading Information Only When User Choose</h3>
+                            <p>Information that is nice to have and runs the risk of being redundant to some users can be loaded when and if the user chooses to access it.</p>
+                            <p><strong>For example</strong> – The navigation menu of a site can contain 6 links but display links to deeper pages on demand when the user activates a menu item.</p>
+                            <p><strong><a href="https://data-flair.training/blogs/javascript-syntax/">Don’t forget to check JavaScript Syntax&nbsp;</a></strong></p>
+                            <h3 class="fittexted_for_content_h3" style="font-size: 22.5px;">5. Fixing Layout Issues</h3>
+                            <p>It can find the position and area of the element on the particular page and the dimensions of the browser window. By implementing this information you can stop overlapping elements and other similar issues.</p>
+                            <p><strong>For example</strong> – You may have a menu with several levels by clicking and checking if there is space for the submenu to appear before showing it, you can prevent scroll bars or overlapping menu items.</p>
+                            <h3 class="fittexted_for_content_h3" style="font-size: 22.5px;">6. Enhancing HTML Interface</h3>
+                            <p>JavaScript can enhance the interfaces that HTML gives us. While it’s nice to&nbsp;have a text input box, you might want to have a combo box allowing you to choose from a list to preset values or enter your own. You can enhance a normal input box to do that, using JavaScript.</p>
+                            <h3 class="fittexted_for_content_h3" style="font-size: 22.5px;">7. Animation of Page Elements</h3>
+                            <p>JavaScript helps to animate elements on a page to show and hide information or highlight specific sections of a page and make it more usable and richer user experience.</p>
+
+                        </b>
+                    </div>
+                    <hr class="separate" style="border-top: 3px solid #fff">
+
+                    <h1>Javascript Libraries</h1>
+                    <div class="lead" style=" font-weight:bold">
+                        <br>
+
+                        <p class="lead">
+                            <b>
+                                10 best Javascript libraries
+                            </b>
+                        </p>
+                        <h3><a href="https://leafletjs.com/" style="color:black">Leaflet</a></h3>
+                        <figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://www.freecodecamp.org/news/content/images/2020/07/image-17.png" width="600px" height="300px" class="kg-image" alt=""></figure>
+
+                        <p class="lead"><b>I think Leaflet is the best open source library for adding mobile-friendly interactive maps to your application.<br>
+                                Its small size (39kB) makes it a great alternative to consider over other map libraries. With cross-platform efficiency and a well-documented API, it has everything you need to make you fall in love.<br>
+                                Here is some sample code that creates a Leaflet map:</b></p>
+                        <pre class="code shadow p-3 mb-5  bg-white rounded"><code>var map = new L.Map("map", {
+    center: new L.LatLng(40.7401, -73.9891),
+    zoom: 12,
+    layers: new L.TileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png")
+});</code></pre>
+
+                        <p class="lead"><b>In Leaflet, we need to provide a tile layer since there isn't one by default. But that also means that can choose from a wide range of layers both free and premium. You can explore various free tile layers <a href="https://leaflet-extras.github.io/leaflet-providers/preview/">here</a>.</b></p>
+                        <p class="lead"><b>Read the <a href="https://leafletjs.com/reference-1.6.0.html">Docs</a> or follow the <a href="https://leafletjs.com/examples.html">Tutorials</a> to learn more.</b></p>
+
+                        <hr class="separate" style="border-top:2px solid  #fff">
+
+                        <h3><a href="https://alvarotrigo.com/fullPage/" style="color:black">fullPage.js</a></h3>
+                        <figure class="kg-card kg-image-card"><img src="https://www.freecodecamp.org/news/content/images/2020/07/ezgif.com-video-to-gif-1--1.gif" class="kg-image" width="600px" height="300px" alt=""></figure>
+                        <p class="lead" style="font-weight:bold">This open-source library helps you create full-screen scrolling websites as you can see in the above GIF. It's easy to use and has many options to customize, so it's no surprise it is used by thousands of developers and has over 30k stars on GitHub.
+                        </p>
+                        <p>Here is a Codepen demo that you can play with:</p>
+                        <figure class="kg-card kg-embed-card"><iframe id="cp_embed_WNrLvLG" src="https://codepen.io/lelouchb/embed/preview/WNrLvLG?height=300&amp;slug-hash=WNrLvLG&amp;default-tabs=html,result&amp;host=https://codepen.io" title="fullPage.js - Base example" scrolling="no" frameborder="0" height="300" allowtransparency="true" class="cp_embed_iframe" style="width: 100%; overflow: hidden;"></iframe></figure>
+                        <p>You can even use it with popular frameworks such as:</p>
+                        <ul>
+                            <li><a href="https://alvarotrigo.com/react-fullpage/">react-fullpage</a></li>
+                            <li><a href="https://alvarotrigo.com/vue-fullpage/">vue-fullpage</a></li>
+                            <li><a href="https://alvarotrigo.com/angular-fullpage/">angular-fullpage</a></li>
+                        </ul>
+                        <p class="lead">
+                            <b>I came across this library about a year ago and since
+                                then it has become one of my favorites. This is one of the few libraries
+                                that you can use in almost every project. If you haven't already
+                                started using it then just try it, you will not be disappointed.
+                            </b>
+                        </p>
+
+                        <hr class="separate" style="border-top: 2px solid #fff">
+
+                        <h3><a style="color:black" href="https://animejs.com/" rel="noreferrer nofollow noopener">anime.js</a></h3>
+                        <figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://www.freecodecamp.org/news/content/images/2020/07/anime.gif" class="kg-image" alt="">
+                        </figure>
+                        <p><br>One of the best animation libraries out there, Anime.js is flexible and simple to use. It is the perfect tool to help you add some really cool animation to your project.</p>
+                        <p>Anime.js works well with CSS properties, SVG, DOM attributes, and JavaScript Objects and can be easily integrated into your applications. </p>
+                        <p>As a developer it's important to have a good portfolio. The first impression people have of your portfolio helps decide whether they will hire you or not. And what better tool than this library to bring life to your portfolio. It will not only enhance your website but will help showcase actual skills.</p>
+                        <p>Check out this Codepen to learn more:</p>
+                        <figure class="kg-card kg-embed-card"><iframe id="cp_embed_XWXoboE" src="https://codepen.io/lelouchb/embed/preview/XWXoboE?height=300&amp;slug-hash=XWXoboE&amp;default-tabs=js,result&amp;host=https://codepen.io" title="anime.js advanced staggering demo" scrolling="no" frameborder="0" height="300" allowtransparency="true" class="cp_embed_iframe" style="width: 100%; overflow: hidden;"></iframe></figure>
+                        <p>You can also take a look at all the other cool projects on <a href="https://codepen.io/collection/XLebem">Codepen</a> or<a href="https://codepen.io/collection/XLebem"> </a><a href="https://animejs.com/documentation/">Read the Docs here</a>.</p>
+
+                        <hr class="separate" style="border-top: 2px solid #fff">
+
+                        <h3><a style="color:black" href="https://github.com/sindresorhus/screenfull.js">Screenfull.js</a></h3>
+                        <figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://www.freecodecamp.org/news/content/images/2020/07/image-29.png" class="kg-image" alt="">
+
+                        </figure>
+                        <p>I came across this library while searching for a way to implement a full-screen feature in my project. </p>
+                        <p>If you also want to have a full-screen feature, I would recommend using this library instead of <a href="https://developer.mozilla.org/en/DOM/Using_full-screen_mode">Fullscreen API</a> because of its cross-browser efficiency (although it is built on top of that). </p>
+                        <p>It is so small that you won't even notice it – just about 0.7kB gzipped.</p>
+                        <p>Try the <a href="https://sindresorhus.com/screenfull.js">Demo </a>or read the <a href="https://github.com/sindresorhus/screenfull.js">Docs</a> to learn more.</p>
+
+
+                        <hr class="separate" style="border-top: 2px solid #fff">
+
+                        <h3><a style="color:black" href="https://momentjs.com/">Moment.js</a></h3>
+                        <figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://www.freecodecamp.org/news/content/images/2020/07/image-18.png" class="kg-image" width="100px" height="100px" alt="">
+                        </figure>
+                        <p class="lead"><b>Working with date and time can be a huge pain, especially with API calls, different Time Zones, local languages, and so on. Moment.js can help you solve all those issues whether it is manipulating, validating, parsing, or formatting dates or time.<br>
+                                There are so many cool methods that are really useful for your projects. For example, I used the <code>.fromNow()</code> method in one of my blog projects to show the time the article was published. </b></p>
+                        <pre class="code shadow p-3 mb-5  bg-white rounded"><code class=" language-javascript"><span class="token keyword">const</span> moment <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'moment'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+relativeTimeOfPost <span class="token operator">=</span> <span class="token function">moment</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2019</span><span class="token punctuation">,</span> <span class="token number">07</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fromNow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token comment">// a year ago</span>
+
+</code></pre>
+                        <p class="lead"><b>Although I don't use it very often, I am a fan of its support for internationalization. For example, we can customize the above result using the <code>.locale()</code> method. </b></p>
+                        <pre class="code shadow p-3 mb-5  bg-white rounded"><code class=" language-javascript"><span class="token comment">// French</span>
+moment<span class="token punctuation">.</span><span class="token function">locale</span><span class="token punctuation">(</span><span class="token string">'fr'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+relativeTimeOfPostInFrench <span class="token operator">=</span> <span class="token function">moment</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2019</span><span class="token punctuation">,</span> <span class="token number">07</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fromNow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token comment">//il y a un an</span>
+
+<span class="token comment">// Spanish</span>
+moment<span class="token punctuation">.</span><span class="token function">locale</span><span class="token punctuation">(</span><span class="token string">'es'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+relativeTimeOfPostInSpanish <span class="token operator">=</span> <span class="token function">moment</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2019</span><span class="token punctuation">,</span> <span class="token number">07</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fromNow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token comment">//hace un año</span></code></pre>
+                        <figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://www.freecodecamp.org/news/content/images/2020/07/ezgif.com-video-to-gif.gif" class="kg-image" alt="">
+                        </figure>
+                        <p class="lead"><b>Read the <a href="https://momentjs.com/">Docs here</a>.</b></p>
+                        <p class="lead"><b><strong>Update September 2020:</strong> Moment.js has entered maintenance mode. Read more about it <a href="https://momentjs.com/docs/#/-project-status/">here</a>. You may want to explore alternatives such as <a href="https://day.js.org/">Day.js</a> or <a href="https://date-fns.org/">date-fns</a>.</b></p>
+
+                        <hr class="separate" style="border-top: 2px solid  #fff">
+
+                        <h3><a style="color:black" href="http://hammerjs.github.io/">Hammer.js</a></h3>
+                        <figure class="kg-card kg-image-card"><img src="https://www.freecodecamp.org/news/content/images/2020/07/ezgif.com-video-to-gif-2.gif" class="kg-image" alt=""></figure>
+                        <p class="lead"><b>Hammer.js is a lightweight JavaScript library that lets you add multi-touch gestures to your Web Apps. </b></p>
+                        <p class="lead"><b>I would recommend this library to add some fun to your components. Here is an example to play with. Just run the pen and tap or click on the grey div.</b></p>
+                        <figure class="kg-card kg-embed-card"><iframe id="cp_embed_abdPOPj" src="https://codepen.io/lelouchb/embed/preview/abdPOPj?height=300&amp;slug-hash=abdPOPj&amp;default-tabs=js,result&amp;host=https://codepen.io" title="RecognizeWith Hammer.js example" scrolling="no" frameborder="0" height="300" allowtransparency="true" class="cp_embed_iframe" style="width: 100%; overflow: hidden;"></iframe></figure>
+                        <p class="lead"><b>It can recognize gestures made by touch, mouse and pointerEvents. For jQuery users I would recommend using the <a href="http://hammerjs.github.io/jquery-plugin/">jQuery plugin</a>.</b></p>
+                        <pre class="code shadow p-3 mb-5  bg-white rounded"><code>$(element).hammer(options).bind("pan", myPanHandler);</code></pre>
+                        <p>Read the <a href="http://hammerjs.github.io/getting-started/">Docs here</a>.</p>
+
+                        <hr class="separate" style="border-top: 2px solid #fff">
+
+                        <h3><a style="color:black" href="https://masonry.desandro.com/">Masonry</a></h3>
+                        <figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://www.freecodecamp.org/news/content/images/2020/07/image-20.png" class="kg-image" width="800px" height="500px" alt="">
+                        </figure>
+                        <p class="lead"><b>Masonry is a JavaScript grid layout library. It is super awesome and I use it for many of my projects. It can take your simple grid elements and place them based on the available vertical space, sort of like how contractors fit stones or blocks into a wall.<br>
+                                You can use this library to show your projects in a different light. Use it with cards, images, modals, and so on.<br>
+                                Here is a simple example to show you the magic in action. Well, not magic exactly, but how the layout changes when you <strong>zoom in </strong>on<strong> </strong>the web page.</b></p>
+                        <figure class="kg-card kg-image-card"><img src="https://www.freecodecamp.org/news/content/images/2020/07/ezgif.com-crop.gif" class="kg-image" alt=""></figure>
+                        <p style="font-weight:bold">And here is the code for the above:</p>
+                        <pre class="code shadow p-3 mb-5  bg-white rounded"><code>var elem = document.querySelector('.grid');
+var msnry = new Masonry( elem, {
+  itemSelector: '.grid-item',
+  columnWidth: 400
+});
+
+var msnry = new Masonry( '.grid');
+</code></pre>
+                        <p style="font-weight:bold">Here is a cool demo on Codepen:</p>
+                        <figure class="kg-card kg-embed-card"><iframe id="cp_embed_qBbLdLQ" src="https://codepen.io/lelouchb/embed/preview/qBbLdLQ?height=300&amp;slug-hash=qBbLdLQ&amp;default-tabs=html,result&amp;host=https://codepen.io" title="Masonry - imagesLoaded progress, vanilla JS" scrolling="no" frameborder="0" height="300" allowtransparency="true" class="cp_embed_iframe" style="width: 100%; overflow: hidden;"></iframe></figure>
+                        <p style="font-weight:bold">Check out these Projects </p>
+                        <ul>
+                            <li><a href="https://halcyon-theme.tumblr.com/">https://halcyon-theme.tumblr.com/</a></li>
+                            <li><a href="https://tympanus.net/Development/GridLoadingEffects/index.html">https://tympanus.net/Development/GridLoadingEffects/index.html</a></li>
+                            <li><a href="https://www.erikjo.com/work">https://www.erikjo.com/work</a></li>
+                        </ul>
+
+
+                        <hr class="separate" style="border-top: 2px solid #fff">
+
+
+                        <h3><a style="color:black" href="https://d3js.org/">D3.js</a></h3>
+                        <figure class="kg-card kg-image-card"><img src="https://www.freecodecamp.org/news/content/images/2020/07/image-30.png" class="kg-image" width="100px" height="100px" alt=""></figure>
+                        <p class="lead">
+                            <b>
+                                If you are a data-obsessed developer then this library is for you. I have yet to find a library that manipulates data as efficiently and beautifully as D3. With over 92k stars on GitHub, D3 is the favorite data visualization library of many developers.
+                                <br>
+                                I recently used D3 to visualize COVID-19 data with React and the <a href="https://github.com/CSSEGISandData/COVID-19">https://github.com/CSSEGISandData/COVID-19</a>It I was a really interesting project, and if you are thinking of doing something similar, I would suggest giving D3.js a try.
+                                <br>
+                                <br>
+                                Read more about it<a href="https://github.com/d3/d3/wiki"> Here.</a>
+                            </b>
+                        </p>
+
+                        <hr class="separate" style="border-top: 2px solid #fff">
+
+                        <h3><a style="color:black" href="https://kenwheeler.github.io/slick/">slick</a></h3>
+                        <figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://www.freecodecamp.org/news/content/images/2020/07/image-23.png" class="kg-image" width="600px" height="300px" alt="">
+                        </figure>
+                        <p class="lead"><b>Slick is fully responsive, swipe-enabled, infinite looping, and more. As mentioned on the homepage it truly is the last carousel you'll ever need.<br>
+                                I have been using this library for quite a while, and it has saved me so much time. With just a few lines of code, you can add so many features to your carousel.</b></p>
+                        <pre class="code shadow p-3 mb-5  bg-white rounded"><code class=" language-js"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.autoplay'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slick</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  slidesToShow<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+  slidesToScroll<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  autoplay<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  autoplaySpeed<span class="token punctuation">:</span> <span class="token number">2000</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+                        <figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://www.freecodecamp.org/news/content/images/2020/07/ezgif.com-video-to-gif-2-.gif" class="kg-image" alt="">
+
+                        </figure>
+                        <p style="font-weight:bold">Check out the demos <a href="https://kenwheeler.github.io/slick/">here</a>.</p>
+
+
+                        <hr class="separate" style="border-top: 2px solid  #fff">
+
+                        <h3><a style="color:black" href="https://popper.js.org/">Popper.js</a></h3>
+                        <figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://www.freecodecamp.org/news/content/images/2020/07/image-25.png" class="kg-image" width="600px" height="400px" alt="">
+                        </figure>
+                        <p class="lead"><b>Popper.js is a lightweight ~3 kB JavaScript library with zero dependencies that provides a reliable and extensible positioning engine you can use to ensure all your popper elements are positioned in the right place. <br>
+                                It may not seem important to spend time configuring popper elements, but these little things are what make you stand out as a developer. And with such small size it doesn't take up much space.<br>
+                                Read the <a href="https://popper.js.org/docs/v2/">Docs here</a>.</b></p>
+                    </div>
+
+
+
+
+
+
+
+
+
+                    <hr class="separate" style="border-top: 3px solid #fff">
+
+                    <!-- ************************************************************************************** -->
+                    <p class="lead"><b><a href="JS_1.html" style="font-size:35px;color:white;text-decoration:none"><i>Next--></i></a></b></p>
+                    <!-- ************************************************************************************** -->
+                    <hr class="separate" style="border-top: 3px solid #fff">
+
+
+                </div>
+            </div>
+
+        </div>
+        <!-- End demo content -->
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+
+        <script>
+            $(function() {
+                // Sidebar toggle behavior
+                $('#sidebarCollapse').on('click', function() {
+                    $('#sidebar, #content').toggleClass('active');
+                });
+            });
+        </script>
+
+    </body>
+
+    </html>
+

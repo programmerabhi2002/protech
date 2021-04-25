@@ -1,0 +1,672 @@
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+
+        <title>
+            R
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    </head>
+
+    <style>
+        .vertical-nav {
+            min-width: 17rem;
+            width: 17rem;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s;
+        }
+
+        .page-content {
+            width: calc(100% - 17rem);
+            margin-left: 17rem;
+            transition: all 0.4s;
+        }
+
+        /* for toggle behavior */
+
+        #sidebar.active {
+            margin-left: -17rem;
+        }
+
+        #content.active {
+            width: 100%;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            #sidebar {
+                margin-left: -17rem;
+            }
+
+            #sidebar.active {
+                margin-left: 0;
+            }
+
+            #content {
+                width: 100%;
+                margin: 0;
+            }
+
+            #content.active {
+                margin-left: 17rem;
+                width: calc(100% - 17rem);
+            }
+        }
+
+        body {
+            background: #599fd9;
+            background: -webkit-linear-gradient(to right, #599fd9, #c2e59c);
+            background: linear-gradient(to right, #599fd9, #c2e59c);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .separator {
+            margin: 3rem 0;
+            border-bottom: 1px dashed #fff;
+        }
+
+        .text-uppercase {
+            letter-spacing: 0.1em;
+        }
+
+        .text-gray {
+            color: #525252;
+        }
+    </style>
+
+    <body>
+
+        <!-- Vertical navbar -->
+        <div class="vertical-nav " id="sidebar">
+            <!-- bg-white -->
+            <div class="py-4 px-3 mb-4 ">
+                <!-- bg-white -->
+                <div class="media d-flex align-items-center"><img src="Img/R.png" alt="..." width="70" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+                <div class="media-body">
+                    <h4 class="m-0" style="font-size:20px"><i></i></h4>
+                    <p class="font-weight text-dark mb-0"><i>
+                            
+                        </i></p>
+                </div>
+
+             </div> 
+            </div>
+
+            <div class="separator"></div>
+            <!--         <hr class="solid" style="border-top: 3px solid #bbb"> -->
+            <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">Index</p>
+
+            <ul class="nav flex-column  mb-0" style="font-weight:bold">
+                <!-- bg-white -->
+                <li class="nav-item">
+                    <a href="#r" class="nav-link text-dark font-italic ">
+                        <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                        Introduction
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#rh" class="nav-link text-dark font-italic">
+                        <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                        History
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#drae" class="nav-link text-dark font-italic">
+                        <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                        Difference Between R and &nbsp;&nbsp;&nbsp;&nbsp;MS-&nbsp;Excel
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#dbrap" class="nav-link text-dark font-italic">
+                        <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                        Difference Between R and &nbsp;&nbsp;&nbsp;&nbsp;Python
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#re" class="nav-link text-dark font-italic">
+                        <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                        R Environment
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#ex" class="nav-link text-dark font-italic">
+                        <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                        Examples
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="R1.html" class="nav-link text-dark font-italic">
+                        <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                        R Libraries
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link text-dark font-italic">
+                        <i class="fa fa-line-chart mr-3 text-primary fa-fw"></i>
+                        <-BACK TO HOME</a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- End vertical navbar -->
+
+
+        <!-- Page content holder -->
+        <div class="page-content p-5" id="content">
+            <!-- Toggle button -->
+            <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">MENU</small></button>
+
+            <!-- Demo content -->
+            <h2 class="display-4 text-white">R</h2>
+            <p class="lead text-white mb-0"> <i>Designed by Ross Ihaka and Robert Gentleman (August 1993)</i></p>
+            <p class="lead text-white mb-0"> <i>Developed by R Core Team </i></p>
+
+            <div class="separator" id="ja"></div>
+
+            <!-- ************************************************************************************** -->
+            <div class="row text-white-bold">
+                <div class="col-lg-12" id="r">
+                    <h3 class="text-dark" style="font-weight:600" id="r">Introduction</h3><br>
+
+                    <h4> What is R ?</h4>
+                    <p class="lead">
+                        <b>
+                            R is a language and environment for statistical computing and graphics. It is a <a href="http://www.gnu.org/"> GNU project</a>which is similar to the S language and environment which was developed at Bell Laboratories (formerly AT&T, now Lucent Technologies) by John Chambers and colleagues. R can be considered as a different implementation of S. There are some important differences, but much code written for S runs unaltered under R.
+                            <br>
+                            R provides a wide variety of statistical (linear and nonlinear modelling, classical statistical tests, time-series analysis, classification, clustering, …) and graphical techniques, and is highly extensible. The S language is often the vehicle of choice for research in statistical methodology, and R provides an Open Source route to participation in that activity.
+                            <br>
+                            One of R’s strengths is the ease with which well-designed publication-quality plots can be produced, including mathematical symbols and formulae where needed. Great care has been taken over the defaults for the minor design choices in graphics, but the user retains full control.
+                            <br>
+
+                        </b>
+                    </p>
+                    <hr Id="rh" class="separate" style="border-top: 2px solid #fff">
+
+                    <h3> History</h3>
+                    <p class="lead">
+                        <b>
+                            <style>
+                                a {
+                                    color: #525252;
+                                }
+                            </style>
+                            R is an implementation of the <a href="/wiki/S_(programming_language)" title="S (programming language)">S programming language</a> combined with <a href="/wiki/Lexical_scoping" class="mw-redirect" title="Lexical scoping">lexical scoping</a> semantics, inspired by <a href="/wiki/Scheme_(programming_language)" title="Scheme (programming language)">Scheme</a>.S was created by <a href="/wiki/John_Chambers_(programmer)" class="mw-redirect" title="John Chambers (programmer)">John Chambers</a> in 1976 while at <a href="/wiki/Bell_Laboratories" class="mw-redirect" title="Bell Laboratories">Bell Labs</a>. A commercial version of S was offered as <a href="/wiki/S-PLUS" title="S-PLUS">S-PLUS</a>
+                            starting in 1988.
+                            <br>
+                            Much of the code written for S-PLUS runs unaltered in R.
+                            <br>
+                            In 1991 <a href="/wiki/Ross_Ihaka" title="Ross Ihaka">Ross Ihaka</a> and <a href="/wiki/Robert_Gentleman_(statistician)" title="Robert Gentleman (statistician)">Robert Gentleman</a> at the <a href="/wiki/University_of_Auckland" title="University of Auckland">University of Auckland</a>, New Zealand, began an alternative implementation of the basic S language, completely independent of <a href="/wiki/S-PLUS" title="S-PLUS">S-PLUS</a>. They publicized this project starting in 1993.In 1995 Martin Maechler convinced Ihaka and Gentleman to make R <a href="/wiki/Free_and_open-source_software" title="Free and open-source software">free and open-source software</a> under the <a href="/wiki/GNU_General_Public_License" title="GNU General Public License">GNU General Public License</a>. The <i>R Development Core Team</i> was created to manage the further development of R. John Chambers became a member at least as of August&nbsp;2018.R is named partly after the first names of the first two R authors and partly as a play on the name of S.
+                            <br>
+                            The first official release came in 1995. The Comprehensive R Archive Network (CRAN) was officially announced 23 April 1997 with 3 mirrors and 12 contributed packages.
+
+                        </b>
+                    </p>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+                    <h3>Why we use R ?</h3>
+                    <br>
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/jn_3N_o2d6Q?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+                    <br>
+                    <hr id="drae" class="separate" style="border-top: 2px solid #fff">
+
+                    <h3> R Vs MS-Excel </h3><br>
+                    <p class="lead">
+                        <b>
+                            <strong>MS-Excel:</strong>Excel is a well-known software program included in the Microsoft Office Suite. Used to create spreadsheets, execute calculations, produce charts, and perform statistical analysis, Excel is used by many professionals across a variety of industries.
+                            <br>
+                            <strong> R:</strong> is a free, open-source programming language and software environment that’s frequently used in big data analysis and statistical computing. R has many advanced functions and capabilities.
+
+                        </b>
+                    </p>
+                    <h3>1. Ease of Use</h3>
+                    <p class="lead"><b>
+                            <strong>Learning the Software</strong>
+                            Most people have likely already learned at least a few basic tips in Microsoft Excel. That’s one substantial benefit of using Excel—the initial learning curve is quite minimal, and most analysis can be done via point-and-click on the top panel. Once a user imports their data into the program, it’s not exceedingly hard to make basic graphs and charts.
+                            R is a programming language, however, meaning the initial learning curve is steeper. It will take most at least a few weeks to familiarize themselves with the interface and master the various functions. Luckily, using R can quickly become second-nature with practice.
+                            <br>
+                            <strong>Replicating Analysis</strong>
+                            R, while less user-friendly with a more intimidating user interface, has the capability to reproduce analyses repeatedly and with very different datasets. This can be incredibly helpful for large projects with multiple data sets, as you’ll keep everything consistent and clean, without having to rewrite the script each time.
+                            <br>
+                            Since Excel’s user interface is point-and-click, you’ll need to rely on memory and repetition frequently. You cannot import codes and scripts as you would with R, so you’ll have to “reinvent the wheel” to perform the same analysis across different data sets. This is not detrimental if you are doing basic statistics, but it may become time-consuming with more complicated analyses.
+
+                        </b>
+                    </p>
+                    <h3>2. Visualization</h3>
+                    <p class="lead">
+                        <b>
+                            When deciding between R and Excel, ask yourself,“How detailed do my visualizations need to be in order to achieve my goal(s)?” In Excel, for example, you can quickly highlight a group of cells and make a simple chart for PowerPoint. If you need a more comprehensive graph, however, R may be your best bet. R can produce incredibly attractive, detailed visuals that can help stakeholders understand your findings.
+                            <br>
+                            It all comes down to what you need your graphics to do. If you’re just looking to cobble together a quick-and-dirty presentation to visualize data for your coworkers, then making simple straightforward charts in Excel will suffice. For those planning to publish large amounts of complicated data to various stakeholders, spending the time in R to create impressive interactive visual representations will likely be worth your while.
+                        </b>
+                    </p>
+
+                    <h3>3. Price, Community, and Customization</h3>
+
+                    <p class="lead">
+                        <b>
+                            Excel costs at least $70 a year as part of Office 365, which also includes Outlook, Word, PowerPoint, and other software. You can download free add-ins for Excel also, including options to improve visualization, among others. Since Excel is part of Microsoft, you also gain access to their community of forums and technical help professionals.
+                            <br>
+                            R, however, is free to download</a>. As R is open-source and open to the public, it has gathered a vibrant community, with many forums, websites, and&nbsp;<a href="https://www.reddit.com/r/Rlanguage/" target="_blank" rel="noopener">Reddit boards</a> devoted to sharing resources and tips. If there’s something you want to do in R, someone is out there to help.
+                            <br>
+                            R’s open-source nature, engaged community, and free price tag are welcoming, but Excel’s price is affordable and the community is also strong.
+
+                        </b>
+                    </p>
+                    <h3>4.&nbsp;Statistical Analysis</h3>
+                    <p class="lead">
+                        <b>
+                            When comparing R and Excel, it’s important to define the level of information you are looking for. If you simply want to run statistics and arithmetic quickly, Excel might be the better choice, since it’s an easy point-and-click way to run numbers.
+                            <br>
+                            Pivot tables in Excel have been gaining traction the past few years, and it’s one of the program’s more useful features for stats. You can easily compute large amounts of data, define variables, and easily choose what rows and columns you want to compare and gather reports from. It’s
+                            <a href="https://www.deskbright.com/excel/how-to-make-a-pivot-table/" target="_blank" rel="noopener">fairly easy to make a pivot table,</a>
+                            and they provide powerful benefits. Excel’s spreadsheets have a finite number of rows and columns, however, so you’ll be unable to analyze massive datasets that can be handled with R.
+                            <br>
+                            R programming can do a tremendous amount of analysis, is great for identifying trends you might not have thought to look for, and it can even decide how reliable said statistics are. R allows you to clean and organize data, gives more visualization options, and if there’s a topic you want to explore, then there’s likely a way to do it in R. If you’re looking to do anything beyond basic statistical analysis, such as regression, clustering, text mining, or time series analysis, R may be the better bet.
+
+                        </b>
+                    </p>
+
+                    <h2><strong>Using R and MS-Excel</strong></h2>
+                    <p class="lead">
+                        <b>
+                            R and Excel are beneficial in different ways. Excel starts off easier to learn and is frequently cited as the go-to program for reporting, thanks to its speed and efficiency. R is designed to handle larger data sets, to be reproducible, and to create more detailed visualizations. It’s not a question of choosing between R and Excel, but deciding which program to use for different needs.
+                        </b>
+                    </p>
+
+                    <hr id="dbrap" class="separate" style="border-top: 2px solid #fff">
+
+                    <h3><a></a>Difference between R and Python </h3>
+                    <br>
+                    <style>
+                        table {
+                            border: 0px;
+                        }
+
+                        table {
+                            max-width: 100%;
+                            background-color: transparent;
+                            border-collapse: collapse;
+                            border-spacing: 0;
+                        }
+                    </style>
+                    <table class="table1 table-striped">
+                        <thead>
+                            <tr>
+                                <th><strong>Parameter</strong> </th>
+                                <th>R </th>
+                                <th>Python </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Objective </td>
+                                <td>Data analysis and statistics </td>
+                                <td>Deployment and production </td>
+                            </tr>
+                            <tr>
+                                <td>Primary Users </td>
+                                <td>Scholar and R&amp;D </td>
+                                <td>Programmers and developers </td>
+                            </tr>
+                            <tr>
+                                <td>Flexibility </td>
+                                <td>Easy to use available library </td>
+                                <td>Easy to construct new models from scratch. I.e., matrix computation and optimization </td>
+                            </tr>
+                            <tr>
+                                <td>Learning curve </td>
+                                <td>Difficult at the beginning </td>
+                                <td>Linear and smooth </td>
+                            </tr>
+                            <tr>
+                                <td>Popularity of Programming Language. Percentage change </td>
+                                <td>4.23% in 2018 </td>
+                                <td>21.69% in 2018 </td>
+                            </tr>
+                            <tr>
+                                <td>Average Salary </td>
+                                <td>$99.000 </td>
+                                <td>$100.000 </td>
+                            </tr>
+                            <tr>
+                                <td>Integration </td>
+                                <td>Run locally </td>
+                                <td>Well-integrated with app </td>
+                            </tr>
+                            <tr>
+                                <td>Task </td>
+                                <td>Easy to get primary results </td>
+                                <td>Good to deploy algorithm </td>
+                            </tr>
+                            <tr>
+                                <td>Database size </td>
+                                <td>Handle huge size </td>
+                                <td>Handle huge size </td>
+                            </tr>
+                            <tr>
+                                <td>IDE </td>
+                                <td>Rstudio </td>
+                                <td>Spyder, Ipython Notebook </td>
+                            </tr>
+                            <tr>
+                                <td>Important Packages and library </td>
+                                <td>tidyverse, ggplot2, caret, zoo </td>
+                                <td>pandas, scipy, scikit-learn, TensorFlow, caret </td>
+                            </tr>
+                            <tr>
+                                <td>Disadvantages </td>
+                                <td>Slow High Learning curve Dependencies between library </td>
+                                <td> Not as many libraries as R </td>
+                            </tr>
+                            <tr>
+                                <td>Advantages </td>
+                                <td>
+                                    <ul>
+                                        <li>Graphs are made to talk. R makes it beautiful</li>
+                                        <li>Large catalog for data analysis</li>
+                                        <li>GitHub interface</li>
+                                        <li>RMarkdown</li>
+                                        <li>Shiny</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Jupyter notebook: Notebooks help to share data with colleagues</li>
+                                        <li>Mathematical computation</li>
+                                        <li>Deployment</li>
+                                        <li>Code Readability</li>
+                                        <li>Speed</li>
+                                        <li>Function in Python</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table><br>
+
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/eRP_J2yLjSU?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+
+
+                    <hr id="re" class="separate" style="border-top: 2px solid #fff">
+
+                    <h3>R Environment </h3>
+                    <p class="lead">
+                        <b>
+                            In this article, you’ll learn about the environment (global environment, cascading of environments and so on) in R programming.
+                            <br>
+                            In order to write <a title="R functions" href="/r-programming/function">functions</a> in a proper way and avoid unusual errors, we need to know the concept of environment and scope in R.
+                            <br>
+                        </b>
+                    </p>
+                    <h4>R Programming Environment</h4>
+                    <p class="lead">
+                        <b>
+                            Environment can be thought of as a collection of <a title="R objects" href="/r-programming/object-class-introduction">objects</a> (functions, variables etc.). An environment is created when we first fire up the R interpreter.
+                            Any variable we define, is now in this environment.
+                            <br>
+                            The top level environment available to us at the R command prompt is the global environment called <code>R_GlobalEnv</code>. <strong>Global environment</strong> can be referred to as <code>.GlobalEnv</code> in R codes as well.
+                            <br>
+                            We can use the <code>ls()</code> function to show what variables and functions are defined in the current environment. Moreover, we can use the <code>environment()</code> function to get the current environment.
+                        </b>
+                    </p>
+                    <pre class="bg-white p-2 rounded my-5 shadow-sm lead">
+<code>
+&gt; a &lt;- 2
+&gt; b &lt;- 5
+&gt; f &lt;- function(x) x&lt;-0
+&gt; ls()
+[1] "a" "b" "f"
+&gt; environment()
+&lt;environment: R_GlobalEnv&gt;
+&gt; .GlobalEnv
+&lt;environment: R_GlobalEnv&gt;
+</code>
+</pre>
+                    <p class="lead"><b>
+                            In the above example, we can see that <code>a</code>, <code>b</code> and <code>f</code> are in the <code>R_GlobalEnv</code> environment.
+                            <br>
+                            Notice that <code>x</code> (in the argument of the function) is not in this global environment. When we define a function, a new environment is created.
+                            <br>
+                            In the above example, the function <code>f</code> creates a new environment inside the global environment.
+                            <br>
+                            >Actually an environment has a frame, which has all the objects defined, and a pointer to the enclosing (parent) environment.
+                            <br>
+                            Hence, <code>x</code> is in the frame of the new environment created by the function <code>f</code>. This environment will also have a pointer to <code>R_GlobalEnv</code>.
+                            <br>
+                        </b>
+                    </p>
+                    <h3>Example: Cascading of environments</h3>
+                    <pre class="bg-white p-2 rounded my-5 shadow-sm lead"><code>
+f &lt;- function(f_x){
+g &lt;- function(g_x){
+print("Inside g")
+print(environment())
+print(ls())
+}
+g(5)
+print("Inside f")
+print(environment())
+print(ls())
+}
+</code></pre>
+
+                    <p class="lead">
+                        <b>
+                            Now when we run it from the command prompt, we get.
+                            <pre class="bg-white p-2 rounded my-5 shadow-sm lead"><code>
+&gt; f(6)
+[1] "Inside g"
+&lt;environment: 0x0000000010c2bdc8&gt;
+[1] "g_x"
+[1] "Inside f"
+&lt;environment: 0x0000000010c2a870&gt;
+[1] "f_x" "g"  
+&gt; environment()
+&lt;environment: R_GlobalEnv&gt;
+&gt; ls()
+[1] "f"
+</code></pre>
+
+                        </b>
+                    </p>
+
+                    <p class="lead">
+                        <b>
+                            Here, we defined function <code>g</code> inside <code>f</code> and it is clear that they both have different environments with different objects within their respective frames.
+
+                        </b>
+                    </p>
+
+
+                    <h3 id="ex"> Examples</h3>
+
+                    <p class="lead">
+                        <b>
+                            <strong>Basic Syntax</strong>
+                            In R, the generally preferred assignment operator is an arrow made from two characters <-, although=can be used in some cases. <pre class="bg-white p-2 rounded my-5 shadow-sm lead">
+                                <span></span><span class="gp">&gt; </span><span class="n">x</span> <span class="o">&lt;-</span> <span class="m">1</span><span class="o">:</span><span class="m">6</span> <span class="c1"># Create a numeric vector in the current environment</span>
+                                <span class="gp">&gt; </span><span class="n">y</span> <span class="o">&lt;-</span> <span class="n">x</span><span class="o">^</span><span class="m">2</span> <span class="c1"># Create vector based on the values in x.</span>
+                                <span class="gp">&gt; </span><span class="nf">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="c1"># Print the vector’s contents.</span>
+                                <span class="go">[1] 1 4 9 16 25 36</span>
+
+                                <span class="gp">&gt; </span><span class="n">z</span> <span class="o">&lt;-</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="c1"># Create a new vector that is the sum of x and y</span>
+                                <span class="gp">&gt; </span><span class="n">z</span> <span class="c1"># return the contents of z to the current environment.</span>
+                                <span class="go">[1] 2 6 12 20 30 42</span>
+
+                                <span class="gp">&gt; </span><span class="n">z_matrix</span> <span class="o">&lt;-</span> <span class="nf">matrix</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">nrow</span><span class="o">=</span><span class="m">3</span><span class="p">)</span> <span class="c1"># Create a new matrix that turns the vector z into a 3x2 matrix object</span>
+                                <span class="gp">&gt; </span><span class="n">z_matrix</span>
+                                <span class="go"> [,1] [,2]</span>
+                                <span class="go">[1,] 2 20</span>
+                                <span class="go">[2,] 6 30</span>
+                                <span class="go">[3,] 12 42</span>
+
+                                <span class="gp">&gt; </span><span class="m">2</span><span class="o">*</span><span class="nf">t</span><span class="p">(</span><span class="n">z_matrix</span><span class="p">)</span><span class="m">-2</span> <span class="c1"># Transpose the matrix, multiple every element by 2, subtract 2 from each element in the matrix, and return the results to the terminal.</span>
+                                <span class="go"> [,1] [,2] [,3]</span>
+                                <span class="go">[1,] 2 10 22</span>
+                                <span class="go">[2,] 38 58 82</span>
+
+                                <span class="gp">&gt; </span><span class="n">new_df</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="nf">t</span><span class="p">(</span><span class="n">z_matrix</span><span class="p">),</span> <span class="n">row.names</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">'A'</span><span class="p">,</span><span class="s">'B'</span><span class="p">))</span> <span class="c1"># Create a new data.frame object that contains the data from a transposed z_matrix, with row names 'A' and 'B'</span>
+                                <span class="gp">&gt; </span><span class="nf">names</span><span class="p">(</span><span class="n">new_df</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">'X'</span><span class="p">,</span><span class="s">'Y'</span><span class="p">,</span><span class="s">'Z'</span><span class="p">)</span> <span class="c1"># set the column names of new_df as X, Y, and Z.</span>
+                                <span class="gp">&gt; </span><span class="nf">print</span><span class="p">(</span><span class="n">new_df</span><span class="p">)</span> <span class="c1">#print the current results.</span>
+                                <span class="go"> X Y Z</span>
+                                <span class="go">A 2 6 12</span>
+                                <span class="go">B 20 30 42</span>
+
+                                <span class="gp">&gt; </span><span class="n">new_df</span><span class="o">$</span><span class="n">Z</span> <span class="c1">#output the Z column</span>
+                                <span class="go">[1] 12 42</span>
+
+                                <span class="gp">&gt; </span><span class="n">new_df</span><span class="o">$</span><span class="n">Z</span><span class="o">==</span><span class="n">new_df</span><span class="p">[</span><span class="s">'Z'</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="n">new_df</span><span class="p">[</span><span class="m">3</span><span class="p">]</span><span class="o">==</span><span class="n">new_df</span><span class="o">$</span><span class="n">Z</span> <span class="c1"># the data.frame column Z can be accessed using $Z, ['Z'], or [3] syntax, and the values are the same. </span>
+                                <span class="go">[1] TRUE</span>
+
+                                <span class="gp">&gt; </span><span class="nf">attributes</span><span class="p">(</span><span class="n">new_df</span><span class="p">)</span> <span class="c1">#print attributes information about the new_df object</span>
+                                <span class="go">$names</span>
+                                <span class="go">[1] "X" "Y" "Z"</span>
+
+                                <span class="go">$row.names</span>
+                                <span class="go">[1] "A" "B"</span>
+
+                                <span class="go">$class</span>
+                                <span class="go">[1] "data.frame"</span>
+
+                                <span class="gp">&gt; </span><span class="nf">attributes</span><span class="p">(</span><span class="n">new_df</span><span class="p">)</span><span class="o">$</span><span class="n">row.names</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">'one'</span><span class="p">,</span><span class="s">'two'</span><span class="p">)</span> <span class="c1">## access and then change the row.names attribute; can also be done using rownames()</span>
+                                <span class="gp">&gt; </span><span class="n">new_df</span>
+                                <span class="go"> X Y Z</span>
+                                <span class="go">one 2 6 12</span>
+                                <span class="go">two 20 30 42</span>
+                                </pre>
+                        </b>
+                    </p>
+
+                    <p class="lead">
+                        <b>
+                            <strong>Structure of a function</strong>
+                            One of R's strengths is the ease of creating new functions. Objects in the function body remain local to the function, and any data type may be returned.
+                            <br>
+
+                            Here is an example user-created function:
+                            <pre class="bg-white p-2 rounded my-5 shadow-sm lead">
+<span></span><span class="c1"># Declare function “f” with parameters “x”, “y“</span>
+<span class="c1"># that returns a linear combination of x and y.</span>
+<span class="n">f</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+<span class="n">z</span> <span class="o">&lt;-</span> <span class="m">3</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="m">4</span> <span class="o">*</span> <span class="n">y</span>
+<span class="nf">return</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="c1">## the return() function is optional here</span>
+<span class="p">}</span>
+
+<hr class="separate" style="border-top: 3px solid #fff">
+
+<span></span><span class="gp">&gt; </span><span class="nf">f</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">)</span>
+<span class="go">[1] 11</span>
+
+<span class="gp">&gt; </span><span class="nf">f</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">),</span> <span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">))</span>
+<span class="go">[1] 23 18 25</span>
+
+<span class="gp">&gt; </span><span class="nf">f</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">,</span> <span class="m">4</span><span class="p">)</span>
+<span class="go">[1] 19 22 25</span>
+
+
+                  </pre>
+                        </b>
+                    </p>
+
+                    <p class="lead">
+                        <b>
+                            <strong>Modelling and Plotting</strong>
+                            The R language has built-in support for data modeling and graphics. The following example shows how R can easily generate and plot a linear model with residuals.
+                            <br>
+
+                            <pre class="bg-white p-2 rounded my-5 shadow-sm lead">
+<span></span><span class="gp">&gt; </span><span class="n">x</span> <span class="o">&lt;-</span> <span class="m">1</span><span class="o">:</span><span class="m">6</span> <span class="c1"># Create x and y values</span>
+<span class="gp">&gt; </span><span class="n">y</span> <span class="o">&lt;-</span> <span class="n">x</span><span class="o">^</span><span class="m">2</span>  
+<span class="gp">&gt; </span><span class="n">model</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">y</span> <span class="o">~</span> <span class="n">x</span><span class="p">)</span>  <span class="c1"># Linear regression model y = A + B * x.</span>
+<span class="gp">&gt; </span><span class="nf">summary</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>  <span class="c1"># Display an in-depth summary of the model.</span>
+
+<span class="go">Call:</span>
+<span class="go">lm(formula = y ~ x)</span>
+
+<span class="go">Residuals:</span>
+<span class="go">      1       2       3       4       5       6</span>
+<span class="go"> 3.3333 -0.6667 -2.6667 -2.6667 -0.6667  3.3333</span>
+
+<span class="go">Coefficients:</span>
+<span class="go">            Estimate Std. Error t value Pr(&gt;|t|)   </span>
+<span class="go">(Intercept)  -9.3333     2.8441  -3.282 0.030453 * </span>
+<span class="go">x             7.0000     0.7303   9.585 0.000662 ***</span>
+<span class="go">---</span>
+<span class="go">Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</span>
+
+<span class="go">Residual standard error: 3.055 on 4 degrees of freedom</span>
+<span class="go">Multiple R-squared:  0.9583, Adjusted R-squared:  0.9478</span>
+<span class="go">F-statistic: 91.88 on 1 and 4 DF,  p-value: 0.000662</span>
+
+<span class="gp">&gt; </span><span class="nf">par</span><span class="p">(</span><span class="n">mfrow</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">2</span><span class="p">))</span>  <span class="c1"># Create a 2 by 2 layout for figures.</span>
+<span class="gp">&gt; </span><span class="nf">plot</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>  <span class="c1"># Output diagnostic plots of the model.</span>
+                    </pre>
+                        </b>
+                    </p>
+                    <center>
+
+                        <img alt="Diagnostic plots from plotting “model” (q.v. “plot.lm()” function). Notice the mathematical notation allowed in labels (lower left plot)." src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Plots_from_lm_example.svg/540px-Plots_from_lm_example.svg.png" decoding="async" width="540" height="540" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Plots_from_lm_example.svg/810px-Plots_from_lm_example.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Plots_from_lm_example.svg/1080px-Plots_from_lm_example.svg.png 2x" data-file-width="540" data-file-height="540">
+                    </center>
+
+
+
+
+
+
+
+                    <!-- ************************************************************************************** -->
+
+                    <hr class="separate" style="border-top: 3px solid #fff">
+
+
+                    <p class="lead"><b><a href="R_1.html" style="font-size:35px;color:white;text-decoration:none"><i>Next--></i></a></b></p>
+
+                    <hr class="separate" style="border-top: 3px solid #fff">
+
+                    <!-- ************************************************************************************** -->
+
+                </div>
+            </div>
+
+        </div>
+        <!-- End demo content -->
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+
+        <script>
+            $(function() {
+                // Sidebar toggle behavior
+                $('#sidebarCollapse').on('click', function() {
+                    $('#sidebar, #content').toggleClass('active');
+                });
+            });
+        </script>
+
+    </body>
+
+    </html>
+

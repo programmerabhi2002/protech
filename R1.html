@@ -1,0 +1,517 @@
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+
+        <title>
+            R
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    </head>
+
+    <style>
+        .vertical-nav {
+            min-width: 17rem;
+            width: 17rem;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s;
+        }
+
+        .page-content {
+            width: calc(100% - 17rem);
+            margin-left: 17rem;
+            transition: all 0.4s;
+        }
+
+        /* for toggle behavior */
+
+        #sidebar.active {
+            margin-left: -17rem;
+        }
+
+        #content.active {
+            width: 100%;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            #sidebar {
+                margin-left: -17rem;
+            }
+
+            #sidebar.active {
+                margin-left: 0;
+            }
+
+            #content {
+                width: 100%;
+                margin: 0;
+            }
+
+            #content.active {
+                margin-left: 17rem;
+                width: calc(100% - 17rem);
+            }
+        }
+
+        body {
+            background: #599fd9;
+            background: -webkit-linear-gradient(to right, #599fd9, #c2e59c);
+            background: linear-gradient(to right, #599fd9, #c2e59c);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .separator {
+            margin: 3rem 0;
+            border-bottom: 1px dashed #fff;
+        }
+
+        .text-uppercase {
+            letter-spacing: 0.1em;
+        }
+
+        .text-gray {
+            color: #525252;
+        }
+
+        a {
+            color: #525252;
+        }
+    </style>
+
+    <body>
+
+        <!-- Vertical navbar -->
+        <div class="vertical-nav " id="sidebar">
+            <!-- bg-white -->
+            <div class="py-4 px-3 mb-4 ">
+                <!-- bg-white -->
+                <div class="media d-flex align-items-center"><img src="Img/R.png" alt="..." width="70" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+
+               <div class="media-body">
+                    <h4 class="m-0" style="font-size:20px"><i></i></h4>
+                    <p class="font-weight text-dark mb-0"><i>
+                           
+                        </i></p>
+                </div>
+
+                </div> 
+            </div>
+
+            <div class="separator"></div>
+            <!--         <hr class="solid" style="border-top: 3px solid #bbb"> -->
+            <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0" style="font-weight:bold">Index</p>
+
+            <ul class="nav flex-column  mb-0" style="font-weight:bold">
+                <!-- bg-white -->
+                <li class="nav-item">
+                    <a href="R.html" class="nav-link text-dark font-italic ">
+                        <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                        Introduction
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="R.html" class="nav-link text-dark font-italic">
+                        <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                        History
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="R.html" class="nav-link text-dark font-italic">
+                        <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                        Difference Between R and &nbsp;&nbsp;&nbsp;&nbsp;MS-&nbsp;Excel
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="R.html" class="nav-link text-dark font-italic">
+                        <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                        Difference Between R and &nbsp;&nbsp;&nbsp;&nbsp;Python
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="R.html" class="nav-link text-dark font-italic">
+                        <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                        R Environment
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="R.html" class="nav-link text-dark font-italic">
+                        <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                        Examples
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="R_1.html" class="nav-link text-dark font-italic">
+                        <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                        R Libraries
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link text-dark font-italic">
+                        <i class="fa fa-line-chart mr-3 text-primary fa-fw"></i>
+                        <-BACK TO HOME</a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- End vertical navbar -->
+            
+           
+
+        <!-- Page content holder -->
+        <div class="page-content p-5" id="content">
+            <!-- Toggle button -->
+            
+            
+            <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">MENU</small></button>
+
+            <!-- Demo content -->
+            <h2 class="display-4 text-white">R</h2>
+            <p class="lead text-white mb-0"> <i>Designed by Ross Ihaka and Robert Gentleman (August 1993)</i></p>
+            <p class="lead text-white mb-0"> <i>Developed by R Core Team </i></p>
+
+            <div class="separator" id="ja"></div>
+
+            <!-- ************************************************************************************** -->
+            <div class="row text-white-bold">
+                <div class="col-lg-12" id="r">
+                    <h3 class="text-dark" style="font-weight:600" id="rl">R Libraries</h3><br>
+                    <p class="lead">
+                        <b>
+                            The libraries mentioned here are in random order and wouldn’t want to give them the ranking because they’re all useful in their own way and it’s not justified to rate them.
+                        </b>
+                    </p>
+
+                    <p class="lead">
+                        <b>
+                            <strong> 1) Dplyr</strong>
+                            <br>
+                            It is mainly used for data manipulation in R. Dplyr is actually built around these 5 functions. These functions make up the majority of the data manipulation you tend to do. You can work with local data frames as well as with remote database tables. You might need to:<br>
+
+                            <strong>Select</strong> certain columns of data.<br>
+                            <strong>Filter</strong> your data to select specific rows.<br>
+                            <strong>Arrange</strong> the rows of your data into an order.<br>
+                            <strong>Mutate</strong> your data frame to contain new columns.<br>
+                            <strong>Summarize</strong>chunks of you data in some way.<br>
+                            It also has functions like <strong>sample</strong>, <strong>group by</strong> and <strong>pipe.</strong>
+
+
+                            <center>
+                                <iframe width="600" height="350" src="https://www.youtube.com/embed/jWjqLW-u3hc?autoplay=1&mute=1">
+                                </iframe>
+                            </center>
+
+                        </b>
+                    </p>
+
+                    <p class="lead">
+                        <b>
+
+                            <strong> 2) Ggplot2</strong>
+                            <br>
+                            Ggplot2 is the one of the best library for data visualization in R. The ggplot2 library implements a “grammar of graphics” (Wilkinson, 2005). This approach gives us a coherent way to produce visualizations by expressing relationships between the attributes of data and their graphical representation. Ggplot2 has wide range of functions.
+                            <br>
+                            Read this R documentation to know about ggplot2 functions, click here:
+                            <a style="color:#525252" href="https://bit.ly/2DBo0VK" class="ei ir" rel="noopener nofollow">https://bit.ly/2DBo0VK</a>
+
+                            <center>
+                                <iframe width="600" height="350" src="https://www.youtube.com/embed/N5gYo43oLE8?autoplay=1&mute=1">
+                                </iframe>
+                            </center>
+                        </b>
+                    </p>
+
+
+                    <p class="lead">
+                        <b>
+                            <strong> 3) Esquisse</strong>
+                            <br>
+                            Not liking ggplot2? having some trouble using ggplot2 and its functions then this package is for you. This package has brought the most important feature of Tableau to R. Just drag and drop, and get your visualization done in minutes. This is actually an enhancement to ggplot2. This addin allows you to interactively explore your data by visualizing it with the ggplot2 package. It allows you to draw bar graphs, curves, scatter plots, histograms, then export the graph or retrieve the code generating the graph. It’s awesome, isn’t it?
+
+                            <center>
+                                <iframe width="600" height="350" src="https://www.youtube.com/embed/WzCyY9CyqUY?autoplay=1&mute=1">
+                                </iframe>
+                            </center>
+
+                        </b>
+                    </p>
+                    <p class="lead">
+                        <b>
+                            <strong> 4) BioConductor</strong>
+                            <br>
+                            When you get into Data Science, you deal with different kinds of data. You may not know what sort of data you gotta deal with in future. If you are in health industry then trust me, you’ll find this very useful. I consider this library to be highly useful when you are working on genomic data. Bioconductor is an open source project that hosts a wide range of tools for analyzing biological data with R. To install Bioconductor Packages, you need to install biocmanager.
+
+                            <ul class="lead">
+                                <li>Graphics: geneplotter, hexbin.</li>
+                                <li>Annotation: annotate, AnnBuilder &lt;-data packages.</li>
+                                <li>Pre-processing Affymetrix oligonucleotide chip data: affy, affycomp, affydata, makecdfenv, vsn.</li>
+                                <li>Pre-processing two-color spotted DNA microarray data: limma, marrayClasses, marrayInput, marrayNorm, marrayPlots, marrayTools, vsn.</li>
+                                <li>Differential gene expression: edd, genefilter, limma, multtest, ROC.</li>
+                                <li>Graphs and networks: graph, RBGL, Rgraphviz.</li>
+                                <li>Analysis of SAGE data: SAGElyzer.</li>
+                            </ul>
+                            <h6 class="lead"><b>
+                                    Click here to know more about installation and other Bioconductor packages :
+                                    <a style="color:#525252" href="https://bit.ly/2OUYdd5" class="ei ir" rel="noopener nofollow">https://bit.ly/2OUYdd5</a>
+                                </b>
+                            </h6>
+
+                            <center>
+                                <iframe width="600" height="350" src="https://www.youtube.com/embed/ScOQ9XHHAH0?autoplay=1&mute=1">
+                                </iframe>
+                            </center>
+
+                        </b>
+                    </p>
+
+                    <p class="lead">
+                        <b>
+                            <strong> 5) Shiny</strong>
+                            <br>
+
+                            This is a very well known package in R. When you want to share your stuff with people around you and make it easier for them to understand and explore it visually, you can use shiny. It’s a Data Scientist’s best friend. Shiny makes it easier to build interactive web apps. You can host standalone apps on a webpage or embed them in
+                            <a style="color:#525252" href="http://rmarkdown.rstudio.com/" class="ei ir" rel="noopener nofollow">R Markdown</a>
+                            documents or build <a style="color:#525252" href="http://rstudio.github.io/shinydashboard/" class="ei ir" rel="noopener nofollow">dashboards</a>
+                            . You can also extend your Shiny apps with
+                            <a style="color:#525252" href="http://rstudio.github.io/shinythemes/" class="ei ir" rel="noopener nofollow">CSS themes</a>
+                            <a style="color:#525252" href="http://www.htmlwidgets.org/" class="ei ir" rel="noopener nofollow">htmlwidgets</a>
+                            <a style="color:#525252" href="https://github.com/daattali/shinyjs/blob/master/README.md" class="ei ir" rel="noopener nofollow">actions</a>
+
+                            <center>
+                                <iframe width="600" height="350" src="https://www.youtube.com/embed/tfN10IUX9Lo?autoplay=1&mute=1">
+                                </iframe>
+                            </center>
+
+                        </b>
+                    </p>
+
+                    <p Class="lead"><b>
+                            <strong> 6) Lubridate</strong>
+                            <br>
+
+                            This library serves its purpose really well. It’s mainly used for data wrangling. It makes the dealing of date-time easier in R. You can do everything you ever wanted to do with date arithmetic using this library, although understanding &amp; using available functionality can be somewhat complex here. When you are analyzing time series data and want to aggregate the data by month then you can use <em class="jq">floor_date </em>from lubridate package, it gets your work done quite easily. It has wide range of functions. You can read the documentation here: <a href="https://bit.ly/2AbTEpf" class="ei ir" rel="noopener nofollow">https://bit.ly/2AbTEpf</a>
+
+
+                            <center>
+                                <iframe width="600" height="350" src="https://www.youtube.com/embed/VYAo69WdJZg?autoplay=1&mute=1">
+                                </iframe>
+                            </center>
+
+                        </b>
+                    </p>
+
+
+
+                    <p Class="lead">
+                        <b>
+                            <strong class="iu gh">7) Knitr</strong>
+                            <br>
+                            This package is used for dynamic report generation in R. The purpose of knitr is to allow reproducible research in R through the means of Literate Programming. This package also enables integration of R code into LaTeX, Markdown, LyX, HTML, AsciiDoc, and reStructuredText documents. You can add R to a markdown document and easily generate reports in HTML, Word and other formats. A must-have if you’re interested in reproducible research and automating the journey from data analysis to report creation.
+
+                            <center>
+                                <iframe width="600" height="350" src="https://www.youtube.com/embed/DUAaNVlC6FE?autoplay=1&mute=1">
+                                </iframe>
+                            </center>
+
+                        </b>
+                    </p>
+
+                    <p Class="lead">
+                        <b>
+                            <strong class="iu gh">8) Mlr</strong>
+                            <br>
+                            This package is absolutely incredible in performing machine learning tasks. It almost has all the important and useful algorithms for performing machine learning tasks. It can also be termed as the extensible framework for classification, regression, clustering, multi-classification and survival analysis. It also has filter and wrapper methods for feature selection. Another thing is most operations performed here can be parallelized. The wide range of functions are mentioned here in the documentation: <a href="https://bit.ly/2QflLy6" class="ei ir" rel="noopener nofollow">https://bit.ly/2QflLy6</a>
+
+                            <center>
+                                <iframe width="600" height="350" src="https://www.youtube.com/embed/oHeTlDcBNtI?autoplay=1&mute=1">
+                                </iframe>
+                            </center>
+
+                        </b>
+                    </p>
+
+                    <p Class="lead">
+                        <b>
+                            <strong class="iu gh">9) Quanteda.<em class="jq">dictionaries</em></strong>
+                            <br>
+                            This package extends the capabilities of <strong class="iu gh"><em class="jq">quanteda</em></strong> package. It consists of dictionaries for text analysis. It’s mainly designed to work with quanteda but can also work well with other text analysis libraries like tm, tidytext and udpipe. With the <em class="jq">liwcalike()</em> function from the quanteda.dictionaries package, you can easily analyze text corpora using exising or custom dictionaries. You can install this package from their github page.
+                            
+                            <center>
+                                <iframe width="600" height="350" src="https://www.youtube.com/embed/O-2xpszBfdA?autoplay=1&mute=1">
+                                </iframe>
+                            </center>
+
+                        </b>
+                    </p>
+
+                    <p Class="lead">
+                        <b>
+                            <strong class="iu gh">10) DT</strong>
+                            <br>
+                            It is a wrapper of javascript library <strong class="iu gh"><em class="jq">DataTables. </em></strong>It is used for data display, you can display R matrices and data frames as interactive HTML tables. You can create a sortable table with minimum amount of code using this library, actually you can create a sortable, searchable table in just one line of code. You can also style your table. DataTables also provides filtering, pagination, sorting, and many other features in the tables.
+                            
+                            <center>
+                                <iframe width="600" height="350" src="https://www.youtube.com/embed/ng7uLN1uxV4?autoplay=1&mute=1">
+                                </iframe>
+                            </center>
+
+                        </b>
+                    </p>
+
+                    <p Class="lead">
+                        <b>
+                            <strong class="iu gh">11) RCrawler</strong>
+                            <br>
+                            RCrawler is a contributed R package for domain-based web crawling and content scraping. It adds the functionality of crawling that<strong class="iu gh"><em class="jq"> Rvest </em></strong>package lacks. RCrawler can crawl, parse, store pages, extract contents, and produce data that can be directly employed for web content mining applications. The process of a crawling operation is performed by several concurrent processes or nodes in parallel, so it’s recommended to use 64bit version of R.
+                             
+                            <center>
+                                <iframe width="600" height="350" src="https://www.youtube.com/embed/l9wtWvAtYSo?autoplay=1&mute=1">
+                                </iframe>
+                            </center>
+
+                        </b>
+                    </p>
+
+                    <p Class="lead">
+                        <b>
+                            <strong class="iu gh">12) Caret</strong>
+                            <br>
+                            Caret stands for classification and regression training. One of the primary tools in the package is the train function which can be used to. evaluate, using re-sampling, the effect of model tuning parameters on performance. Caret has several functions that attempt to streamline the model building and evaluation process, as well as feature selection and other techniques. This package alone is all you need to know for solve almost any supervised machine learning problem. It provides a uniform interface to several machine learning algorithms and standardizes various other tasks such as Data splitting, pre-processing, feature selection, variable importance estimation etc.
+                             
+                            <center>
+                                <iframe width="600" height="350" src="https://www.youtube.com/embed/aBo6rngw1tU?autoplay=1&mute=1">
+                                </iframe>
+                            </center>
+
+                        </b>
+                    </p>
+
+                    <p Class="lead">
+                        <b>
+                            <strong class="iu gh">13) RMarkdown</strong>
+                            <br>
+                            R Markdown allows you to create documents that serve as a neat record of your analysis. In the world of reproducible research, we want other researchers to easily understand what we did in our analysis, otherwise nobody can be certain that you analysed your data properly. R Markdown is a variant of Markdown that has embedded R code chunks, to be used with <strong class="iu gh"><em class="jq">knitr</em></strong> to make it easy to create reproducible web-based reports. You can turn your analyses into high quality documents, reports, presentations and dashboards with <strong class="iu gh">R Markdown.</strong>
+                            
+                            <center>
+                                <iframe width="600" height="350" src="https://www.youtube.com/embed/tKUufzpoHDE?autoplay=1&mute=1">
+                                </iframe>
+                            </center>
+
+                        </b>
+                    </p>
+
+                    <p Class="lead">
+                        <b>
+                            <strong class="iu gh">14) Leaflet</strong>
+                            <br>
+                            It is a javascript library which is mainly used for mapping and working on interactive maps. Moreover, you can directly use these maps from R console. Leaflet provides you with different set of functions that can be used to style and customize your map. Development work for this library is also extensive. Make sure to try out this library if you want to work around with maps. You can also use different tiles for your maps apart from the base maps.
+                             
+                            <center>
+                                <iframe width="600" height="350" src="https://www.youtube.com/embed/vl9D3uTk36k?autoplay=1&mute=1">
+                                </iframe>
+                            </center>
+
+                        </b>
+                    </p>
+
+                    <p Class="lead">
+                        <b>
+                            <strong class="iu gh">15) Janitor</strong>
+                            <br>
+                            Janitor makes basic data cleaning made easy, such as finding duplicates by multiple columns, making R-friendly column names and removing empty columns. It also has some nice tabulating tools, like adding a total row, as well as generating tables with percentages and easy cross tabs. And, its get_dupes() function is an elegant way of finding duplicate rows in data frames, either based on one column, several columns, or entire rows.
+                             
+                            <center>
+                                <iframe width="600" height="350" src="https://www.youtube.com/embed/9ivbY48mUvs?autoplay=1&mute=1">
+                                </iframe>
+                            </center>
+
+                        </b>
+                    </p>
+
+                    <p Class="lead">
+                        <b>
+                            <strong class="iu gh"><em class="jq">Other worth mentioning R libraries :</em></strong>
+                        </b>
+                    </p>
+
+                    <ol class="lead"><b>
+                            <li>Ggvis       </li>
+                            <li>Plotly      </li>
+                            <li>Rcharts     </li>
+                            <li>Rbokeh      </li>
+                            <li>Broom       </li>
+                            <li>StringR     </li>
+                            <li>Magrittr    </li>
+                            <li>Slidify     </li>
+                            <li>Rvest       </li>
+                            <li>Future      </li>
+                            <li>RMySQL      </li>
+                            <li>RSQLite     </li>
+                            <li>Prophet     </li>
+                            <li>Glmnet      </li>
+                            <li>Text2Vec    </li>
+                            <li>SnowballC   </li>
+                            <li>Quantmod    </li>
+                            <li>Rstan       </li>
+                            <li>Swirl       </li>
+                            <li>DataScienceR</li>
+                        </b>
+                    </ol>
+                    <p class="lead">
+                        <b>
+                            If I’ve missed out any important library then do let me know down below in the comments section.
+                        </b>
+                    </p>
+
+
+
+
+                    <!-- ************************************************************************************** -->
+
+                    <hr class="separate" style="border-top: 3px solid #fff">
+
+
+                    <p class="lead"><b><a href="#content" style="font-size:35px;color:white;text-decoration:none"><i>Go to Top</i></a></b></p>
+
+                    <hr class="separate" style="border-top: 3px solid #fff">
+
+                    <!-- ************************************************************************************** -->
+
+                </div>
+            </div>
+
+        </div>
+        <!-- End demo content -->
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+
+        <script>
+            $(function() {
+                // Sidebar toggle behavior
+                $('#sidebarCollapse').on('click', function() {
+                    $('#sidebar, #content').toggleClass('active');
+                });
+            });
+        </script>
+
+    </body>
+
+    </html>
+

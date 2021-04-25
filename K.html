@@ -1,0 +1,683 @@
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+
+        <title>
+            Kotlin
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    </head>
+
+    <style>
+        .vertical-nav {
+            min-width: 17rem;
+            width: 17rem;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s;
+        }
+
+        .page-content {
+            width: calc(100% - 17rem);
+            margin-left: 17rem;
+            transition: all 0.4s;
+        }
+
+        /* for toggle behavior */
+
+        #sidebar.active {
+            margin-left: -17rem;
+        }
+
+        #content.active {
+            width: 100%;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            #sidebar {
+                margin-left: -17rem;
+            }
+
+            #sidebar.active {
+                margin-left: 0;
+            }
+
+            #content {
+                width: 100%;
+                margin: 0;
+            }
+
+            #content.active {
+                margin-left: 17rem;
+                width: calc(100% - 17rem);
+            }
+        }
+
+        body {
+            background: #599fd9;
+            background: -webkit-linear-gradient(to right, #599fd9, #c2e59c);
+            background: linear-gradient(to right, #599fd9, #c2e59c);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .separator {
+            margin: 3rem 0;
+            border-bottom: 1px dashed #fff;
+        }
+
+        .text-uppercase {
+            letter-spacing: 0.1em;
+        }
+
+        .text-gray {
+            color: #525252;
+        }
+
+        a {
+            color: #525252;
+        }
+    </style>
+
+    <body>
+
+        <!-- Vertical navbar -->
+        <div class="vertical-nav " id="sidebar">
+            <!-- bg-white -->
+            <div class="py-4 px-3 mb-4 ">
+                <!-- bg-white -->
+                 <div class="media d-flex align-items-center"><img src="Img/Kotlin.png" alt="" width="70" class="mr-3 rounded-circle img-thumbnail shadow-sm"> 
+
+                <div class="media-body">
+                    <h4 class="m-0" style="font-size:20px"><i></i></h4>
+                    <p class="font-weight text-dark mb-0"><i>
+                           
+                        </i></p>
+                </div>
+                 </div> 
+            </div>
+
+            <div class="separator"></div>
+            <!--         <hr class="solid" style="border-top: 3px solid #bbb"> -->
+            <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0">
+            <b>
+            Index
+            </b>
+            </p>
+
+            <ul class="nav flex-column  mb-0"><b>
+                <!-- bg-white -->
+                <li class="nav-item">
+                    <a href="#ki" class="nav-link text-dark font-italic ">
+                        <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                        Introduction
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#kh" class="nav-link text-dark font-italic">
+                        <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                        History
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#wk" class="nav-link text-dark font-italic">
+                        <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                        Difference between Kotlin &nbsp;&nbsp;&nbsp;&nbsp;and JAVA
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#adk" class="nav-link text-dark font-italic">
+                        <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                        Advantages & Disadvantages &nbsp;&nbsp;&nbsp;&nbsp;of Kotlin
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Aok" class="nav-link text-dark font-italic">
+                        <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                        Alternatives to Kotlin
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#exk" class="nav-link text-dark font-italic">
+                        <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                        Examples
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#kl" class="nav-link text-dark font-italic">
+                        <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                        Kotlin Libraries
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link text-dark font-italic">
+                        <i class="fa fa-line-chart mr-3 text-primary fa-fw"></i>
+                        <-BACK TO HOME</a>
+                </li>
+                </b>
+            </ul>
+
+        </div>
+        <!-- End vertical navbar -->
+
+
+        <!-- Page content holder -->
+        <div class="page-content p-5" id="content">
+            <!-- Toggle button -->
+            <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">MENU</small></button>
+
+            <!-- Demo content -->
+            <h2 class="display-4 text-white">Kotlin</h2>
+            <p class="lead text-white mb-0"> <i>Designed by JetBrains (22 July 2011)</i></p>
+            <p class="lead text-white mb-0"> <i>Developed by JetBrains </i></p>
+
+            <div class="separator" id="k"></div>
+
+            <!-- ************************************************************************************** -->
+            <div class="row text-white-bold">
+                <div class="col-lg-12" id="r">
+                    <h3 class="text-dark" style="font-weight:600" id="ki">Introduction</h3>
+
+                    <p class="lead">
+                        <b>
+                            Kotlin is a cross-platform, statically typed, general-purpose programming language with type inference. Kotlin is designed to interoperate fully with Java, and the JVM version of Kotlin's standard library depends on the Java Class Library,
+                            but type inference allows its syntax to be more concise. Kotlin mainly targets the JVM, but also compiles to JavaScript
+                            or native code (via LLVM); e.g., for native iOS apps sharing business logic with Android apps.
+                            Language development costs are borne by JetBrains, while the Kotlin Foundation protects the Kotlin trademark.
+                            <br>
+                            On 7 May 2019, Google announced that the Kotlin programming language is now its preferred language for Android app developers. As a result many developers have switched to Kotlin.
+                            Since the release of Android Studio 3.0 in October 2017, Kotlin has been included as an alternative to the standard Java compiler. The Android Kotlin compiler targets Java 6 by default, but lets the programmer choose to target Java 8 up to 13, for optimization,
+                            or more features.
+                        </b>
+                    </p>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+
+                    <h3 class="text-dark" style="font-weight:600" id="kh">History</h3>
+
+                    <ul class="lead">
+                        <b>
+                            <li>
+                                In July 2011, JetBrains unveiled Project Kotlin, a new language for the JVM, which had been under development for a year.
+                                etBrains lead Dmitry Jemerov said that most languages did not have the features they were looking for, with the exception of Scala. However, he cited the slow compilation time of Scala as a deficiency.
+                            </li>
+                            <li>
+                                One of the stated goals of Kotlin is to compile as quickly as Java. In February 2012, JetBrains open sourced the project under the Apache 2 license.
+                            </li>
+                            <li>
+                                The name comes from Kotlin Island, near St. Petersburg. Andrey Breslav mentioned that the team decided to name it after an island, just like Java was named after the Indonesian island of Java
+                                though the programming language Java was perhaps named after the coffee.
+                            </li>
+                            <li>
+                                JetBrains hopes that the new language will drive IntelliJ IDEA sales.
+                                <br>
+                                Kotlin v1.0 was released on February 15, 2016.his is considered to be the first officially stable release and JetBrains has committed to long-term backwards compatibility starting with this version.
+                            </li>
+                            <li>
+                                At Google I/O 2017, Google announced first-class support for Kotlin on Android.
+                                Kotlin v1.2 was released on November 28, 2017.Sharing code between JVM and JavaScript platforms feature was newly added to this release (as of version 1.4 multiplatform programming is an alpha feature
+                                upgraded from "experimental"). A full-stack demo has been made with the new Kotlin/JS Gradle Plugin.
+                            </li>
+                            <li>
+                                On May 7, 2019, Google announced that the Kotlin programming language is now its preferred language for Android app developers.
+                                Kotlin v1.4 was released in August 2020, with e.g. some slight changes to the support for Apple's platforms, i.e. to the Objective-C/Swift interop.
+                            </li>
+                        </b>
+                    </ul>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+
+                    <p class="lead" id="wk">
+                        <b>
+                            <strong>Why we should use Kotlin ?</strong>
+                            <br>
+
+                            Kotlin is a modern, statically-typed programming language that features both object-oriented and functional programming constructs. It targets several platforms, including the JVM, and is fully interoperable with Java. In many ways,
+                            Kotlin is what Java might look like if it were designed today.
+                            <br>
+                            <ul class="lead">
+                                <li>
+                                    Modern, concise and safe programming language
+                                </li>
+                                <li>A productive way to write server‑side applications</li>
+                                <li>Natural way to share code between mobile platforms</li>
+                                <li>Big, friendly and helpful community</li>
+                                <li> TO know more about Kotlin Click <a href="https://kotlinlang.org/"> Here.</a></li>
+                            </ul>
+                        </b>
+                    </p>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+                    <div class="lead">
+                        <b>
+
+                            <h3>Difference Between Kotlin and JAVA</h3>
+
+                            <p>Both are popular choices in the market; let us discuss some of the major differences:</p>
+
+                            <ul>
+                                <li>Kotlin has the support of smart cast which identifies immutable types and performs implicit cast by compiler whereas in Java we need to identify and perform the casting.</li>
+                                <li>Kotlin has the support of type inference which means we don’t need to specify the data type of variable explicitly whereas in Java we need to specify explicitly.</li>
+                                <li>In Kotlin, we don’t have checked exceptions, which is a disadvantage as it leads to error prone-code whereas Java has support for checked exceptions by which we can perform error handling.</li>
+                                <li>Java compilation time is 15-20% faster than Kotlin compilation time but in perspective of incremental build compilation, Kotlin will also take same compilation time as Java.</li>
+                                <li>In Kotlin, we can’t assign null values to variables or return values, if we really want to assign then we can declare a variable with special syntax whereas in Java we can assign null values but when we try to access objects pointing to null values raises an exception.</li>
+                                <li>Kotlin is interchangeable with Java irrespective of difference between Java vs Kotlin. We can call Kotlin code in Java and Java code in Kotlin. So we can have both Java vs Kotlin classes side by side in a project and compiles without any issues. After compilation we unable to find which class written in Java or Kotlin.</li>
+                            </ul>
+
+                            <!-- <img src="Img/Java-Vs-Kotlin.png" width="400" height="auto"> -->
+
+                            <div style="overflow-x:auto;">
+                                <table style="height: 1920px" width="700" border="1">
+                                    <tbody>
+                                        <tr>
+                                            <td width="213"><strong>The Basis Of Comparison&nbsp;</strong></td>
+                                            <td style="text-align: center" width="213"><strong>Java</strong></td>
+                                            <td style="text-align: center" width="213"><strong>Kotlin</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="213"><strong>Null Safe</strong></td>
+                                            <td width="213">In Java, NullPointerExceptions causes huge frustration for developers. It allows users to assign null to any variables but while accessing an object reference having null value raises a null pointer exception which user needs to handle.</td>
+                                            <td width="213">In Kotlin, By default, all types of variables are non-null able (i.e. we can’t assign null values to any type of variables/objects). If we try to assign or return null values, Kotlin code will fail during compile-time. If we really want a variable to have a null value, we can declare as follows:<br>
+                                                value num: Int? = null</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="213"><strong>Extension Functions</strong></td>
+                                            <td width="213">In Java, If we want to extend the functionality of existing class we need to create a new class and inherit the parent class. So Extension functions are not available in Java</td>
+                                            <td width="213">Kotlin provides developers the ability to extend an existing class with new functionality. We can create extend functions by prefixing the name of a class to name of the new function.</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="213"><b>Coroutines</b><strong>&nbsp;Support</strong></td>
+                                            <td width="213">In Java, whenever if we initiate a long-running network I/0 or CPU Intensive operations, the corresponding thread will be blocked. As Android is a single-threaded by default. Java provides the ability to create multiple threads in the background and run but managing them is a complex task.</td>
+                                            <td width="213">In Kotlin, We can create multiple threads to run these long-running intensive operations but we have coroutines support, which will suspend execution at a certain point without blocking threads while executing long-running intensive operations.</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="213"><strong>No checked exceptions</strong></td>
+                                            <td width="213">In Java, We have checked exceptions support which makes developers declare and catch the exception which ultimately leads to robust code with good error handling.</td>
+                                            <td width="213">In Kotlin, we don’t have checked exceptions. So developers don’t need to declare or catch the exceptions, which have advantages and disadvantages.</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="213"><strong>Data classes</strong></td>
+                                            <td width="213">In Java, suppose we need to have a class which needs to hold data but nothing else. For this we need to define constructors, variables to store data, getter and setter methods, hashcode(), toString(), and equals() functions</td>
+                                            <td width="213">In Kotlin, If we need to have classes which need to hold data we can declare a class with keyword “data” in the class definition then the compiler will take care of all of this work such as creating constructors, getter, setter methods for different fields.</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="213"><strong>Smart casts</strong></td>
+                                            <td width="213">In Java, We need to check the type of variables and cast according to our operation.</td>
+                                            <td width="213">In Kotlin, smart casts will handle these casting checks with keyword “is-checks” which will check for immutable values and performs implicit casting.</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="213"><strong>Type inference</strong></td>
+                                            <td width="213">In Java, we need to specify a type of each variable explicitly while declaring.</td>
+                                            <td width="213">In Kotlin, we don’t need to specify the type of each variable explicitly based on assignment it will handle. If we want to specify explicitly we can do.</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="213"><strong>Functional Programming</strong></td>
+                                            <td width="213">Java doesn’t have functional programming support till Java 8 but while developing Android applications it supports the only subset of <a href="https://www.educba.com/java-8-features/">Java 8 features</a>.</td>
+                                            <td width="213">Kotlin is a mix of procedural and functional programming language which consists of many useful methods such as lambda, operator overloading, higher-order functions, and lazy evaluation, etc.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </b>
+                    </div>
+
+                    <br>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+                    <div class="lead"><b>
+                            <h3 id="adk">Advantages and Disadvantages of Kotlin</h3>
+
+                            <h4><strong>Advantages of Kotlin </strong></h4>
+
+                            <ul>
+                                <li><strong>Maximize the productivity</strong></li>
+                            </ul>
+
+                            <p>Kotlin is a programing language that is based on Java. Kotlin can easily get rid of aggravations as well as obsolescence of Java. Kotlin is a clear compact and dynamic language. Kotlin can maximize the productivity of the developer’s team as it takes very little time to write and also you can deploy it pretty fast.</p>
+
+                            <ul>
+                                <li><strong>Works with existing Java Code</strong></li>
+                            </ul>
+
+                            <p>Kotlin is interoperable with Java codes. Kotlin is persistent with Java and so many other related frameworks and tools. So switching to Kotlin is much easy. If the product you are building can’t only be written in Kotlin, you can use the other one and both can be used together easily.</p>
+
+                            <ul>
+                                <li><strong>Can be easily maintained</strong></li>
+                            </ul>
+
+                            <p>Kotlin is supported by many IDEs which also include Android Studio and so many other SDK tools. By this, it also can maximize the productivity of the developer as it can continuously deal with toolkits they are already using.</p>
+
+                            <ul>
+                                <li><strong>Less Buggy</strong></li>
+                            </ul>
+
+                            <p>As we know Kotlin is a clear and compact codebase so it does not leave any space for making any mistakes, it also helps to provide more stable codes in production. The compiler will identify every possible mistake at a compile-time span sans any tumult.</p>
+
+                            <ul>
+                                <li><strong>Reliable</strong></li>
+                            </ul>
+
+                            <p>So many programming languages are available out there but Kotlin is more sophisticated language among them. Kotlin came on the big screen in the year of 2011. Till the time it has been introduced Kotlin has undergone many Beta and Alfa stages prior to releasing its final version.</p>
+
+                            <ul>
+                                <li><strong>Easy to learn</strong></li>
+                            </ul>
+
+                            <p>Kotlin aims to enhance the features of Java not just rewrite them. Mobile developers who have worked on Java they also can use Kotlin easily and their skill on Java will also stay relevant and helpful on Kotlin.</p>
+
+                            <ul>
+                                <li><strong>merges fuctional and procedural programming</strong></li>
+                            </ul>
+
+                            <p>Nowadays so many programming languages are available in the market and everyone has their fair share of advantages and disadvantages. In order to get the best results Kotlin has combined the best of the functional as well as procedural programming.</p>
+
+                            <h4><strong>Disadvantages of Kotlin</strong></h4>
+
+                            <ul>
+                                <li><strong>Different from Java</strong></li>
+                            </ul>
+
+                            <p>Though Kotlin and Java have too many resemblances but still, there are some differences too. App developers just can’t make the switch if they have inadequate knowledge about Kotlin.</p>
+
+                            <ul>
+                                <li><strong>Compilation Speed</strong></li>
+                            </ul>
+
+                            <p>In some cases, Kotlin works even faster than Java while performing incremental builds. But it should be remembered that Java will still stay incomparable when we talk about clean building.</p>
+
+                            <ul>
+                                <li><strong>Less Kotlin professionals</strong></li>
+                            </ul>
+
+                            <p>Kotlin has the sky-high popularity in developers community still only few programmers are available in this field. The fact about Kotlin is developers need to have in-depth knowledge about this language but nowadays it is really hard to find experienced experts in the domain of Kotlin.</p>
+
+                            <ul>
+                                <li><strong>Limited sources to learn</strong></li>
+                            </ul>
+
+                            <p>The number of developers who are switching to Kotlin is increasing but there are only limited developers community available to learn this language from or solve quarries in the process of development.</p>
+                        </b>
+                    </div>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+                    <div class="lead">
+                        <b>
+
+                            <div class="css-12257h" id="Aok">
+                                <h2 class="css-41bx4t">Top Alternatives to Kotlin</h2>
+                                <div class="css-1kupcgo">
+                                    <ul class="css-m7giud">
+                                        <li class="css-1to1q1s"><img src="https://img.stackshare.io/service/1012/thumb_retina_scala.png" alt="Scala" class="css-np1rfd">
+                                            <div class="css-zwwro1">
+                                                <h3 class="css-1ps7r35">Scala</h3>
+                                                <p class="css-1w2c3xd">Scala is an acronym for “Scalable Language”. This means that Scala grows with <span>you. You can play with it by typing one-line expressions and observing the results. But you can also rely on it for large mission critical systems, as many companies, including Twitter, LinkedIn, or Intel do. To some, Scala feels like a scripting language. Its syntax is concise and low ceremony; its types get out of the way because the compiler can infer them. </span></p>
+                                            </div>
+                                        </li>
+                                        <li class="css-1to1q1s"><img src="https://img.stackshare.io/service/1009/thumb_retina_tuHsaI2U.png" alt="Swift" class="css-np1rfd">
+                                            <div class="css-zwwro1">
+                                                <h3 class="css-1ps7r35">Swift</h3>
+                                                <p class="css-1w2c3xd">Writing code is interactive and fun, the syntax is concise yet expressive, and <span>apps run lightning-fast. Swift is ready for your next iOS and OS X project — or for addition into your current app — because Swift code works side-by-side with Objective-C. </span></p>
+                                            </div>
+                                        </li>
+                                        <li class="css-1to1q1s"><img src="https://img.stackshare.io/service/995/thumb_retina_K85ZWV2F.png" alt="Java" class="css-np1rfd">
+                                            <div class="css-zwwro1">
+                                                <h3 class="css-1ps7r35">Java</h3>
+                                                <p class="css-1w2c3xd">Java is a programming language and computing platform first released by Sun <span>Microsystems in 1995. There are lots of applications and websites that will not work unless you have Java installed, and more are created every day. Java is fast, secure, and reliable. From laptops to datacenters, game consoles to scientific supercomputers, cell phones to the Internet, Java is everywhere! </span></p>
+                                            </div>
+                                        </li>
+                                        <li class="css-1to1q1s"><img src="https://img.stackshare.io/service/997/thumb_retina_6d180ca6647e7f690c2615a86e7c2843.png" alt="Groovy" class="css-np1rfd">
+                                            <div class="css-zwwro1">
+                                                <h3 class="css-1ps7r35">Groovy</h3>
+                                                <p class="css-1w2c3xd">Groovy builds upon the strengths of Java but has additional power features inspired <span>by languages like Python, Ruby and Smalltalk. It makes modern programming features available to Java developers with almost-zero learning curve. </span></p>
+                                            </div>
+                                        </li>
+                                        <li class="css-1to1q1s"><img src="https://img.stackshare.io/service/993/thumb_retina_pUBY5pVj.png" alt="Python" class="css-np1rfd">
+                                            <div class="css-zwwro1">
+                                                <h3 class="css-1ps7r35">Python</h3>
+                                                <p class="css-1w2c3xd">Python is a general purpose programming language created by Guido Van Rossum. <span>Python is most praised for its elegant syntax and readable code, if you are just beginning your programming career python suits you best. </span></p>
+                                            </div>
+                                        </li>
+                                        <li class="css-1to1q1s"><img src="https://img.stackshare.io/service/1005/thumb_retina_O6AczwfV_400x400.png" alt="Go" class="css-np1rfd">
+                                            <div class="css-zwwro1">
+                                                <h3 class="css-1ps7r35">Go</h3>
+                                                <p class="css-1w2c3xd">Go is expressive, concise, clean, and efficient. Its concurrency mechanisms <span>make it easy to write programs that get the most out of multicore and networked machines, while its novel type system enables flexible and modular program construction. Go compiles quickly to machine code yet has the convenience of garbage collection and the power of run-time reflection. It's a fast, statically typed, compiled language that feels like a dynamically typed, interpreted language. </span></p>
+                                            </div>
+                                        </li>
+                                        <li class="css-1to1q1s"><img src="https://img.stackshare.io/service/2699/thumb_retina_KoK6gHzp.jpg" alt="React Native" class="css-np1rfd">
+                                            <div class="css-zwwro1">
+                                                <h3 class="css-1ps7r35">React Native</h3>
+                                                <p class="css-1w2c3xd">React Native enables you to build world-class application experiences on native <span>platforms using a consistent developer experience based on JavaScript and React. The focus of React Native is on developer efficiency across all the platforms you care about - learn once, write anywhere. Facebook uses React Native in multiple production apps and will continue investing in React Native. </span></p>
+                                            </div>
+                                        </li>
+                                        <li class="css-1to1q1s"><img src="https://img.stackshare.io/service/7180/thumb_retina_flutter-mark-square-100.png" alt="Flutter" class="css-np1rfd">
+                                            <div class="css-zwwro1">
+                                                <h3 class="css-1ps7r35">Flutter</h3>
+                                                <p class="css-1w2c3xd">Flutter is a mobile app SDK to help developers and designers build modern mobile <span>apps for iOS and Android. </span></p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </b>
+                    </div>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+
+                    <div id="exk" class="lead"><b>
+                            <h4>Examples</h4>
+
+                            <h5>Example_1:Kotlin Program to Add Two Integers</h5>
+
+                            <pre class="bg-white p-2 rounded my-5 shadow-sm" style="max-height: 600px;">
+<code class="kotlin hljs "><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">(args: <span class="hljs-type">Array</span>&lt;<span class="hljs-type">String</span>&gt;)</span></span> {
+
+<span class="hljs-keyword">val</span> first: <span class="hljs-built_in">Int</span> = <span class="hljs-number">10</span>
+<span class="hljs-keyword">val</span> second: <span class="hljs-built_in">Int</span> = <span class="hljs-number">20</span>
+
+<span class="hljs-keyword">val</span> sum = first + second
+
+println(<span class="hljs-string">"The sum is: <span class="hljs-variable">$sum</span>"</span>)
+}
+</code>
+</pre>
+
+                            <p>When you run the program, the output will be:</p>
+
+                            <pre class="bg-white p-2  rounded my-5 shadow-sm"><samp>The sum is: 30</samp></pre>
+
+
+                            <h5>Example_2:Multiply Two Floating Point Numbers</h5>
+
+                            <pre class="bg-white p-2 rounded my-5 shadow-sm" style="max-height: 600px;"><code class="kotlin hljs"><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">(args: <span class="hljs-type">Array</span>&lt;<span class="hljs-type">String</span>&gt;)</span></span> {
+
+<span class="hljs-keyword">val</span> first = <span class="hljs-number">1.5f</span>
+<span class="hljs-keyword">val</span> second = <span class="hljs-number">2.0f</span>
+
+<span class="hljs-keyword">val</span> product = first * second
+
+println(<span class="hljs-string">"The product is: <span class="hljs-variable">$product</span>"</span>)
+}</code></pre>
+
+                            <p>When you run the program, the output will be:</p>
+
+                            <pre class="bg-white p-2 rounded my-5 shadow-sm"><samp>The product is: 3.0</samp></pre>
+
+
+                            <h5>Example_3:Find Factorial of a number using for loop</h5>
+
+                            <pre class="bg-white p-2 rounded my-5 shadow-sm" style="max-height: 600px;"><code class="kotlin hljs"><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">(args: <span class="hljs-type">Array</span>&lt;<span class="hljs-type">String</span>&gt;)</span></span> {
+
+<span class="hljs-keyword">val</span> num = <span class="hljs-number">10</span>
+<span class="hljs-keyword">var</span> factorial: <span class="hljs-built_in">Long</span> = <span class="hljs-number">1</span>
+<span class="hljs-keyword">for</span> (i <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>..num) {
+    <span class="hljs-comment">// factorial = factorial * i;</span>
+    factorial *= i.toLong()
+}
+println(<span class="hljs-string">"Factorial of <span class="hljs-variable">$num</span> = <span class="hljs-variable">$factorial</span>"</span>)
+}</code></pre>
+
+                            <p>When you run the program, the output will be:</p>
+
+                            <pre class="bg-white p-2 rounded my-5 shadow-sm"><samp>Factorial of 10 = 3628800</samp></pre>
+
+
+                            <h5>Example_4: Sum of Natural Numbers using for loop</h5>
+
+                            <pre class="bg-white p-2 rounded my-5 shadow-sm" style="max-height: 600px;"><code class="kotlin hljs"><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">(args: <span class="hljs-type">Array</span>&lt;<span class="hljs-type">String</span>&gt;)</span></span> {
+
+<span class="hljs-keyword">val</span> num = <span class="hljs-number">100</span>
+<span class="hljs-keyword">var</span> sum = <span class="hljs-number">0</span>
+
+<span class="hljs-keyword">for</span> (i <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>..num) {
+    <span class="hljs-comment">// sum = sum+i;</span>
+    sum += i
+}
+
+println(<span class="hljs-string">"Sum = <span class="hljs-variable">$sum</span>"</span>)
+}</code></pre>
+
+                            <p>When you run the program, the output will be:</p>
+
+                            <pre class="bg-white p-2 rounded my-5 shadow-sm"><samp>Sum = 5050</samp></pre>
+
+                        </b>
+                    </div>
+
+                    <hr class="separate" style="border-top: 2px solid #fff">
+
+
+
+                    <div class="lead" id="kl">
+                        <h3>Some popular Kotlin Libraries</h3><br>
+
+                        <b>
+                            <strong>1. Kotlin Coroutines</strong>
+                            <br>
+
+                            <p>Some of the APIs embark on long-running operations that include IO, CPU, file IO, or GPU-intensive work and require a caller to block until they come to an end. But with Kotlin Coroutines, things are quite different. This helps to shun blocking thread and replaces it with the more convenient operation known as suspension of coroutines. Kotlin Coroutines enable developers to develop asynchronous programs in a simpler way, which are primarily based on the concept of continuation-passing style programming.</p>
+
+                            <center>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/C38lG2wraoo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </center>
+
+                            <strong>2. FlexboxLayout</strong>
+
+                            <br>
+                            <p>If you want to develop flexible layouts in your application, then FlexboxLayout is an amazing Android layout manager that can help you bring the analogous capabilities to the CSS Flexible Box Layout Module. This feature has extended the ViewGroup similar to Android linear layout and relative layout. You can also add different layouts to Flexbox such as flexWrap, flexDirection, justifyContent, alignItems, and alignContent. While using this layout you can arrange items in a horizontal manner and for step, you’ll be shifted to the next line.</p>
+
+                            <center>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/fqNPSSoMO9Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </center>
+
+                            <strong>3. Anko</strong>
+
+                            <br>
+                            <p>This is one of the popular Android libraries as it is written in Kotlin but maintained by JetBrains. The goal of this library is to speed-up the Kotlin Android development process, which makes it convenient as compared to other libraries. Anko has got its names from the first two letters of (An)droid and (Ko)tlin, naming it Anko. In addition, the library has four diverse modules that include Layouts, SQLite, Commons, and Coroutines.</p>
+
+                            <center>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/C_bbdj-_Rgs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </center>
+
+                            <strong>4. RxKotlin</strong>
+
+                            <p>This is the most lightweight library as compared to all the above-mentioned Android libraries because it adds convenient extension functions to RxJava, which allows you to utilize RxJava and Kotlin exceptionally. Although Kotlin has language features like extension functions that help to simplify the usage of RxJava even more. RxKotlin assists in gathering all these conveniences into one centralized library and standardize conventions for using RxJava with Kotlin.</p>
+
+                            <center>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/tHs-STjXLzE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </center>
+
+                            <strong>5. KBinding</strong>
+
+                            <br>
+
+                            <p>As the name suggests, KBinding is the data binding library for Kotlin, which is widely used with Anko to allow data binding seamlessly and comprehensively to understand the syntax. This library enables you to bind the data of your models straight to the XML views in a very flawless way. It represents four data binding models, which are as follows:</p>
+
+                            <ul>
+                                <li>OneWay: Binding from model to view</li>
+                                <li>TwoWay: Binding from model to view and view to model</li>
+                                <li>OneTime: Binding from model to view and auto-release after first emit</li>
+                                <li>OneWayToSource: Binding from view to model</li>
+                            </ul>
+
+                            <strong>6. Ktlint</strong>
+                            <br>
+                            <p>We always advise you to focus on what matters and adds value to the business rather than spending time on non-revenue generating tasks. Ktlint library includes both linear and formatted as it is a single binary, in which, it tries to capture the code from Android Kotlin Guide Style and kotlinlang.org. With this library, you can put over the importance of code clarity and community conventions than preferences. This will make things quite easy for people who are reading your codes, freeing up your time spent documenting everything.</p>
+
+                            <center>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/YmZIkUGnCco" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </center>
+
+                            <strong>7. Klaxon</strong>
+                            <br>
+                            <p>This is also a lightweight library that helps you parse JSON in Kotlin. In this library, the values are parsed from a suitable JSON file to the following type:</p>
+
+                            <ul>
+                                <li style="list-style-type: none;">
+                                    <ul>
+                                        <li>Long</li>
+                                        <li>Int</li>
+                                        <li>String</li>
+                                        <li>Double</li>
+                                        <li>JsonObject</li>
+                                        <li>JsonArray</li>
+                                        <li>Boolean</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                           
+
+
+                        </b>
+                    </div>
+
+                    <hr class="separate" style="border-top: 3px solid #fff">
+
+                   
+
+                </div>
+            </div>
+
+        </div>
+        <!-- End demo content -->
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+
+        <script>
+            $(function() {
+                // Sidebar toggle behavior
+                $('#sidebarCollapse').on('click', function() {
+                    $('#sidebar, #content').toggleClass('active');
+                });
+            });
+        </script>
+
+    </body>
+
+    </html>
+

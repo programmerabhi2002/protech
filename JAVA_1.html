@@ -1,0 +1,1144 @@
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+
+        <title>
+            Java
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    </head>
+
+    <style>
+        .vertical-nav {
+            min-width: 17rem;
+            width: 17rem;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s;
+        }
+
+        .page-content {
+            width: calc(100% - 17rem);
+            margin-left: 17rem;
+            transition: all 0.4s;
+        }
+
+        /* for toggle behavior */
+
+        #sidebar.active {
+            margin-left: -17rem;
+        }
+
+        #content.active {
+            width: 100%;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            #sidebar {
+                margin-left: -17rem;
+            }
+
+            #sidebar.active {
+                margin-left: 0;
+            }
+
+            #content {
+                width: 100%;
+                margin: 0;
+            }
+
+            #content.active {
+                margin-left: 17rem;
+                width: calc(100% - 17rem);
+            }
+        }
+
+        body {
+            background: #599fd9;
+            background: -webkit-linear-gradient(to right, #599fd9, #c2e59c);
+            background: linear-gradient(to right, #599fd9, #c2e59c);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .separator {
+            margin: 3rem 0;
+            border-bottom: 1px dashed #fff;
+        }
+
+        .text-uppercase {
+            letter-spacing: 0.1em;
+        }
+
+        .text-gray {
+            color: #525252;
+        }
+    </style>
+
+    <body>
+
+        <!-- Vertical navbar -->
+        <div class="vertical-nav " id="sidebar">
+            <!-- bg-white -->
+            <div class="py-4 px-3 mb-4 ">
+                <!-- bg-white -->
+                <div class="media d-flex align-items-center"><img src="Img/Java.png" alt="..." width="70" class="mr-3 rounded-circle img-thumbnail shadow-sm">
+
+                <div class="media-body">
+                    <h4 class="m-0" style="font-size:20px"><i></i></h4>
+                    <p class="font-weight text-dark mb-0"><i>
+                           
+                        </i></p>
+                </div>
+           </div>
+        </div>
+
+        <div class="separator"></div>
+        <!--         <hr class="solid" style="border-top: 3px solid #bbb"> -->
+        <p class="text-gray font-weight-bold text-uppercase px-3 small pb-4 mb-0" style="font-weight:bold">Index</p>
+
+        <ul class="nav flex-column  mb-0" style="font-weight:bold">
+            <!-- bg-white -->
+            <li class="nav-item">
+                <a href="#ja" class="nav-link text-dark font-italic ">
+                    <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>
+                    Introduction
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#hi" class="nav-link text-dark font-italic">
+                    <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>
+                    History
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#aj" class="nav-link text-dark font-italic">
+                    <i class="fa fa-cubes mr-3 text-primary fa-fw"></i>
+                    Applications of Java
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#jl" class="nav-link text-dark font-italic">
+                    <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                    Java Libraries
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#jf" class="nav-link text-dark font-italic">
+                    <i class="fa fa-picture-o mr-3 text-primary fa-fw"></i>
+                    Java Frameworks
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="index.html" class="nav-link text-dark font-italic">
+                    <i class="fa fa-line-chart mr-3 text-primary fa-fw"></i>
+                    <-BACK TO HOME</a>
+            </li>
+        </ul>
+
+        </div>
+        <!-- End vertical navbar -->
+
+
+        <!-- Page content holder -->
+        <div class="page-content p-5" id="content">
+            <!-- Toggle button -->
+            <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill shadow-sm px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">MENU</small></button>
+
+            <!-- Demo content -->
+            <h2 class="display-4 text-white">Java</h2>
+            <p class="lead text-white mb-0"> <i>Designed by James Gosling</i></p>
+            <p class="lead text-white mb-0"> <i>Developed by <a href="https://en.wikipedia.org/wiki/Oracle_Corporation" style="color:white">Oracle Corporation</a> </i></p>
+            <br>
+            <p class="lead text-white">For downloading latest version Click <a href="https://www.java.com/en/download/manual.jsp" class="text-white">
+                    <u>Here</u></a>
+            </p>
+            <hr class="separate" style="border-top: 3px solid #fff">
+
+          
+            <!-- ************************************************************************************** -->
+            <p class="lead"><b><a href="JAVA.html" style="font-size:35px;color:white;text-decoration:none">
+                        <i>
+                            <--Back </i>
+                    </a>
+                </b>
+            </p>
+            <!-- ************************************************************************************** -->
+            <hr class="separate" style="border-top: 3px solid #fff">
+
+            <div class="row text-white-bold">
+                <div class="col-lg-12">
+
+                    <h4> 8) Mockito</h4>
+                    <p class="lead">
+                        <b>
+                            Mockito is a mocking framework, JAVA-based library that is used for effective unit testing of JAVA applications. Mockito is used to mock interfaces so that a dummy functionality can
+                            be added to a mock interface that can be used in unit testing.
+                            <br>
+                            <strong>
+                                Mocking:
+                            </strong>
+                            Mocking is a way to test the functionality of a class in isolation. Mocking does not require a database connection or properties file read or file server read to test a functionality. Mock objects do the mocking of the real service. A mock object returns
+                            a dummy data corresponding to some dummy input passed to it.
+                            <br>
+                            <strong>Mockito: </strong>
+                            <br>
+                            Mockito facilitates creating mock objects seamlessly. It uses Java Reflection in order to create mock objects for a given interface.
+                            Mock objects are nothing but proxy for actual implementations.
+                            <br>
+                            Consider a case of Stock Service which returns the price details of a stock. During development, the actual stock service cannot be used to get real-time data. So we need a dummy implementation of the stock service.
+                            Mockito can do the same very easily, as its name suggests.
+                            <br>
+                            For Example:
+                        </b>
+                    </p>
+                    <pre class="bg-white p-5 rounded my-5 shadow-sm">
+
+    import java.io.IOException;
+
+    public class HelloApplication {
+
+    public static interface Greeter {
+        String getGreeting(String subject);
+        String getIntroduction(String actor);
+    }
+    
+    public static class HelloGreeter implements Greeter {
+        private String hello;
+        private String segmenter;
+        
+        public HelloGreeter(String hello, String segmenter) {
+            this.hello = hello;
+            this.segmenter = segmenter;
+        }
+        public String getGreeting(String subject) {
+            return hello + " " + subject; 
+        }
+        public String getIntroduction(String actor) {
+            return actor+segmenter;
+        }
+    }
+    
+    public static interface HelloActable {
+        void sayHello(String actor, String subject) throws IOException;
+    }
+    
+    public static class HelloAction implements HelloActable {
+        private Greeter helloGreeter;
+        private Appendable helloWriter;
+
+        public HelloAction(Greeter helloGreeter, Appendable helloWriter) {
+            super();
+            this.helloGreeter = helloGreeter;
+            this.helloWriter = helloWriter;
+        }
+        public void sayHello(String actor, String subject) throws IOException { 
+            helloWriter.append(helloGreeter.getIntroduction(actor)).append(helloGreeter.getGreeting(subject));
+        }
+    }
+
+    public static void main(String... args) throws IOException {
+        new HelloAction(new HelloGreeter("hello", ": "), System.out).sayHello("application", "world");
+    }
+
+    }
+                </pre>
+                    <p class="lead">
+                        <b>
+                            The result of HelloApplication launching will be the following:<br>
+                        </b>
+                    </p>
+
+                    <pre class="bg-white p-5 rounded my-5 shadow-sm">
+application: hello world
+                </pre>
+
+                    <p class="lead">
+                        <b>
+                            Unit test for HelloActable component may look like this:<br> </b>
+                        </b>
+                    </p>
+
+                    <pre class="bg-white p-5 rounded my-5 shadow-sm">
+
+    package org.examples;
+
+    import static org.mockito.Matchers.any;
+    import static org.mockito.Matchers.eq;
+    import static org.mockito.Mockito.mock;
+    import static org.mockito.Mockito.times;
+    import static org.mockito.Mockito.verify;
+    import static org.mockito.Mockito.when;
+
+    import org.junit.Before;
+    import org.junit.Test;
+
+    import org.examples.HelloApplication.HelloActable;
+    import org.examples.HelloApplication.HelloAction;
+    import org.examples.HelloApplication.Greeter;
+
+    public class HelloActionUnitTest {
+    
+    Greeter helloGreeterMock;
+    Appendable helloWriterMock;
+    HelloActable helloAction;
+    
+    @Before
+    public void setUp() {
+        helloGreeterMock = mock(Greeter.class);
+        helloWriterMock = mock(Appendable.class);
+        helloAction = new HelloAction(helloGreeterMock, helloWriterMock);
+    }
+    
+    @Test
+    public void testSayHello() throws Exception {
+        when(helloWriterMock.append(any(String.class))).thenReturn(helloWriterMock);
+        when(helloGreeterMock.getIntroduction(eq("unitTest"))).thenReturn("unitTest : ");
+        when(helloGreeterMock.getGreeting(eq("world"))).thenReturn("hi world");
+        
+        helloAction.sayHello("unitTest", "world");
+        
+        verify(helloGreeterMock).getIntroduction(eq("unitTest"));
+        verify(helloGreeterMock).getGreeting(eq("world"));
+
+        verify(helloWriterMock, times(2)).append(any(String.class));
+        verify(helloWriterMock, times(1)).append(eq("unitTest : "));
+        verify(helloWriterMock, times(1)).append(eq("hi world"));
+    }
+    }
+                    </pre>
+
+                    <p class="lead">
+                        <b>
+                            It uses mock objects for the Greeter and Appendable interfaces, and implicitly assumes the next use case:<br> </b>
+                        </b>
+                    </p>
+
+                    <pre class="bg-white p-5 rounded my-5 shadow-sm">
+unitTest : hi world
+                    </pre>
+
+                    <p class="lead">
+                        <b>
+                            Integration test code for testing HelloActable wired together with Greeter may look like the following:<br> </b>
+                        </b>
+                    </p>
+
+                    <pre class="bg-white p-5 rounded my-5 shadow-sm">
+
+    package org.examples;
+
+    import static org.mockito.Matchers.any;
+    import static org.mockito.Matchers.eq;
+    import static org.mockito.Mockito.mock;
+    import static org.mockito.Mockito.times;
+    import static org.mockito.Mockito.verify;
+    import static org.mockito.Mockito.when;
+
+    import org.junit.Before;
+    import org.junit.Test;
+
+    import org.examples.HelloApplication.HelloActable;
+    import org.examples.HelloApplication.HelloAction;
+    import org.examples.HelloApplication.Greeter;
+    import org.examples.HelloApplication.HelloGreeter;
+
+    public class HelloActionIntegrationTest {
+    HelloActable helloAction;
+    Greeter helloGreeter;
+    Appendable helloWriterMock;
+    
+    @Before
+    public void setUp() {
+        helloGreeter = new HelloGreeter("welcome", " says ");
+        helloWriterMock = mock(Appendable.class);
+        helloAction = new HelloAction(helloGreeter, helloWriterMock);
+    }
+    
+    @Test
+    public void testSayHello() throws Exception {
+        when(helloWriterMock.append(any(String.class))).thenReturn(helloWriterMock);
+
+        helloAction.sayHello("integrationTest", "universe");
+
+        verify(helloWriterMock, times(2)).append(any(String.class));
+        verify(helloWriterMock, times(1)).append(eq("integrationTest says "));
+        verify(helloWriterMock, times(1)).append(eq("welcome universe"));
+    }
+    }
+                    </pre>
+
+                    <p class="lead">
+                        <b>
+                            It uses mock objects only in place of Appendable interfaces, uses the real implementations for other (HelloActable and Greeter) interfaces, and implicitly assumes the next use case:
+                            <br>
+                        </b>
+                    </p>
+
+                    <pre class="bg-white p-5 rounded my-5 shadow-sm">
+integrationTest says welcome universe
+                    </pre>
+
+                    <p class="lead">
+                        <b>
+                            As can be seen from the import statements of HelloActionUnitTest and HelloActionIntegrationTest classes, it is necessary to put some Mockito jars and JUnit jars in your class
+                            path to be able to compile and run the test classes.<br>
+                        </b>
+                    </p>
+                    <p class="lead">
+                        <b>
+                            For more information visit <a href="https://site.mockito.org/"> Here.</a>
+                        </b>
+                    </p>
+
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/eILy4p99ac8?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+
+                    <hr class="separate" style="border-top: 3px solid #fff">
+
+                    <!-- ************************************************************************************** -->
+
+                    <h4>
+                        9) JUnit
+                    </h4>
+
+
+                    <p class="lead">
+                        <b>
+                            <strong>
+                                What is JUnit ?
+                            </strong>
+                            <br>
+                            JUnit is a unit testing framework for Java programming language. It plays a crucial role test-driven development, and is a family of unit testing frameworks collectively known as xUnit.
+                            <br>
+                            JUnit promotes the idea of "first testing then coding", which emphasizes on setting up the test data for a piece of code that can be tested first and then implemented. This approach is like "test a little, code a little, test a little, code a little." It increases the productivity of the programmer and the stability of program code, which in turn reduces the stress on the programmer and the time spent on debugging.
+                            <br>
+
+                            JUnit is a unit testing framework for Java programming language. JUnit has been important in the development of test-driven development, and is one of a family of unit testing frameworks collectively known as
+                            xUnit, that originated with JUnit.
+                            <br>
+                            <strong>For Example:</strong>
+                            <br>
+                            Create a java class file name TestJunit in<strong> C:\>JUNIT_WORKSPACE</strong>
+                        </b>
+                    </p>
+
+                    <pre class="bg-white p-5 rounded my-5 shadow-sm">
+    import org.junit.Test;
+    import static org.junit.Assert.assertEquals;
+
+    public class TestJunit {
+    @Test
+        
+    public void testAdd() {
+        String str = "Junit is working fine";
+        assertEquals("Junit is working fine",str);
+    }
+    }
+                     </pre>
+
+                    <p class="lead">
+                        <b>
+                            Create a java class file name TestRunner in<strong> C:\>JUNIT_WORKSPACE</strong> to execute test case(s). </b>
+                    </p>
+
+                    <pre class="bg-white p-5 rounded my-5 shadow-sm">
+    import org.junit.runner.JUnitCore;
+    import org.junit.runner.Result;
+    import org.junit.runner.notification.Failure;
+
+    public class TestRunner {
+    public static void main(String[] args) {
+        Result result = JUnitCore.runClasses(TestJunit.class);
+            
+        for (Failure failure : result.getFailures()) {
+            System.out.println(failure.toString());
+        }
+            
+        System.out.println(result.wasSuccessful());
+    }
+    }
+                     </pre>
+                    <p class="lead">
+                        <b>
+                            Compile the classes using<strong> javac</strong> compiler as follows −
+                        </b>
+                    </p>
+
+                    <pre class="bg-white p-5 rounded my-5 shadow-sm">
+C:\JUNIT_WORKSPACE>javac TestJunit.java TestRunner.java
+                    </pre>
+
+                    <p class="lead">
+                        <b>
+                            Now run the Test Runner to see the result as follows −
+                        </b>
+                    </p>
+
+                    <pre class="bg-white p-5 rounded my-5 shadow-sm">
+C:\JUNIT_WORKSPACE>java TestRunner
+                    </pre>
+                    <p class="lead">
+                        <b>
+                            Verify the output:
+                        </b>
+                    </p>
+                    <pre class="bg-white p-5 rounded my-5 shadow-sm">
+true
+                    </pre>
+
+                    </p>
+                    <p class="lead">
+                        <b>
+                            For more information visit <a href="https://junit.org/junit4/"> Here.</a>
+                        </b>
+                    </p>
+
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/SDwqcFwvwY0?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+                    <br>
+                    <hr class="separate" style="border-top: 3px solid #fff">
+                    <!-- ************************************************************************************** -->
+
+                    <h4> 10) Log4j and Slf4j</h4>
+
+                    <h5> Log4j</h5>
+                    <p class="lead">
+                        <b>
+                            log4j is a reliable, fast and flexible logging framework (APIs) written in Java, which is distributed under the Apache Software License.
+                            <br>
+                            log4j has been ported to the C, C++, C#, Perl, Python, Ruby, and Eiffel languages.
+                            <br>
+                            log4j is highly configurable through external configuration files at runtime. It views the logging process in terms of levels of priorities and offers mechanisms to direct logging information to a great variety of
+                            destinations, such as a database, file, console, UNIX Syslog, etc.
+
+                            <br>
+
+                            log4j has three main components:
+                            <br>
+
+                            <ul class="list lead">
+                                <li>
+                                    <p><b>loggers</b>: Responsible for capturing logging information.</p>
+                                </li>
+                                <li>
+                                    <p><b>appenders</b>: Responsible for publishing logging information to various preferred destinations.</p>
+                                </li>
+                                <li>
+                                    <p><b>layouts</b>: Responsible for formatting logging information in different styles.</p>
+                                </li>
+                            </ul>
+                        </b>
+                    </p>
+
+                    <p class="lead">
+                        <b>
+                            For more information about Log4J visit <a href="https://logging.apache.org/log4j/1.2/"> Here.</a>
+                        </b>
+                    </p>
+
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/mblGoKU1aKo?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+
+
+                    <h5>Slf4j</h5>
+                    <p class="lead">
+                        <b>
+                            SLF4J stands for Simple Logging Facade for Java. It provides a simple abstraction of all the logging frameworks. It enables a user to work with any of the logging frameworks such as Log4j, Logback,
+                            JUL (java.util.logging), etc. using single dependency.
+                            <br>
+                            SLF4J stands for Simple Logging Facade for Java. It provides a simple abstraction of all the logging frameworks in Java. Thus, it enables a user to work with any of the logging frameworks such as Log4j, Logback and JUL (java.util.logging) using single dependency.
+                            You can migrate to the required logging framework at
+                            run-time/deployment time.
+                            <br>
+
+                        </b>
+                    </p>
+
+                    <p class="lead">
+                        <b>
+                            For more information about SLF4J visit <a href="http://www.slf4j.org/"> Here.</a>
+                        </b>
+                    </p>
+
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/lGrcZsw-hKQ?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+                    <hr class="separate" id="jf" style="border-top: 3px solid #fff">
+                    <!-- ************************************************************************************** -->
+                    <h3 class="text-dark" style="font-weight:600" id="in">Java Frameworks</h3><br>
+                    <h5>What is Java Framework ?</h5>
+                    <p class="lead">
+                        <b>
+                            A body of pre-written code acting as a template or skeleton, which a developer can then use and reuse to create an application by filling in their code as needed to get the app to work as they intend refers to as a Framework. Reuse of frameworks enables developers to program their application without the
+                            manual overhead of creating every line of code from
+                            scratch.<br>
+                            A Java framework is specific to the Java programming language, used as a platform for developing software applications and Java programs.
+                            Java frameworks may include predefined classes and functions used to process, input, and manage hardware devices, as well as interact with system software. It depends on the type of framework, the programmer’s skill level,
+                            what they’re trying to accomplish, and their preferences.
+                        </b>
+                    </p>
+
+                    <h5>Why should we use Frameworks ?</h5>
+
+                    <p class="lead">
+                        <b>
+                            Frameworks give a structure to your applications. For example, if we have a proper framework for testing, we can automate a lot of things and get accurate and consistent results. Same way if there are frameworks for ORM, web applications, logging, data management etc. it will make a developer’s life simple and help them concentrate more on business logic rather than worrying
+                            about common pieces of code used across a domain or
+                            application.
+                            <br>
+                            List of best 10 Frameworks:
+                            <br>
+                            <ul class="lead" type="square">
+                                <li>
+                                    Spring
+                                </li>
+                                <li>
+                                    Struts
+                                </li>
+                                <li>
+                                    vaadin
+                                </li>
+                                <li>
+                                    Apache Wicket
+                                </li>
+                                <li>
+                                    JSF (Java Server Faces)
+                                </li>
+                                <li>
+                                    Dropwizard
+                                </li>
+                                <li>
+                                    Grails
+                                </li>
+                                <li>
+                                    ATG
+                                </li>
+                                <li>
+                                    Play
+                                </li>
+                                <li>
+                                    Apache Hadoop
+                                </li>
+                                Here are some other Framework which are little bit popular :<br>
+                                <ul class="lead" type="square"><b>
+                                        <li>
+                                            Drools
+                                        </li>
+                                        <li>
+                                            GWT (Google Web Toolkit)
+                                        </li>
+                                        <li>
+                                            Jersey
+                                        </li>
+                                        <li>
+                                            Spark
+                                        </li>
+                                    </b>
+                                </ul>
+                            </ul>
+                        </b>
+                    </p>
+
+
+                    <hr class="separate" style="border-top: 3px solid #fff">
+                    <!-- ************************************************************************************** -->
+                    <p>
+                        <img class="alignleft wp-image-4266" style="float: left; border:2px solid white" src="https://hackr.io/blog/uploads/images/1570190916NEL81mpkxu.jpg" alt="Spring" width="120" height="100">
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h4>
+                        Spring Framework
+                    </h4>
+
+                    <p class="lead"> <b>
+                            <strong>Developers:</strong> Pivotal Software<br>
+                            <strong>Initial Release:</strong> 1 October 2002; 18 years ago<br>
+                            <strong>Written in:</strong> Java<br>
+                            <strong>License:</strong> Apache License 2.0<br>
+                            <strong>Repository:</strong> <a href="github.com/spring-projects/spring-framework">
+                                github.com/spring-projects/spring-framework</a><br>
+                        </b>
+                    </p>
+
+                    <p class="lead">
+                        <b>
+                            The Spring Framework is an application framework and inversion of control container for the Java platform. The framework's core features can be used by any Java application, but there are extensions for building web applications on top of the Java EE (Enterprise Edition) platform. Although the framework does not impose any specific programming model, it has become popular in the Java community as an addition to the
+                            Enterprise JavaBeans (EJB) model.
+                            The Spring Framework is open source.
+                            <br>
+                            Central to the Spring Framework is its inversion of control (IoC) container, which provides a consistent means of configuring and managing Java objects using reflection. The container is responsible for managing object lifecycles of specific objects: creating these objects, calling their initialization methods,
+                            and configuring these objects by
+                            wiring them together.
+                            <br>
+                            Spring framework is exhaustive and covers a lot of features including security and configuration, which are easy to learn. Further, since it is the most popular web framework, you can find a lot of documentation and an active community.
+
+                            With everything configured, your code will be clean and easy to comprehend.
+                            <br>
+                            The Spring Framework has its own Aspect-oriented programming (AOP) framework that modularizes cross-cutting concerns in aspects. The motivation for creating a separate AOP framework comes from the belief that it should be possible to provide basic AOP features without too much complexity in either design, implementation, or configuration.
+                            The Spring AOP framework also takes full advantage
+                            of the Spring container.
+                            <br>
+                            The Spring AOP framework is proxy pattern-based, and is configured at run time. This removes the need for a compilation step or load-time weaving. On the other hand, interception only allows for public
+                            method-execution on existing objects at a
+                            join point.
+                            <br>
+                            The Spring Framework features its own model–view–controller (MVC) web application framework, which wasn't originally planned. The Spring developers decided to write their own Web framework as a reaction to what they perceived as
+                            the poor design of the (then) popular
+                            Jakarta Struts Web framework,as well as deficiencies in other available frameworks. In particular, they felt there was insufficient separation between the presentation and request handling layers,
+                            and between the request handling layer and the model.
+                            The framework defines strategy interfaces for all of the responsibilities that must be handled by a modern request-based framework. The goal of each interface is to be simple and clear so that it's easy for Spring MVC users to write their own implementations, if they so choose. MVC paves the way for cleaner front end code. All interfaces are tightly coupled to
+                            the Servlet API.
+                            <br>
+                            When a user clicks a link or submits a form in their web-browser, the request goes to Spring DispatcherServlet. DispatcherServlet is a front-controller in spring MVC. It consults one or more handler mappings. DispatcherServlet has been chosen as an appropriate controller and forwards the request to it. The Controller processes the particular request and generates a result. It is known as Model. This information needs to be formatted in html or any front-end technology like JSP. This is the View of an application. All of the information is in the MODEL And VIEW object. When the controller is not coupled to a particular view,
+                            DispatcherServlet finds the actual JSP with the help of
+                            ViewResolver.
+                            <br>
+                            <strong> For example see below example :-</strong>
+                            <br>
+                        </b>
+                    </p>
+
+
+
+                    <center>
+                        <iframe width="600" height="350" src="https://youtube.com/embed/mN_9sKco_DQ?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+
+                    <p class="lead">
+                        <b>
+                            For tutorial you can visit <a href="https://www.youtube.com/embed/If1Lw4pLLEo"> Here.</a>
+                        </b>
+                    </p>
+
+                    <hr class="separate" style="border-top: 3px solid #fff">
+                    <!-- ************************************************************************************** -->
+
+                    <p>
+                        <img class="alignleft wp-image-4266" style="float: left; border:2px solid white" src="https://hackr.io/blog/uploads/images/1570190916lxHGuA7h8x.jpg" alt="Struts" width="150" height="100">
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h4>
+                        Struts Framework
+                    </h4>
+
+                    <p class="lead"> <b>
+                            <strong>Developers:</strong> Apache Software Foundation<br>
+                            <strong>Initial Release:</strong> October 10, 2006; 14 years ago<br>
+                            <strong>Written in:</strong> Java<br>
+                            <strong>License:</strong> Apache License 2.0<br>
+                            <strong>Repository:</strong> <a href="Struts Repository">
+                                Struts Repository</a><br>
+                        </b>
+                    </p>
+
+                    <p class="lead">
+                        <b>
+                            Apache Struts is another robust open-source framework for web applications. It follows the MVC (Model-View-Controller) model and extends the JSP API.
+                            In a traditional servlet-JSP approach, if a user submits let’s say a form with his details, the information then goes to a servlet for processing or the control goes over to next JSP (Java Server Pages – where you can write Java code in an HTML). This becomes confusing for complex applications as the ‘View’ or presentation layer should ideally not have business logic.
+                            <br>
+                            Struts separate the View, Controller and the Model (data) and provides the binding between each through a configuration file struts-config.xml.
+                            <br>
+                            The controller is an ActionServlet where you can write templates for the View and the user data is maintained using ActionForm JavaBean.
+                            The Action object is responsible for forwarding the application flow.
+
+                            <br>
+                            Struts is used to create a web applications based on servlet and JSP. Struts depend on the MVC (Model View Controller) framework. Struts application is a genuine web application. Struts are thoroughly useful in building J2EE (Java 2 Platform, Enterprise Edition) applications because struts takes advantage of J2EE design patterns.
+                            Struts follows these J2EE design
+                            patterns including MVC.
+                            <br>
+                        </b>
+                    </p>
+
+                    <p class="lead">
+                        <b>
+                            To download it click <a href="https://struts.apache.org/download.cgi#struts2526"> Here.</a>
+                        </b>
+                    </p>
+
+                    <p>
+                        <center>
+                            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20200115051016/Untitled-Diagram-713.png" width="450" height="300">
+                        </center>
+                    </p>
+
+
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/YcCsJtqI72A?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+
+                    <p class="lead">
+                        <b>
+                            For tutorial you can visit <a href="https://www.youtube.com/embed/f46WEeM8HTA"> Here.</a>
+                        </b>
+                    </p>
+
+                    <hr class="separate" style="border-top: 3px solid #fff">
+                    <!-- ************************************************************************************** -->
+
+                    <p>
+                        <img class="alignleft wp-image-4266" style="float: left; border:2px solid white" src="https://hackr.io/blog/uploads/images/1570190916LbCS0CD6La.jpg" width="180" height="100">
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h4>
+                        vaadin Framework
+                    </h4>
+
+                    <p class="lead"> <b>
+                            <strong>Developers:</strong> Vaadin Ltd.<br>
+
+                            <strong>Written in:</strong> Java, JavaScript<br>
+                            <strong>License:</strong> Apache License 2.0<br>
+                            <strong>Repository:</strong> <a href="	Vaadin Repository">
+                                Vaadin Repository</a><br>
+                        </b>
+                    </p>
+
+                    <p class="lead">
+                        <b>
+                            Vaadin is a flagship product and also a platform where developers can do HTML5 web UI implementation using Java. It is an open-source platform that includes the Java web framework and a set of web components along with application starters and tools. These web components form the core of Vaadin and can be customized leading to high performance and versatile
+                            code for desktop and mobile apps.
+                            <br>
+                            Vaadin flow is the actual Java framework part of the Vaadin platform that takes care of the client-server communication as well as routing. With Vaadin flow, you can write your web application completely in Java without the fuss of JS or CSS. The UI components take care of the browser activities of the user using automated communication to and forth browser and server. You can easily integrate Vaadin components into any IDE that you are using plus it is a cross-platform framework, so no need to worry about migrating the code into
+                            a different platform.
+                            <br>
+                            It is a whole new approach to build Java applications so that you can concentrate on the presentation layer alone without worrying about client-server communications. It also has Data Binding API that maps UI components to the database using type-safe Java code and abstraction layers so that you can build reusable components in UI using HTML
+                            templates and Java both.
+                            Vaadin Flow programming model is similar to Vaadin Framework's–It uses Java as the programming language for creating web content. Vaadin Flow features a server-side architecture which means that most of the logic runs on the server. On the client-side, Vaadin Flow is built on top of Web Component standards.
+                            Vaadin Flow includes Web Component support for Java developers and allows the use of HTML templates (based on Polymer) with automated client-server communication. It also includes APIs for routing (connecting user interface components to URLs), data binding (synchronizing input fields with server-side data models),
+                            and server-side DOM manipulation.
+                            <br>
+
+                        </b>
+                    </p>
+
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/BszYCl4mJg?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+
+                    <p class="lead">
+                        <b>
+                            For tutorial you can visit <a href="https://www.youtube.com/embed/qUBt8k4pQgQ"> Here.</a>
+                        </b>
+                    </p>
+
+
+                    <hr class="separate" style="border-top: 3px solid #fff">
+                    <!-- ************************************************************************************** -->
+
+                    <p>
+                        <img class="alignleft wp-image-4266" style="float: left; border:2px solid white" src="https://hackr.io/blog/uploads/images/1570190916N7oxA8X6Eo.jpg" width="100" height="100">
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h4>
+                        Apache Wicket Framework
+                    </h4>
+
+                    <p class="lead"> <b>
+                            <strong>Developers:</strong> Apache Software Foundation<br>
+                            <strong>Written in:</strong> Java<br>
+                            <strong>License:</strong> Apache License 2.0<br>
+                            <strong>Repository:</strong> <a href="	Wicket Repository (Mirror)">
+                                Wicket Repository (Mirror)</a><br>
+                        </b>
+                    </p>
+
+                    <p class="lead">
+                        <b>
+                            Apache Wicket, commonly referred to as Wicket, is a component-based web application framework for the Java programming language conceptually similar to JavaServer Faces and Tapestry. It was originally written by Jonathan Locke in April 2004. Version 1.0 was released in June 2005. It graduated into an Apache top-level project in June 2007.
+                            <br>
+                            If you have already worked with JSP, the learning wicket will be a cakewalk. A simple Java web frameworks, Wicket has a component-oriented structure and all you need to know is Java and HTML. Absolutely no XMLs or configuration files!
+                            <br>
+                            The main feature of Wicket is it POJO model wherein components are simple (Plain Old) Java Objects having OOP features. These components are bundled together as reusable packages with images, buttons, forms, links, pages, containers, behaviours and more so that developers can customize them.
+                            <br>
+                            Wicket is light-weight and you can build applications really fast. It is also easy to unit test code written in Wicket.
+                            <br>
+                            In Wicket, all server side state is automatically managed. You should never directly use an HttpSession object or similar wrapper to store state. Instead, state is associated with components. Each server-side page component holds a nested hierarchy of stateful components, where each component's model is, in the end, a POJO (Plain Old Java Object)
+
+                            Wicket aims for simplicity. There are no configuration files to learn in Wicket. Wicket is a simple class library with a consistent approach to component structure.
+                        </b>
+                    </p>
+
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/dmtXkA7FlwA?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+
+                    <p class="lead">
+                        <b>
+                            For tutorial you can visit <a href="https://www.youtube.com/embed/y1CSRj_jjM4"> Here.</a>
+                        </b>
+                    </p>
+                    <hr class="separate" style="border-top: 3px solid #fff">
+                    <!-- ************************************************************************************** -->
+
+                    <p>
+                        <img class="alignleft wp-image-4266" style="float: left; border:2px solid white" src="https://hackr.io/blog/uploads/images/1570190916PlNWJFdTdn.jpg" width="160" height="100">
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h4>
+                        JSF (Java Server Faces)
+                    </h4>
+
+                    <p class="lead"> <b>
+                            <strong>Developers:</strong> Eclipse Foundation<br>
+                            <strong>Written in:</strong> Java<br>
+                            <strong>License:</strong> Apache License 2.0<br>
+                            <strong>Repository:</strong> <a href="	github.com/eclipse-ee4j/faces-api">
+                                github.com/eclipse-ee4j/faces-api</a><br>
+                        </b>
+                    </p>
+
+                    <p class="lead">
+                        <b>
+                            Don’t confuse JSF with JSP, which is just a text document that can have static and dynamic content. JSF is developed by Oracle as a part of the Java Enterprise Edition 7.
+                            <br>
+                            Jakarta Server Faces (JSF; formerly JavaServer Faces) is a Java specification for building component-based user interfaces for web applications[1] and was formalized as a standard through the Java Community Process being part of the Java Platform, Enterprise Edition. It is also a MVC web framework that simplifies construction of user interfaces (UI) for server-based applications by using reusable UI components in a page.
+                            <br>
+
+                            It is a component-based MVC framework and has reusable UI components for server-based applications. The main idea is to encapsulate various client-side technologies like CSS, JavaScript, and HTML that will allow developers to create UI without knowing any of these technologies in-depth. They can just drag and drop UI components and focus more on their presentation layer specifics.
+                            <br>
+                            The default templating system in JSF is the FaceLets. JSF is quite similar to Struts.
+                            <br>
+
+                            JSF can be further seamlessly integrated with AJAX-enabled components to enrich the user experience by adding Ajax events for validations and method invocations.
+                            <br>
+                            Based on a component-driven UI design-model, JavaServer Faces uses XML files called view templates or Facelets views. The FacesServlet processes requests, loads the appropriate view template, builds a component tree, processes events, and renders the response (typically in the HTML language) to the client. The state of UI components and other objects of scope interest is saved at the end of each request in a process called stateSaving (note: transient true), and restored upon next creation of that view.
+                            Either the client or the server side can save objects and states.
+
+                        </b>
+                    </p>
+
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/sBcsdMRrTBw?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+
+                    <p class="lead">
+                        <b>
+                            For tutorial you can visit <a href="https://www.youtube.com/embed/6Xj3UUuPBDk"> Here.</a>
+                        </b>
+                    </p>
+
+                    <hr class="separate" style="border-top: 3px solid #fff">
+                    <!-- ************************************************************************************** -->
+
+                    <p>
+                        <img class="alignleft wp-image-4266" style="float: left; border:2px solid white" src="https://hackr.io/blog/uploads/images/15701909167ay8Hvg6Al.jpg" width="160" height="100">
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h4>
+                        Dropwizard Framework
+                    </h4>
+
+                    <p class="lead">
+                        <b>
+                            Dropwizard straddles the line between being a library and a framework. Its goal is to provide performant, reliable implementations of everything a production-ready web application needs. Because this functionality is extracted into a reusable library, your application remains lean and focused, reducing both time-to-market and maintenance burdens.
+                            <br>
+                            Another Java framework true to its name – wizard. This light-weight framework lets you complete your application very fast because of it's out of the box support for advanced configurations, logging, application metrics and much more. You can create RESTful web applications that give high performance,
+                            are stable and reliable.
+                            <br>
+                            Dropwizard is especially magical because it brings together a host of libraries like Jetty, Guava, Jersey, Jackson, and Metrics amongst many others from the Java ecosystem into one framework and gives you a light-weight and lean application.
+                            <br>
+                            Since there are integrated libraries for all the configurations, security and performance-related tasks, all you need to do as a developer is building your business logic.
+
+                            Dropwizard is an open-source framework that is bundled with libraries and you can easily set it up with Eclipse IDE and create a simple project to learn (Believe me, you can learn Dropwizard on your own!). The basic tutorial from Dropwizard
+                            website will help you through each step.
+                        </b>
+                    </p>
+
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/UonVxuAOznc?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+
+                    <p class="lead">
+                        <b>
+                            For tutorial you can visit <a href="https://www.youtube.com/embed/cQQ6k2hbuCQ"> Here.</a>
+                        </b>
+                    </p>
+
+                    <hr class="separate" style="border-top: 3px solid #fff">
+                    <!-- ************************************************************************************** -->
+
+                    <p>
+                        <img class="alignleft wp-image-4266" style="float: left; border:2px solid white" src="https://hackr.io/blog/uploads/images/1570190916HcxR39moMk.jpg" width="160" height="100">
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h4>
+                        GRAILS
+                    </h4>
+
+                    <p class="lead"> <b>
+                            <strong>Developers:</strong> Graeme Rocher<br>
+                            <strong>Intial release:</strong>October, 2005<br>
+                            <strong>Written in:</strong> Groovy<br>
+                            <strong>License:</strong> Apache License 2.0<br>
+                            <strong>Repository:</strong> <a href="	https://github.com/grails/grails-core">
+                                Grails Repository</a><br>
+                        </b>
+                    </p>
+
+                    <p class="lead">
+                        <b>
+                            Grails is an easy to learn full-stack framework much suitable for those who are just beginning their programming career. While Grails is a web framework written in Groovy programming language, it runs on Java platform and is perfectly compatible with Java syntax.
+                            This framework is based on the MVC design pattern.
+                            <br>
+                            Groovy is similar to Java which some more features added when compared to Java.
+                            It is very easy to learn Groovy if you already know Java.
+                            <br>
+                            Similar to JSP, in Grails, the rendering technology is GSP (Groovy Server Pages). Creating tags for the View in Grails is simple and easy. It also uses GORM which as you might have guessed is the ORM implementation used in Grails. You can also directly use Hibernate instead of GORM. Grails has built-in support for RESTful APIs thus making it easy
+                            to create such services.
+                            <br>
+                            Here comes the best part – you can integrate your existing java code with Grails. If you have a mix of Groovy and Java code in your application – it will work just fine!
+                            <br>
+                            Grails is an open source web application framework that uses the Apache Groovy programming language (which is in turn based on the Java platform). It is intended to be a high-productivity framework by following the "coding by convention" paradigm, providing a stand-alone development environment and hiding much of the configuration detail from the
+                            developer.
+                            <br>
+                            Grails was previously known as "Groovy on Rails"; in March 2006 that name was dropped in response to a request by David Heinemeier Hansson, founder of the Ruby on Rails framework.
+                            <br>
+                        </b>
+                    </p>
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/YSddB1naEXs?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+
+                    <p class="lead">
+                        <b>
+                            For tutorial_1 you can visit <a href="http://grails.asia/grails-tutorial-for-beginners"> Here.</a><br>
+                            For tutorial_2 you can visit <a href="https://www.youtube.com/embed/XrDXqoomws4&list=PLlJ10NoMRw4odwmN_z0My4GyJvFgJAHUT"> Here.</a>
+                        </b>
+                    </p>
+
+                    <hr class="separate" style="border-top: 3px solid #fff">
+                    <!-- ************************************************************************************** -->
+
+                    <p>
+                        <img class="alignleft wp-image-4266" style="float: left; border:2px solid white" src="https://hackr.io/blog/uploads/images/1570190916dym91rqho2.jpg" width="160" height="100">
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h4>
+                        ATG
+                    </h4>
+
+                    <p class="lead">
+                        <b>
+                            ATG is a web commerce platform written in Java. It is a customizable and configurable framework, particularly useful for websites related to e-commerce. The product is owned by Oracle and supports both B2B and B2C applications that are complex and huge. For small scale applications, it could be costly, however. If you are getting into developing e-commerce websites, ATG is a good framework to learn and will enrich your technical as well as domain knowledge.
+                            <br>
+                            ATG platform can run on three servers – Oracle Weblogic, IBM Websphere, and JBoss.
+                            <br>
+                            There are 3 main layers in the framework –
+
+                            <ul class="lead">
+                                <li><strong>The Dynamo Application Framework –</strong> it is the base layer that provides a development environment based on JavaBeans and JSP. There are standard ATG classes for all the common functionalities and even custom Java code can be created and assembled out of component beans by linking them through configuration files.</li>
+                                <li><strong>The Personalization module –</strong> This is where the content for each user is customized dynamically. This module helps control and maintain user-profiles and business rules that define what content is to be shown to a particular user. This layer also supports targeted emails.</li>
+                                <li><strong>The Scenarios module –</strong> This module further enhances the capabilities of the personalization module by introducing time-sensitive, event-driven campaigns that manage interactions between site visitors and the content for a period of time. For example, limited time offers, exclusive deals for certain members etc…</li>
+                            </ul>
+                            ATG is an extensive framework and you need time and patience to learn it. Several big companies like Walmart, Macy’s, BestBuy, ASDA and more have their website built on ATG.
+
+                        </b>
+                    </p>
+
+
+
+                    <center>
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/ZQszr4bMpr0?autoplay=1&mute=1">
+                        </iframe>
+                    </center>
+
+                    <p class="lead">
+                        <b>
+                            For tutorial_1 you can visit <a href="https://docs.oracle.com/cd/E24152_01/Platform.10-1/ATGMultiApp/html/s0102abouttheoracleatgwebcommerceplat01.html"> Here.</a><br>
+                            For tutorial_2 you can visit <a href="https://www.youtube.com/channel/UCy9_eNRg7GOdnmCPoZm3FYA"> Here.</a>
+                        </b>
+                    </p>
+
+
+                    <hr class="separate" style="border-top: 3px solid #fff">
+                    <!-- ************************************************************************************** -->
+                    <p class="lead"><b><a href="JAVA_2.html" style="font-size:35px;color:white;text-decoration:none"><i>NEXT--></i></a></b></p>
+                    <!-- ************************************************************************************** -->
+                    <hr class="separate" style="border-top: 3px solid #fff">
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- End demo content -->
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+
+        <script>
+            $(function() {
+                // Sidebar toggle behavior
+                $('#sidebarCollapse').on('click', function() {
+                    $('#sidebar, #content').toggleClass('active');
+                });
+            });
+        </script>
+
+    </body>
+
+
+
+
+    </html>
